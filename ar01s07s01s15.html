@@ -1,0 +1,58 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>7.1.15.&nbsp;Cardinalities of Editorial Objects</title><link rel="stylesheet" href="mystyle.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.73.1"><link rel="start" href="index.html" title="ODIS Creator Help"><link rel="up" href="ar01s07s01.html" title="7.1.&nbsp;Editorial Object General Information"><link rel="prev" href="ar01s07s01s14.html" title="7.1.14.&nbsp;Editorial Object Complaints"><link rel="next" href="ar01s07s01s16.html" title="7.1.16.&nbsp;Creating Formatted Text">
+<script type="text/javascript" src="../../../advanced/synchWithToc.js"></script>
+
+<link rel="stylesheet" href="../../../content/org.eclipse.help.webapp/advanced/breadcrumbs.css" charset="ISO-8859-1" type="text/css"></link>
+<script type="text/javascript" src="../../../content/org.eclipse.help/livehelp.js"> </script>
+<script type="text/javascript">
+if( self == top ){
+  var  anchorParam = location.hash.length > 0 ? '\u0026anchor=' + location.hash.substr(1) : '';
+  window.location.replace( "../../../index.jsp?topic=%2FMasterData_Client_Control%2Fhtml%2Far01s07s01s15.html" + anchorParam);
+}
+</script>
+</head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="help_breadcrumbs"><a href="index.html">ODIS Creator Help</a> > <a href="ar01s07.html">7&#46; ODIS Creator Editing Process</a> > <a href="ar01s07s01.html">7&#46;1&#46; Editorial Object General Information</a></div>
+<div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">7.1.15.&nbsp;Cardinalities of Editorial Objects</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ar01s07s01s14.html">Prev</a>&nbsp;</td><th width="60%" align="center">7.1.&nbsp;Editorial Object General Information</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ar01s07s01s16.html">Next</a></td></tr></table><hr></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="redaktion.kardinalitaet"></a>7.1.15.&nbsp;Cardinalities of Editorial Objects</h4></div></div></div>
+			
+			<p>The creation, copy and usage of editorial objects under other editorial objects causes references to be made between the respective objects. These references are subject to the so-called cardinality conditions. This will regulate which object types may form references. Furthermore the amount will be set there of how often an editorial object may reference another of a certain type. For example, a vehicle model may only be referenced by a knowledge base. However, a knowledge base may reference any number of vehicle models. Thereby, the following three cardinalities are distinguished in ODIS Creator, whereby the mentioned error messages contain example data and may read differently in the specific error scenario.</p>
+			<div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="redaktion.kardinalitaet.standard"></a>7.1.15.1.&nbsp;Normal Cardinality Condition</h5></div></div></div>
+				
+				<p>It is simply defined here, which object types may be in direct relationship to each other. This also regulates how often which object types are referenced, or how often this may be used under another object type.</p>
+				<div class="itemizedlist"><ul type="square"><li style="list-style-type: square">
+						<p>Normally, the ODIS Creator interface is designed so that the user can only create references between object types that are permitted. However, if an action causes two editorial objects to create a reference that is not allowed despite the design, then it will be blocked by the system and the user will be given one of the following error messages:</p>
+						<p>The editorial object 'Combi' with the 'Variant' type cannot be assigned to an object with the 'Brand' type.</p>
+						<p>No object from the 'Variant' type can be assigned under the editorial object 'Volkswagen' wit the 'Brand' type.</p>
+					</li><li style="list-style-type: square">
+						<p>The amount of times an editorial object of a specific type is used may also be limited under editorial object types.</p>
+						<p>Example: a vehicle model may only be assigned one time to a knowledge base.</p>
+						<p>Error message: the 'remaining vehicles' editorial object with the 'vehicle model' type can only be assigned a maximum of 1 time to an object from the 'knowledge base' type.</p>
+					</li><li style="list-style-type: square">
+						<p>The minimum amount of object types to which an editorial object must be assigned is also set.</p>
+						<p>Example: in the equipment network, it is always necessary that an editorial object is assigned to the type on the next-highest level. For example, an engine object must always be assigned to one variant.</p>
+						<p>Error message: the editorial object 'Engine XY' with the 'Engine' type must be assigned at least one time to an object with the 'Variant' type.</p>
+					</li><li style="list-style-type: square">
+						<p>The same also applies to the minimum amount of object types that must be subordinate to an editorial object.</p>
+						<p>Example: a measured value table must always be assigned to a control module description.</p>
+						<p>Error message: the editorial object 'Get_02____0AM_1_1007_11' with the 'measured value table' type must have at least one subordinate object with the 'control module group' type.</p>
+					</li><li style="list-style-type: square">
+						<p>Finally, the maximum amount of object types that can be subordinate to an editorial object is limited.</p>
+						<p>Example: only one control module description can be assigned to one control module configuration.</p>
+						<p>Error message: the editorial object 'BV_DashBoardUDS/MultipleBrands' with the 'control module configuration' type may only have a maximum of one subordinate object with the 'control module group' type.</p>
+					</li></ul></div>
+			</div>
+			<div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="redaktion.kardinalitaet.or"></a>7.1.15.2.&nbsp;Or-Cardinality Condition</h5></div></div></div>
+				
+				<p>For an Or-condition, an editorial object must be assigned to at least one other editorial object from a specific type set.</p>
+				<p>Example: a diagnostic object must always be assigned to at least one knowledge base object or diagnostic object. This however also permits that the diagnostic object is assigned to one knowledge base object and multiple diagnostic objects at the same time.</p>
+				<p>Error message: for the editorial object '17_instrument cluster', none of the following alternative cardinality conditions were met for one sub(/super)ordinate object:</p>
+				<p>Knowledge base: 1..1</p>
+				<p>Diagnostic object: 1..*</p>
+			</div>
+			<div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="redaktion.kardinalitaet.xor"></a>7.1.15.3.&nbsp;Exclusive-Or Cardinality Condition</h5></div></div></div>
+				
+				<p>An exclusive-or condition then exists, if a complete group of object types would be permitted under or above an editorial object. However, as soon as an editorial object with a type from this group is assigned, other objects of this type can only be assigned still and the remaining types are excluded.</p>
+				<p>Example: control module configurations can be assigned in principle to ODX/KWP control module groups. However, only one control module description from the 4 categories mentioned may be assigned to one specific control module configuration.</p>
+				<p>Error message: the editorial object 'BV_DashBoardUDS/Mehrmarke' ('BV_DashBoardUDS/MultipleBrands') must exclusively be assigned to or be superordinate to an editorial object from the following types: UDS control module group, KWP control module group, UDS control module variants, KWP control module variants</p>
+			</div>
+		</div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ar01s07s01s14.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="ar01s07s01.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="ar01s07s01s16.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">7.1.14.&nbsp;Editorial Object Complaints&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;7.1.16.&nbsp;Creating Formatted Text</td></tr></table></div></body></html>

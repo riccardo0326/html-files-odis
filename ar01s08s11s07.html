@@ -1,0 +1,26 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>8.11.7.&nbsp;Export Check Sum</title><link rel="stylesheet" href="mystyle.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.73.1"><link rel="start" href="index.html" title="ODIS Creator Help"><link rel="up" href="ar01s08s11.html" title="8.11.&nbsp;Cooperation export"><link rel="prev" href="ar01s08s11s06.html" title="8.11.6.&nbsp;Managing a Global Exclusion List"><link rel="next" href="ar01s09.html" title="9.&nbsp;ODIS Creator Configuration">
+<script type="text/javascript" src="../../../advanced/synchWithToc.js"></script>
+
+<link rel="stylesheet" href="../../../content/org.eclipse.help.webapp/advanced/breadcrumbs.css" charset="ISO-8859-1" type="text/css"></link>
+<script type="text/javascript" src="../../../content/org.eclipse.help/livehelp.js"> </script>
+<script type="text/javascript">
+if( self == top ){
+  var  anchorParam = location.hash.length > 0 ? '\u0026anchor=' + location.hash.substr(1) : '';
+  window.location.replace( "../../../index.jsp?topic=%2FMasterData_Client_Control%2Fhtml%2Far01s08s11s07.html" + anchorParam);
+}
+</script>
+</head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="help_breadcrumbs"><a href="index.html">ODIS Creator Help</a> > <a href="ar01s08.html">8&#46; ODIS Creator Preparation Process</a> > <a href="ar01s08s11.html">8&#46;11&#46; Cooperation export</a></div>
+<div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">8.11.7.&nbsp;Export Check Sum</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ar01s08s11s06.html">Prev</a>&nbsp;</td><th width="60%" align="center">8.11.&nbsp;Cooperation export</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ar01s09.html">Next</a></td></tr></table><hr></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="coopexport.checksum_editor"></a>8.11.7.&nbsp;Export Check Sum</h4></div></div></div>
+			
+			<p>After a successful export, the calculated SHA512 check sum for the export file will be displayed in the editor. The check sum can be copied to the clipboard for further use using a button.</p>
+			<div class="figure"><a name="figure.coopexport.checksum"></a><div class="figure-contents">
+				
+				<div class="mediaobject"><img src="images/coopexport_pruefsumme.png" alt="Illustration: check sum for an export file"></div>
+			</div><p class="title"><b>Figure&nbsp;636.&nbsp;Checksum</b></p></div><br class="figure-break">
+			<p><a name="export.pruefsumme"></a>In addition to the display in the editor, the check sum will be written in a text file that is located near the actual export file.</p>
+			<p>The check sum is used to check the integrity of the export file. For an integrity test, the recipient can calculate the check sum using standard Windows applications and compare it with the value provided by the exporter. If the value is the same, then integrity is ensured. The data was not modified during transmission.</p>
+			<p>Windows PowerShell application is used to calculate the SHA512 check sum of an export file. The following command can be entered there to generate the check sum: Get-FileHash Pfad-zur-Export-Datei -Algorithm SHA512 | Format-List</p>
+		</div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ar01s08s11s06.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="ar01s08s11.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="ar01s09.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">8.11.6.&nbsp;Managing a Global Exclusion List&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;9.&nbsp;ODIS Creator Configuration</td></tr></table></div></body></html>

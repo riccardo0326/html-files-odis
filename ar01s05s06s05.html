@@ -1,0 +1,60 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>5.6.5.&nbsp;Translation Process for Text IDs</title><link rel="stylesheet" href="mystyle.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.73.1"><link rel="start" href="index.html" title="ODIS Creator Help"><link rel="up" href="ar01s05s06.html" title="5.6.&nbsp;Text Library"><link rel="prev" href="ar01s05s06s04.html" title="5.6.4.&nbsp;Sorting and Filtering in the Text Library"><link rel="next" href="ar01s05s07.html" title="5.7.&nbsp;Remote diagnosis export">
+<script type="text/javascript" src="../../../advanced/synchWithToc.js"></script>
+
+<link rel="stylesheet" href="../../../content/org.eclipse.help.webapp/advanced/breadcrumbs.css" charset="ISO-8859-1" type="text/css"></link>
+<script type="text/javascript" src="../../../content/org.eclipse.help/livehelp.js"> </script>
+<script type="text/javascript">
+if( self == top ){
+  var  anchorParam = location.hash.length > 0 ? '\u0026anchor=' + location.hash.substr(1) : '';
+  window.location.replace( "../../../index.jsp?topic=%2FMasterData_Client_Control%2Fhtml%2Far01s05s06s05.html" + anchorParam);
+}
+</script>
+</head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="help_breadcrumbs"><a href="index.html">ODIS Creator Help</a> > <a href="ar01s05.html">5&#46; ODIS Creator Administration Process</a> > <a href="ar01s05s06.html">5&#46;6&#46; Text Library</a></div>
+<div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">5.6.5.&nbsp;Translation Process for Text IDs</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ar01s05s06s04.html">Prev</a>&nbsp;</td><th width="60%" align="center">5.6.&nbsp;Text Library</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ar01s05s07.html">Next</a></td></tr></table><hr></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="textbib.uebersetzung"></a>5.6.5.&nbsp;Translation Process for Text IDs</h4></div></div></div>
+            
+            <p>The translation process for the text IDs from the text library has the following characteristics in contrast to the editorial translation process:</p>
+            <p>
+                </p><div class="itemizedlist"><ul type="disc"><li>
+                        <p>The source language of the project package is German.</p>
+                    </li><li>
+                        <p>The translation occurs into all of the languages currently in the master data of ODIS Creator.</p>
+                    </li><li>
+                        <p>The translation requirements for the text library texts are assigned completely to the VW Wolfsburg location.</p>
+                    </li><li>
+                        <p>The translation process for a version of a text library text begins only if this version has the "released" processing status.</p>
+                    </li><li>
+                        <p>Every version of a text in the text library contains a separate translation status with the following range of values:</p>
+                        <p>
+                            </p><div class="itemizedlist"><ul type="circle"><li>
+                                    <p>Empty (no display)</p>
+                                </li><li>
+                                    <p>Ready for translation</p>
+                                </li><li>
+                                    <p>In translation</p>
+                                </li><li>
+                                    <p>Complete</p>
+                                </li></ul></div><p>
+                        </p>
+                    </li><li>
+                        <p>A version of a text ID in the text library has the translation status "Empty (no display)" as long as it was not released.</p>
+                    </li><li>
+                        <p>A text ID version with the "released" processing status contains the translations status "ready for translation" and it will create translation requirements for all system languages.</p>
+                    </li><li>
+                        <p>A text ID version with the "released" processing status receives the "in translation" translation status, if there is at least one translation requirement for a language that was transferred to the translation package, but translation requirements that have still not been transferred to a translation package are available for no language.</p>
+                    </li><li>
+                        <p>A text ID version with the "released" processing status has the "complete" translation status, if the translation packages have been imported for all of the languages for this text version.</p>
+                        <p>A text ID in the text library can then only be used, if at least one version of this text has the "Complete" translation status. The newest version with the "Complete" translation status will then be used.</p>
+                    </li><li>
+                        <p>After adding a new language in the ODIS Creator master data, the translation requirements for all text library text IDs are created when implementing a job. This can result in a portion of the text IDs changing from a translation status of "complete" to "ready for translation". These text IDs can however continue to be used.</p>
+                    </li><li>
+                        <p>Text IDs from the text library, which have plain text that consists exclusively of elements that are not relevant to translation, are excluded from the translation process. Instead of an image of translation requirements, the translation status will be set directly to "Complete". This particularly applies to text IDs from the category type "text module", "text module (ANSI characters)" or "placeholder". The text IDs used in the text modules must have at least one version with the "complete" translation status, since this represents a requirement for its usability.</p>
+                    </li><li>
+                        <p>There is also a feedback process for text IDs (see <a class="xref" href="ar01s05s06s03.html#textbib.reklamation" title="5.6.3.8.&nbsp;Make a Text ID Complaint">Section&nbsp;5.6.3.8, &#8220;Make a Text ID Complaint&#8221;</a>).</p>
+                    </li><li>
+                        <p>When copying a text ID from the text library, all of the translations already having the "complete" translation status will be applied to the copy. If the text ID content of the copy is not changed again before the release, then no translation requirements are created for the languages, in which the translation could be carried over from the source object. New translation requirements will be created for the remaining languages.</p>
+                    </li></ul></div><p>
+            </p>
+        </div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ar01s05s06s04.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="ar01s05s06.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="ar01s05s07.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">5.6.4.&nbsp;Sorting and Filtering in the Text Library&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;5.7.&nbsp;Remote diagnosis export</td></tr></table></div></body></html>

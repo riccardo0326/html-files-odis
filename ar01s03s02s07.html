@@ -1,0 +1,80 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>3.2.7.&nbsp;Preconfiguration Selection Dialogs</title><link rel="stylesheet" href="mystyle.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.73.1"><link rel="start" href="index.html" title="ODIS Creator Help"><link rel="up" href="ar01s03s02.html" title="3.2.&nbsp;Program Structure"><link rel="prev" href="ar01s03s02s06.html" title="3.2.6.&nbsp;Tables and Lists"><link rel="next" href="ar01s03s02s08.html" title="3.2.8.&nbsp;Separating Views">
+<script type="text/javascript" src="../../../advanced/synchWithToc.js"></script>
+
+<link rel="stylesheet" href="../../../content/org.eclipse.help.webapp/advanced/breadcrumbs.css" charset="ISO-8859-1" type="text/css"></link>
+<script type="text/javascript" src="../../../content/org.eclipse.help/livehelp.js"> </script>
+<script type="text/javascript">
+if( self == top ){
+  var  anchorParam = location.hash.length > 0 ? '\u0026anchor=' + location.hash.substr(1) : '';
+  window.location.replace( "../../../index.jsp?topic=%2FMasterData_Client_Control%2Fhtml%2Far01s03s02s07.html" + anchorParam);
+}
+</script>
+</head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="help_breadcrumbs"><a href="index.html">ODIS Creator Help</a> > <a href="ar01s03.html">3&#46; ODIS Creator Basic Information</a> > <a href="ar01s03s02.html">3&#46;2&#46; Program Structure</a></div>
+<div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">3.2.7.&nbsp;Preconfiguration Selection Dialogs</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ar01s03s02s06.html">Prev</a>&nbsp;</td><th width="60%" align="center">3.2.&nbsp;Program Structure</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ar01s03s02s08.html">Next</a></td></tr></table><hr></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="auswahldialog.vorbelegung.arten"></a>3.2.7.&nbsp;Preconfiguration Selection Dialogs</h4></div></div></div>
+				
+				<p>The following cases are distinguished:</p>
+				<div class="itemizedlist"><ul type="square"><li style="list-style-type: square">
+						<p>Opening of selection dialog for revision</p>
+					</li><li style="list-style-type: square">
+						<p>Opening of selection dialog for new entries</p>
+					</li></ul></div>
+				<div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="auswahldialog.vorbelegung.%C3%BCberarbeitung"></a>3.2.7.1.&nbsp;Selection Dialog for Revision</h5></div></div></div>
+					
+					<p>If you open the selection dialog in the context of an existing entry, then the corresponding editorial or data object will be displayed and selected. For example, if a <a class="xref" href="ar01s11.html#dtc" title="DTC"><span class="bold"><strong>DTC</strong></span></a> is set as a symptom in an IF command in a function test, then the object tree will be opened and the <a class="xref" href="ar01s11.html#dtc" title="DTC"><span class="bold"><strong>DTC</strong></span></a> preselected when revising the symptom in the respective selection dialog.</p>
+					<p>The memory status of the source object is irrelevant for the system behavior. If you open a function test for editing and there is an IF command with a <a class="xref" href="ar01s11.html#dtc" title="DTC"><span class="bold"><strong>DTC</strong></span></a> revise 'XYZ' in it, then the tree structure is opened in the respective dialog and the <a class="xref" href="ar01s11.html#dtc" title="DTC"><span class="bold"><strong>DTC</strong></span></a> 'XYZ' is selected. Then change the selection to the <a class="xref" href="ar01s11.html#dtc" title="DTC"><span class="bold"><strong>DTC</strong></span></a> 'ABC' and close the dialog with OK. If you open the dialog again now, then the <a class="xref" href="ar01s11.html#dtc" title="DTC"><span class="bold"><strong>DTC</strong></span></a> 'ABC' is selected this time and does not depend on if you have persisted the <a class="xref" href="ar01s11.html#dtc" title="DTC"><span class="bold"><strong>DTC</strong></span></a> change previously or not.</p>
+					<p>If the path to an object is not unique, then the path that is found first by the system will open. Then, for example, a linked diagnostic object can be used at multiples places in a knowledge base. The selection dialog for fault locations offers two options for the path display (navigation and log). To abstract from the multiplicity of control module instances through the various vehicle projects, the preselection for fault locations is always displayed in the log view.</p>
+				</div>
+				<div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="auswahldialog.vorbelegung.neu"></a>3.2.7.2.&nbsp;Selection Dialog for New Entries</h5></div></div></div>
+					
+					<p>If you open a selection dialog for a new entry, then the object that was selected when you last confirmed the dialog with OK, is preselected. For this the system memorizes the entire object path so that the same context can be restored again. However, this information is only saved for the duration of a session and does not carry over to other sessions. The preconfigurations are discarded as soon as you log out of the system.</p>
+					<div class="section" lang="en"><div class="titlepage"><div><div><h6 class="title"><a name="auswahldialog.vorbelegung.neu.redaktionsobjekt"></a>3.2.7.2.1.&nbsp;Editorial Object Selection Dialog</h6></div></div></div>
+						
+						<p>This selection dialog is used for all editorial object types. If the simple rule would be applied that the last object is always reselected, then it would not cover enough area, because, for example, if this dialog was used last time to search an equipment network for a variant rule, however now a diagnostic object is being searched for. Because of this, this dialog is preconfigured based on the editorial object type. The data to preconfigure this dialog for equipment network, function library, knowledge base, DTC memory, control module description and supplemental document objects is considered and saved separately. In addition to this, it will differentiate when selecting control module description objects if your selection was made through the navigation (<a class="xref" href="ar01s03s02s07.html#auswahldialog.vorbelegung.auswahl.sgb.objekt" title="Figure&nbsp;39.&nbsp;Selection Dialog for Editorial Objects in the form of Control Module Description Objects by means of Object Structure">Figure&nbsp;39, &#8220;Selection Dialog for Editorial Objects in the form of Control Module Description Objects by means of Object Structure&#8221;</a>) or through the vehicle projects (<a class="xref" href="ar01s03s02s07.html#auswahldialog.vorbelegung.auswahl.sgb.fahrzeug" title="Figure&nbsp;40.&nbsp;Selection Dialog for Editorial Objects in the form of Control Module Description Objects by means of Vehicle Projects">Figure&nbsp;40, &#8220;Selection Dialog for Editorial Objects in the form of Control Module Description Objects by means of Vehicle Projects&#8221;</a>).</p>
+						<p>
+							</p><div class="figure"><a name="auswahldialog.vorbelegung.auswahl.sgb.objekt"></a><div class="figure-contents">
+								
+								<div class="mediaobject"><img src="images/Steuergeraetebeschreibungsobjekte_mittels_Objektstruktur.png" alt="Image: selection dialog for editorial objects in the form of control module description objects by means of object structure"></div>
+							</div><p class="title"><b>Figure&nbsp;39.&nbsp;Selection Dialog for Editorial Objects in the form of Control Module Description Objects by means of Object Structure</b></p></div><p><br class="figure-break">
+						</p>
+						<p>
+							</p><div class="figure"><a name="auswahldialog.vorbelegung.auswahl.sgb.fahrzeug"></a><div class="figure-contents">
+								
+								<div class="mediaobject"><img src="images/Steuergeraetebeschreibungsobjekte_mittels_Fahrzeugprojekten.png" alt="Image: selection dialog for editorial objects in the form of control module description objects by means of vehicle projects"></div>
+							</div><p class="title"><b>Figure&nbsp;40.&nbsp;Selection Dialog for Editorial Objects in the form of Control Module Description Objects by means of Vehicle Projects</b></p></div><p><br class="figure-break">
+						</p>
+					</div>
+					<div class="section" lang="en"><div class="titlepage"><div><div><h6 class="title"><a name="auswahldialog.vorbelegung.neu.diagnose"></a>3.2.7.2.2.&nbsp;Diagnostic Service Selection Dialog</h6></div></div></div>
+						
+						<p>The dialog to select an operation or a service can be opened from the (ASAM) Ecukom dialog of the function test editor. If an operation or a service is already displayed in (ASAM) Ecukom, then the respective entry will be selected in the selection field (<a class="xref" href="ar01s03s02s07.html#auswahldialog.vorbelegung.auswahl.sgb.dienste" title="Figure&nbsp;41.&nbsp;Operations/Services Selection Dialog">Figure&nbsp;41, &#8220;Operations/Services Selection Dialog&#8221;</a>).</p>
+						<p>
+							</p><div class="figure"><a name="auswahldialog.vorbelegung.auswahl.sgb.dienste"></a><div class="figure-contents">
+								
+								<div class="mediaobject"><img src="images/Auswahldialog_fuer_Operationen_Dienste.png" alt="Image: operations/services selection dialog"></div>
+							</div><p class="title"><b>Figure&nbsp;41.&nbsp;Operations/Services Selection Dialog</b></p></div><p><br class="figure-break">
+						</p>
+					</div>
+					<div class="section" lang="en"><div class="titlepage"><div><div><h6 class="title"><a name="auswahldialog.vorbelegung.neu.parameter"></a>3.2.7.2.3.&nbsp;Parameter Selection Dialog</h6></div></div></div>
+						
+						<p>Likewise, the dialog to select a parameter can be accessed from the (ASAM) Ecukom dialog of the function test editor. If this dialog is called up in the context of an existing entry in a table, then the parameter path displayed there is automatically selected after opening the dialog (<a class="xref" href="ar01s03s02s07.html#auswahldialog.vorbelegung.auswahl.parameter" title="Figure&nbsp;42.&nbsp;Parameter Selection Dialog">Figure&nbsp;42, &#8220;Parameter Selection Dialog&#8221;</a>).</p>
+						<p>
+							</p><div class="figure"><a name="auswahldialog.vorbelegung.auswahl.parameter"></a><div class="figure-contents">
+								
+								<div class="mediaobject"><img src="images/Auswahldialog_fuer_Parameter.png" alt="Image: parameter selection dialog"></div>
+							</div><p class="title"><b>Figure&nbsp;42.&nbsp;Parameter Selection Dialog</b></p></div><p><br class="figure-break">
+						</p>
+					</div>
+					<div class="section" lang="en"><div class="titlepage"><div><div><h6 class="title"><a name="auswahldialog.vorbelegung.neu.eintrag"></a>3.2.7.2.4.&nbsp;Entry Selection Dialog</h6></div></div></div>
+						
+						<p>The dialog to select a parameter can be accessed from the (ASAM) Ecukom dialog parameter table. If this dialog is called up in the context of an existing table entry, then the ID displayed there is preselected together with the corresponding RDID in the dialog selection field (<a class="xref" href="ar01s03s02s07.html#auswahldialog.vorbelegung.auswahl.eintrag" title="Figure&nbsp;43.&nbsp;Entry Selection Dialog">Figure&nbsp;43, &#8220;Entry Selection Dialog&#8221;</a>).</p>
+						<p>
+							</p><div class="figure"><a name="auswahldialog.vorbelegung.auswahl.eintrag"></a><div class="figure-contents">
+								
+								<div class="mediaobject"><img src="images/Auswahldialog_Eintrag.png" alt="Image: entry selection dialog"></div>
+							</div><p class="title"><b>Figure&nbsp;43.&nbsp;Entry Selection Dialog</b></p></div><p><br class="figure-break">
+						</p>
+					</div>
+				</div>
+			</div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ar01s03s02s06.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="ar01s03s02.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="ar01s03s02s08.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">3.2.6.&nbsp;Tables and Lists&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;3.2.8.&nbsp;Separating Views</td></tr></table></div></body></html>

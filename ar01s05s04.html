@@ -1,0 +1,36 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>5.4.&nbsp;Importing Control Module Descriptions</title><link rel="stylesheet" href="mystyle.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.73.1"><link rel="start" href="index.html" title="ODIS Creator Help"><link rel="up" href="ar01s05.html" title="5.&nbsp;ODIS Creator Administration Process"><link rel="prev" href="ar01s05s03s03.html" title="5.3.3.&nbsp;Assignment of Meta Roles"><link rel="next" href="ar01s05s04s01.html" title="5.4.1.&nbsp;Initiating the Import of Control Module Descriptions">
+<script type="text/javascript" src="../../../advanced/synchWithToc.js"></script>
+
+<link rel="stylesheet" href="../../../content/org.eclipse.help.webapp/advanced/breadcrumbs.css" charset="ISO-8859-1" type="text/css"></link>
+<script type="text/javascript" src="../../../content/org.eclipse.help/livehelp.js"> </script>
+<script type="text/javascript">
+if( self == top ){
+  var  anchorParam = location.hash.length > 0 ? '\u0026anchor=' + location.hash.substr(1) : '';
+  window.location.replace( "../../../index.jsp?topic=%2FMasterData_Client_Control%2Fhtml%2Far01s05s04.html" + anchorParam);
+}
+</script>
+</head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="help_breadcrumbs"><a href="index.html">ODIS Creator Help</a> > <a href="ar01s05.html">5&#46; ODIS Creator Administration Process</a></div>
+<div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">5.4.&nbsp;Importing Control Module Descriptions</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ar01s05s03s03.html">Prev</a>&nbsp;</td><th width="60%" align="center">5.&nbsp;ODIS Creator Administration Process</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ar01s05s04s01.html">Next</a></td></tr></table><hr></div><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a name="sgbimport"></a>5.4.&nbsp;Importing Control Module Descriptions</h3></div></div></div>
+        
+        <p>The control module descriptions are imported by a location administrator (see <a class="xref" href="ar01s03s03.html" title="3.3.&nbsp;Roles and Teams">Section&nbsp;3.3, &#8220;Roles and Teams&#8221;</a>) in ODIS Creator. The import is done with the reference table (for base control modules) and through an import similar to ODX from the control module extractor. The grouping occurs based on the assigned vehicle projects. Control module objects in ODIS Creator contain all information about jobs, services, parameters, data types, range of values, etc. KWP control modules are generally handled like UDS control modules and contain Logical Links. There are control module descriptions given as XML files for every KWP control module. The base control module descriptions were broken down to the separate control module variants. The structure of KWP control module objects was based on ODX. The names of control modules, jobs, services, parameters are based on ODX for all KWP types, and therefore they are now authored in the English shortened version, for example "EnginContrModul1KWP2000" for the KWP engine control module.</p>
+        <p>The import of a vehicle project is performed either as a complete import or incremental important, as determined by the metadata in the control module extracts. With incremental imports, the amount to be imported is restricted to the modified control modules compared to the total scope of the vehicle project. This also reduces the update effort in ODIS Creator. There are no abilities to influence this on the part of ODIS Creator.</p>
+        <p>When importing control modules, the system will check if the control module extracts to be imported contain Cyclone data so that they can be processed appropriately. The Cyclone extracts will be marked with an &#8220;Cyclone-INFO.xml&#8221; and processed as Cyclone data.</p>
+        <p>
+            </p><div class="figure"><a name="figure.sgbimport.navigator"></a><div class="figure-contents">
+                
+                <div class="mediaobject"><img src="images/sgbimport.png" alt="Control module import view"></div>
+            </div><p class="title"><b>Figure&nbsp;65.&nbsp;Control module import view</b></p></div><p><br class="figure-break">
+        </p>
+        
+
+        
+        
+        
+        
+        
+        
+        
+    </div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ar01s05s03s03.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="ar01s05.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="ar01s05s04s01.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">5.3.3.&nbsp;Assignment of Meta Roles&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;5.4.1.&nbsp;Initiating the Import of Control Module Descriptions</td></tr></table></div></body></html>

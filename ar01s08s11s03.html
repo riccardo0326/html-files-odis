@@ -1,0 +1,104 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>8.11.3.&nbsp;Collaboration export editor</title><link rel="stylesheet" href="mystyle.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.73.1"><link rel="start" href="index.html" title="ODIS Creator Help"><link rel="up" href="ar01s08s11.html" title="8.11.&nbsp;Cooperation export"><link rel="prev" href="ar01s08s11s02.html" title="8.11.2.&nbsp;Collaboration export properties view"><link rel="next" href="ar01s08s11s04.html" title="8.11.4.&nbsp;Using an Export Template">
+<script type="text/javascript" src="../../../advanced/synchWithToc.js"></script>
+
+<link rel="stylesheet" href="../../../content/org.eclipse.help.webapp/advanced/breadcrumbs.css" charset="ISO-8859-1" type="text/css"></link>
+<script type="text/javascript" src="../../../content/org.eclipse.help/livehelp.js"> </script>
+<script type="text/javascript">
+if( self == top ){
+  var  anchorParam = location.hash.length > 0 ? '\u0026anchor=' + location.hash.substr(1) : '';
+  window.location.replace( "../../../index.jsp?topic=%2FMasterData_Client_Control%2Fhtml%2Far01s08s11s03.html" + anchorParam);
+}
+</script>
+</head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="help_breadcrumbs"><a href="index.html">ODIS Creator Help</a> > <a href="ar01s08.html">8&#46; ODIS Creator Preparation Process</a> > <a href="ar01s08s11.html">8&#46;11&#46; Cooperation export</a></div>
+<div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">8.11.3.&nbsp;Collaboration export editor</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ar01s08s11s02.html">Prev</a>&nbsp;</td><th width="60%" align="center">8.11.&nbsp;Cooperation export</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ar01s08s11s04.html">Next</a></td></tr></table><hr></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="coopexport.editor"></a>8.11.3.&nbsp;Collaboration export editor</h4></div></div></div>
+			
+			<p>The editor serves to define new collaboration exports as well as to view collaboration exports that have already been exported. In addition to the name of the collaboration export and the comment field, the editor also shows configuration options for an export. These include the option to select export templates, knowledge bases, and equipment network objects, as well as a checkbox for selecting the &#8220;German&#8221; or &#8220;English&#8221; language, use of an exclusion list, and a &#8220;Test baseline&#8221; checkbox for selecting the processing status that should be taken into consideration during the export. The configuration options will be described in more detail now. The <a class="xref" href="ar01s08s11s03.html#figure.coopexport.editor" title="Figure&nbsp;625.&nbsp;Cooperation export">Figure&nbsp;625, &#8220;Cooperation export&#8221;</a> shows the complete editor in read mode. The individual components and selection options are described in more detail. The logs for exports can be viewed and downloaded as the logs for orders are (see <a class="xref" href="ar01s08s07.html" title="8.7.&nbsp;Logs for Baselines">Section&nbsp;8.7, &#8220;Logs for Baselines&#8221;</a>).</p>
+			<div class="figure"><a name="figure.coopexport.editor"></a><div class="figure-contents">
+				
+				<div class="mediaobject"><img src="images/coopexport_editor.png" alt="Image: cooperation export editor"></div>
+			</div><p class="title"><b>Figure&nbsp;625.&nbsp;Cooperation export</b></p></div><br class="figure-break">
+			<div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="coopexport.editor.knowledgebaseAndEquipment"></a>8.11.3.1.&nbsp;Selecting a Knowledge Base and Equipment Network Objects</h5></div></div></div>
+				
+				<p>The selected knowledge base will be listed in the &#8220;Knowledge base&#8221; field. The knowledge base is selected in the &#8220;Editorial objects selection dialog&#8221; <a class="xref" href="ar01s08s11s03.html#figure.coopexport.dialog.knowledgebase" title="Figure&nbsp;626.&nbsp;Knowledge base selection dialog for collaboration export">Figure&nbsp;626, &#8220;Knowledge base selection dialog for collaboration export&#8221;</a>, which can be opened by clicking on the &#8220;Select&#8221; button next to the &#8220;Knowledge base&#8221; field.</p>
+				<div class="figure"><a name="figure.coopexport.dialog.knowledgebase"></a><div class="figure-contents">
+					
+					<div class="mediaobject"><img src="images/coopexport_knowledgebase_dialog.png" alt="Image: knowledge base selection dialog for collaboration export"></div>
+				</div><p class="title"><b>Figure&nbsp;626.&nbsp;Knowledge base selection dialog for collaboration export</b></p></div><br class="figure-break">
+				<p>This dialog displays the knowledge bases that can be selected with their subordinate diagnostic objects. An entire knowledge base or one or more diagnostic objects can be selected, but all of the diagnostic objects must be from one knowledge base. Then one or more equipment network objects must selected in the associated equipment network for filtering the variant rules. The selected equipment network objects must be allocated to a vehicle type, which is assigned to the selected knowledge base. The selection is made in the &#8220;Editorial objects selection dialog&#8221; <a class="xref" href="ar01s08s11s03.html#figure.coopexport.dialog.equipment" title="Figure&nbsp;627.&nbsp;Equipment network selection dialog for collaboration export">Figure&nbsp;627, &#8220;Equipment network selection dialog for collaboration export&#8221;</a>, which can be opened by clicking on the &#8220;Select&#8221; button next to the &#8220;Equipment network&#8221; field. If the knowledge base selection is changed, any equipment network objects already selected will be discarded.</p>
+				<div class="figure"><a name="figure.coopexport.dialog.equipment"></a><div class="figure-contents">
+					
+					<div class="mediaobject"><img src="images/coopexport_equipment_dialog.png" alt="Image: equipment network selection dialog for collaboration export"></div>
+				</div><p class="title"><b>Figure&nbsp;627.&nbsp;Equipment network selection dialog for collaboration export</b></p></div><br class="figure-break">
+				<p>Only the last risk-released status will be displayed in both selection dialogs so that only the production data can ever be used.</p>
+			</div>
+			<div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="coopexport.editor.language"></a>8.11.3.2.&nbsp;Language Selection</h5></div></div></div>
+				
+				<p>The selection of the &#8220;German&#8221; or &#8220;English&#8221; language defines in which language the collaboration exports should be created. No language is selected by default. At least one language must be selected. If both languages are selected, a collaboration export package will be created for each language.</p>
+			</div>
+			<div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="coopexport.exclusionlist"></a>8.11.3.3.&nbsp;Using an Exclusion List</h5></div></div></div>
+				
+				<p>The editor also gives the option of using a local or global exclusion list <a class="xref" href="ar01s08s11s03.html#figure.coopexport.globalexclusions" title="Figure&nbsp;628.&nbsp;Global exclusion list">Figure&nbsp;628, &#8220;Global exclusion list&#8221;</a>, which are both simple text files consisting of regular expressions. When creating a configured collaboration export, the system will reference this exclusion list. Based on these, the values for the variables listed and the keywords for the collaboration export <a class="xref" href="ar01s08s11s03.html#figure.coopexport.example" title="Figure&nbsp;629.&nbsp;Example collaboration export">Figure&nbsp;629, &#8220;Example collaboration export&#8221;</a> will be made unrecognizable. For example, the value of the &#8220;test1&#8221; variable in the collaboration export will be displayed in a way that cannot be identified because the &#8220;test1&#8221; variable is contained in the exclusion list.</p>
+				<div class="figure"><a name="figure.coopexport.globalexclusions"></a><div class="figure-contents">
+					
+					<div class="mediaobject"><img src="images/coopexport_globalexclusionlist.png" alt="Image: global exclusion list"></div>
+				</div><p class="title"><b>Figure&nbsp;628.&nbsp;Global exclusion list</b></p></div><br class="figure-break">
+				<div class="figure"><a name="figure.coopexport.example"></a><div class="figure-contents">
+					
+					<div class="mediaobject"><img src="images/coopexport_example_without_wildcard.png" alt="Image: example cooperation export Example"></div>
+				</div><p class="title"><b>Figure&nbsp;629.&nbsp;Example collaboration export</b></p></div><br class="figure-break">
+				<p>The following example <a class="xref" href="ar01s08s11s03.html#figure.coopexport.globalexclusions.wildcard" title="Figure&nbsp;630.&nbsp;Global Exclusion List with Wildcard">Figure&nbsp;630, &#8220;Global Exclusion List with Wildcard&#8221;</a> shows a regular expression with a wildcard in the exclusion list:</p>
+				<div class="figure"><a name="figure.coopexport.globalexclusions.wildcard"></a><div class="figure-contents">
+					
+					<div class="mediaobject"><img src="images/coopexport_globalexclusionlist_wildcard.png" alt="Image: global exclusion list with wildcard"></div>
+				</div><p class="title"><b>Figure&nbsp;630.&nbsp;Global Exclusion List with Wildcard</b></p></div><br class="figure-break">
+				<p>In the associated collaboration export, the values for the test1, test2, and test3 variables will be made unrecognizable.</p>
+				<div class="figure"><a name="figure.coopexport.example.wildcard"></a><div class="figure-contents">
+					
+					<div class="mediaobject"><img src="images/coopexport_example_with_wildcard.png" alt="Image: example collaboration export with wildcard"></div>
+				</div><p class="title"><b>Figure&nbsp;631.&nbsp;Example collaboration export with wildcard</b></p></div><br class="figure-break">
+				<p>Exclusion lists can be used as follows:</p><div class="itemizedlist"><ul type="disc"><li>
+							<p>no exclusion list</p>
+						</li><li>
+							<p>local exclusion list only</p>
+						</li><li>
+							<p>global exclusion list only</p>
+						</li><li>
+							<p>local and global exclusion lists (contents will be combined)</p>
+						</li></ul></div>
+				<p>If a local exclusion list is used, it must be imported using the import dialog. A list that has already been imported can be exported.</p>
+				<p>If using a global exclusion list, it must be imported first if that has not already been done. A global exclusion list that has already been imported in the editor is preselected by default.</p>
+			</div>
+			<div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="coopexport.editor.testbaseline"></a>8.11.3.4.&nbsp;Selecting the Processing Status</h5></div></div></div>
+				
+				<p>Selecting the &#8220;Test baseline&#8221; checkbox specifies that the most current versions of the editorial objects (regardless of status, logic such as test baseline) should be exported if applicable so that a co-op export will also reflect the current processing status. The objects that are in the &#8220;In Processing" status will also be taken into account during the export.</p>
+				<p>If the checkbox is deactivated, a production export will take place.</p>
+				<p>If the checkbox is activated:</p><div class="itemizedlist"><ul type="disc"><li>
+							<p>The processing status of the editorial objects will be exported</p>
+						</li><li>
+							<p>The &#8220;Comment&#8221; action element and the content from the &#8220;Global Start&#8221; will be exported</p>
+						</li><li>
+							<p>The data classification will be set to &#8220;Confidential&#8221; (data classification cannot be configured)</p>
+						</li><li>
+							<p>The local and global exclusion lists (contents) will be combined</p>
+						</li></ul></div><p>
+				</p>
+				<p>Change tracking will only happen for exports that were created from an export template. When changing the data (knowledge base, equipment network, and &#8220;Test baseline&#8221; checkbox) from the template, there is no comparison and the &#8220;Test baseline&#8221; checkbox will be deactivated.</p>
+				<p>To track changes better, they will be indicated with a changed icon directly on an object.</p>
+				<p>The following changes will cause an object to be marked:</p><div class="itemizedlist"><ul type="disc"><li>
+							<p>New version of an object (also a working version)</p>
+						</li><li>
+							<p>Newly created objects</p>
+						</li><li>
+							<p>If an object has reached its market introduction date and was not previously contained in a co-op export</p>
+						</li><li>
+							<p>The &#8220;Last change&#8221; date is greater than in the last export</p>
+						</li><li>
+							<p>The &#8220;Last change&#8221; date is greater than in the last export</p>
+						</li></ul></div><p>
+				</p>
+				<p>Objects that are in processing will also be marked by a change in icon</p>
+			</div>
+		</div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ar01s08s11s02.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="ar01s08s11.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="ar01s08s11s04.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">8.11.2.&nbsp;Collaboration export properties view&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;8.11.4.&nbsp;Using an Export Template</td></tr></table></div></body></html>

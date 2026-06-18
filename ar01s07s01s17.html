@@ -1,0 +1,129 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>7.1.17.&nbsp;Using Text IDs in Editing</title><link rel="stylesheet" href="mystyle.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.73.1"><link rel="start" href="index.html" title="ODIS Creator Help"><link rel="up" href="ar01s07s01.html" title="7.1.&nbsp;Editorial Object General Information"><link rel="prev" href="ar01s07s01s16.html" title="7.1.16.&nbsp;Creating Formatted Text"><link rel="next" href="ar01s07s01s18.html" title="7.1.18.&nbsp;Templates">
+<script type="text/javascript" src="../../../advanced/synchWithToc.js"></script>
+
+<link rel="stylesheet" href="../../../content/org.eclipse.help.webapp/advanced/breadcrumbs.css" charset="ISO-8859-1" type="text/css"></link>
+<script type="text/javascript" src="../../../content/org.eclipse.help/livehelp.js"> </script>
+<script type="text/javascript">
+if( self == top ){
+  var  anchorParam = location.hash.length > 0 ? '\u0026anchor=' + location.hash.substr(1) : '';
+  window.location.replace( "../../../index.jsp?topic=%2FMasterData_Client_Control%2Fhtml%2Far01s07s01s17.html" + anchorParam);
+}
+</script>
+</head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="help_breadcrumbs"><a href="index.html">ODIS Creator Help</a> > <a href="ar01s07.html">7&#46; ODIS Creator Editing Process</a> > <a href="ar01s07s01.html">7&#46;1&#46; Editorial Object General Information</a></div>
+<div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">7.1.17.&nbsp;Using Text IDs in Editing</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ar01s07s01s16.html">Prev</a>&nbsp;</td><th width="60%" align="center">7.1.&nbsp;Editorial Object General Information</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ar01s07s01s18.html">Next</a></td></tr></table><hr></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="textIdVerwenden"></a>7.1.17.&nbsp;Using Text IDs in Editing</h4></div></div></div>
+		
+		<p>Text IDs from the text library (see <a class="xref" href="ar01s05s06.html" title="5.6.&nbsp;Text Library">Section&nbsp;5.6, &#8220;Text Library&#8221;</a>) can be used in editing.</p>
+		<div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="texteinfuegen"></a>7.1.17.1.&nbsp;Using Texts</h5></div></div></div>
+			
+			<p>Free text entries can be made to use a text ID. If a space is entered within a free text entry, an auto-completion dialog will open. Based on the text input, suggestions from the text library (see <a class="xref" href="ar01s05s06.html" title="5.6.&nbsp;Text Library">Section&nbsp;5.6, &#8220;Text Library&#8221;</a>) are listed, and you can select a text from this list (by double clicking). If none of the suggested text IDs work, you can continue to write and use the free text.</p>
+			<p>The auto-complete dialog (selection dialog) for entries in the text library is initially paired directly with the dialog that is opened (main dialog). The effect of this pairing is that the selection dialog is connected to the upper right corner of the main dialog so that the main dialog is not covered by the selection dialog. The pairing also ensures that the selection dialog will change its position parallel to the main dialog when the main dialog is moved. The pairing can be ended if the user moves the selection dialog away from its location next to the main dialog. At this point, both dialogs are separated, meaning the selection dialog will no longer change its position when the main dialog does. The pairing will be restored if the selection dialog is closed and then opened again. The selection dialog can be closed separately from the main dialog. However, if the author closes the main dialog, then the selection dialog will automatically close. This also occurs even if the two dialogs were separated from each other.</p>
+			<p>In general: the auto-complete dialog (selection dialog) for text library entries is only visible if text library entries are also permitted in the field that is currently in focus. In particular, this means that an open selection dialog will close automatically if the author switches the focus from a text field that allows text library entries to another interface element in the GUI (such as a drop-down box).</p>
+			<p>If you use a text from the text library, you will recognize the text based on the background color. In <a class="xref" href="ar01s07s01s17.html#figure.redaktion.text.hintergrund" title="Figure&nbsp;208.&nbsp;Display of a Used Text ID">Figure&nbsp;208, &#8220;Display of a Used Text ID&#8221;</a>, you will see an example for text ID usage in a diagnostic object. You can also see additional information about the text ID in the associated tool tip, such as the ID or the author of the text ID.</p>
+			<p>
+				</p><div class="figure"><a name="figure.redaktion.text.hintergrund"></a><div class="figure-contents">
+					
+					<div class="mediaobject"><img src="images/textbib_verwendung_hintergrund_tooltip.jpg" alt="Image: display of a used text ID"></div>
+				</div><p class="title"><b>Figure&nbsp;208.&nbsp;Display of a Used Text ID</b></p></div><p><br class="figure-break">
+			</p>
+			<p>Texts can also be placeholders. If you have inserted a placeholder, you can assign the placeholder a variable, a keyword or a value using the interface table (see <a class="xref" href="ar01s07s01s17.html#text.schnittstellentabelle" title="7.1.17.5.&nbsp;Change Text ID Variable/Keyword">Section&nbsp;7.1.17.5, &#8220;Change Text ID Variable/Keyword&#8221;</a>).</p>
+			<p>A special feature is the expression being in the function editor (see <a class="xref" href="ar01s07s14s12.html#ausdruck.textbibliothek" title="7.14.12.1.3.&nbsp;Text Library">Section&nbsp;7.14.12.1.3, &#8220;Text Library&#8221;</a>). A text ID is added there with the <span class="bold"><strong>Text library</strong></span> function.</p>
+			<p>It acts similarly to the locations where no free text is entered, however variables or codes cannot be used, for example. In the instruction dialogs with tables, there is the <span class="bold"><strong>"..."</strong></span> button and the menu item <span class="bold"><strong>text library</strong></span> under that (see <a class="xref" href="ar01s07s01s17.html#figure.redaktion.text.tabellen" title="Figure&nbsp;209.&nbsp;Text Selection in Table Cells">Figure&nbsp;209, &#8220;Text Selection in Table Cells&#8221;</a>); the selection dialog with the search field will also open at these locations.</p>
+			<p>
+				</p><div class="figure"><a name="figure.redaktion.text.tabellen"></a><div class="figure-contents">
+					
+					<div class="mediaobject"><img src="images/fte_deklarieren_textbib.png" alt="Image: text selection in table cells"></div>
+				</div><p class="title"><b>Figure&nbsp;209.&nbsp;Text Selection in Table Cells</b></p></div><p><br class="figure-break">
+			</p>
+		</div>
+		<div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="textekopieren"></a>7.1.17.2.&nbsp;Reusing Texts</h5></div></div></div>
+			
+			<p>It is possible to copy text IDs from one editorial object to another. To do this, select the text ID to be copied and select copy in the context menu. Select paste in the new editorial object, where this text ID should be used. Now you have more options of how the text ID should be pasted.</p>
+			<p>
+				</p><div class="itemizedlist"><ul type="disc"><li>
+						<p><span class="bold"><strong>Paste text ID as reference:</strong></span> the text ID reference is pasted in the new editorial object with the ID of the selected text ID. For example, @[txt]123.123456.</p>
+					</li><li>
+						<p><span class="bold"><strong>Paste:</strong></span> the plain text of the text ID is pasted in the new editorial object. The formatting is transferred with this, however the reference to the text ID is no longer at the pasted location.</p>
+					</li></ul></div><p>
+			</p>
+		</div>
+		<div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="d4e6841"></a>7.1.17.3.&nbsp;Usage Locations of Text IDs</h5></div></div></div>
+			
+			<p>There are different usage locations for text IDs, which are defined by the respective superordinate category (see <a class="xref" href="ar01s05s06s01.html#figure.admin.textbib.kategorie_einstellen" title="Figure&nbsp;82.&nbsp;Category properties">Figure&nbsp;82, &#8220;Category properties&#8221;</a>). The text IDs used in an editorial object are listed in the table "used texts from text library" (see <a class="xref" href="ar01s07s01s17.html#figure.redaktion.tabelle.verwendeteTexte" title="Figure&nbsp;210.&nbsp;&#34;Used Texts from Text Library&#34; Table">Figure&nbsp;210, &#8220;"Used Texts from Text Library" Table&#8221;</a>).</p>
+			<p>
+				</p><div class="figure"><a name="figure.redaktion.tabelle.verwendeteTexte"></a><div class="figure-contents">
+					
+					<div class="mediaobject"><img src="images/textbib_tabelle_verwendete_texte.jpg" alt="Image: &#34;used texts from text library&#34; table"></div>
+				</div><p class="title"><b>Figure&nbsp;210.&nbsp;"Used Texts from Text Library" Table</b></p></div><p><br class="figure-break">
+			</p>
+			<p>In the used texts table, you will see the text ID with the version, the category it belongs to and the content. The content is not displayed immediately, but rather can be loaded using the context menu.</p>
+			<p>Usage in the function test editor is somewhat extensive compared to the rest of editing, therefore the following table gives an overview of the usage locations in the function test editor of text IDs as well as the type of usage and insertion.</p>
+			<p>
+				</p><div class="table"><a name="d4e6857"></a><div class="table-contents">
+					<table summary="Usage Locations of Text IDs in the Function Test Editor" border="1"><colgroup><col align="left"><col align="left"><col align="left"><col align="left"><col align="left"><col align="left"><col align="left"></colgroup><thead><tr bgcolor="#EEEEEE"><th align="left">Location/action element</th><th align="left">Type</th><th align="left">Text ID selection</th><th align="left">ANSI characters permitted</th><th align="left">Special characters permitted</th><th align="left">Formatting permitted</th><th align="left">Text ID category</th></tr></thead><tbody valign="top"><tr><td align="left" valign="top">Title</td><td align="left" valign="top">one line</td><td align="left" valign="top">Auto complete</td><td align="left" valign="top">No</td><td align="left" valign="top">No</td><td align="left" valign="top">Yes</td><td align="left" valign="top">Function test title</td></tr><tr><td align="left" valign="top">Tester description</td><td align="left" valign="top">Multi-line</td><td align="left" valign="top">Auto complete</td><td align="left" valign="top">Yes</td><td align="left" valign="top">Yes</td><td align="left" valign="top">Yes</td><td align="left" valign="top">Tester description</td></tr><tr><td align="left" valign="top">Test step title</td><td align="left" valign="top">one line</td><td align="left" valign="top">Auto complete</td><td align="left" valign="top">No</td><td align="left" valign="top">No</td><td align="left" valign="top">Yes</td><td align="left" valign="top">Test step title</td></tr><tr><td align="left" valign="top">Sub-Program</td><td align="left" valign="top">Expression (translatable)</td><td align="left" valign="top">Button</td><td align="left" valign="top">No</td><td align="left" valign="top">Yes</td><td align="left" valign="top">Yes</td><td align="left" valign="top">Sub-Program</td></tr><tr><td align="left" valign="top">Set test module title</td><td align="left" valign="top">one line</td><td align="left" valign="top">Auto complete</td><td align="left" valign="top">No</td><td align="left" valign="top">No</td><td align="left" valign="top">Yes</td><td align="left" valign="top">Set test module title</td></tr><tr><td align="left" valign="top">Question - Text</td><td align="left" valign="top">Multi-line</td><td align="left" valign="top">Auto complete</td><td align="left" valign="top">Yes</td><td align="left" valign="top">Yes</td><td align="left" valign="top">Yes</td><td align="left" valign="top">Question</td></tr><tr><td align="left" valign="top">Question - Answer</td><td align="left" valign="top">Expression (translatable)</td><td align="left" valign="top">Button</td><td align="left" valign="top">No</td><td align="left" valign="top">No</td><td align="left" valign="top">Yes</td><td align="left" valign="top">Question</td></tr><tr><td align="left" valign="top">Input</td><td align="left" valign="top">Multi-line</td><td align="left" valign="top">Auto complete</td><td align="left" valign="top">Yes</td><td align="left" valign="top">Yes</td><td align="left" valign="top">Yes</td><td align="left" valign="top">Input</td></tr><tr><td align="left" valign="top">Help</td><td align="left" valign="top">Multi-line</td><td align="left" valign="top">Auto complete</td><td align="left" valign="top">Yes</td><td align="left" valign="top">Yes</td><td align="left" valign="top">Yes</td><td align="left" valign="top">Help</td></tr><tr><td align="left" valign="top">Message</td><td align="left" valign="top">Multi-line</td><td align="left" valign="top">Auto complete</td><td align="left" valign="top">Yes</td><td align="left" valign="top">Yes</td><td align="left" valign="top">Yes</td><td align="left" valign="top">Message</td></tr><tr><td align="left" valign="top">Make declaration</td><td align="left" valign="top">Expression (translatable)</td><td align="left" valign="top">Button</td><td align="left" valign="top">No</td><td align="left" valign="top">No</td><td align="left" valign="top">Yes</td><td align="left" valign="top">Make declaration</td></tr><tr><td align="left" valign="top">Expression</td><td align="left" valign="top">Expression (translatable)</td><td align="left" valign="top">Button</td><td align="left" valign="top">No</td><td align="left" valign="top">No</td><td align="left" valign="top">Yes</td><td align="left" valign="top">Expression</td></tr><tr><td align="left" valign="top">Measuring equipment - supplemental text</td><td align="left" valign="top">Multi-line</td><td align="left" valign="top">Auto complete</td><td align="left" valign="top">Yes</td><td align="left" valign="top">Yes</td><td align="left" valign="top">Yes</td><td align="left" valign="top">Measuring channel, voltage, current, resistance, diode, temperature, oscilloscope, high-voltage block</td></tr><tr><td align="left" valign="top">Measuring equipment - Vehicle test point/text</td><td align="left" valign="top">one line</td><td align="left" valign="top">Auto complete</td><td align="left" valign="top">No</td><td align="left" valign="top">No</td><td align="left" valign="top">Yes</td><td align="left" valign="top">Measuring channel, voltage, current, resistance, diode, temperature, oscilloscope, high-voltage block</td></tr><tr><td align="left" valign="top">Ecukom - output text</td><td align="left" valign="top">Multi-line</td><td align="left" valign="top">Auto complete</td><td align="left" valign="top">Yes</td><td align="left" valign="top">Yes</td><td align="left" valign="top">Yes</td><td align="left" valign="top">Ecukom, ASAM Ecukom</td></tr><tr><td align="left" valign="top">Read measured values</td><td align="left" valign="top">Multi-line</td><td align="left" valign="top">Auto complete</td><td align="left" valign="top">Yes</td><td align="left" valign="top">Yes</td><td align="left" valign="top">Yes</td><td align="left" valign="top">Read measured values</td></tr><tr><td align="left" valign="top">Documents</td><td align="left" valign="top">Expression (translatable)</td><td align="left" valign="top">Button</td><td align="left" valign="top">No</td><td align="left" valign="top">Yes</td><td align="left" valign="top">Yes</td><td align="left" valign="top">Documents</td></tr><tr><td align="left" valign="top">All/ table cell / ANSI cell content</td><td align="left" valign="top">Multi-line</td><td align="left" valign="top">Auto complete</td><td align="left" valign="top">No</td><td align="left" valign="top">Yes</td><td align="left" valign="top">Yes</td><td align="left" valign="top">All</td></tr></tbody></table>
+				</div><p class="title"><b>Table&nbsp;43.&nbsp;Usage Locations of Text IDs in the Function Test Editor</b></p></div><p><br class="table-break">
+			</p>
+			<p>Key:</p>
+			<p>
+				</p><div class="itemizedlist"><ul type="disc"><li>
+						<p><span class="bold"><strong>Location/action element</strong></span>: instruction and if necessary, rich text editor attribute</p>
+					</li><li>
+						<p><span class="bold"><strong>Type</strong></span>: rich text editor type (one line/multiple lines)</p>
+					</li><li>
+						<p><span class="bold"><strong>Text ID selection</strong></span>: selection type (auto population/button)</p>
+					</li><li>
+						<p><span class="bold"><strong>ANSI characters permitted</strong></span>: use of ANSI characters permitted (yes/no)</p>
+					</li><li>
+						<p><span class="bold"><strong>Special characters permitted</strong></span>: use of special characters (icons) permitted (yes/no)</p>
+					</li><li>
+						<p><span class="bold"><strong>Formatting permitted</strong></span>: text IDs with special characters permitted (yes/no)</p>
+					</li><li>
+						<p><span class="bold"><strong>Text ID category</strong></span>: category name from the text library</p>
+					</li></ul></div><p>
+			</p>
+		</div>
+		<div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="aktionen.verwendete.Texte"></a>7.1.17.4.&nbsp;Actions on Used Text IDs</h5></div></div></div>
+			
+			<p>If you use a text ID in an editorial object, you can perform various actions using the context menu on the text ID plain text. These are explained in the following.</p>
+			<p>In <a class="xref" href="ar01s07s01s17.html#figure.redaktion.kontext_textid" title="Figure&nbsp;211.&nbsp;Context Menu of a Used Text ID">Figure&nbsp;211, &#8220;Context Menu of a Used Text ID&#8221;</a>, you will see an example for a text ID context menu in a diagnostic object.</p>
+			<p>
+				</p><div class="figure"><a name="figure.redaktion.kontext_textid"></a><div class="figure-contents">
+					
+					<div class="mediaobject"><img src="images/textbib_kontext_verwendungsstelle.jpg" alt="Image: context menu of a used text ID"></div>
+				</div><p class="title"><b>Figure&nbsp;211.&nbsp;Context Menu of a Used Text ID</b></p></div><p><br class="figure-break">
+			</p>
+			<p>
+				</p><div class="itemizedlist"><ul type="disc"><li>
+						<p><span class="bold"><strong>Copy:</strong></span> this copies the text ID to the clipboard and it can be pasted at another location.</p>
+					</li><li>
+						<p><span class="bold"><strong>Paste:</strong></span> pastes a copied text ID as plain text to the desired location. As long as a text ID can be used at this location, the reference to the text ID will remain there, otherwise only the plain text is inserted.</p>
+					</li><li>
+						<p><span class="bold"><strong>Cut:</strong></span> this copies the text ID to the clipboard and it can be pasted at another location. The text ID is then no longer present in the original field.</p>
+					</li><li>
+						<p><span class="bold"><strong>Undo/Repeat:</strong></span> this can undo or repeat changes. An action can only be redone if it was previously undone.</p>
+					</li><li>
+						<p><span class="bold"><strong>Copy XML:</strong></span> this function copies the XML structure for the text ID reference to the clipboard.</p>
+					</li><li>
+						<p><span class="bold"><strong>Paste XML:</strong></span> this function pastes the XML structure for the text ID reference from the clipboard.</p>
+					</li><li>
+						<p><span class="bold"><strong>Change text ID variable/keyword:</strong></span> this function opens the interface table in which a variable, a keyword or a value can be set for every placeholder. (see <a class="xref" href="ar01s07s01s17.html#text.schnittstellentabelle" title="7.1.17.5.&nbsp;Change Text ID Variable/Keyword">Section&nbsp;7.1.17.5, &#8220;Change Text ID Variable/Keyword&#8221;</a>)</p>
+					</li><li>
+						<p><span class="bold"><strong>Display text IDs:</strong></span> this function allows the IDs of the used text IDs to be displayed. The function is a switch and can be activated and deactivated through the context menu.</p>
+					</li><li>
+						<p><span class="bold"><strong>Paste text ID reference:</strong></span> this function pastes a copied text ID as a reference at another location.</p>
+					</li></ul></div><p>
+			</p>
+		</div>
+		<div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="text.schnittstellentabelle"></a>7.1.17.5.&nbsp;Change Text ID Variable/Keyword</h5></div></div></div>
+			
+			<p>In the function test editor, a variable, a keyword or a value can be assigned to a text ID that is a placeholder. In <a class="xref" href="ar01s07s01s17.html#figure.redaktion.schnittstellentabelle" title="Figure&nbsp;212.&nbsp;Text ID Interface Table">Figure&nbsp;212, &#8220;Text ID Interface Table&#8221;</a>, you will see the interface table, that is accessed when you select <span class="bold"><strong>Change text ID variable/keyword</strong></span> in the context menu for a text ID placeholder. In the <span class="bold"><strong>Value/variable/function test keyword</strong></span> column, you can specify the desired value or the variable or the keyword.</p>
+			<p>
+				</p><div class="figure"><a name="figure.redaktion.schnittstellentabelle"></a><div class="figure-contents">
+					
+					<div class="mediaobject"><img src="images/textbib_schnittstellentabelle.jpg" alt="Image: text ID interface table"></div>
+				</div><p class="title"><b>Figure&nbsp;212.&nbsp;Text ID Interface Table</b></p></div><p><br class="figure-break">
+			</p>
+		</div>
+	</div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ar01s07s01s16.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="ar01s07s01.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="ar01s07s01s18.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">7.1.16.&nbsp;Creating Formatted Text&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;7.1.18.&nbsp;Templates</td></tr></table></div></body></html>

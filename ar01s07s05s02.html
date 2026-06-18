@@ -1,0 +1,213 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>7.5.2. Diagnostic objects</title><link rel="stylesheet" href="mystyle.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.73.1"><link rel="start" href="index.html" title="ODIS Creator Help"><link rel="up" href="ar01s07s05.html" title="7.5. Knowledge base"><link rel="prev" href="ar01s07s05s01.html" title="7.5.1. Knowledge Base Root Node"><link rel="next" href="ar01s07s05s03.html" title="7.5.3. Specify the &#34;Used&#34; Relationship">
+<script type="text/javascript" src="../../../advanced/synchWithToc.js"></script>
+
+<link rel="stylesheet" href="../../../content/org.eclipse.help.webapp/advanced/breadcrumbs.css" charset="ISO-8859-1" type="text/css"></link>
+<script type="text/javascript" src="../../../content/org.eclipse.help/livehelp.js"> </script>
+<script type="text/javascript">
+if( self == top ){
+  var  anchorParam = location.hash.length > 0 ? '\u0026anchor=' + location.hash.substr(1) : '';
+  window.location.replace( "../../../index.jsp?topic=%2FMasterData_Client_Control%2Fhtml%2Far01s07s05s02.html" + anchorParam);
+}
+</script>
+</head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="help_breadcrumbs"><a href="index.html">ODIS Creator Help</a> > <a href="ar01s07.html">7&#46; ODIS Creator Editing Process</a> > <a href="ar01s07s05.html">7&#46;5&#46; Knowledge base</a></div>
+<div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">7.5.2. Diagnostic objects</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ar01s07s05s01.html">Zur&uuml;ck</a>&nbsp;</td><th width="60%" align="center">7.5. Knowledge base</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ar01s07s05s03.html">Weiter</a></td></tr></table><hr></div><div class="section" lang="de"><div class="titlepage"><div><div><h4 class="title"><a name="diagnoseobjekt"></a>7.5.2. Diagnostic objects<a class="indexterm" name="d4e11865"></a></h4></div></div></div>
+			
+			<p>Diagnostic objects create the diagnostic object tree within a knowledge base. They control with this the diagnostic process in use. The validity of a diagnostic object in actual usage is expressed through variant rules. Diagnostic objects contain allocations to function tests (see <a class="xref" href="ar01s07s06.html" title="7.6.&nbsp;Function Library">Section&nbsp;7.6, &#8220;Function Library&#8221;</a>) and documentation references (see <a class="xref" href="ar01s07s10.html" title="7.10.&nbsp;Supplemental documents">Section&nbsp;7.10, &#8220;Supplemental documents&#8221;</a>), that can likewise be qualified through variant rules. A suspicion rule can be assigned to a diagnostic object.</p>
+			<p>A diagnostic object is always assigned to exactly one knowledge base, which can however be used at various locations in the diagnostic object tree within a knowledge base (see <a class="xref" href="ar01s07s01s08.html" title="7.1.8.&nbsp;Copy Editorial Objects">Section&nbsp;7.1.8, &#8220;Copy Editorial Objects&#8221;</a>). However, no recursive reuse is possible. If you try to reuse a diagnostic object "DGO A" in the diagnostic object structure under "DGO A", then a message will appear and reuse is blocked.</p>
+			<div class="section" lang="de"><div class="titlepage"><div><div><h5 class="title"><a name="diagnoseobjekt.anlegen"></a>7.5.2.1. Create New Diagnostic Object<a class="indexterm" name="d4e11874"></a></h5></div></div></div>
+				
+				<p>You can create a new diagnostic object by selecting an already existing diagnostic object and then clicking on the menu item <span class="bold"><strong>New parallel node &gt; Diagnostic object</strong></span> in the context menu or click on <span class="bold"><strong>Parallel node &gt; Diagnostic object</strong></span> in the Insert selection menu.</p>
+				<p>A new diagnostic object can also be created directly under an already existing knowledge base root node. After the knowledge base root node is selected, the menu item <span class="bold"><strong>Subnode &gt; Diagnostic object</strong></span> must be selected in the context menu or in the selection menu.</p>
+			</div>
+			<div class="section" lang="de"><div class="titlepage"><div><div><h5 class="title"><a name="diagnoseobjekt.attribute"></a>7.5.2.2. Diagnostic Object Attributes<a class="indexterm" name="d4e11884"></a></h5></div></div></div>
+				
+				<p>
+					</p><div class="figure"><a name="figure.redaktion.diagnoseobjekt.attribute"></a><div class="figure-contents">
+						
+						<div class="mediaobject"><img src="images/dgo_attribute.png" alt="Image: diagnostic object attributes"></div>
+					</div><p class="title"><b>Abbildung 249. Diagnostic Object Attributes</b></p></div><p><br class="figure-break">
+				</p>
+				<p><span class="bold"><strong>Migration protection:</strong></span></p>
+				<p>This attribute is explained in <a class="xref" href="ar01s07s01s01.html" title="7.1.1.&nbsp;Creating a New Editorial Object">Section&nbsp;7.1.1, &#8220;Creating a New Editorial Object&#8221;</a>.</p>
+				<p><span class="bold"><strong>Transfer of external links:</strong></span></p>
+				<p>The document references to diagnostic objects can be inherited (see 'document inheritance' field), when creating a new associated diagnostic object ('used' relationship).</p>
+				<p><span class="bold"><strong>Internal:</strong></span></p>
+				<p>This attribute is explained in <a class="xref" href="ar01s07s05s01.html#wissensbasis.attribute" title="7.5.1.2. Knowledge Base Root Node Attributes">Abschnitt&nbsp;7.5.1.2, &#8222;Knowledge Base Root Node Attributes&#8220;</a>.</p>
+				<p><span class="bold"><strong>P-differ:</strong></span></p>
+				<p>This attribute is explained in <a class="xref" href="ar01s07s05s01.html#wissensbasis.attribute" title="7.5.1.2. Knowledge Base Root Node Attributes">Abschnitt&nbsp;7.5.1.2, &#8222;Knowledge Base Root Node Attributes&#8220;</a>.</p>
+				<p><span class="bold"><strong>Guided Function:</strong></span></p>
+				<p>The diagnostic object and the referenced test programs can be selected in ODIS Service through the Guided Functions in the network diagram (this attribute is inheritable).</p>
+				<p><span class="bold"><strong>General function:</strong></span></p>
+				<p>The diagnostic object and the referenced test programs can be selected in ODIS Service through the "General function" tab.</p>
+				<p><span class="bold"><strong>Order:</strong></span></p>
+				<p>This flag indicates that the order of the diagnostic objects in GFF in ODIS Service is relevant.</p>
+			</div>
+			<div class="section" lang="de"><div class="titlepage"><div><div><h5 class="title"><a name="diagnoseobjekt.variantenregel"></a>7.5.2.3. Creating a Variant Rule in a Diagnostic Object<a class="indexterm" name="d4e11921"></a><a class="indexterm" name="d4e11924"></a></h5></div></div></div>
+				
+				<p>Variant rules in a diagnostic object will restrict its validity. Here any number of variant expressions can be combined in a rule using Boolean algebra. The variant rule is edited directly in the diagnostic object editor.</p>
+				<p>To create a variant rule, the table editor must be activated using the <span class="inlinemediaobject"><img src="images/plus.png"></span>- symbol. If there is a previous selection of an existing variant rule, the new variant rule will be added under the selected variant rule. When selecting one or more variant rules in an associated block, they can be sorted or moved up or down using the <span class="inlinemediaobject"><img src="images/Pfeil&#32;hoch.png"></span> <span class="inlinemediaobject"><img src="images/Pfeil&#32;runter.png"></span>symbols. The link between strings of the expression is done with logical operators (AND, OR, NOT, ...) and parentheses. The selection of the type (basic features, control module equipment, query, VIN, control module-dependent versions, importer, and dealer) (see <a class="xref" href="ar01s07s05s02.html#figure.redaktion.wissensbasis.variantenregel" title="Abbildung 250. Type Selection">Abbildung&nbsp;250, &#8222;Type Selection&#8220;</a>) and the value (in <a class="xref" href="ar01s07s05s02.html#figure.redaktion.wissensbasis.variantenregel.auswahlobjekt" title="Abbildung 251. Value Selection">Abbildung&nbsp;251, &#8222;Value Selection&#8220;</a> from editorial objects equipment network) complete the variant expression. The value selection can be achieved here through the dialog displayed in the <a class="xref" href="ar01s07s05s02.html#figure.redaktion.wissensbasis.variantenregel.auswahlobjekt" title="Abbildung 251. Value Selection">Abbildung&nbsp;251, &#8222;Value Selection&#8220;</a> or by typing the desired system name directly in the table cell (with auto completion). For <span class="bold"><strong>Questions</strong></span>, the default text selection dialog will open <a class="xref" href="ar01s07s14s03.html#figure.Funktionstesteditor.Allgemeine_Funktionalitaet.Standardtexte" title="Figure&nbsp;342.&nbsp;Default Texts">Figure&nbsp;342, &#8220;Default Texts&#8221;</a>.</p>
+				<p>The term &#8216;control module-dependent version&#8217; includes the following types: hardware version, hardware part number, software part number, software version, ODX file version and IdentMaster data. The value for these control module-dependent variants can be selected using the dialog shown in <a class="xref" href="ar01s07s05s02.html#figure.redaktion.wissensbasis.variantenregel.sgabhaengigeauswahl" title="Abbildung 252. Value Selection Using IdentMaster Data as an Example">Abbildung&nbsp;252, &#8222;Value Selection Using IdentMaster Data as an Example&#8220;</a>. The importer and dealer values are free text fields. The ODX file identifier variant rule can be configured both as free text and as a dialog selection and must not contain the EV main version. This EV main version is automatically removed when selected via the selection dialog.</p>
+				<p>With the <span class="inlinemediaobject"><img src="images/minus.png"></span>- symbol, a string of the variant expression can be removed again.</p>
+				<div class="figure"><a name="figure.redaktion.wissensbasis.variantenregel"></a><div class="figure-contents">
+					
+					<div class="mediaobject"><img src="images/variantenregel.png" alt="Image: type selection"></div>
+				</div><p class="title"><b>Abbildung 250. Type Selection</b></p></div><br class="figure-break">
+				<div class="figure"><a name="figure.redaktion.wissensbasis.variantenregel.auswahlobjekt"></a><div class="figure-contents">
+					
+					<div class="mediaobject"><img src="images/variantenregel_auswahlobjekt.png" alt="Image: value selection at equipment network example"></div>
+				</div><p class="title"><b>Abbildung 251. Value Selection</b></p></div><br class="figure-break">
+				
+			</div>
+			
+			<div class="section" lang="de"><div class="titlepage"><div><div><h5 class="title"><a name="diagnoseobjekt.variantenregel.sgabhaengigeauswahl"></a>7.5.2.4. Control Module-Dependent Variants Selection Dialog</h5></div></div></div>
+				
+				<p>The following illustration <a class="xref" href="ar01s07s05s02.html#figure.redaktion.wissensbasis.variantenregel.sgabhaengigeauswahl" title="Abbildung 252. Value Selection Using IdentMaster Data as an Example">Abbildung&nbsp;252, &#8222;Value Selection Using IdentMaster Data as an Example&#8220;</a> shows the dialog for selecting the value for the types of control module-dependent variants.</p>
+				<p>
+					</p><div class="figure"><a name="figure.redaktion.wissensbasis.variantenregel.sgabhaengigeauswahl"></a><div class="figure-contents">
+						
+						<div class="mediaobject"><img src="images/variantenregel_sgabhaengig_auswahlobjekt.png" alt="Image: value selection using IdentMaster data as an example"></div>
+					</div><p class="title"><b>Abbildung 252. Value Selection Using IdentMaster Data as an Example</b></p></div><p><br class="figure-break">
+				</p>
+				<div class="itemizedlist"><ul type="disc"><li>
+						<p>Control module</p>
+						<p>Defines the short name of the control module group for which the identification value is to be checked. Input is mandatory and content is entered using the &#8220;editorial objects selection dialog&#8221; <a class="xref" href="ar01s07s05s02.html#figure.diagnoseobjekt.variantenregel.sgabhaengigeauswahl.ecushortname" title="Abbildung 253. Editorial objects selection dialog">Abbildung&nbsp;253, &#8222;Editorial objects selection dialog&#8220;</a>.</p>
+					</li><li>
+						<p>Ident Key (RDID/long name)</p>
+						<p>Content is entered as free text. Input is mandatory and is only shown for the &#8220;IdentMaster data&#8221; type. An RDID or long name is expected as the value.</p>
+					</li><li>
+						<p>IdentMaster</p>
+						<p>Defines the value that the control module must return in order to fulfill the variant rule. Input is mandatory and is entered for the &#8220;ODX file identifier&#8221; type using the &#8220;editorial objects selection dialog&#8221;, in which only control module variants may be selected. Input for other types is free text. The name of the field is dynamic and the name updates depending on the type that is selected.</p>
+					</li></ul></div>
+				<p>The parameters set in the selection dialog will be displayed in the &#8220;Value&#8221; column as follows: <span class="bold"><strong>Control Module;Ident Key;IdentMaster</strong></span>. Value selection using IdentMaster data as an example.</p>
+				<div class="figure"><a name="figure.diagnoseobjekt.variantenregel.sgabhaengigeauswahl.ecushortname"></a><div class="figure-contents">
+					
+					<div class="mediaobject"><img src="images/variantenregel_sgabhaengig_ecushortname.png" alt="Image: editorial object selection dialog"></div>
+				</div><p class="title"><b>Abbildung 253. Editorial objects selection dialog</b></p></div><br class="figure-break">
+			</div>
+					
+			
+			<div class="section" lang="de"><div class="titlepage"><div><div><h5 class="title"><a name="diagnoseobjekt.verdachtsregel"></a>7.5.2.5. Creating a Suspicion Rule in a Diagnostic Object<a class="indexterm" name="d4e11997"></a><a class="indexterm" name="d4e12000"></a></h5></div></div></div>
+				
+				<p>There are various options to create a suspicion rule. On one hand, a new rule can be created through the <span class="inlinemediaobject"><img src="images/plus.png"></span>- symbol. On the other hand, a DTC memory object from the control module tree can be dragged to the suspicion rule list via drag and drop, in order to create a suspicion rule with a string, that the dragged DTC memory object (<a class="link" href="ar01s11.html#dtc" title="DTC">DTC</a>) contains. Error locations from various reference tables can be included in the suspicion rule list. If multiple DTCs are dragged per drag and drop, then a separate suspicion rule is created for each object.</p>
+				<p>The list of suspicion rules for a diagnostic object can also be sorted manually and persistently if necessary. By selecting a suspicion rule, it can be sorted or moved up and down with the <span class="inlinemediaobject"><img src="images/Pfeil&#32;hoch.png"></span> <span class="inlinemediaobject"><img src="images/Pfeil&#32;runter.png"></span>symbols. After saving and opening again, the order that was previously set using the arrow keys will be visible again.</p>
+				<p>
+					</p><div class="figure"><a name="figure.redaktion.wissensbasis.verdachtsregel"></a><div class="figure-contents">
+						
+						<div class="mediaobject"><img src="images/verdachtsregel.png" alt="Image: new suspicion rule"></div>
+					</div><p class="title"><b>Abbildung 254. New Suspicion Rule</b></p></div><p><br class="figure-break">
+				</p>
+				<p>Double-clicking on a suspicion rule in the suspicion rule list table opens an auxiliary editor in a new tab (parallel to the editor that is currently open) (see <a class="xref" href="ar01s07s05s02.html#figure.redaktion.wissensbasis.verdachtsregel.bearbeiten" title="Abbildung 255. Edit Suspicion Rule">Abbildung&nbsp;255, &#8222;Edit Suspicion Rule&#8220;</a>) for editing the suspicion rule. No other suspicion rules can be edited as long as the auxiliary editor is open. The supplemental editor allows the name, the importance as well as the individual suspicion expressions (lines) to be edited. Suspicion rules allow all symptom types (DTC, EFA code, TSB) to be used in a rule. Here any amount of suspicion expressions can be combined in a rule using Boolean algebra. Using the <span class="inlinemediaobject"><img src="images/plus.png"></span>- symbol, additional suspicion expression strings can be added. With the <span class="inlinemediaobject"><img src="images/Minus01.png"></span>- symbol, a suspicion rule string can be removed. To add the values of symptom types to a suspicion expression, there are specialized input options. To input an EFA code, the EFA code assist (see <a class="xref" href="ar01s07s17.html" title="7.17.&nbsp;Standard Fault Description Language (EFA)">Section&nbsp;7.17, &#8220;Standard Fault Description Language (EFA)&#8221;</a>) is used; DTCs can be entered through an editorial object selection dialog or (see <a class="xref" href="ar01s07s05s02.html#figure.redaktion.wissensbasis.verdachtsregel.bearbeiten.dnd" title="Abbildung 256. Enter DTC for Suspicion Expression">Abbildung&nbsp;256, &#8222;Enter DTC for Suspicion Expression&#8220;</a>) from the control module tree using drag and drop, and TSBs are entered directly into the table cell. Depending on the error code, you can also give the fault type 1 and fault type 2 here.</p>
+				<p>Just like the ability to sort the suspicion rules in the list, which was described above, it is also possible to sort the individual lines within a suspicion rule. Selecting a line of the suspicion rule means this can be sorted or moved up and down with the <span class="inlinemediaobject"><img src="images/Pfeil&#32;hoch.png"></span> <span class="inlinemediaobject"><img src="images/Pfeil&#32;runter.png"></span>symbols.</p><div class="table"><a name="table.hinweis.verdachtsregel"></a><div class="table-contents">
+						<table summary="Note on sorting suspicion rule lines" border="1"><colgroup><col align="center"><col align="left"></colgroup><tbody valign="top"><tr><td align="center" valign="top"><span class="inlinemediaobject"><img src="images/info.png" alt="Note symbol"></span></td><td align="left" valign="top"><span class="bold"><strong>Note:</strong></span> When moving, the lines including all values (Boolean operator, parentheses, etc.) are moved. When this happens, the previously-defined Boolean logic may not longer be technically correct. The author is then responsible here for ensuring that the suspicion rule logic is correctly defined in the technical sense. No technical support is provided here for the Boolean algebra and for the parentheses.</td></tr></tbody></table>
+					</div><p class="title"><b>Tabelle 56. Note on sorting suspicion rule lines</b></p></div><p><br class="table-break">
+				</p>
+				<p>By clicking the button in the lower section of the supplemental editor, the edited suspicion rule is either applied (<span class="bold"><strong>Apply</strong></span>) or discarded (<span class="bold"><strong>Cancel</strong></span>).</p>
+				<p>
+					</p><div class="figure"><a name="figure.redaktion.wissensbasis.verdachtsregel.bearbeiten"></a><div class="figure-contents">
+						
+						<div class="mediaobject"><img src="images/verdachtsregel_subeditor.png" alt="Image: editing a suspicion rule"></div>
+					</div><p class="title"><b>Abbildung 255. Edit Suspicion Rule</b></p></div><p><br class="figure-break">
+					</p><div class="figure"><a name="figure.redaktion.wissensbasis.verdachtsregel.bearbeiten.dnd"></a><div class="figure-contents">
+						
+						<div class="mediaobject"><img src="images/verdachtsregel_subeditor_dnd.png" alt="Image: entering DTC for suspicion expression"></div>
+					</div><p class="title"><b>Abbildung 256. Enter DTC for Suspicion Expression</b></p></div><p><br class="figure-break">
+				</p>
+				<p>If a suspicion rule was edited and applied, then the author can also see its content in the object editor. This function is also available, if you have not opened the diagnostic object for editing. Here, the respective rule must be selected in the suspicion rule list and its content is automatically displayed in the <span class="bold"><strong>suspicion rule</strong></span> table.</p><div class="figure"><a name="figure.redaktion.wissensbasis.verdachtsregel.ansehen"></a><div class="figure-contents">
+						
+						<div class="mediaobject"><img src="images/verdachtsregel_anzeige.png" alt="Image: viewing a suspicion rule"></div>
+					</div><p class="title"><b>Abbildung 257. Viewing a Suspicion Rule</b></p></div><p><br class="figure-break"></p>
+				<p>The control module relationship to the DTC can now be understood and checked in a suspicion rule for every DTC object in the <span class="bold"><strong>suspicion rule</strong></span> table; use the context menu function <span class="bold"><strong>Display path</strong></span> to do this. The dialog window will open from <a class="xref" href="ar01s07s05s02.html#figure.redaktion.wissensbasis.verdachtsregel.pfadanzeige" title="Abbildung 258. Display DTC Control Modules Context">Abbildung&nbsp;258, &#8222;Display DTC Control Modules Context&#8220;</a>, in which the DTC path from the suspicion rule is displayed. This function is also available if you have not opened the diagnostic object for editing.</p>
+				<p>The results can be limited to the individual brand using the checkbox <span class="bold"><strong>only particular brand</strong></span> in the usage location dialog. If you set knowledge base as the filter, you can also limit the display to a concrete knowledge base. You can also have invalid control modules displayed by marking the control field <span class="bold"><strong>All ECU Usage Locations</strong></span>. These will be displayed in gray text.</p>
+				<p>
+					</p><div class="figure"><a name="figure.redaktion.wissensbasis.verdachtsregel.pfadanzeige"></a><div class="figure-contents">
+						
+						<div class="mediaobject"><img src="images/verdachtsregel_pfadanzeige.png" alt="Image: display DTC control modules context"></div>
+					</div><p class="title"><b>Abbildung 258. Display DTC Control Modules Context</b></p></div><p><br class="figure-break">
+				</p>
+			</div>
+			<div class="section" lang="de"><div class="titlepage"><div><div><h5 class="title"><a name="diagnoseobjekt.regelkopieren"></a>7.5.2.6. Copy of Variant/Suspicion Rules Between Diagnostic Objects<a class="indexterm" name="d4e12099"></a><a class="indexterm" name="d4e12102"></a></h5></div></div></div>
+				
+				<p>To facilitate the authors, defined rules can be copied from a diagnostic object to another diagnostic object. It is possible to copy either suspicion or variant rules or both rules together. To get the source object on the clipboard, the existing copy function (menu, toolbar, context menu) is used. Rules can only be copied from exactly one diagnostic object, however they can be added to multiple diagnostic objects at the same time. The target objects must be in the "in processing" status, however they do not need to be checked out by the author. To add source object rules from the clipboard to diagnostic objects, the target objects must be selected in the navigation tree and then the desired menu item from <a class="xref" href="ar01s07s05s02.html#figure.redaktion.diagnoseobjekt.regelkopieren" title="Abbildung 259. Menu to Copy Variant/Suspicion Rules">Abbildung&nbsp;259, &#8222;Menu to Copy Variant/Suspicion Rules&#8220;</a> must be performed. The menu items can be reached through the context menu and also through the main menu <span class="bold"><strong>Insert &gt;&gt; Insert only ...</strong></span></p>
+				<p>
+					</p><div class="figure"><a name="figure.redaktion.diagnoseobjekt.regelkopieren"></a><div class="figure-contents">
+						
+						<div class="mediaobject"><img src="images/regelkopieren_menue.png" alt="Image: menu to copy variant/suspicion rules"></div>
+					</div><p class="title"><b>Abbildung 259. Menu to Copy Variant/Suspicion Rules</b></p></div><p><br class="figure-break">
+				</p>
+				<p>Possible restrictions on the copying and insertion operations for rules are:</p><div class="itemizedlist"><ul type="square"><li style="list-style-type: square">
+							<p>The source objects has no variant rule.</p>
+						</li><li style="list-style-type: square">
+							<p>The source objects has no suspicion rule.</p>
+						</li><li style="list-style-type: square">
+							<p>The source object only has one of the two rules, but both should be inserted.</p>
+						</li><li style="list-style-type: square">
+							<p>A referenced object from a rule to be inserted is not visible to you in the Creator.</p>
+						</li></ul></div><p>If one of the restrictions mentioned above occurs, then the entire item is canceled and none of the target objects are changed.</p><div class="itemizedlist"><ul type="square"><li style="list-style-type: square">
+							<p>One or more of the target objects are not in the <span class="bold"><strong>in processing</strong></span> status.</p>
+						</li><li style="list-style-type: square">
+							<p>One or more of the target objects are locked by another user (checked out).</p>
+						</li><li style="list-style-type: square">
+							<p>One or more of the target objects already have variant/suspicion rules - an overwrite of rules is not wanted.</p>
+						</li></ul></div><p>This applies to the three items given above: you are informed of any existing restrictions with a dialog after the insert operation. The editing of other target objects remains unaffected.</p>
+			</div>
+			<div class="section" lang="de"><div class="titlepage"><div><div><h5 class="title"><a name="diagnoseobjekt.werkzeuge"></a>7.5.2.7. Using a Tool in a Diagnostic Object</h5></div></div></div>
+				
+				<p>In the "Used tools" table, tools can be assigned to the diagnostic object. Using the <span class="inlinemediaobject"><img src="images/plus.png"></span> and <span class="inlinemediaobject"><img src="images/Minus01.png"></span> icons, lines can be added or removed.</p>
+				<div class="figure"><a name="figure.redaktion.diagnoseobjekt.werkzeug"></a><div class="figure-contents">
+					
+					<div class="mediaobject"><img src="images/werkzeugliste_verwendung.png" alt="Image: Used tools"></div>
+				</div><p class="title"><b>Abbildung 260. Used Tools Table</b></p></div><br class="figure-break">
+				<p>In the <span class="bold"><strong>tool number/name</strong></span> column, the plain text of the selected text ID is displayed. The display is in the data language that is currently set. In editing mode, the display is in the editing language. If no translation in this language is available for the text ID, the text is displayed in German (de-DE).</p>
+				<p>Only available for selection are the text IDs of categories, for which the "Used tools" usage location is selected. The selection is done with the dialog "text library selection", the same as for questions in variant rules.</p>
+				<p>If for the selected TextID there is an automatically created entry in the categories <span class="bold"><strong>023 - Tool (code in front)</strong></span> or <span class="bold"><strong>024 - Tool (code behind)</strong></span> during the tool list import, the image number created during the import is displayed in the image number column. The image number column cannot be edited.</p>
+				<p>In the logical link column, the used tools are linked to each other through the logical operators <span class="bold"><strong>AND</strong></span> and <span class="bold"><strong>OR</strong></span>. The logical expressions can be grouped using parentheses in the columns <span class="bold"><strong>"("</strong></span> and <span class="bold"><strong>")"</strong></span>.</p>
+				<div class="section" lang="de"><div class="titlepage"><div><div><h6 class="title"><a name="diagnoseobjekt.werkzeug.vererbung"></a>7.5.2.7.1. Inheriting Tools</h6></div></div></div>
+					
+					<p>With the "Inherit tools" function, it is possible to copy the allocation of the used tools for a selected diagnostic object automatically to all of the subordinate diagnostic objects. This function can be accessed in the context menu (<a class="xref" href="ar01s07s05s02.html#figure.redaktion.diagnoseobjekt.werkzeug.vererbung" title="Abbildung 261. Inherit Tools Context Menu">Abbildung&nbsp;261, &#8222;Inherit Tools Context Menu&#8220;</a>) and in the "Edit" menu.</p>
+					<div class="figure"><a name="figure.redaktion.diagnoseobjekt.werkzeug.vererbung"></a><div class="figure-contents">
+						
+						<div class="mediaobject"><img src="images/werkzeugliste_vererbung.png" alt="Image: Inherit tools context menu"></div>
+					</div><p class="title"><b>Abbildung 261. Inherit Tools Context Menu</b></p></div><br class="figure-break">
+					<p>Because the allocation of the used tools can only be changed for the diagnostic objects in processing, all subordinate diagnostic objects must be set to the <span class="bold"><strong>in processing</strong></span> status. For released diagnostic objects, a new working version is generated for this in the current order context. If this is not possible, because, for example, a different team already created a working version or because a diagnostic object is checked out for editing by another used, a message (see <a class="xref" href="ar01s07s05s02.html#figure.redaktion.diagnoseobjekt.werkzeug.vererbung_meldung" title="Abbildung 262. Error Message During Inheritance">Abbildung&nbsp;262, &#8222;Error Message During Inheritance&#8220;</a>) is given and skips copying for this diagnostic object and all subordinate objects.</p>
+					<div class="figure"><a name="figure.redaktion.diagnoseobjekt.werkzeug.vererbung_meldung"></a><div class="figure-contents">
+						
+						<div class="mediaobject"><img src="images/werkzeugliste_vererbung_meldung.png" alt="Image: error message during inheritance"></div>
+					</div><p class="title"><b>Abbildung 262. Error Message During Inheritance</b></p></div><br class="figure-break">
+					<p>If a subordinate diagnostic object already has an allocation of used tools, this is added. All assigned tools from the inherited diagnostic object that are not included in the allocation of the subordinate diagnostic object, are added. They will be added at the end of the table without a logical link.</p>
+					<p>If inheritance could not be performed for at least one subordinate diagnostic object, a notification will be created for the current user who had accessed the Inherit tools function after processing is complete. This notification references a log file where all diagnostic objects for which inheritance could not be performed are listed with all the detected conflicts when inheritance is performed. The user is alerted about the notification with a brief message.</p>
+				</div>
+			</div>
+			<div class="section" lang="de"><div class="titlepage"><div><div><h5 class="title"><a name="drag.allgemein"></a>7.5.2.8. Drag and Drop for Suspicion Rules</h5></div></div></div>
+				
+				<div class="section" lang="de"><div class="titlepage"><div><div><h6 class="title"><a name="drag.navigationsbaum"></a>7.5.2.8.1. Drop in Navigation Tree</h6></div></div></div>
+					
+					<p>With this implementation, it is possible for you to drag multiple selected DTC memory entries per drag and drop to a diagnostic object in the knowledge base navigation tree. If the diagnostic object was already checked out, the drop behaves the same as that described in <a class="xref" href="ar01s07s05s02.html#drag.objekteditor" title="7.5.2.8.2. Drop in the Object Editor">Abschnitt&nbsp;7.5.2.8.2, &#8222;Drop in the Object Editor&#8220;</a> when dropping into an object editor. The details can be seen there. If the object is still not checked out by you, then an automatic checkout will be initiated. If the checkout does not work for some reason, then a corresponding error message is displayed (the same occurs after double clicking in the navigation tree) and the entire drag and drop is canceled. A selection dialog is presented after a checkout is successful, as described in <a class="xref" href="ar01s07s05s02.html#drag.auswahldialog" title="7.5.2.8.3. Selection Dialog for One or More Rules">Abschnitt&nbsp;7.5.2.8.3, &#8222;Selection Dialog for One or More Rules&#8220;</a>, if more than one DTC memory entry is in the amount of dragged objects. If you pressed the &#8222;Cancel&#8220; button in the selection dialog, the entire drag and drop action is canceled. Otherwise the selected process is performed and the diagnostic object is automatically checked in. If you only selected a DTC memory entry, a suspicion rule is created with this DTC memory entry. After checking in successfully, the changed and persisting diagnostic object is presented in a read-only object editor. This procedure is performed as an operation on a navigation tree and contains a save action (check in). The object editor displayed at the end is read-only. For these reasons, a drag and drop action cannot be undone by entering 'CTRL Z'.</p>
+				</div>
+				<div class="section" lang="de"><div class="titlepage"><div><div><h6 class="title"><a name="drag.objekteditor"></a>7.5.2.8.2. Drop in the Object Editor</h6></div></div></div>
+					
+					<p>You have the option to use drag and drop to create suspicion rules in the suspicion rule list table of the diagnostic object editor. To do this, the diagnostic object must be checked out, because all read-only object editors are automatically closed when the drag process starts. It is possible to drag multiple DTC memory entries to the object editor at the same time. If this process is selected, then the selection dialog described in <a class="xref" href="ar01s07s05s02.html#drag.auswahldialog" title="7.5.2.8.3. Selection Dialog for One or More Rules">Abschnitt&nbsp;7.5.2.8.3, &#8222;Selection Dialog for One or More Rules&#8220;</a> appears after dropping the DTC memory entries in the object editor. Depending on the selection, the corresponding selected procedure is then initiated or the entire action is canceled. The most important difference to the process from <a class="xref" href="ar01s07s05s02.html#drag.navigationsbaum" title="7.5.2.8.1. Drop in Navigation Tree">Abschnitt&nbsp;7.5.2.8.1, &#8222;Drop in Navigation Tree&#8220;</a> is that the change to the diagnostic object is not saved here. You must save the object editor and the added suspicion rule(s) in a separate step.</p>
+				</div>
+				<div class="section" lang="de"><div class="titlepage"><div><div><h6 class="title"><a name="drag.auswahldialog"></a>7.5.2.8.3. Selection Dialog for One or More Rules</h6></div></div></div>
+					
+					<p>The dialog asks if you would like to create only one suspicion rule with all DTC memory objects as &#8222;value/fault location&#8220; or multiple suspicion rules each with a DTC memory object as &#8222;value/fault location&#8220;. You also still have the option to cancel the entire action with the &#8222;Cancel&#8220; button in the dialog. This selection dialog appears for both drop operations of DTC memory entries to diagnostic objects described in <a class="xref" href="ar01s07s05s02.html#drag.navigationsbaum" title="7.5.2.8.1. Drop in Navigation Tree">Abschnitt&nbsp;7.5.2.8.1, &#8222;Drop in Navigation Tree&#8220;</a> and <a class="xref" href="ar01s07s05s02.html#drag.objekteditor" title="7.5.2.8.2. Drop in the Object Editor">Abschnitt&nbsp;7.5.2.8.2, &#8222;Drop in the Object Editor&#8220;</a>, if more than one DTC memory entry is contained in the object volume of the drop operation.</p>
+					<p>If you select the &#8222;one rule&#8220; button in the selection dialog, then all DTC memory entries from the volume of objects in the drop operation are combined in one suspicion rule. The following conditions apply to this:</p>
+					<div class="itemizedlist"><ul type="square"><li style="list-style-type: square">
+							<p>The name of the new suspicion rule is automatically created and always reads as new suspicion rule x, (x is the amount of currently existing suspicion rules +1). An analysis of names of suspicion rules already existing is not performed here. If suspicion rules previously created through the drag and drop method are not renamed, then suspicion rules with the same name may result under certain circumstances (for example, suspicion rules were deleted again in the meantime). It is therefore recommended to change the name of the suspicion rule after it is created automatically.</p>
+						</li><li style="list-style-type: square">
+							<p>The quantifier of the suspicion rule is set to the &#8222;medium&#8220; value and can be changed later.</p>
+						</li><li style="list-style-type: square">
+							<p>The strings within the suspicion rule (one line per DTC memory entry) are linked with &#8222;OR&#8220;.</p>
+						</li><li style="list-style-type: square">
+							<p>If the diagnostic object already contains a suspicion rule, then the newly created suspicion rule is attached to the lower end of the suspicion rule list for the diagnostic object.</p>
+						</li></ul></div>
+				</div>
+				<div class="section" lang="de"><div class="titlepage"><div><div><h6 class="title"><a name="drag.verdachtsregeleditor"></a>7.5.2.8.4. Drop in the Suspicion Rule Editor</h6></div></div></div>
+					
+					<p>The drop from DTC memory entries into the suspicion rule editor is permitted in the entire suspicion rule table. Two cases are differentiated for this, which are described in further detail in this section. If a drop occurs somewhere in the suspicion rule table, where there is <span class="bold"><strong>NO</strong></span> row, for example, under the last row or on the header row in the table, then new suspicion rule rows are automatically created. One line is created per DTC memory entry. Every newly created row has the &#8222;fault location&#8220; entry in the &#8222;type&#8220; column, the respective DTC memory entry in the &#8222;value/fault location&#8220; column and &#8222;n/a&#8220; in the &#8222;fault location type 2&#8220; column. The new rows are always inserted under the rows that already exist. The new rows are all linked to each other with &#8222;OR&#8220;. &#8222;OR&#8220; also connects the already existing rows.</p>
+					<p>The other case is dropping into the existing content in the suspicion rule table. This will replace the existing content with the new content at this location.</p>
+				</div>
+			</div>
+		</div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ar01s07s05s01.html">Zur&uuml;ck</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="ar01s07s05.html">Nach oben</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="ar01s07s05s03.html">Weiter</a></td></tr><tr><td width="40%" align="left" valign="top">7.5.1. Knowledge Base Root Node&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html">Zum Anfang</a></td><td width="40%" align="right" valign="top">&nbsp;7.5.3. Specify the "Used" Relationship</td></tr></table></div></body></html>

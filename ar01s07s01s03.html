@@ -1,0 +1,74 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>7.1.3.&nbsp;Editorial Object Status</title><link rel="stylesheet" href="mystyle.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.73.1"><link rel="start" href="index.html" title="ODIS Creator Help"><link rel="up" href="ar01s07s01.html" title="7.1.&nbsp;Editorial Object General Information"><link rel="prev" href="ar01s07s01s02.html" title="7.1.2.&nbsp;Revising an Editorial Object"><link rel="next" href="ar01s07s01s04.html" title="7.1.4.&nbsp;Selecting Editorial Objects">
+<script type="text/javascript" src="../../../advanced/synchWithToc.js"></script>
+
+<link rel="stylesheet" href="../../../content/org.eclipse.help.webapp/advanced/breadcrumbs.css" charset="ISO-8859-1" type="text/css"></link>
+<script type="text/javascript" src="../../../content/org.eclipse.help/livehelp.js"> </script>
+<script type="text/javascript">
+if( self == top ){
+  var  anchorParam = location.hash.length > 0 ? '\u0026anchor=' + location.hash.substr(1) : '';
+  window.location.replace( "../../../index.jsp?topic=%2FMasterData_Client_Control%2Fhtml%2Far01s07s01s03.html" + anchorParam);
+}
+</script>
+</head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="help_breadcrumbs"><a href="index.html">ODIS Creator Help</a> > <a href="ar01s07.html">7&#46; ODIS Creator Editing Process</a> > <a href="ar01s07s01.html">7&#46;1&#46; Editorial Object General Information</a></div>
+<div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">7.1.3.&nbsp;Editorial Object Status</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ar01s07s01s02.html">Prev</a>&nbsp;</td><th width="60%" align="center">7.1.&nbsp;Editorial Object General Information</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ar01s07s01s04.html">Next</a></td></tr></table><hr></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="redaktion.status"></a>7.1.3.&nbsp;Editorial Object Status</h4></div></div></div>
+			
+			<div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="redaktion.status.in_bearbeitung"></a>7.1.3.1.&nbsp;"In Processing" Status</h5></div></div></div>
+				
+				<p>Every version of an editorial object goes through various statuses<a class="indexterm" name="d4e5905"></a>up to release. Some of these statuses will always be undergone, others only on a case-by-case basis. The first status of a new version is <span class="bold"><strong>in processing</strong></span>. This is the status for every new object created for the first time, and for all objects that are revised in a new version after the release. The following requirements are necessary to acquire this status:</p>
+				<div class="itemizedlist"><ul type="square"><li style="list-style-type: square">
+						<p>The editorial object must always be able to be revised in ODIS Creator. This applies to all editorial objects from the control module tree and DTC memory, except objects for vehicle projects.</p>
+					</li><li style="list-style-type: square">
+						<p>You must set an order context<a class="indexterm" name="d4e5914"></a>. No object can be newly created, edited or deleted in ODIS Creator without an order.</p>
+					</li><li style="list-style-type: square">
+						<p>The object must be directly or indirectly assigned to the brand, that is edited at your editing location or no brand is assigned at all (for example, with the supply of created function tests and supplemental documents, that has still not been used).</p>
+					</li><li style="list-style-type: square">
+						<p>A working version may not already exist that is edited by another team.</p>
+					</li><li style="list-style-type: square">
+						<p>Based on your role, you must have the right to edit the editorial object. For example, it can be that the equipment network objects can only be viewed, but cannot be edited.</p>
+					</li></ul></div>
+				<p>If you have taken an object into processing, then it is assigned to the order step that you have selected as an order context. In this condition, you must fill out only the minimum required attributes, so that the editorial object can be identified in ODIS Creator. You can initiate the consistency check at any time in this status,<a class="indexterm" name="d4e5924"></a>in order to see if the editorial object already fulfills the minimum requirements for completion. This check will run in the background. You do not have to wait on it. In the <span class="bold"><strong>in processing</strong></span> status, the editorial object can only be viewed and changed for you and your team members. All other teams cannot view or change the object until it is released. Until then, you will continue to see the previously released version as long as you have not recreated the object. If this is the case, the members of other teams will not see the object at all.</p>
+			</div>
+			<div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="redaktion.status.fertiggemeldet"></a>7.1.3.2.&nbsp;"Confirmed Completed" Status</h5></div></div></div>
+				
+				<p>To bring the editorial object into the <span class="bold"><strong>confirmed completed</strong></span> status,<a class="indexterm" name="d4e5931"></a>it must be consistent. All minimum entries must exist and the object must fulfill the necessary requirements for its uniqueness. You have two options for the status transfer:</p><div class="itemizedlist"><ul type="disc"><li>
+							<p>In the editor in a navigator, select one or more editorial objects in the "in processing" status. Then carry out the command <span class="bold"><strong>Complete</strong></span> or <span class="bold"><strong>Edit &gt;&gt; Complete</strong></span> in the context menu.</p>
+							<p>
+								</p><div class="figure"><a name="figure.redaktion.kontextmenu"></a><div class="figure-contents">
+									
+									<div class="mediaobject"><img src="images/RedaktionKontextmenu.png" alt="Image: context menu editing"></div>
+								</div><p class="title"><b>Figure&nbsp;175.&nbsp;Context Menu Editing</b></p></div><p><br class="figure-break">
+							</p>
+						</li><li>
+							<p>In the order management, select one or more editorial objects in the "in processing" in an order step from the list. Then carry out the command <span class="bold"><strong>Complete</strong></span> or <span class="bold"><strong>Edit &gt;&gt; Complete</strong></span> in the context menu.</p>
+							<p>
+								</p><div class="figure"><a name="figure.auftragsverwaltung.kontextmenu"></a><div class="figure-contents">
+									
+									<div class="mediaobject"><img src="images/AuftragsschrittKontextmenu.png" alt="Image: context menu editing"></div>
+								</div><p class="title"><b>Figure&nbsp;176.&nbsp;Order Management Context Menu</b></p></div><p><br class="figure-break">
+							</p>
+						</li></ul></div>
+			</div>
+			<div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="redaktion.status.in_pruefung"></a>7.1.3.3.&nbsp;&#8220;In Testing&#8221; Status</h5></div></div></div>
+				
+				<p>The status of function code objects that contain Java box action elements changes automatically to the &#8220;In testing&#8221; status if the &#8220;Confirmed completed&#8221; status is reached when there is at least one untested Java box. See <a class="xref" href="ar01s05s08s03.html" title="5.8.3.&nbsp;Status Model">Section&nbsp;5.8.3, &#8220;Status Model&#8221;</a>.</p>
+			</div>	
+			<div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="redaktion.status.in_fertigmeldung"></a>7.1.3.4.&nbsp;"Being Completed" Status</h5></div></div></div>
+				
+				<p>The object status changes to <span class="bold"><strong>Being completed</strong></span> and the consistency changes to <span class="bold"><strong>In testing</strong></span>. You can see this information if you click on the object and view the properties at the bottom left. The completion may take several minutes, however it will run in the background. You do not have to wait on it. Press the <span class="bold"><strong>Update</strong></span> command if you would like to see if there are results. You can also complete more than one editorial object at once. To do this, mark all desired objects by clicking on them while pressing the <span class="bold"><strong>CTRL</strong></span> button and then select the command <span class="bold"><strong>Complete</strong></span>. If the consistency check fails, then the editorial object will be set back to the <span class="bold"><strong>in processing</strong></span> status and the consistency will be displayed <span class="bold"><strong>with an error</strong></span>. You can obtain details from the test log, which you can access by opening the editorial object and double click on the <span class="bold"><strong>PTC</strong></span> type log.</p>
+				<p>
+					</p><div class="figure"><a name="figure.redaktion.ptc"></a><div class="figure-contents">
+						
+						<div class="mediaobject"><img src="images/RedaktionPTC.png" alt="Image: PTC test log"></div>
+					</div><p class="title"><b>Figure&nbsp;177.&nbsp;PTC Test Log</b></p></div><p><br class="figure-break">
+				</p>
+				<p>If completion was successful, then the editorial object will receive the <span class="bold"><strong>Confirmed completed</strong></span> status. It can now be viewed by all other teams and can be reused or used as a copy template. The object can however be further edited by your team. If you edit it again now, ODIS Creator automatically increases the third position by one so that changes can also be made apparent to other teams. Include the version comment if this is the case. If you are finished with the revision, you must complete the object again and it must pass the consistency checks again.</p>
+			</div>
+			<div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="redaktion.status.risikofreigegeben"></a>7.1.3.5.&nbsp;"Risk Released" Status</h5></div></div></div>
+				
+				<p>You can risk release objects reported as completed. To do this, switch to the order management, select the order step for which you have edited the objects and perform the <a class="link" href="ar01s06s02s05.html" title="6.2.5.&nbsp;Releasing Editorial Objects">risk release</a><a class="indexterm" name="d4e5988"></a>. Objects that are not yet confirmed completed can be first approved and then risk released using the <span class="bold"><strong>Complete and risk release</strong></span> function.</p>
+				<p>Risk-released objects are exported with the next <a class="link" href="ar01s08.html" title="8.&nbsp;ODIS Creator Preparation Process">provision</a> for the processing system, if they were edited in an adhoc order step<a class="indexterm" name="d4e5993"></a>. The provision may be delayed for scheduled order steps until the initial deployment deadline<a class="indexterm" name="d4e5996"></a>has been reached.</p>
+			</div>
+		</div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ar01s07s01s02.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="ar01s07s01.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="ar01s07s01s04.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">7.1.2.&nbsp;Revising an Editorial Object&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;7.1.4.&nbsp;Selecting Editorial Objects</td></tr></table></div></body></html>

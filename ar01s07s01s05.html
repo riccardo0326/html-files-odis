@@ -1,0 +1,60 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>7.1.5.&nbsp;Apply Filter</title><link rel="stylesheet" href="mystyle.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.73.1"><link rel="start" href="index.html" title="ODIS Creator Help"><link rel="up" href="ar01s07s01.html" title="7.1.&nbsp;Editorial Object General Information"><link rel="prev" href="ar01s07s01s04.html" title="7.1.4.&nbsp;Selecting Editorial Objects"><link rel="next" href="ar01s07s01s06.html" title="7.1.6.&nbsp;Sorting Subnodes">
+<script type="text/javascript" src="../../../advanced/synchWithToc.js"></script>
+
+<link rel="stylesheet" href="../../../content/org.eclipse.help.webapp/advanced/breadcrumbs.css" charset="ISO-8859-1" type="text/css"></link>
+<script type="text/javascript" src="../../../content/org.eclipse.help/livehelp.js"> </script>
+<script type="text/javascript">
+if( self == top ){
+  var  anchorParam = location.hash.length > 0 ? '\u0026anchor=' + location.hash.substr(1) : '';
+  window.location.replace( "../../../index.jsp?topic=%2FMasterData_Client_Control%2Fhtml%2Far01s07s01s05.html" + anchorParam);
+}
+</script>
+</head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="help_breadcrumbs"><a href="index.html">ODIS Creator Help</a> > <a href="ar01s07.html">7&#46; ODIS Creator Editing Process</a> > <a href="ar01s07s01.html">7&#46;1&#46; Editorial Object General Information</a></div>
+<div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">7.1.5.&nbsp;Apply Filter</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ar01s07s01s04.html">Prev</a>&nbsp;</td><th width="60%" align="center">7.1.&nbsp;Editorial Object General Information</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ar01s07s01s06.html">Next</a></td></tr></table><hr></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="redaktion.filter"></a>7.1.5.&nbsp;Apply Filter</h4></div></div></div>
+			
+			<p>As opposed to the <a class="link" href="ar01s03s02s03.html#navigator.filter.definieren" title="3.2.3.1.&nbsp;Defining the filter">filter concept</a> in the <a class="link" href="ar01s06s02s01.html#auftraege.ueberwachen" title="6.2.1.3.&nbsp;Monitoring Orders">order management</a>, the filters in the editing module do not apply to all elements in the structure tree, but rather only to the already expanded navigator elements from the time they were created.</p>
+			<p>You have the option to use the saved filter for a changed selection using <span class="bold"><strong>Filter again</strong></span>. Editorial objects, to which <span class="bold"><strong>Filter again</strong></span> has been applied to, are displayed in italics. However <span class="bold"><strong>Refresh</strong></span> will refresh all objects currently visible in the navigator, while maintaining the respective filter settings so that no other nodes are displayed. However, deleted objects are removed through the refresh function.</p>
+			<div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="redaktion.standardfilter"></a>7.1.5.1.&nbsp;Default Filter</h5></div></div></div>
+				
+				<p>If no user-defined filter is set, then the default filter is always active. This limits the displayed objects based on the structure tree type. For the equipment network tree or knowledge base structure tree, all objects that were not edited at your location will be filtered out. So that you can see the object in the default filter, the responsible team and your team must be assigned to the same location. The brand creates an exception here. All brands, that you are responsible for, are displayed in the structure tree. However, in the function library structure tree and supplemental document structure tree, only objects are displayed where the team responsible for it is the same team you are assigned to. For all other structure trees (control module tree, DTC memory, vehicle project and XML template), all working versions of the individual team are displayed if a working version is permitted. Only the objects released by other teams are displayed, regardless of the brand allocation.</p>
+				<p>This default filter can be switched off by opening the filter and removing all restrictions there, or confirm the empty filter and then select the <span class="bold"><strong>Filter again</strong></span> command. The closer you use this filter to the root of the displayed navigator, the more objects you can see. You can copy objects from other brands and reuse them, if permitted. However, you can only then edit these objects, if they are used exclusively or among other objects that are assigned to the brand that is processed at your editing location.</p>
+			</div>
+			<div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="redaktion.primaerfilter"></a>7.1.5.2.&nbsp;Filter for Primary Objects</h5></div></div></div>
+				
+				<p>ODIS Creator also still has a predefined filter for primary objects. In contrast to the previous editing system, ODIS Creator can also display every direct dependency in the navigators. For example, you can directly see which traversal test or which supplemental document is used at a specific location in the equipment network and you can also create a new one, edit and delete it directly at this location. This makes it much easier for you to see the attachments and dependencies at a glance, and you can create objects with all sub-objects directly at a location, without constantly switching to the respective work area.</p>
+				<p>However, if you prefer to work with the previous process, then perhaps interrupt the additionally displayed objects. If this is the case, activate the primary object filter (see <a class="xref" href="ar01s07s01s05.html#figure.primaerfilter" title="Figure&nbsp;178.&nbsp;Primary Filter">Figure&nbsp;178, &#8220;Primary Filter&#8221;</a>) and you will only see the equipment network objects in the equipment network, only diagnostic objects in the knowledge base, only function tests in the various values in the function test library, as well as preset measurements and measurement value tables. The control module tree and the supplemental documents are always sorted correctly, since no other references from these objects are possible.</p>
+				<p>
+					</p><div class="figure"><a name="figure.primaerfilter"></a><div class="figure-contents">
+						
+						<div class="mediaobject"><img src="images/primaerfilter.png" alt="Image: primary filter"></div>
+					</div><p class="title"><b>Figure&nbsp;178.&nbsp;Primary Filter</b></p></div><p><br class="figure-break">
+				</p>
+				<p>Under the menu item <span class="bold"><strong>Help &gt;&gt; Settings</strong></span>, you have the option in every editor navigator to set if the primary objects filter is active or inactive when opening. (see <a class="xref" href="ar01s07s01s05.html#figure.benutzervorgaben.primaerfilter" title="Figure&nbsp;179.&nbsp;Primary Filter Settings">Figure&nbsp;179, &#8220;Primary Filter Settings&#8221;</a>)</p>
+				<p>
+					</p><div class="figure"><a name="figure.benutzervorgaben.primaerfilter"></a><div class="figure-contents">
+						
+						<div class="mediaobject"><img src="images/benutzervorgaben_primaerfilter.png" alt="Image: Primary filter settings"></div>
+					</div><p class="title"><b>Figure&nbsp;179.&nbsp;Primary Filter Settings</b></p></div><p><br class="figure-break">
+				</p>
+			</div>
+			<div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="redaktion.filter.menge"></a>7.1.5.3.&nbsp;Filter Results</h5></div></div></div>
+				
+				<p>Regardless of the filter setting, the number of objects that can be loaded and displayed is limited. The group administrator can set a value. The default value is 500. If more child objects are found when opening an object node, then an applicable message will be displayed, in which you can select between three processes:</p>
+				<div class="itemizedlist"><ul type="square"><li style="list-style-type: square">
+						<p><span class="bold"><strong>Load all:</strong></span> Despite the limit given by the group administrator, this makes it possible to also display all found objects. Note: depending on the amount of results, the display may take some time.</p>
+					</li><li style="list-style-type: square">
+						<p><span class="bold"><strong>Load:</strong></span> All objects up to the permitted maximum amount will be loaded. If it is 500, for example, then the first 500 hits will be returned and displayed. The sorting of loaded objects deviates in this case from the default sorting. To offer you a logical object selection, the objects are loaded here in the order of their editing date. The last edited object will therefore be displayed first.</p>
+					</li><li style="list-style-type: square">
+						<p><span class="bold"><strong>Filter:</strong></span> The filter dialog will open automatic and you can set a filter or add to the existing filter. When closing the filter dialog with <span class="bold"><strong>OK</strong></span>, the child objects will begin to load again. If the setting of the filter was not sufficient, then the corresponding message will display again.</p>
+					</li></ul></div>
+				<p>
+					</p><div class="figure"><a name="figure.maximum_exceeded"></a><div class="figure-contents">
+						
+						<div class="mediaobject"><img src="images/Objekt_Hoechstanzahl.png" alt="Image: message when permitted maximum amount is exceeded"></div>
+					</div><p class="title"><b>Figure&nbsp;180.&nbsp;Message when Permitted Maximum Amount is Exceeded</b></p></div><p><br class="figure-break">
+				</p>
+			</div>
+		</div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ar01s07s01s04.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="ar01s07s01.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="ar01s07s01s06.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">7.1.4.&nbsp;Selecting Editorial Objects&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;7.1.6.&nbsp;Sorting Subnodes</td></tr></table></div></body></html>

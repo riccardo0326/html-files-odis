@@ -1,0 +1,248 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>7.15.11.&nbsp;Additional Debug Functions</title><link rel="stylesheet" href="mystyle.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.73.1"><link rel="start" href="index.html" title="ODIS Creator Help"><link rel="up" href="ar01s07s15.html" title="7.15.&nbsp;Debugger (Integrated Operating System)"><link rel="prev" href="ar01s07s15s10.html" title="7.15.10.&nbsp;Additional Views"><link rel="next" href="ar01s07s16.html" title="7.16.&nbsp;ODIS Service Debug">
+<script type="text/javascript" src="../../../advanced/synchWithToc.js"></script>
+
+<link rel="stylesheet" href="../../../content/org.eclipse.help.webapp/advanced/breadcrumbs.css" charset="ISO-8859-1" type="text/css"></link>
+<script type="text/javascript" src="../../../content/org.eclipse.help/livehelp.js"> </script>
+<script type="text/javascript">
+if( self == top ){
+  var  anchorParam = location.hash.length > 0 ? '\u0026anchor=' + location.hash.substr(1) : '';
+  window.location.replace( "../../../index.jsp?topic=%2FMasterData_Client_Control%2Fhtml%2Far01s07s15s11.html" + anchorParam);
+}
+</script>
+</head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="help_breadcrumbs"><a href="index.html">ODIS Creator Help</a> > <a href="ar01s07.html">7&#46; ODIS Creator Editing Process</a> > <a href="ar01s07s15.html">7&#46;15&#46; Debugger &#40;Integrated Operating System&#41;</a></div>
+<div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">7.15.11.&nbsp;Additional Debug Functions</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ar01s07s15s10.html">Prev</a>&nbsp;</td><th width="60%" align="center">7.15.&nbsp;Debugger (Integrated Operating System)</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ar01s07s16.html">Next</a></td></tr></table><hr></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="d4e32228"></a>7.15.11.&nbsp;Additional Debug Functions</h4></div></div></div>
+      
+      <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="Funktionstesteditor.Debugger.DebugSitzung.Hintergrund"></a>7.15.11.1.&nbsp;Background: Debug Session</h5></div></div></div>
+        
+        <p>The timespan in which ODIS Debug is active is considered the debug session. A debug session can be started in two different ways.</p><div class="itemizedlist"><ul type="disc"><li>
+              <p>Using Start test module: the session lasts until the base data function test has run through completely (including all sub-programs). Concrete: the timespan between the Configure test execution and Simulation service dialogs. A runtime error ends the debug session early.</p>
+            </li><li>
+              <p>Using Start GFF: timespan between diagnostic entry and diagnostic exit. Concrete: the timespan between the Configure diagnostic entry service dialog and successful diagnostic exit. Individual function tests can also be run using Start test module in the time period between performing diagnostic entry and diagnostic exit.</p>
+            </li></ul></div><p>The debug session process including user interactions is shown in the following illustration.</p>
+        <p>
+          </p><div class="figure"><a name="figure.Funktionstesteditor.Debugger.WeitereFunktionen.ActivitySitzung"></a><div class="figure-contents">
+            
+            <div class="mediaobject"><img src="images/fte_Debug_WeitereFunktionen_DebugSitzung.png" alt="Image: debug session cycle"></div>
+          </div><p class="title"><b>Figure&nbsp;582.&nbsp;Debug Session Cycle</b></p></div><p><br class="figure-break">
+        </p>
+        <p>In the illustration, the debug session begins using the Start GFF function. ODIS Creator contains a callback with Diagnostic entry canceled or Diagnostic entry performed. During entry, the editor has the option to cancel using the Stop GFF function. ODIS Creator receives a callback as soon as this function has canceled diagnostic entry. The debug session ends.</p>
+        <p>If entry was completed, the Start test module function can be run with no limit on the number (outside of diagnostic entry, this step is intended as its own debug session). Callbacks to ODIS Creator occur depending on the status (started, ended, canceled). The editor calls up the Stop GFF function in order to start diagnostic exit. If the exit is performed, ODIS Creator receives a callback and the debug session is considered ended.</p>
+        <p>The following table describes the activation status of the functions.</p><div class="table"><a name="d4e32249"></a><div class="table-contents">
+            
+            <table summary="Function Activation Status" border="1"><colgroup><col><col></colgroup><thead><tr bgcolor="#EEEEEE"><th>Function</th><th>Active if</th></tr></thead><tbody><tr><td>Start GFF</td><td>
+                    <div class="itemizedlist"><ul type="disc"><li>
+                        <p>no diagnostic entry is performed</p>
+                      </li><li>
+                        <p>no diagnostic exit is performed</p>
+                      </li><li>
+                        <p>the status of the debug session is diagnostic entry not performed</p>
+                      </li></ul></div>
+                  </td></tr><tr><td>Stop GFF</td><td>
+                    <div class="itemizedlist"><ul type="disc"><li>
+                        <p>while diagnostic entry is running (cancels entry)</p>
+                      </li><li>
+                        <p>Diagnostic entry performed (starts diagnostic exit)</p>
+                      </li></ul></div>
+                  </td></tr><tr><td>Start test module/start test module in single step mode</td><td>
+                    <div class="itemizedlist"><ul type="disc"><li>
+                        <p>no diagnostic entry is performed</p>
+                      </li><li>
+                        <p>no diagnostic exit is performed</p>
+                      </li></ul></div>
+                  </td></tr></tbody></table>
+          </div><p class="title"><b>Table&nbsp;135.&nbsp;Function Activation Status</b></p></div><p><br class="table-break"></p>
+      </div>
+      <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="d4e32285"></a>7.15.11.2.&nbsp;Background: Editing Variables</h5></div></div></div>
+        
+        <p>Variables and keywords are called names in the following information. There are different types of names in a function test.</p><div class="itemizedlist"><ul type="disc"><li>
+              <p>Super globals: Tester State and Select identify the status of the global tester. Their values cannot be edited manually, but only be affected by the program using the "Set status" command.</p>
+            </li><li>
+              <p>Global name: they are declared/defined within pre-run and are therefore visible for the entire function test (visible until post-run ends).</p>
+            </li><li>
+              <p>Local name: they are declared/defined within a test step or a process command. If the test step or process command ends (such as loop, while, etc.), these variables no longer exist.</p>
+            </li></ul></div>
+        <p>The administrative structure of the names is typically in the form of a stack message (LIFO). The following illustration shows the stack with different names.</p>
+        <p>
+          </p><div class="figure"><a name="figure.Funktionstesteditor.Debugger.VariablenView.Background.Stack"></a><div class="figure-contents">
+            
+            <div class="mediaobject"><img src="images/fte_Debug_VariableView_Background_Stack.png" alt="Image: stack"></div>
+          </div><p class="title"><b>Figure&nbsp;583.&nbsp;Stack</b></p></div><p><br class="figure-break">
+        </p>
+        <p>After a local command (such as a test step or loop) has ended, meaning the process has exited this area, the name is removed from the stack and destroyed. After the function test post-run has completed, the function test is considered ended and the global name is removed. The stack is displayed in the variables view. There are still filtered variables views that display the content of the stack, filtered based on various criteria.</p>
+        <p>ODIS Creator assembles and disassembles the stack depending on the procedure item. A <span class="bold"><strong>history</strong></span> of the function tests that have run and the last name used including the values is saved. The values in the history can no longer be changed because the copy of the elements on the stack is not running.</p>
+        <p>
+          </p><div class="figure"><a name="figure.Funktionstesteditor.Debugger.VariablenView.Background.History"></a><div class="figure-contents">
+            
+            <div class="mediaobject"><img src="images/fte_Debug_VariableView_Background_History.png" alt="Image: history"></div>
+          </div><p class="title"><b>Figure&nbsp;584.&nbsp;History</b></p></div><p><br class="figure-break">
+        </p>
+        <p>The history contains the names (including the last values that were set) that were available in the last function test when the process ended. There are reasons that could cause the process to end:</p><div class="orderedlist"><ol type="1"><li>
+              <p>Because the post-run ended: the process reaches the post-run stage and ends.</p>
+            </li><li>
+              <p>Due to a runtime error: runtime errors can theoretically occur at any time. (Example: access to an array field that does not exist).</p>
+            </li><li>
+              <p>Because a function test was canceled using the "Cancel test module" function.</p>
+            </li><li>
+              <p>Due to ending the debugger using the "End debugger" function.</p>
+            </li></ol></div><p>In all cases, the history is filled with names that are available at the time it ended. The global names are retained for all cases. Especially for cause 4, the local name that was available on the stack at the time of the cancellation. With cause 2, this is not possible because a runtime error occurs here in the operating system that ODIS Creator does not recognize, and this causes local variables to be removed from the stack.</p>
+      </div>
+      <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="Funktionstesteditor.Debugger.DebugSitzung.SitzungStoppen"></a>7.15.11.3.&nbsp;Stop Debug Session</h5></div></div></div>
+        
+        <p>A debug session can be stopped using the "Stop debug session" function. Executing this function causes the integrated operating system to stop the debug session at the next possible point. During diagnostic entry, the spacing of these points can increase. If the function is used during within diagnostic entry while a function test is being executed with "Start test module", the entire diagnostic session will stop.</p>
+      </div>
+      <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="Funktionstesteditor.Debugger.ODISDebugMenueeintraege"></a>7.15.11.4.&nbsp;ODIS Debug Menu Items</h5></div></div></div>
+        
+        <p>There are separate menu items for configuring and controlling ODIS Debug. The following menu items are added:</p>
+        <p>
+          </p><div class="itemizedlist"><ul type="disc"><li>
+              <p><span class="bold"><strong>ODIS Debug status display</strong></span></p>
+              <p>Displays the current status of ODIS Service Debug and the interface to the vehicle.</p>
+            </li><li>
+              <p><span class="bold"><strong>Load ODIS Debug test baseline</strong></span></p>
+              <p>Loads the test baselines from a shared drive.</p>
+            </li><li>
+              <p><span class="bold"><strong>Remove ODIS Debug vehicle project</strong></span></p>
+              <p>Removes the last vehicle project that was selected.</p>
+            </li><li>
+              <p><span class="bold"><strong>ODIS Debug configuration</strong></span></p>
+              <p>Configure ODIS Debug and select test baselines or production baselines.</p>
+            </li><li>
+              <p><span class="bold"><strong>Close ODIS Debug measuring equipment view</strong></span></p>
+              <p>Closes the measuring equipment view.</p>
+            </li><li>
+              <p><span class="bold"><strong>ODIS Debug VCI configuration</strong></span></p>
+              <p>Configure the connected VCI.</p>
+            </li></ul></div><p>
+        </p>
+        <p>The individual menu items can be seen in the following illustration.</p>
+        <p>
+          </p><div class="figure"><a name="figure.Funktionstesteditor.Debugger.ODISDebugMenueeintraege"></a><div class="figure-contents">
+            
+            <div class="mediaobject"><img src="images/fte_Debug_ODISDebugMenueeintraege.png" alt="Image: ODIS Debug menu items"></div>
+          </div><p class="title"><b>Figure&nbsp;585.&nbsp;ODIS Debug Menu Items</b></p></div><p><br class="figure-break">
+        </p>
+        <p><a name="Funktionstesteditor.Debugger.PruefungsausfuehrungKonfigurieren"></a>The configuration of the test execution can be applied using a separate menu item. To do this, the item "Configure test execution" must be selected. The following image shows the menu item.</p>
+        <p>
+          </p><div class="figure"><a name="figure.Funktionstesteditor.Debugger.ODISDebugMenueeintraegPruefungsausfuehrungKonfigurieren"></a><div class="figure-contents">
+            
+            <div class="mediaobject"><img src="images/fte_Debug_ODISDebugMenueeintragPruefAusfKonfig.png" alt="Image: menu item \&#34;Configure test execution\&#34;"></div>
+          </div><p class="title"><b>Figure&nbsp;586.&nbsp;"Configure test execution" in the Menu</b></p></div><p><br class="figure-break">
+        </p>
+      </div>
+      <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="Funktionstesteditor.Debugger.FunktionstestInBearbeitung_setzen"></a>7.15.11.5.&nbsp;Placing Function Test in Editing Status</h5></div></div></div>
+        
+        <p>During a debug session, function tests loaded from the database are in read-only mode. Changes can also be made for the debug session and are also visible after being saved locally. In order to make changes that can be saved in the database directly during the debug session, the "Edit function test" function is used to set the status of the function test to "In editing".</p>
+        <p>The "Edit function test" function allows the author to change a function test during a debug session and then set it afterward to the status "In editing". Changes that were made in read-only mode are transferred into the editing status.</p>
+        <p>
+          </p><div class="figure"><a name="figure.Funktionstesteditor.Debugger.FunktionstestBearbeiten"></a><div class="figure-contents">
+            
+            <div class="mediaobject"><img src="images/fte_Debug_FunktionstestBearbeiten.png" alt="Image: edit function test"></div>
+          </div><p class="title"><b>Figure&nbsp;587.&nbsp;Edit Function Test</b></p></div><p><br class="figure-break">
+        </p>
+        <p>An order context must be active in order to change the status. Also, no other users maybe editing the function test. Otherwise, there will be an error message. The text of the error message specifies the name of the user who is editing the function test. ODIS Debug must also be in single step mode in the context of ODIS Creator.</p>
+        <p>The function is available as a sub-item in the "Extras" menu and as a button in the toolbar. If no order context is set, the dialog screen for setting a context will be displayed, as in ODIS Creator. The function is active if:</p>
+        <p>
+          </p><div class="itemizedlist"><ul type="disc"><li>
+              <p>a debug session is running in ODIS Creator,</p>
+            </li><li>
+              <p>the function test currently running in debug mode is in a read-only context,</p>
+            </li><li>
+              <p>ODIS Debug is in single step mode.</p>
+            </li></ul></div><p>
+        </p>
+        <p>The function is always executed in the function test that is currently running in debugger (regardless of the focus).</p>
+        <p>When the status changes, the associated object properties editor is updated to "In editing". This occurs in the background. The FTE file for the function test is changed from read-only context to order context. The local file is also copied when this happens, which involves closing the read-only version and opening the copy in the function test editor. The FTE file is copied, which may have already been changed locally during the debug session. The changes are retained so they can be saved in the database later (the changes are not visible for ODIS Debug).</p>
+        <p>The opening and closing occur almost simultaneously. The debug views (ODIS Creator and Service views) are not closed. Their content remains the same. The command counter (yellow arrow) is reset right after reopening.</p>
+      </div>
+      <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="Funktionstesteditor.Debugger.KonfigurationLogging"></a>7.15.11.6.&nbsp;Logging Mechanism Configuration</h5></div></div></div>
+        
+        <p>ODIS Creator gives the option of adapting the logging level at the time of execution for the application. Using this function, the logging level (scope, type of log entries) of the output in the log file can be controlled. Each time ODIS Creator starts, all output is logged at the "Information" level by default. The logging level can be adjusted in the settings. The settings affect the integrated ODIS Service debug.</p>
+        <p>
+          </p><div class="figure"><a name="figure.Funktionstesteditor.Benutzervorgaben"></a><div class="figure-contents">
+            
+            <div class="mediaobject"><img src="images/fte_Benutzervorgaben.png" alt="Image: Settings"></div>
+          </div><p class="title"><b>Figure&nbsp;588.&nbsp;Settings</b></p></div><p><br class="figure-break">
+        </p>
+        <p>The user preferences can be selected using the menu item <span class="bold"><strong>Help &gt;&gt; Settings</strong></span>. There is a &#8220;Logging&#8221; entry in the navigation tree in the settings. If it is selected, the page for configuring the log levels opens.</p>
+        <p>
+          </p><div class="figure"><a name="figure.Funktionstesteditor.Benutzervorgaben.LoggingLevel"></a><div class="figure-contents">
+            
+            <div class="mediaobject"><img src="images/fte_Benutzervorgaben_LoggingLevel.png" alt="Image: Log-level settings"></div>
+          </div><p class="title"><b>Figure&nbsp;589.&nbsp;Log-Level Settings</b></p></div><p><br class="figure-break">
+        </p>
+        <p>The log file specifies the degree/scope of the logging mechanism. Possible levels are:</p>
+        <p>
+          </p><div class="itemizedlist"><ul type="disc"><li>
+              <p>Critical error</p>
+            </li><li>
+              <p>Error</p>
+            </li><li>
+              <p>Warning</p>
+            </li><li>
+              <p>Information</p>
+            </li><li>
+              <p>All (corresponds to debug)</p>
+            </li></ul></div><p>
+        </p>
+        <p>The ranking of the log levels is: All (corresponds to debug) &lt; Information &lt; Warning &lt; Error &lt; Critical error (for example, if the level is set to warning, neither debugging nor information entries will be logged, but warnings, errors and critical errors will be logged).</p>
+        <p>If this dialog is confirmed, the program will set the log levels in the ODIS Logging framework. The level that is set is valid across ODIS, meaning the change in level applies to the root logger and is inherited by all specific loggers as long as they do not have a specified level defined.</p>
+        <p>The default setting is the "Information" level. The level that is currently active is selected when the dialog opens. If the "All" log level is selected, there may be performance restrictions when running the ODIS Creator application.</p>
+        <p>The log level change takes place immediately after confirming the dialog and remains in effect for the current ODIS Creator session. meaning this setting is not stored for all sessions that occur. The log level reverts to the default value the next time ODIS Creator is started.</p>
+        <div class="section" lang="en"><div class="titlepage"><div><div><h6 class="title"><a name="d4e32438"></a>7.15.11.6.1.&nbsp;Configuration by File</h6></div></div></div>
+          
+          <p>In addition to changing the log level in the user interface, there is another configuration option. By supplying the Log4j configuration file by webstarter, the logging can be configured already before ODIS Creator actually starts. The configuration file can also affect more details of the logging functionality beyond just setting the log level.</p>
+          <p>Notes:</p>
+          <p>
+            </p><div class="itemizedlist"><ul type="disc"><li>
+                <p>Each time ODIS Creator starts, the webstarter delivers the default configuration file and overwrites any file that is available locally. If the file is modified manually, ODIS Creator must be restarted using odisc.exe.</p>
+              </li><li>
+                <p>In the configuration file, separate loggers are linked with namespaces with the log level. If no log level is specified, the level of the entry defined as the root logger is used.</p>
+              </li></ul></div><p>
+          </p>
+          <p>The Log4j configuration file consists of three components.</p>
+          <p>
+            </p><div class="itemizedlist"><ul type="disc"><li>
+                <p>Appender: specifies the output location for log files. Three appenders that can write log messages in files are currently defined (FileAppender).</p>
+              </li><li>
+                <p>Logger: links a log level with an appender. If the logger name matches a Java package, then the logger only provides messages for the package.</p>
+              </li><li>
+                <p>Root logger: the root logger specifies a log level and a number of appenders. All other loggers inherit the log level from the root logger as long as no specific level is specified. All other loggers inherit the appender from the root logger and can define their own appenders.</p>
+              </li></ul></div><p>
+          </p>
+          <p>For additional information on Log4j, see <a class="ulink" href="http://logging.apache.org/log4j/2.x/manual/index.html" target="_top">Apache Log4J</a>.</p>
+        </div>
+        <div class="section" lang="en"><div class="titlepage"><div><div><h6 class="title"><a name="d4e32459"></a>7.15.11.6.2.&nbsp;Log Entries</h6></div></div></div>
+          
+          <p>The following table shows the actions that trigger log outputs in ODIS Creator. Work with ODIS Creator can be reproduced if necessary using these outputs.</p>
+          <p>
+            </p><div class="table"><a name="d4e32463"></a><div class="table-contents">
+              
+              <table summary="Log Entries for User Interactions" border="1"><colgroup><col><col><col></colgroup><thead><tr bgcolor="#EEEEEE"><th>Topic</th><th>Logging implementation</th><th>Log level</th></tr></thead><tbody><tr><td>View change</td><td>Each time the view changes, a log entry with the name of the new view is written.</td><td>Debug</td></tr><tr><td>Editor displays</td><td>Each time an editor opens and closes, a log entry with the name of the editor (system name of the object) and the action (open or close) is written.</td><td>Debug</td></tr><tr><td>View displays</td><td>If a view is opened, closed or activated, a log entry with the name of the view will be written.</td><td>Debug</td></tr><tr><td>FTE command dialogs</td><td>When opening and closing an FTE command dialog, a log entry with the name of the dialog is written.</td><td>Debug</td></tr><tr><td>Commands</td><td>Each time a command is initiated using the menu, a log entry with information about the initiated command is written.</td><td>Debug</td></tr><tr><td>ODIS Creator Debug</td><td>Activities regarding status of the debug session, etc.</td><td>Debug</td></tr></tbody></table>
+            </div><p class="title"><b>Table&nbsp;136.&nbsp;Log Entries for User Interactions</b></p></div><p><br class="table-break">
+          </p>
+        </div>
+      </div>
+      <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="Funktionstesteditor.Debugger.DebugSitzung.BekannteProbleme"></a>7.15.11.7.&nbsp;Messages in the Problems View</h5></div></div></div>
+        
+        <p>A special Java code must be generated from the function test in order to use ODIS Debug. The scope of the debug Java code is larger than the standard Java code that is playing during preparation. For this reason, the debug Java code can reach the limits of the Java Virtual Machine, which the standard Java code does not reach. This first occurs during debugging and is displayed in the problems view.</p>
+        <p>For example, if a compilation message that contains the text "Code too large" indicates this condition. The solution can consist of various actions:</p>
+        <p>
+          </p><div class="itemizedlist"><ul type="disc"><li>
+              <p>Reducing the scope of test steps</p>
+            </li><li>
+              <p>Storing logic in sub-programs</p>
+            </li><li>
+              <p>Reducing the commands in pre-run</p>
+            </li><li>
+              <p>Splitting control module communication commands with many parameters</p>
+            </li><li>
+              <p>Optimizing/splitting expensive array initializations</p>
+            </li><li>
+              <p>Splitting case commands that check too many values</p>
+            </li></ul></div><p>
+        </p>
+      </div>
+    </div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ar01s07s15s10.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="ar01s07s15.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="ar01s07s16.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">7.15.10.&nbsp;Additional Views&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;7.16.&nbsp;ODIS Service Debug</td></tr></table></div></body></html>

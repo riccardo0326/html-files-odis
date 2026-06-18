@@ -1,0 +1,281 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>8.10.7.&nbsp;Plausibility and Completeness Check Log</title><link rel="stylesheet" href="mystyle.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.73.1"><link rel="start" href="index.html" title="ODIS Creator Help"><link rel="up" href="ar01s08s10.html" title="8.10.&nbsp;Plausibility and Completeness Checks"><link rel="prev" href="ar01s08s10s06.html" title="8.10.6.&nbsp;Test Object Editor"><link rel="next" href="ar01s08s10s08.html" title="8.10.8.&nbsp;Notification">
+<script type="text/javascript" src="../../../advanced/synchWithToc.js"></script>
+
+<link rel="stylesheet" href="../../../content/org.eclipse.help.webapp/advanced/breadcrumbs.css" charset="ISO-8859-1" type="text/css"></link>
+<script type="text/javascript" src="../../../content/org.eclipse.help/livehelp.js"> </script>
+<script type="text/javascript">
+if( self == top ){
+  var  anchorParam = location.hash.length > 0 ? '\u0026anchor=' + location.hash.substr(1) : '';
+  window.location.replace( "../../../index.jsp?topic=%2FMasterData_Client_Control%2Fhtml%2Far01s08s10s07.html" + anchorParam);
+}
+</script>
+</head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="help_breadcrumbs"><a href="index.html">ODIS Creator Help</a> > <a href="ar01s08.html">8&#46; ODIS Creator Preparation Process</a> > <a href="ar01s08s10.html">8&#46;10&#46; Plausibility and Completeness Checks</a></div>
+<div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">8.10.7.&nbsp;Plausibility and Completeness Check Log</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ar01s08s10s06.html">Prev</a>&nbsp;</td><th width="60%" align="center">8.10.&nbsp;Plausibility and Completeness Checks</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ar01s08s10s08.html">Next</a></td></tr></table><hr></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="prozess.bereitstellung.pruefung.protokoll"></a>8.10.7.&nbsp;Plausibility and Completeness Check Log</h4></div></div></div>
+            
+            <p>As soon as the plausibility and completeness check is completed and the respective test object has one of the final statuses "Completed" or "Error", the location administrator can view the progression of the test with the log files. To do this, select the respective test object in the navigator. The button "Download log" is now available in the editor. As with the deployment, the user can thereby download the log file as a zip file.</p>
+            <p>When the automatic tests are performed after the deployment, the log is also stored in the log folder of the respective baseline on the server.</p>
+            <p>For the manual test, the log is also stored in the specified folder on the replacement drive. The log is stored in the sub-folder with the name of the respective test type.</p>
+            <p>For each test, a log in the form of an Excel table is created with the same name as the corresponding test object. This Excel file will always contain the following data sheets:</p>
+            <p>
+                </p><div class="itemizedlist"><ul type="disc"><li>
+                        <p>One <a class="link" href="ar01s08s10s07.html#prozess.bereitstellung.pruefung.protokoll.uebersicht" title="8.10.7.1.&nbsp;Overview Sheet">overview sheet</a></p>
+                    </li><li>
+                        <p>One for those <a class="link" href="ar01s08s10s07.html#prozess.bereitstellung.pruefung.protokoll.fehler" title="8.10.7.2.&nbsp;&#34;With Errors&#34; Table Sheet">"With errors"</a>, thus the list of all checked editorial objects for which an error was created</p>
+                    </li><li>
+                        <p>One for those <a class="link" href="ar01s08s10s07.html#prozess.bereitstellung.pruefung.protokoll.fehlerfrei" title="8.10.7.3.&nbsp;&#34;Without Errors&#34; Table Sheet">"Without errors"</a>, thus the list of all checked editorial objects for which no error was created</p>
+                    </li><li>
+                        <p>One for the <a class="link" href="ar01s08s10s07.html#prozess.bereitstellung.pruefung.protokoll.auftrag" title="8.10.7.4.&nbsp;&#34;Order Headers And Order Steps&#34; Table Sheet">"order headers and order steps"</a>, thus the list of all order headers and order steps for all included editorial objects.</p>
+                    </li><li>
+                        <p>One for the <a class="link" href="ar01s08s10s07.html#prozess.bereitstellung.pruefung.protokoll.verwendung" title="8.10.7.5.&nbsp;&#34;References to other brands&#34; Table Sheet">"references to other brands"</a>, therefore the list of all editorial objects, which reference editorial objects of other brands.</p>
+                    </li></ul></div><p>
+            </p>
+            <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="prozess.bereitstellung.pruefung.protokoll.uebersicht"></a>8.10.7.1.&nbsp;Overview Sheet</h5></div></div></div>
+                
+                <p>The overview sheet includes a summary of the performed test. These include:</p>
+                <p>
+                    </p><div class="itemizedlist"><ul type="disc"><li>
+                            <p><a class="link" href="ar01s08s10s07.html#prozess.bereitstellung.pruefung.protokoll.uebersicht.daten" title="8.10.7.1.1.&nbsp;Imported Data Information">Imported Data Information</a></p>
+                        </li><li>
+                            <p><a class="link" href="ar01s08s10s07.html#prozess.bereitstellung.pruefung.protokoll.uebersicht.info" title="8.10.7.1.2.&nbsp;Test Object Information">Test information</a></p>
+                        </li><li>
+                            <p><a class="link" href="ar01s08s10s07.html#prozess.bereitstellung.pruefung.protokoll.uebersicht.statistik" title="8.10.7.1.3.&nbsp;Statistics for the Considered Editorial Objects">Statistics for the Considered Editorial Objects</a></p>
+                        </li><li>
+                            <p><a class="link" href="ar01s08s10s07.html#prozess.bereitstellung.pruefung.protokoll.uebersicht.pruefungen" title="8.10.7.1.4.&nbsp;Test Overview">Test Overview</a></p>
+                        </li></ul></div><p>
+                </p>
+                <div class="section" lang="en"><div class="titlepage"><div><div><h6 class="title"><a name="prozess.bereitstellung.pruefung.protokoll.uebersicht.daten"></a>8.10.7.1.1.&nbsp;Imported Data Information</h6></div></div></div>
+                    
+                    <p>Among other information, the date and the version of the data that data was imported into ODIS Creator are entered in the first worksheet. For most of this data, the date of the last change or the import date and the version are saved. This date is then displayed in the log. This applies to the following data:</p>
+                    <p>
+                        </p><div class="itemizedlist"><ul type="disc"><li>
+                                <p>Reference table</p>
+                            </li><li>
+                                <p>Measured value default display</p>
+                            </li><li>
+                                <p>Document categories</p>
+                            </li><li>
+                                <p>Vehicle status texts</p>
+                            </li><li>
+                                <p>System texts</p>
+                            </li><li>
+                                <p>Service references</p>
+                            </li><li>
+                                <p>Master components list</p>
+                            </li></ul></div><p>
+                    </p>
+                </div>
+                <div class="section" lang="en"><div class="titlepage"><div><div><h6 class="title"><a name="prozess.bereitstellung.pruefung.protokoll.uebersicht.info"></a>8.10.7.1.2.&nbsp;Test Object Information</h6></div></div></div>
+                    
+                    <p>The following information in relation to the test itself is added to the worksheet:</p>
+                    <p>
+                        </p><div class="itemizedlist"><ul type="disc"><li>
+                                <p>Name of test</p>
+                            </li><li>
+                                <p>Test type</p>
+                            </li><li>
+                                <p>Test trigger</p>
+                            </li><li>
+                                <p>Test sort</p>
+                            </li><li>
+                                <p>Provision date</p>
+                                <p>The simulated deployment deadline for the plausibility and completeness check started manually for the production baseline. Otherwise &#8222;n/a&#8220; is entered.</p>
+                            </li><li>
+                                <p>Order step deadline</p>
+                                <p>The deadline used when tests are automatically started after reaching the deadline of the test order step. Otherwise &#8222;n/a&#8220; is entered.</p>
+                            </li><li>
+                                <p>Start time (date and time) of the baseline creation when tests are automatically started after a baseline creation</p>
+                            </li><li>
+                                <p>End time (date and time) of the baseline creation for which the ODIS Creator has ended the storage of baseline data on the replacement drive</p>
+                            </li><li>
+                                <p>Baseline version</p>
+                            </li><li>
+                                <p>Baseline creation date</p>
+                            </li><li>
+                                <p>Test started</p>
+                            </li><li>
+                                <p>Test ended</p>
+                            </li></ul></div><p>
+                    </p>
+                </div>
+                <div class="section" lang="en"><div class="titlepage"><div><div><h6 class="title"><a name="prozess.bereitstellung.pruefung.protokoll.uebersicht.statistik"></a>8.10.7.1.3.&nbsp;Statistics for the Considered Editorial Objects</h6></div></div></div>
+                    
+                    <p>During the test, the statistics are compiled for the considered editorial objects. The statistics are listed for the following editorial objects:</p>
+                    <p>
+                        </p><div class="itemizedlist"><ul type="disc"><li>
+                                <p>Diagnostic objects per knowledge base</p>
+                            </li><li>
+                                <p>Equipment network objects per vehicle model</p>
+                            </li><li>
+                                <p>Function tests</p>
+                            </li><li>
+                                <p>General tests</p>
+                            </li><li>
+                                <p>Traversal tests</p>
+                            </li><li>
+                                <p>Test procedures</p>
+                            </li><li>
+                                <p>Measured values tables</p>
+                            </li><li>
+                                <p>Default measurements</p>
+                            </li><li>
+                                <p>XML Templates</p>
+                            </li><li>
+                                <p>Supplemental documents</p>
+                            </li></ul></div><p>
+                    </p>
+                    <p>The following values are listed for these objects:</p>
+                    <p>
+                        </p><div class="itemizedlist"><ul type="disc"><li>
+                                <p><span class="bold"><strong>Total:</strong></span> the total amount of the tested objects</p>
+                            </li><li>
+                                <p><span class="bold"><strong>No error:</strong></span> number of objects, for which no errors were detected.</p>
+                            </li><li>
+                                <p><span class="bold"><strong>Error:</strong></span> number of objects, for which separate errors were detected, but do not prevent the deployment.</p>
+                            </li><li>
+                                <p><span class="bold"><strong>Not deployed:</strong></span> number of objects, for which at least one error was detected that prevents the deployment</p>
+                            </li></ul></div><p>
+                    </p>
+                </div>
+                <div class="section" lang="en"><div class="titlepage"><div><div><h6 class="title"><a name="prozess.bereitstellung.pruefung.protokoll.uebersicht.pruefungen"></a>8.10.7.1.4.&nbsp;Test Overview</h6></div></div></div>
+                    
+                    <p>This section gives an overview of the tests performed and the log worksheet, in which the results of the respective tests are given. Only the tests are listed that were selected when it was prepared. A direct correlation of a test to a log worksheet is not always possible.</p>
+                </div>
+                <div class="section" lang="en"><div class="titlepage"><div><div><h6 class="title"><a name="prozess.bereitstellung.pruefung.protokoll.uebersicht.testbaseline"></a>8.10.7.1.5.&nbsp;Note for the Test Baseline Check</h6></div></div></div>
+                    
+                    <p>When performing the plausibility and completeness check after a baseline is created for the test baseline, it may occur that there are different separate working versions of the considered editorial objects at the time of the provision and the time of the test. The user will be informed of this status in the test log with the following message:</p>
+                    <p>"The status of the checked objects can differ between the test baseline and the validation check because the validation check occurs later. The log entries for the test baseline contain a time stamp indicating when the object was provided. The worksheets with the list of all the checked editorial objects contain the time stamp for the last change of the object at the time of the test.</p>
+                </div>
+                <div class="section" lang="en"><div class="titlepage"><div><div><h6 class="title"><a name="prozess.bereitstellung.pruefung.protokoll.uebersicht.move"></a>8.10.7.1.6.&nbsp;Notes for Unavailable Connection to the MOVE Database</h6></div></div></div>
+                    
+                    <p>If the connection to the MOVE database could not be established while the plausibility and completeness check is being performed, the user is notified of this status with the following message:</p>
+                    <p>"The connection to the MOVE database could not be established. The test for the used MOVE objects was not performed."</p>
+                </div>
+            </div>
+            <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="prozess.bereitstellung.pruefung.protokoll.fehler"></a>8.10.7.2.&nbsp;"With Errors" Table Sheet</h5></div></div></div>
+                
+                <p>All editorial objects are logged here that were considered and for which as least one error was detected.</p>
+                <p>The &#8222;With errors&#8220; table sheet contains a total of 15 columns. The first 12 columns are the same is in <a class="xref" href="ar01s08s10s07.html#prozess.bereitstellung.pruefung.protokoll.fehlerfrei" title="8.10.7.3.&nbsp;&#34;Without Errors&#34; Table Sheet">Section&nbsp;8.10.7.3, &#8220;"Without Errors" Table Sheet&#8221;</a>. The last columns are listed below with title and description:</p>
+                <p>
+                    </p><div class="itemizedlist"><ul type="disc"><li>
+                            <p><span class="bold"><strong>Test:</strong></span> name of the test</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Error:</strong></span> the reason for an entry with details</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Relevant to deployment:</strong></span> flag if the error prevented the deployment or not. If the flag is set (&#8220;Yes&#8221;), then there may be two causes for this. One cause is that the editorial object may not be present. The other cause is that the editorial object may be present, but referenced objects (child objects) are not present, so the relationships to the references objects cannot be prepared.</p>
+                        </li></ul></div><p>
+                </p>
+                <p>Applies to the filling of the table: there is one separate row for each error in an editorial object. Multiple errors can be detected for one editorial object through multiple tests. If this is the case, multiple entries for one editorial object are included in the worksheet.</p>
+            </div>
+            <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="prozess.bereitstellung.pruefung.protokoll.fehlerfrei"></a>8.10.7.3.&nbsp;"Without Errors" Table Sheet</h5></div></div></div>
+                
+                <p>All editorial objects are logged here that were considered and for which no error was detected.</p>
+                <p>The &#8222;Without errors&#8220; table sheet contains a total of 12 columns. The columns are labeled as follows:</p>
+                <p>
+                    </p><div class="itemizedlist"><ul type="disc"><li>
+                            <p><span class="bold"><strong>Object type:</strong></span> object type of the considered object</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Object path:</strong></span> the path of the considered brand-specific object in the primary tree of the object type. Only one path is always given</p>
+                        </li><li>
+                            <p><span class="bold"><strong>System name:</strong></span> the system name of the considered object</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Object status:</strong></span> object status of the considered object</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Object version:</strong></span> object version of the considered object</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Version comments:</strong></span> version comments of the affected version</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Team:</strong></span> team of the last editor of the considered object version</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Last author:</strong></span> last editor of the considered object version</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Last context:</strong></span> order context (name of the order head and step, separated by " |-| ") of the considered object version</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Version-specific ID:</strong></span> version-specific ID of the considered object version</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Version-independent ID:</strong></span> version-independent ID of the considered object</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Last change:</strong></span> time stamp of the last change of the considered object</p>
+                        </li></ul></div><p>
+                </p>
+                <p>Applies to the filling of the table: there is one separate row for each editorial object. The columns are filled in with the respective values.</p>
+            </div>
+            <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="prozess.bereitstellung.pruefung.protokoll.auftrag"></a>8.10.7.4.&nbsp;"Order Headers And Order Steps" Table Sheet</h5></div></div></div>
+                
+                <p>Here all order headers and order steps are listed, which contain editorial objects with errors.</p>
+                <p>The "Order headers and order steps" table sheet contains a total of 13 columns. The columns are labeled as follows:</p>
+                <p>
+                    </p><div class="itemizedlist"><ul type="disc"><li>
+                            <p><span class="bold"><strong>Order header label:</strong></span> name of the order header</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Order step label:</strong></span> name of the order step</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Order header status:</strong></span> object status of the order header</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Order step status:</strong></span> object status of the order step</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Start date:</strong></span> scheduled start date of the scheduled order</p>
+                        </li><li>
+                            <p><span class="bold"><strong>End date:</strong></span> scheduled end date of the scheduled order</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Initial deployment date:</strong></span> initial deployment date of the scheduled order</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Market name:</strong></span> market name from the applicable order header</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Author of the last order header change:</strong></span> the user responsible for the last order header change</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Responsible order header team:</strong></span> the team responsible for the last order header change</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Order step end date:</strong></span> scheduled end date of the scheduled order step</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Responsible order step team:</strong></span> the team responsible for the last order step change</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Contains no released objects:</strong></span> it is noted if unreleased objects are included</p>
+                        </li></ul></div><p>
+                </p>
+                <p>Applies to the filling of the table: there is one row for each order step. Then the information for the applicable order header is included in the row. The columns are filled with the respective values, as long as they exist for the corresponding object. If the values for the respective object do not exist, then the Excel table cells are not filled in.</p>
+            </div>
+            <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="prozess.bereitstellung.pruefung.protokoll.verwendung"></a>8.10.7.5.&nbsp;"References to other brands" Table Sheet</h5></div></div></div>
+                
+                <p>All editorial objects are logged here that were considered and that reference editorial objects of other brands.</p>
+                <p>The &#8222;Without errors&#8220; table sheet contains a total of 13 columns. The columns are labeled as follows:</p>
+                <p>
+                    </p><div class="itemizedlist"><ul type="disc"><li>
+                            <p><span class="bold"><strong>Source object system name:</strong></span> the system name of the considered object</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Source object object type:</strong></span> the object type of the considered object</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Source object path:</strong></span> the path of the considered brand-specific object in the primary tree of the object type. Only one path is always given.</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Reference object system name:</strong></span> the system name of the referenced non-brand object</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Source object version:</strong></span> the object version of the considered object</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Source object status:</strong></span> the object status of the considered object</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Source object ID:</strong></span> version-specific ID of the considered object version</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Version-independent ID of source object:</strong></span> version-independent ID of the considered object</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Reference object ID:</strong></span> version-specific ID of the referenced non-brand object</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Version-independent ID of reference object:</strong></span> version-independent ID of the referenced non-brand object</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Last author of source object:</strong></span> last editor of the considered object version</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Last context of source object:</strong></span> order context (name of the order head and step, separated by " |-| ") of the considered object version</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Action element:</strong></span> the path to the action elements in the function test content, that references the non-brand object.</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Reference object type:</strong></span> the object type of the referenced non-brand object</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Reference object brand:</strong></span> the brand of the referenced non-brand object</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Reference object location:</strong></span> the location of the referenced non-brand object</p>
+                        </li></ul></div><p>
+                </p>
+                <p>Applies to the filling of the table: there is one separate row for each editorial object. The columns are filled in with the respective values.</p>
+            </div>
+        </div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ar01s08s10s06.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="ar01s08s10.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="ar01s08s10s08.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">8.10.6.&nbsp;Test Object Editor&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;8.10.8.&nbsp;Notification</td></tr></table></div></body></html>

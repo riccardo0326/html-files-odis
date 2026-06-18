@@ -1,0 +1,36 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>7.13.6.&nbsp;Deleting Brand Variables</title><link rel="stylesheet" href="mystyle.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.73.1"><link rel="start" href="index.html" title="ODIS Creator Help"><link rel="up" href="ar01s07s13.html" title="7.13.&nbsp;Brand Variables"><link rel="prev" href="ar01s07s13s05.html" title="7.13.5.&nbsp;Deactivating/Activating Brand Variables"><link rel="next" href="ar01s07s13s07.html" title="7.13.7.&nbsp;Usage Locations Dialog">
+<script type="text/javascript" src="../../../advanced/synchWithToc.js"></script>
+
+<link rel="stylesheet" href="../../../content/org.eclipse.help.webapp/advanced/breadcrumbs.css" charset="ISO-8859-1" type="text/css"></link>
+<script type="text/javascript" src="../../../content/org.eclipse.help/livehelp.js"> </script>
+<script type="text/javascript">
+if( self == top ){
+  var  anchorParam = location.hash.length > 0 ? '\u0026anchor=' + location.hash.substr(1) : '';
+  window.location.replace( "../../../index.jsp?topic=%2FMasterData_Client_Control%2Fhtml%2Far01s07s13s06.html" + anchorParam);
+}
+</script>
+</head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="help_breadcrumbs"><a href="index.html">ODIS Creator Help</a> > <a href="ar01s07.html">7&#46; ODIS Creator Editing Process</a> > <a href="ar01s07s13.html">7&#46;13&#46; Brand Variables</a></div>
+<div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">7.13.6.&nbsp;Deleting Brand Variables</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ar01s07s13s05.html">Prev</a>&nbsp;</td><th width="60%" align="center">7.13.&nbsp;Brand Variables</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ar01s07s13s07.html">Next</a></td></tr></table><hr></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="markenvariable.loeschen"></a>7.13.6.&nbsp;Deleting Brand Variables</h4></div></div></div>
+			
+			<p>Brand variables can be deleted if they have the "deactivated" status and currently (meaning under consideration of all current working versions and all currently valid released versions) cannot be used by a function code object</p>
+			<div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="markenvariable.loeschen.manuell"></a>7.13.6.1.&nbsp;Deleting Brand Variables Manually</h5></div></div></div>
+				
+				<p>Select one or more unused, deactivated brand variables and select the "Delete brand variable" entry in the context menu. After a confirmation prompt is confirmed, the brand variables will be permanently deleted.</p>
+			</div>
+			<div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="markenvariable.loeschen.job"></a>7.13.6.2.&nbsp;Brand Variables Deletion Job</h5></div></div></div>
+				
+				<p>The management of the brand variable deletion jobs is controlled by the location administrator through the "brand variables job configuration editor" in the brand nodes of the brand variables navigator.</p>
+				<p>
+					</p><div class="figure"><a name="figure.markenvariable.loeschen.job"></a><div class="figure-contents">
+						
+						<div class="mediaobject"><img src="images/markenvariablen_konfigurationseditor.png" alt="Brand variable job configuration editor"></div>
+					</div><p class="title"><b>Figure&nbsp;332.&nbsp;Brand variable job configuration editor</b></p></div><p><br class="figure-break">
+				</p>
+				<p>In the "brand variable job configuration editor", you can configure the job with author and location administrator rights. The job can be configured for each brand. If you deselect the "Deactivate job" checkbox, the job will be activated and will run at the times defined in the table. All unused, deactivated brand variables are permanently deleted at that time.</p>
+				<p>Up to five tuples of weekdays and times can be applied for the job start in the configuration. Individual tuples can be activated or deactivated. The order of tuples does not play a role, because it will use the chronological order of the activated entries for determining the next start time for the job.</p>
+				<p>Users, that only have the author role, can open the "brand variable job configuration editor" as read-only. This allows you to see the current configuration.</p>
+			</div>
+		</div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ar01s07s13s05.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="ar01s07s13.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="ar01s07s13s07.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">7.13.5.&nbsp;Deactivating/Activating Brand Variables&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;7.13.7.&nbsp;Usage Locations Dialog</td></tr></table></div></body></html>

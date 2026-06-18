@@ -1,0 +1,135 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>6.4.7.&nbsp;Translation Packages</title><link rel="stylesheet" href="mystyle.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.73.1"><link rel="start" href="index.html" title="ODIS Creator Help"><link rel="up" href="ar01s06s04.html" title="6.4.&nbsp;Translation"><link rel="prev" href="ar01s06s04s06.html" title="6.4.6.&nbsp;Translation Jobs"><link rel="next" href="ar01s06s04s08.html" title="6.4.8.&nbsp;Monitoring Translations">
+<script type="text/javascript" src="../../../advanced/synchWithToc.js"></script>
+
+<link rel="stylesheet" href="../../../content/org.eclipse.help.webapp/advanced/breadcrumbs.css" charset="ISO-8859-1" type="text/css"></link>
+<script type="text/javascript" src="../../../content/org.eclipse.help/livehelp.js"> </script>
+<script type="text/javascript">
+if( self == top ){
+  var  anchorParam = location.hash.length > 0 ? '\u0026anchor=' + location.hash.substr(1) : '';
+  window.location.replace( "../../../index.jsp?topic=%2FMasterData_Client_Control%2Fhtml%2Far01s06s04s07.html" + anchorParam);
+}
+</script>
+</head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="help_breadcrumbs"><a href="index.html">ODIS Creator Help</a> > <a href="ar01s06.html">6&#46; ODIS Creator Order Management Process</a> > <a href="ar01s06s04.html">6&#46;4&#46; Translation</a></div>
+<div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">6.4.7.&nbsp;Translation Packages</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ar01s06s04s06.html">Prev</a>&nbsp;</td><th width="60%" align="center">6.4.&nbsp;Translation</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ar01s06s04s08.html">Next</a></td></tr></table><hr></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="uebersetzungspakete"></a>6.4.7.&nbsp;Translation Packages</h4></div></div></div>
+        
+        <p>Translation requirements are included in translation packages through an automatic or manual package assembly. The included editorial objects are given in the translation with that (outside of ODIS Creator).</p>
+        <p>A translation package (see <a class="xref" href="ar01s06s04s07.html#figure.auftragsverwaltung.uebersetzung.paketeansicht" title="Figure&nbsp;161.&nbsp;Translation Packages View">Figure&nbsp;161, &#8220;Translation Packages View&#8221;</a>) includes information about the target and source language, editorial object location, the scheduled deadline, the package creator, information about the Trados matches, as well as the version, status, type, brand name, initial deployment date and the author of the objects in the package.</p>
+        <p>Every package is named according to the following schema: &lt;Brand_Location code_Source language_Target language_Date_Order number&gt;, whereby the order number is a 9-digit number with the prefix "OC".</p>
+        <p>Translation packages always have one of the following statuses:</p>
+        <p>
+            </p><div class="itemizedlist"><ul type="disc"><li>
+                    <p><span class="inlinemediaobject"><img src="images/translation_package.png"></span> <span class="bold"><strong>Exported:</strong></span> the package was exported from ODIS Creator.</p>
+                </li><li>
+                    <p><span class="inlinemediaobject"><img src="images/translation_package.png"></span> <span class="bold"><strong>Exported (package name in orange):</strong></span> the package is a complaint package (see <a class="xref" href="ar01s06s04s10.html" title="6.4.10.&nbsp;Translation Disputes">Section&nbsp;6.4.10, &#8220;Translation Disputes&#8221;</a>), which has been created by ODIS Creator.</p>
+                </li><li>
+                    <p><span class="inlinemediaobject"><img src="images/problem_error.png"></span> <span class="bold"><strong>Error:</strong></span> the package could not be imported into GoCAT/DELS. The translation coordinator or the team of translation coordinators receives a notification for the translation package that an error occurred when importing into GoCAT/DELS.</p>
+                </li><li>
+                    <p><span class="inlinemediaobject"><img src="images/translation_package_rejected.png"></span> <span class="bold"><strong>Rejected:</strong></span> the package was rejected by GoCAT/DELS. The translation coordinator or the team of translation coordinators receives a notification for the translation package with the rejection comments from GoCAT/DELS. The package can be exported again or reset by the translation coordinator.</p>
+                </li><li>
+                    <p><span class="inlinemediaobject"><img src="images/translation_package_imported_gocat.png"></span> <span class="bold"><strong>In translation:</strong></span> the package was imported successfully into GoCAT/DELS and is now in translation.</p>
+                </li><li>
+                    <p><span class="inlinemediaobject"><img src="images/translation_package_imported.png"></span> <span class="bold"><strong>Imported:</strong></span> the package could be imported into ODIS Creator successfully after translation.</p>
+                </li><li>
+                    <p><span class="inlinemediaobject"><img src="images/translation_package_reseted.png"></span> <span class="bold"><strong>Reset:</strong></span> the package has been manually reset by the translation coordinator.</p>
+                </li></ul></div><p>
+        </p>
+        <p>This status and the time stamp for the status change are displayed in the properties window (see <a class="xref" href="ar01s06s04s07.html#figure.auftragsverwaltung.uebersetzung.paketeansicht" title="Figure&nbsp;161.&nbsp;Translation Packages View">Figure&nbsp;161, &#8220;Translation Packages View&#8221;</a>).</p>
+        <p>
+            </p><div class="figure"><a name="figure.auftragsverwaltung.uebersetzung.paketeansicht"></a><div class="figure-contents">
+                
+                <div class="mediaobject"><img src="images/Uebersetzungspaket_ansicht.jpg" alt="Image: translation packages view"></div>
+            </div><p class="title"><b>Figure&nbsp;161.&nbsp;Translation Packages View</b></p></div><p><br class="figure-break">
+        </p>
+        <p>The status is retrieved by GOCAT every 60 minutes. The maximum wait time between the export from ODIS Creator and the import into GOCAT can be set by the translation coordinator for each location in the translation parameters editor (see <a class="xref" href="ar01s06s04s01.html" title="6.4.1.&nbsp;Define Translation Parameters">Section&nbsp;6.4.1, &#8220;Define Translation Parameters&#8221;</a>).</p>
+        <p>If you are assigned to a team with the roll "read-only author" or "author", then you can double click on an editorial object to switch to the corresponding content in the editing view. Analogous to the already existing link functions in other modules, the usage location dialog is also displayed to the user here if the destination of the link cannot be clearly determined (for example, due to reusage).</p>
+        <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="uebersetzungspakete.paketbildung"></a>6.4.7.1.&nbsp;Package Image</h5></div></div></div>
+            
+            <p>The automatic packaging of requirements is principally handled in two disjunctive quantities</p><div class="itemizedlist"><ul type="disc"><li>Quantity 1: requirements that have a target date between the current date "today" (inclusive) and the date "today - translation period" (inclusive)</li><li>Quantity 2: requirements that have a target data before the date "today - translation period" or in the future (after "today") as well as requirements from AdHoc orders</li></ul></div><p>Different parameters apply for both these quantities during the package setup. The requirements for quantity 1 should always be prioritized.</p>
+            <p>Quantity 1 requirements are always completely exported. It may also be that packages are created, which are not filled up to the set threshold.</p>
+            <p>Quantity 2 requirements are only transferred to packages if the set threshold &#8220;Amount (editorial text)&#8221; or &#8220;Amount (editorial content)&#8221; is reached. The packages are always filled with the set quantity (text or content) for this. Any additional requirements will remain until they either fall in quantity 1 or they create additional packages through quantity 2.</p>
+            <p>For both quantities, the parameters are likewise considered as the top threshold per package, therefore more packages are created when necessary if the threshold is exceeded for an object type.</p>
+            <p>The maximum number of objects of any type that can be contained in each package is specified by the &#8220;Amount (editorial text)&#8221; parameter. For object contents, the maximum amount of content is specified by the parameter &#8220;Amount (editorial content)&#8221;; the type of object is not relevant. It is important that a function code or a supplemental document is exported together (text and content) into a package, as long as both are being sent for translation.</p>
+            <p>For example, a package of the maximum size may contain the following objects if the values &#8220;Amount (editorial text)&#8221; = 500 and &#8220;Amount (editorial content)&#8221; = 500 are:</p><div class="itemizedlist"><ul type="disc"><li>
+                        <p>500 objects from the equipment network (editorial text)</p>
+                    </li><li>
+                        <p>500 objects from the knowledge base (editorial text)</p>
+                    </li><li>
+                        <p>500 objects from the function library (editorial text)</p>
+                    </li><li>
+                        <p>500 objects from the supplementary documents (editorial text)</p>
+                    </li><li>
+                        <p>500 content files from the function code, supplementary documents, and measured value table types (editorial content)</p>
+                    </li></ul></div><p>
+            </p>
+            <p>500 function codes including a content file should be included. Supplemental documents with content are no longer exported in the same package.</p>
+            <p><a class="xref" href="ar01s06s04s07.html#table.auftragsverwaltung.uebersetzung.paketbildung" title="Table&nbsp;35.&nbsp;Package Creation Example">Table&nbsp;35, &#8220;Package Creation Example&#8221;</a> shows an example with more than one package for quantity 2. If the requirements were in quantity 1, the remaining requirements would be exported in another package. The parameters have the following values &#8220;Amount (editorial text)&#8221; = 50 and &#8220;Amount (editorial content)&#8221; = 60.</p>
+            <p>In <a class="xref" href="ar01s06s04s07.html#table.auftragsverwaltung.uebersetzung.paketbildung" title="Table&nbsp;35.&nbsp;Package Creation Example">Table&nbsp;35, &#8220;Package Creation Example&#8221;</a>, the code OBE stands for the texts from objects, such as the system name of a diagnostic object, and the code TBI stands for the texts from content files, such as the textual content of a supplemental document. The codes ASN, WBS, FKC, ZDK and MWT stand for various objects, therefore ASN stands for equipment network objects, WSB for knowledge base objects, FKC for function codes, ZDK for supplemental documents and MWT for measured values table.</p>
+            <p>
+                </p><div class="table"><a name="table.auftragsverwaltung.uebersetzung.paketbildung"></a><div class="table-contents">
+                    <table summary="Package Creation Example" border="1"><colgroup><col align="left"><col align="center"><col align="center"><col align="center"><col align="center"><col align="center"><col align="center"></colgroup><thead><tr><th align="left">Object type</th><th align="center">Requirements</th><th colspan="2" align="center">Paket1</th><th colspan="2" align="center">Paket2</th><th align="center">Remaining requirements</th></tr><tr><th align="left">&nbsp;</th><th align="center">Amount of objects</th><th align="center">Objects</th><th align="center">File</th><th align="center">Objects</th><th align="center">File</th><th align="center">Amount of objects</th></tr></thead><tbody valign="top"><tr><td align="left" valign="top">ASN OBE</td><td align="center" valign="top">70</td><td align="center" valign="top">50</td><td align="center" valign="top">1</td><td align="center" valign="top">0</td><td align="center" valign="top">0</td><td align="center" valign="top">20</td></tr><tr><td align="left" valign="top">WBS OBE</td><td align="center" valign="top">130</td><td align="center" valign="top">50</td><td align="center" valign="top">1</td><td align="center" valign="top">50</td><td align="center" valign="top">1</td><td align="center" valign="top">30</td></tr><tr><td align="left" valign="top">FKC OBE</td><td align="center" valign="top">20</td><td align="center" valign="top">0</td><td align="center" valign="top">0</td><td align="center" valign="top">0</td><td align="center" valign="top">0</td><td align="center" valign="top">20</td></tr><tr><td align="left" valign="top">ZDK OBE</td><td align="center" valign="top">80</td><td align="center" valign="top">50</td><td align="center" valign="top">1</td><td align="center" valign="top">0</td><td align="center" valign="top">0</td><td align="center" valign="top">30</td></tr><tr><td align="left" valign="top">&nbsp;</td><td class="auto-generated">&nbsp;</td><td class="auto-generated">&nbsp;</td><td class="auto-generated">&nbsp;</td><td class="auto-generated">&nbsp;</td><td class="auto-generated">&nbsp;</td><td class="auto-generated">&nbsp;</td></tr><tr><td align="left" valign="top">ZDK TBI</td><td align="center" valign="top">30</td><td align="center" valign="top">30</td><td align="center" valign="top">30</td><td align="center" valign="top">0</td><td align="center" valign="top">0</td><td align="center" valign="top">0</td></tr><tr><td align="left" valign="top">FKC TBI</td><td align="center" valign="top">70</td><td align="center" valign="top">30</td><td align="center" valign="top">30</td><td align="center" valign="top">40</td><td align="center" valign="top">40</td><td align="center" valign="top">0</td></tr><tr><td align="left" valign="top">MWT TBI</td><td align="center" valign="top">50</td><td align="center" valign="top">0</td><td align="center" valign="top">0</td><td align="center" valign="top">20</td><td align="center" valign="top">20</td><td align="center" valign="top">30</td></tr></tbody></table>
+                </div><p class="title"><b>Table&nbsp;35.&nbsp;Package Creation Example</b></p></div><p><br class="table-break">
+            </p>
+            <p>The target date for a translation package is calculated as follows when packages are created automatically: packages with quantity 1 requirements always contain the earliest introduction date of all included requirements (in this package). The deadline for the generated packages are thus in the range between "today" and the date "today + translation period". The set translation period is deliberately shorter for packages from quantity 1 requirements. For packages for quantity 2 requirements, the deadline is always set to "today + translation period" depending on which deadlines the included requirements have.</p>
+        </div>
+        <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="zieltermin.uebersetzungspaket"></a>6.4.7.2.&nbsp;Changing the Translation Package Deadline</h5></div></div></div>
+            
+            <p>You can select any amount of translation packages in the translation management navigation tree. When selecting, it does not matter if the selected translation packages have the same or different source-target language combination. The selection of translation packages from different locations is also possible. After confirming the (context) menu item <span class="bold"><strong>Adjust deadline</strong></span>, a dialog is presented to you, where you can specify the present date or a date in the future (see <a class="xref" href="ar01s06s04s07.html#figure.auftragsverwaltung.uebersetzung.pakete" title="Figure&nbsp;162.&nbsp;Adjusting the Translation Package Deadline">Figure&nbsp;162, &#8220;Adjusting the Translation Package Deadline&#8221;</a>). This dialog gives you the option to completely cancel the action or proceed with it.</p>
+            <p>
+                </p><div class="figure"><a name="figure.auftragsverwaltung.uebersetzung.pakete"></a><div class="figure-contents">
+                    
+                    <div class="mediaobject"><img src="images/Uebersetzungspaket.JPG" alt="Image: adjusting the translation package deadline"></div>
+                </div><p class="title"><b>Figure&nbsp;162.&nbsp;Adjusting the Translation Package Deadline</b></p></div><p><br class="figure-break">
+            </p>
+            <p>If the action is carried out, then the selected date (see <a class="xref" href="ar01s06s04s07.html#figure.auftragsverwaltung.uebersetzung.pakete.termin" title="Figure&nbsp;163.&nbsp;Adjusting the Translation Package Deadline">Figure&nbsp;163, &#8220;Adjusting the Translation Package Deadline&#8221;</a>) for all previously selected translation packages is applied as the new deadline date. During this, the value is only adjusted in the database, so that you can see it in the ODIS Creator interface. An adjustment to the already exported files does not occur. After the action has been successfully performed, the navigation tree in translation management is updated.</p>
+            <p>
+                </p><div class="figure"><a name="figure.auftragsverwaltung.uebersetzung.pakete.termin"></a><div class="figure-contents">
+                    
+                    <div class="mediaobject"><img src="images/Uebersetzungspaket_termin.jpg" alt="Image: adjusting the translation package deadline"></div>
+                </div><p class="title"><b>Figure&nbsp;163.&nbsp;Adjusting the Translation Package Deadline</b></p></div><p><br class="figure-break">
+            </p>
+        </div>
+        <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="uebersetzung.pakete.zuruecksetzen"></a>6.4.7.3.&nbsp;Resetting Translation Packages</h5></div></div></div>
+            
+            <p>The function to reset translation packages allows you to remove translation packages, that have not been imported yet, from the entire translation process. The reset packages will correspondingly be seen with the status <span class="bold"><strong>reset</strong></span>, and the objects contained in the package are reset to the initial status of the translation process. If the reset translation package contains administrative objects (for example, default texts), translation requirements are then created for all required target languages as a result of the reset process.</p>
+            <p>
+                </p><div class="figure"><a name="figure.auftragsverwaltung.uebersetzung.pakete.zurueck"></a><div class="figure-contents">
+                    
+                    <div class="mediaobject"><img src="images/Uebersetzungspaket_zuruecksetzen.jpg" alt="Image: resetting translation packages"></div>
+                </div><p class="title"><b>Figure&nbsp;164.&nbsp;Resetting Translation Packages</b></p></div><p><br class="figure-break">
+            </p>
+            <p>To reset translation packages, select the desired packages and then select the "Reset package" entry in the context menu (see <a class="xref" href="ar01s06s04s07.html#figure.auftragsverwaltung.uebersetzung.pakete.zurueck" title="Figure&nbsp;164.&nbsp;Resetting Translation Packages">Figure&nbsp;164, &#8220;Resetting Translation Packages&#8221;</a> with the icon) <span class="inlinemediaobject"><img src="images/Uebersetzung_zuruecksetzen.png"></span>. This function can also be accessed through the global menu and the button. After the menu item has been activated, a message dialog will appear (see <a class="xref" href="ar01s06s04s07.html#figure.auftragsverwaltung.uebersetzung.pakete.zurueck.dialog" title="Figure&nbsp;165.&nbsp;Confirmation Dialog Before Resetting Translation Packages">Figure&nbsp;165, &#8220;Confirmation Dialog Before Resetting Translation Packages&#8221;</a>), in which you must confirm the resetting of the selected translation packages.</p>
+            <p>
+                </p><div class="figure"><a name="figure.auftragsverwaltung.uebersetzung.pakete.zurueck.dialog"></a><div class="figure-contents">
+                    
+                    <div class="mediaobject"><img src="images/Uebersetzungspaket_zuruecksetzen_dialog.jpg" alt="Image: confirmation dialog before resetting translation packages"></div>
+                </div><p class="title"><b>Figure&nbsp;165.&nbsp;Confirmation Dialog Before Resetting Translation Packages</b></p></div><p><br class="figure-break">
+            </p>
+            <p>Translation packages with the <span class="bold"><strong>reset</strong></span> status are not visible at first in the navigation tree. However, these can be made visible through a corresponding filter setting (see <a class="xref" href="ar01s06s04s07.html#figure.auftragsverwaltung.uebersetzung.filtern" title="Figure&nbsp;166.&nbsp;Filter Dialog for Translation Packages">Figure&nbsp;166, &#8220;Filter Dialog for Translation Packages&#8221;</a>).</p>
+            <p>Reset translation packages can be displayed using the filter setting <span class="bold"><strong>Reset = Yes</strong></span> in the navigation tree.</p>
+            <p>
+                </p><div class="figure"><a name="figure.auftragsverwaltung.uebersetzung.filtern"></a><div class="figure-contents">
+                    
+                    <div class="mediaobject"><img src="images/Ubersetzungspaket_filterdialog.jpg" alt="Image: filter dialog for translation packages"></div>
+                </div><p class="title"><b>Figure&nbsp;166.&nbsp;Filter Dialog for Translation Packages</b></p></div><p><br class="figure-break">
+            </p>
+            <p>There are some restrictions when handling these reset packages, that are listed in the following:</p>
+            <p>
+                </p><div class="itemizedlist"><ul type="disc"><li>
+                        <p>If translation packages are imported, that are internally labeled with the "reset" status, the import of texts from the packages is rejected. The packages are moved to the designated "Error" folder and a corresponding message is stored in the log file. The message says that the translation package could not be imported due to the package status.</p>
+                    </li><li>
+                        <p>The import of translation packages with the "reset" status is still possible in expert mode.</p>
+                    </li><li>
+                        <p>Reset translation packages are initially not displayed in the navigation tree. To display translation packages with this status, a respective filter must be set.</p>
+                    </li><li>
+                        <p>Translation packages with the "reset" status are "grayed out" in the display, thus the name is not black but rather given in gray font.</p>
+                    </li><li>
+                        <p>Translation packages with the "reset" status are displayed with the icon <span class="inlinemediaobject"><img src="images/uebersetzungsstatus_zurueckgesetzt.png"></span> .</p>
+                    </li><li>
+                        <p>Reset translation packages are permanently deleted from the system by an automatic job after a set retention period. The setting is identical to the retention period of imported translation packages and is set for each location within the translation parameters.</p>
+                    </li></ul></div><p>
+            </p>
+        </div>
+    </div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ar01s06s04s06.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="ar01s06s04.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="ar01s06s04s08.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">6.4.6.&nbsp;Translation Jobs&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;6.4.8.&nbsp;Monitoring Translations</td></tr></table></div></body></html>

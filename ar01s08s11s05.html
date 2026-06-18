@@ -1,0 +1,54 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>8.11.5.&nbsp;Change Tracking</title><link rel="stylesheet" href="mystyle.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.73.1"><link rel="start" href="index.html" title="ODIS Creator Help"><link rel="up" href="ar01s08s11.html" title="8.11.&nbsp;Cooperation export"><link rel="prev" href="ar01s08s11s04.html" title="8.11.4.&nbsp;Using an Export Template"><link rel="next" href="ar01s08s11s06.html" title="8.11.6.&nbsp;Managing a Global Exclusion List">
+<script type="text/javascript" src="../../../advanced/synchWithToc.js"></script>
+
+<link rel="stylesheet" href="../../../content/org.eclipse.help.webapp/advanced/breadcrumbs.css" charset="ISO-8859-1" type="text/css"></link>
+<script type="text/javascript" src="../../../content/org.eclipse.help/livehelp.js"> </script>
+<script type="text/javascript">
+if( self == top ){
+  var  anchorParam = location.hash.length > 0 ? '\u0026anchor=' + location.hash.substr(1) : '';
+  window.location.replace( "../../../index.jsp?topic=%2FMasterData_Client_Control%2Fhtml%2Far01s08s11s05.html" + anchorParam);
+}
+</script>
+</head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="help_breadcrumbs"><a href="index.html">ODIS Creator Help</a> > <a href="ar01s08.html">8&#46; ODIS Creator Preparation Process</a> > <a href="ar01s08s11.html">8&#46;11&#46; Cooperation export</a></div>
+<div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">8.11.5.&nbsp;Change Tracking</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ar01s08s11s04.html">Prev</a>&nbsp;</td><th width="60%" align="center">8.11.&nbsp;Cooperation export</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ar01s08s11s06.html">Next</a></td></tr></table><hr></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="coopexport.editor.changespy"></a>8.11.5.&nbsp;Change Tracking</h4></div></div></div>
+			
+			<p>The &#8220;Track changes&#8221; checkbox enables tracking of changed editorial objects (auxiliary documents and function codes) and deleted editorial objects (auxiliary documents, function codes, and diagnostic objects) in the collaboration export. All changed and deleted objects are listed in a separate structure node. The objects are sorted alphabetically within the structure node and are marked with an icon (see <a class="xref" href="ar01s08s11s05.html#figure.coopexport.baumansicht" title="Figure&nbsp;633.&nbsp;Collaboration Export Tree View">Figure&nbsp;633, &#8220;Collaboration Export Tree View&#8221;</a>). The comparison will only happen for exports that were created from an export template. There is no comparison when data (knowledge base and equipment network) from the template is changed. It is checked off by default after selecting the template.</p><div class="figure"><a name="figure.coopexport.baumansicht"></a><div class="figure-contents">
+					
+					<div class="mediaobject"><img src="images/coopexport_baumansicht.png" alt="Image: collaboration export tree view"></div>
+				</div><p class="title"><b>Figure&nbsp;633.&nbsp;Collaboration Export Tree View</b></p></div><p><br class="figure-break">
+			</p>
+			<p>For deleted objects that are still in the recycle bin, only the display name is shown within the tree structure. Objects that have been permanently deleted (deleted from the recycle bin) will not be displayed.</p>
+			<p>The following changes will cause an object to be marked as changed:</p><div class="itemizedlist"><ul type="disc"><li>
+						<p>New version of an object</p>
+					</li><li>
+						<p>Newly created objects</p>
+					</li><li>
+						<p>If an object has reached its market introduction date and was not previously contained in a collaboration export</p>
+					</li></ul></div><p>
+			</p>
+		<div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="coopexport.editor.changespy.flag"></a>8.11.5.1.&nbsp;Identifying the Differences between Test Steps and Action Elements in an SVG Export</h5></div></div></div>
+			
+			<p>Changes of test steps and action elements compared to the previous version will be marked in color so that the author can identify the changes. The following changes will be identified and marked in color:</p><div class="itemizedlist"><ul type="disc"><li>
+						<p>New test steps that are added: the frame is displayed with a &#8220;bold&#8221; green border. All action elements within the test step will also be marked in green.</p>
+					</li><li>
+						<p>New action elements that are added: the frame is displayed with a &#8220;bold&#8221; green border. If a parent node (such as Loop, If, etc.) is added, the parent node will be marked in green along with all child nodes.</p>
+					</li><li>
+						<p>Changed test steps of all types and action elements: the frame is displayed with a &#8220;bold&#8221; red border. All changes to content are identified. If an action element with a branch (such as an IF command) was changed, only this will be marked and not the entire branch.</p>
+					</li><li>
+						<p>Moved test steps and action elements: the frame is displayed with a &#8220;bold&#8221; yellow border. Added and deleted instructions do not have any effect on the marking. All instructions that are affected by the move are marked.</p>
+					</li><li>
+						<p>Moved and changed test steps: the frame is displayed with a &#8220;bold&#8221; orange border.</p>
+					</li><li>
+						<p>Change or addition of an action element in a test step: the test step is displayed with a red background. The lettering of the test step name is shown in red on the instruction side.</p>
+					</li></ul></div><p>   
+			</p> 
+			<p>The differences in subprograms (test procedure, general tests, and function tests) are also identified and marked accordingly.</p>
+			<div class="figure"><a name="figure.coopexport.markierung"></a><div class="figure-contents">
+				
+				<div class="mediaobject"><img src="images/coopexport_markierung.png" alt="Image: collaboration export marking of differences"></div>
+			</div><p class="title"><b>Figure&nbsp;634.&nbsp;Collaboration Export Marking of Differences</b></p></div><br class="figure-break">
+		</div>
+		</div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ar01s08s11s04.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="ar01s08s11.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="ar01s08s11s06.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">8.11.4.&nbsp;Using an Export Template&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;8.11.6.&nbsp;Managing a Global Exclusion List</td></tr></table></div></body></html>

@@ -1,0 +1,301 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>7.14.3.&nbsp;Use cases</title><link rel="stylesheet" href="mystyle.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.73.1"><link rel="start" href="index.html" title="ODIS Creator Help"><link rel="up" href="ar01s07s14.html" title="7.14.&nbsp;Function Test Editor"><link rel="prev" href="ar01s07s14s02.html" title="7.14.2.&nbsp;Menus and Tool Bars"><link rel="next" href="ar01s07s14s04.html" title="7.14.4.&nbsp;Drag and Drop">
+<script type="text/javascript" src="../../../advanced/synchWithToc.js"></script>
+
+<link rel="stylesheet" href="../../../content/org.eclipse.help.webapp/advanced/breadcrumbs.css" charset="ISO-8859-1" type="text/css"></link>
+<script type="text/javascript" src="../../../content/org.eclipse.help/livehelp.js"> </script>
+<script type="text/javascript">
+if( self == top ){
+  var  anchorParam = location.hash.length > 0 ? '\u0026anchor=' + location.hash.substr(1) : '';
+  window.location.replace( "../../../index.jsp?topic=%2FMasterData_Client_Control%2Fhtml%2Far01s07s14s03.html" + anchorParam);
+}
+</script>
+</head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="help_breadcrumbs"><a href="index.html">ODIS Creator Help</a> > <a href="ar01s07.html">7&#46; ODIS Creator Editing Process</a> > <a href="ar01s07s14.html">7&#46;14&#46; Function Test Editor</a></div>
+<div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">7.14.3.&nbsp;Use cases</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ar01s07s14s02.html">Prev</a>&nbsp;</td><th width="60%" align="center">7.14.&nbsp;Function Test Editor</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ar01s07s14s04.html">Next</a></td></tr></table><hr></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="Funktionstesteditor.Allgemeine_Funktionalitaet2"></a>7.14.3.&nbsp;Use cases</h4></div></div></div>
+    
+    <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="Funktionstesteditor.Allgemeine_Funktionalitaet.Oeffnen_eines_Funktionstests"></a>7.14.3.1.&nbsp;Opening a Function Test</h5></div></div></div>
+      
+      <p>Function tests can be opened as follows.</p>
+      <div class="section" lang="en"><div class="titlepage"><div><div><h6 class="title"><a name="Funktionstesteditor.Allgemeine_Funktionalitaet.Oeffnen_eines_Funktionstests.OEE"></a>7.14.3.1.1.&nbsp;Opening with an Object Properties Editor</h6></div></div></div>
+        
+        <p>If a function code is opened in the object properties editor, the associated function test can be opened in the function test editor using the "Test sequence" function. This function is available in the context menu, in the global menu under Extras -&gt; Editor menu, and in the tool bar. It then appears on the desktop. Multiple function tests can be opened, and can then be selected using the tabs above the desktop.</p>
+      </div>
+      <div class="section" lang="en"><div class="titlepage"><div><div><h6 class="title"><a name="Funktionstesteditor.Allgemeine_Funktionalitaet.Oeffnen_eines_Funktionstests.Validierung"></a>7.14.3.1.2.&nbsp;Validation</h6></div></div></div>
+        
+        <p>The function test is validated when opened. If a function test does not contain a valid XML, it cannot be opened. A corresponding error message appears. See <a class="xref" href="ar01s07s14s03.html#figure.Funktionstesteditor.Allgemeine_Funktionalitaet.Oeffnen_eines_Funktionstests" title="Figure&nbsp;337.&nbsp;Validation Error">Figure&nbsp;337, &#8220;Validation Error&#8221;</a>.</p>
+        <p>
+          </p><div class="figure"><a name="figure.Funktionstesteditor.Allgemeine_Funktionalitaet.Oeffnen_eines_Funktionstests"></a><div class="figure-contents">
+            
+            <div class="mediaobject"><img src="images/fte_Validierungsfehler.png" alt="Image: validation error"></div>
+          </div><p class="title"><b>Figure&nbsp;337.&nbsp;Validation Error</b></p></div><p><br class="figure-break">
+        </p>
+      </div>
+    </div>
+    <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="Funktionstesteditor.Allgemeine_Funktionalitaet.Speichern"></a>7.14.3.2.&nbsp;Save</h5></div></div></div>
+      
+      <p>Changes that were made in the function test can be saved. Clicking on the disk symbol in the tool bar saves the active editor. Saving the prepared function test by exporting it is recommended. Changes can then be made with the current version and also saved. The changes are saved in the open function test. There is no prompt to ask for a different file name to save under.</p>
+      <p>A function test cannot be saved if action elements were created but not edited. See <a class="xref" href="ar01s07s14s09.html#Funktionstesteditor.Arbeitsflaeche.Aktionselemente_Anlegen" title="7.14.9.3.&nbsp;Create Action Element">Section&nbsp;7.14.9.3, &#8220;Create Action Element&#8221;</a>.</p>
+      <p>The XML that was created is validated when saving and entered into the test language. The code that results is displayed in the <span class="bold"><strong>Java code</strong></span> view<a class="indexterm" name="d4e15225"></a>, see <a class="xref" href="ar01s07s14s23.html" title="7.14.23.&nbsp;XML View">Section&nbsp;7.14.23, &#8220;XML View&#8221;</a> or <a class="xref" href="ar01s07s14s24.html" title="7.14.24.&nbsp;Java Code (View)">Section&nbsp;7.14.24, &#8220;Java Code (View)&#8221;</a>, and compiled. Errors that occur are displayed in the <span class="bold"><strong>Problems</strong></span> view. See <a class="xref" href="ar01s07s14s25.html" title="7.14.25.&nbsp;Problems (View)">Section&nbsp;7.14.25, &#8220;Problems (View)&#8221;</a>.</p>
+      <p>When saving an edited function code in read-only mode, it is possible to save the content locally or on the server. Pressing the &#8220;No&#8221; button saves the function code locally. Pressing the &#8220;Yes&#8221; button performs the following actions:</p><div class="itemizedlist"><ul type="disc"><li>
+            <p>The function code and object are checked out (same functionality as &#8220;Placing Function Test in Editing Status,&#8221; see <a class="xref" href="ar01s07s15s11.html#Funktionstesteditor.Debugger.FunktionstestInBearbeitung_setzen" title="7.15.11.5.&nbsp;Placing Function Test in Editing Status">Section&nbsp;7.15.11.5, &#8220;Placing Function Test in Editing Status&#8221;</a>)</p>
+          </li><li>
+            <p>The function code is saved</p>
+          </li><li>
+            <p>The function code is also checked in after saving if a function, including check-in, was performed.</p>
+          </li></ul></div><p>
+        </p>
+        <p>
+        </p><div class="figure"><a name="figure.Funktionstesteditor.Allgemeine_Funktionalitaet.Speichern_eines_Funktionstests_Readonly"></a><div class="figure-contents">
+          
+          <div class="mediaobject"><img src="images/fte_readonly_funktionscode_auschecken.png" alt="Image: Checking out a read-only function code"></div>
+        </div><p class="title"><b>Figure&nbsp;338.&nbsp;Checking Out a Read-Only Function Code</b></p></div><p><br class="figure-break">
+        </p>
+    </div>
+    <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="Funktionstesteditor.Allgemeine_Funktionalitaet.KombiniertesSpeichern"></a>7.14.3.3.&nbsp;Combined Save</h5></div></div></div>
+      
+      <p>This function is similar to the Save function (see <a class="xref" href="ar01s07s14s03.html#Funktionstesteditor.Allgemeine_Funktionalitaet.Speichern" title="7.14.3.2.&nbsp;Save">Section&nbsp;7.14.3.2, &#8220;Save&#8221;</a>), except the linked object properties editor is also saved. By saving the object properties editor, the function test is saved on the ODIS Creator server. You can continue working directly after the combined save: the function test remains open and in the "In editing" status.</p>
+      <p>To be able to save a function test and its test sequence together, all required fields in the function test must be filled out and there must be at least one change made in the test sequence. You can save the test sequence and the associated file in the test sequence function test editor using the menu <span class="bold"><strong>File -&gt; Combined save</strong></span>.</p>
+      <p>If a non-modal dialog for the focused function test is opened during a combined save, a yes/now prompt appears which offers the option to automatically accept the dialog.</p>
+    </div>
+    <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="Funktionstesteditor.Allgemeine_Funktionalitaet.Drucken"></a>7.14.3.4.&nbsp;Print</h5></div></div></div>
+      
+      <p>The current function test can be printed using this function. After activating the function, you can select the area to be printed. See <a class="xref" href="ar01s07s14s03.html#figure.Funktionstesteditor.Allgemeine_Funktionalitaet.Drucken.Bereichsauswahl" title="Figure&nbsp;339.&nbsp;Area Selection">Figure&nbsp;339, &#8220;Area Selection&#8221;</a>. The default setting is to print the commands.</p>
+      <p>
+        </p><div class="figure"><a name="figure.Funktionstesteditor.Allgemeine_Funktionalitaet.Drucken.Bereichsauswahl"></a><div class="figure-contents">
+          
+          <div class="mediaobject"><img src="images/fte_Druck_Export_Bereichsauswahl_Dialog.png" alt="Image: area selection"></div>
+        </div><p class="title"><b>Figure&nbsp;339.&nbsp;Area Selection</b></p></div><p><br class="figure-break">
+      </p>
+      <p>Depending on the area selection, the corresponding section or the complete content of the function test may be sent to the printer. The test steps are always placed above the commands. A selection in the function test editor does not affect the print scope.</p>
+      <p>A sample printout is shown in <a class="xref" href="ar01s07s14s03.html#figure.Funktionstesteditor.Allgemeine_Funktionalitaet.Drucken" title="Figure&nbsp;340.&nbsp;Print">Figure&nbsp;340, &#8220;Print&#8221;</a>.</p>
+      <p>
+        </p><div class="figure"><a name="figure.Funktionstesteditor.Allgemeine_Funktionalitaet.Drucken"></a><div class="figure-contents">
+          
+          <div class="mediaobject"><img src="images/fte_Drucken.png" alt="Image: printing commands"></div>
+        </div><p class="title"><b>Figure&nbsp;340.&nbsp;Print</b></p></div><p><br class="figure-break">
+      </p>
+    </div>
+    <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="Funktionstesteditor.Allgemeine_Funktionalitaet.SVG_Export"></a>7.14.3.5.&nbsp;SVG Export</h5></div></div></div>
+      
+      <p>This function exports the currently-selected function test in SVG format. See <a class="xref" href="ar01s07s14s03.html#figure.Funktionstesteditor.Allgemeine_Funktionalitaet.SVG_Export" title="Figure&nbsp;341.&nbsp;SVG Export">Figure&nbsp;341, &#8220;SVG Export&#8221;</a>. The content can be viewed with <a class="ulink" href="http://www.adobe.com/svg/viewer/install" target="_top">Adobe SVG Viewer</a>, for example.</p>
+      <p>When exporting SVG, you can select the area you would like to export (commands, test steps, all). See <a class="xref" href="ar01s07s14s03.html#figure.Funktionstesteditor.Allgemeine_Funktionalitaet.Drucken.Bereichsauswahl" title="Figure&nbsp;339.&nbsp;Area Selection">Figure&nbsp;339, &#8220;Area Selection&#8221;</a>. Test steps are always placed above commands.</p>
+      <p>The icons and the JavaScript<a class="indexterm" name="d4e15286"></a>for the display and the tool tip are copied into the 'Palette' folder related to the SVG file to be exported.</p>
+      <p>The following image shows an example display of the SVG export in a browser.</p>
+      <p>
+        </p><div class="figure"><a name="figure.Funktionstesteditor.Allgemeine_Funktionalitaet.SVG_Export"></a><div class="figure-contents">
+          
+          <div class="mediaobject"><img src="images/fte_SVG.png" alt="Image: SVG export"></div>
+        </div><p class="title"><b>Figure&nbsp;341.&nbsp;SVG Export</b></p></div><p><br class="figure-break">
+      </p>
+    </div>
+    <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="Funktionstesteditor.Allgemeine_Funktionalitaet.Perspektive_Zuruecksetzen"></a>7.14.3.6.&nbsp;Reset View</h5></div></div></div>
+      
+      <p>The individual views can be hidden. You can undo this using the <span class="bold"><strong>Reset view</strong></span> function. All views are shown again. The selected zoom factor is not reset.</p>
+    </div>
+    <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="Funktionstesteditor.Allgemeine_Funktionalitaet.Funktionstestanzeige_Aktualisieren"></a>7.14.3.7.&nbsp;Update Local Function Test Display</h5></div></div></div>
+      
+      <p>When this function is activated, the function test display in the right view is updated.</p>
+    </div>
+    <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="Funktionstesteditor.Allgemeine_Funktionalitaet.Javacode_Aktualisieren"></a>7.14.3.8.&nbsp;Update Java Code</h5></div></div></div>
+      
+      <p>This function is used to update the<a class="indexterm" name="d4e15307"></a>code displayed in the Java code view. See <a class="xref" href="ar01s07s14s24.html" title="7.14.24.&nbsp;Java Code (View)">Section&nbsp;7.14.24, &#8220;Java Code (View)&#8221;</a>. Otherwise, the Java code is only updated when the function test is opened.</p>
+    </div>
+      <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="Funktionstesteditor.Allgemeine_Funktionalitaet.Javacode_Kompilieren"></a>7.14.3.9.&nbsp;Compiling Java code</h5></div></div></div>
+          
+          <p>There are three compilation options available in the ODIS Creator client. These can be called up either via the menu, via buttons in the Java code tab (see also <a class="xref" href="ar01s07s14s24.html" title="7.14.24.&nbsp;Java Code (View)">Section&nbsp;7.14.24, &#8220;Java Code (View)&#8221;</a>) or via keyboard shortcuts.</p>
+          <p>The three compilation options are described below.</p>
+          <div class="section" lang="en"><div class="titlepage"><div><div><h6 class="title"><a name="Funktionstesteditor.Allgemeine_Funktionalitaet.Javacode_Kompilieren_normal"></a>7.14.3.9.1.&nbsp;Compile</h6></div></div></div>
+              
+              <p>This function includes the general activities for compiling a function test:</p><div class="itemizedlist"><ul type="disc"><li>
+                          <p>The Java code is recreated and temporarily saved (update Java code).</p>
+                      </li><li>
+                          <p>The Java file is compiled with all check language jars and debug jars in the class path.</p>
+                      </li><li>
+                          <p>Compilation errors are listed in the Problems tab. The Problems tab is activated if errors have been entered, see also <a class="xref" href="ar01s07s14s25.html" title="7.14.25.&nbsp;Problems (View)">Section&nbsp;7.14.25, &#8220;Problems (View)&#8221;</a>.</p>
+                      </li></ul></div><p>It runs locally on the computer. Saving the test sequence beforehand is not absolutely necessary to execute the function. Errors found are highlighted in the test sequence and can be accessed via the entries in the Problems tab.</p>
+          </div>
+        <div class="section" lang="en"><div class="titlepage"><div><div><h6 class="title"><a name="Funktionstesteditor.Allgemeine_Funktionalitaet.Javacode_Kompilieren_server"></a>7.14.3.9.2.&nbsp;Compile on server</h6></div></div></div>
+              
+              <p>This function has the same scope as compilation, but runs on the server. The same compilation is carried out that is also carried out with the completion message. If a test sequence has been edited, it must be saved beforehand (see also <a class="xref" href="ar01s07s14s03.html#Funktionstesteditor.Allgemeine_Funktionalitaet.Speichern" title="7.14.3.2.&nbsp;Save">Section&nbsp;7.14.3.2, &#8220;Save&#8221;</a>), otherwise this function is not executed. The compilation takes place asynchronously on the server. When the function is finished, the user receives a dialog message indicating whether the compilation was successful or not. Several compilations can be started simultaneously; these are then processed one after the other. The dialog message contains the name of the relevant function test. Errors found are not highlighted in the test sequence and cannot be accessed via the entry in the Problems tab. The message in the Problems tab matches the compiler&#8217;s feedback and is not filtered. This function can be used to check whether a &#8220;code too large&#8221; problem would occur before the completion message appears. The function supplements the existing &#8220;Compile function test&#8221; function, as the client and server use different compilers, which can lead to different results. This function allows the author to check at an early stage whether server-side checks (e.g. consistency checks) are run without errors. This increases the likelihood that the deployment will complete successfully.</p>
+              
+          </div>
+        <div class="section" lang="en"><div class="titlepage"><div><div><h6 class="title"><a name="Funktionstesteditor.Allgemeine_Funktionalitaet.Javacode_Kompilieren_Debug"></a>7.14.3.9.3.&nbsp;Compile for debugging</h6></div></div></div>
+              
+              <p>This function has the same scope as compilation when the debugger is called up. It can be used to find problems during compilation before the debugger is started. If a test sequence has been edited, it must be saved beforehand (see also <a class="xref" href="ar01s07s14s03.html#Funktionstesteditor.Allgemeine_Funktionalitaet.Speichern" title="7.14.3.2.&nbsp;Save">Section&nbsp;7.14.3.2, &#8220;Save&#8221;</a>), otherwise this function is not executed. If there is already a syntax error, the debug compilation is aborted and a dialog message is output. The compilation takes place asynchronously on the local computer. After the function has been completed, the user receives a dialog message indicating whether the compilation was successful or not. Several compilations can be started simultaneously; these are then processed one after the other. The dialog message contains the name of the relevant function test. This function can be used to check whether a &#8220;code too large&#8221; problem would occur before starting the debugger. This function is similar to the debug function, but focuses exclusively on generating and validating functional tests for Java code. It is not necessary to open or close the debug window.</p>
+              
+          </div>
+      </div>
+    <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="Funktionstesteditor.Allgemeine_Funktionalitaet.Problemansicht_Aktualisieren"></a>7.14.3.10.&nbsp;Update Problems View</h5></div></div></div>
+      
+      <p>The problems view can be updated with this function. See <a class="xref" href="ar01s07s14s25.html" title="7.14.25.&nbsp;Problems (View)">Section&nbsp;7.14.25, &#8220;Problems (View)&#8221;</a>.</p>
+    </div>
+    <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="Funktionstesteditor.Allgemeine_Funktionalitaet.Details_Anzeigen"></a>7.14.3.11.&nbsp;Show Details</h5></div></div></div>
+      
+      <p>This function is used to display details about entries in the problems view. See <a class="xref" href="ar01s07s14s25.html" title="7.14.25.&nbsp;Problems (View)">Section&nbsp;7.14.25, &#8220;Problems (View)&#8221;</a>.</p>
+    </div>
+    <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="Funktionstesteditor.Allgemeine_Funktionalitaet.Standardtexte"></a>7.14.3.12.&nbsp;Default Texts</h5></div></div></div>
+      
+      <p>This function is reached using a button labeled "Default" in the dialog for the action elements 'Question', 'Message', 'Test module title', 'Input', 'Help', 'Vehicle test point dialog' (for example, reached using the oscilloscope, DSOx cable selection). If you click this button, a dialog where you can select a default text appears. See <a class="xref" href="ar01s07s14s03.html#figure.Funktionstesteditor.Allgemeine_Funktionalitaet.Standardtexte" title="Figure&nbsp;342.&nbsp;Default Texts">Figure&nbsp;342, &#8220;Default Texts&#8221;</a>.</p>
+      <p>
+        </p><div class="figure"><a name="figure.Funktionstesteditor.Allgemeine_Funktionalitaet.Standardtexte"></a><div class="figure-contents">
+          
+          <div class="mediaobject"><img src="images/fte_Standardtext.png" alt="Image: default texts"></div>
+        </div><p class="title"><b>Figure&nbsp;342.&nbsp;Default Texts</b></p></div><p><br class="figure-break">
+      </p>
+      <p>The selection is made by:</p><div class="itemizedlist"><ul type="disc"><li>
+            <p>selecting the text group</p>
+          </li><li>
+            <p>selecting a default text.</p>
+          </li></ul></div><p>If the dialog is confirmed with the OK button, a reference to the selected default text is automatically entered in the text field at the current cursor location (for example, '@[std]myStdTextID'). Nothing is entered after pressing the Cancel button. Default texts can only be created by a text administrator (see <a class="xref" href="ar01s05s05.html" title="5.5.&nbsp;Default Texts">Section&nbsp;5.5, &#8220;Default Texts&#8221;</a>).</p>
+    </div>
+    <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="Funktionstesteditor.Allgemeine_Funktionalitaet.URL-Liste"></a>7.14.3.13.&nbsp;URL List</h5></div></div></div>
+      
+      <p>The URL list is used in the action elements: 'Send online', 'Receive online', 'Send log'. The selection field shown there is filled with the corresponding values from the server.</p>
+    </div>
+    <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="Funktionstesteditor.Allgemeine_Funktionalitaet.XML-Templates"></a>7.14.3.14.&nbsp;XML Templates</h5></div></div></div>
+      
+      <p>XML templates are used in the five action elements from the category. The selection dialog is filled with corresponding values from the server.</p>
+    </div>
+    <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="Funktionstesteditor.Debugger.FunktionstestUebersetzungsinformation_anzeigen"></a>7.14.3.15.&nbsp;Change Display of Translation-Relevant Texts</h5></div></div></div>
+      
+      <p>This function allows you to visualize changes to translation-relevant texts. Using this display, you can determine early on if a change was made to translation-relevant texts. The display itself does not affect the translation of the texts for the function test. It is used only for visualization purposes for the author to see what types of changes have been made. Therefore, the change display may differ from the translation result. Depending on which status is the standard for your brand at the start of translation (Completed or Released), the change indicator may need to be interpreted differently.</p>
+      <p>Each change to a translation-relevant field in a command or a test step results in the need to translate the function test. Translation-relevant fields include one-line and multi-line texts fields (rich text editor) and expression fields, if they contain translation-relevant literal text.</p>
+      <p>The change indicator for translation-relevant texts indicates the change information for brands with "Release&#8221; translation trigger in three stages, as follows:</p>
+      <p>
+        </p><div class="itemizedlist"><ul type="disc"><li>
+            <p>Gray and deactivated: indicates that no translation-relevant text changes were made in the function test.</p>
+          </li><li>
+            <p>Blue: indicates that the current version cycle of the function test contains translation-relevant text changes.</p>
+          </li><li>
+            <p>Red: indicates that the user has made translation-relevant text changes after opening the function test.</p>
+          </li></ul></div><p>
+      </p>
+      <p>The change indicator for translation-relevant texts indicates the change information for brands with "Completed&#8221; translation trigger in three stages, as follows:</p>
+      <p>
+        </p><div class="itemizedlist"><ul type="disc"><li>
+            <p>Gray and deactivated: indicates that no translation-relevant text changes have been made to the function test since the last relevance point (Completion or Release, whichever occurred last).</p>
+          </li><li>
+            <p>Blue: indicates that the function test contains translation-relevant text changes in the current version cycle since the last relevance point (Completion or Release, whichever occurred last).</p>
+          </li><li>
+            <p>Red: indicates that the user has made translation-relevant text changes after opening the function test.</p>
+          </li></ul></div><p>
+      </p>
+      <p>In ODIS Creator, the change display for translation-relevant texts is displayed in the tool bar when opening a function test. It is grayed out as long as no translation-relevant changes were made to the function test in the version cycle.</p>
+      <p>
+        </p><div class="figure"><a name="figure.Funktionstesteditor.Allgemeine_Funktionalitaet.Uebersetzungsanzeige.Grau"></a><div class="figure-contents">
+          
+          <div class="mediaobject"><img src="images/fte_allgemein_aenderungsanzeige_uebtexte_grau.png" alt="Image: change display for translation-relevant texts: gray"></div>
+        </div><p class="title"><b>Figure&nbsp;343.&nbsp;Change Display for Translation-Relevant Texts: Gray</b></p></div><p><br class="figure-break">
+      </p>
+      <p>If translation-relevant texts were changed or added in the version cycle for a function test (without a temporary change after opening), then the change status is initially shown as a blue icon in the tool bar.</p>
+      <p>
+        </p><div class="figure"><a name="figure.Funktionstesteditor.Allgemeine_Funktionalitaet.Uebersetzungsanzeige.Blau"></a><div class="figure-contents">
+          
+          <div class="mediaobject"><img src="images/fte_allgemein_aenderungsanzeige_uebtexte_blau.png" alt="Image: change display for translation-relevant texts: blue"></div>
+        </div><p class="title"><b>Figure&nbsp;344.&nbsp;Change Display for Translation-Relevant Texts: Blue</b></p></div><p><br class="figure-break">
+      </p>
+      <p>If translation-relevant texts were changed or added in the function test editor after opening, then change status will be displayed as a red icon in the tool bar.</p>
+      <p>
+        </p><div class="figure"><a name="figure.Funktionstesteditor.Allgemeine_Funktionalitaet.Uebersetzungsanzeige.Rot"></a><div class="figure-contents">
+          
+          <div class="mediaobject"><img src="images/fte_allgemein_aenderungsanzeige_uebtexte_rot.png" alt="Image: change display for translation-relevant texts: red"></div>
+        </div><p class="title"><b>Figure&nbsp;345.&nbsp;Change Display for Translation-Relevant Texts: Red</b></p></div><p><br class="figure-break">
+      </p>
+      <p>No functions can be triggered using the button for the change display of translatable texts. It is only for visualizing the combined change status.</p>
+      <p>If the function test is closed and then opened again in the function test editor, then the change display will be reset or it will no longer be red, and it will show that no texts were changed after opening. The button is blue initially if there was a translation-relevant change in the version cycle. Otherwise, it will be gray.</p>
+      <div class="section" lang="en"><div class="titlepage"><div><div><h6 class="title"><a name="d4e15418"></a>7.14.3.15.1.&nbsp;Effect on Translation</h6></div></div></div>
+        
+        <p>The change display does not affect the translation logic. It only applies to content changes to texts within the function test. The translation logic is based on comparisons of text content with previous versions, regardless of the change display. Additional translations may also be needed due to translation-relevant triggers ("Reuse function test", "Add a new language to a market", or "Add a new market in the equipment network"). The latter do not have any effect on the change display.</p>
+      </div>
+      <div class="section" lang="en"><div class="titlepage"><div><div><h6 class="title"><a name="d4e15421"></a>7.14.3.15.2.&nbsp;Recognizing Translation-Relevant Text Changes</h6></div></div></div>
+        
+        <p>The function test editor has optimized recognition of translation-relevant text changes. There is a "Touched" flag in order to recognize changes in the text control elements and to reduce text changes. Retroactive change recognition also performs a comparison of the content of texts for a command.</p>
+        <p>Texts that only contain text that is not translation-relevant are considered. If these are changed, there is no effect on the change display. A text that only contains content that is not relevant for translation may only consist of any number of the following elements:</p>
+        <p>
+          </p><div class="itemizedlist"><ul type="disc"><li>
+              <p>Tabs</p>
+            </li><li>
+              <p>Default Texts</p>
+            </li><li>
+              <p>Texts from the text library</p>
+            </li><li>
+              <p>System texts</p>
+            </li><li>
+              <p>Set characters</p>
+            </li><li>
+              <p>Spaces</p>
+            </li><li>
+              <p>Variables (such as %str_component)</p>
+            </li><li>
+              <p>Keywords (such as $str_PW)</p>
+            </li><li>
+              <p>Special characters (such as ellipsis, attention, information, warning)</p>
+            </li><li>
+              <p>Line Breaks</p>
+            </li><li>
+              <p>Formatting with content that is not translation-relevant</p>
+            </li><li>
+              <p>Tables with content that is not translation-relevant</p>
+            </li><li>
+              <p>Vehicle status texts</p>
+            </li><li>
+              <p>ANSI special characters (information, note, warning, attention, caution) with content that is not translation-relevant</p>
+            </li></ul></div><p>
+        </p>
+      </div>
+      <div class="section" lang="en"><div class="titlepage"><div><div><h6 class="title"><a name="d4e15455"></a>7.14.3.15.3.&nbsp;Overview of Translation-Relevant Change Operations</h6></div></div></div>
+        
+        <p>The following table provides an overview for the authors of which change operations can be expected to be relevant for translation.</p>
+        <div class="table"><a name="d4e15458"></a><div class="table-contents">
+          <table summary="List of Translation-Relevant Change Operations" border="1"><colgroup><col align="left"><col align="left"></colgroup><thead><tr bgcolor="#EEEEEE"><th align="left">Change operations</th><th align="left">Relevance for translation</th></tr></thead><tbody><tr><td align="left">Adding new nodes (commands)</td><td align="left">-</td></tr><tr><td align="left">Adding new nodes (steps)</td><td align="left">Yes, if translatable text was edited or changed.</td></tr><tr><td align="left">Editing nodes</td><td align="left">Yes, if translatable text was edited or changed.</td></tr><tr><td align="left">Editing nodes (steps)</td><td align="left">Yes, if translatable text was edited or changed.</td></tr><tr><td align="left">Copying nodes</td><td align="left">-</td></tr><tr><td align="left">Cutting nodes</td><td align="left">No, text change marking is not reset</td></tr><tr><td align="left">Inserting nodes</td><td align="left">Yes, if nodes with translation-relevant content were inserted from other function tests.</td></tr><tr><td align="left">Deleting nodes</td><td align="left">No, text change marking is not reset</td></tr><tr><td align="left">Moving nodes</td><td align="left">Yes, if nodes with translation-relevant content were inserted from other function tests.</td></tr><tr><td align="left">Editing test module settings (steps)</td><td align="left">Yes, if translatable text was edited or changed.</td></tr><tr><td align="left">Editing post-run</td><td align="left">Yes, if translatable text was edited or changed.</td></tr><tr><td align="left">Editing output step</td><td align="left">-</td></tr><tr><td align="left">Setting output step</td><td align="left">-</td></tr><tr><td align="left">Changing step type</td><td align="left">-</td></tr><tr><td align="left">Adding default case in switch</td><td align="left">-</td></tr><tr><td align="left">Executing Ecukom QuickFix</td><td align="left">-</td></tr><tr><td align="left">Merging declares</td><td align="left">Yes, if nodes with translation-relevant content from other function tests were merged.</td></tr><tr><td align="left">New keywords using keyword button</td><td align="left">Yes, if translatable text is contained.</td></tr><tr><td align="left">New variables using variable button</td><td align="left">Yes, if translatable text is contained.</td></tr></tbody></table>
+        </div><p class="title"><b>Table&nbsp;69.&nbsp;List of Translation-Relevant Change Operations</b></p></div><br class="table-break">
+        <p>Change recognition for translation-relevant texts is done by default with all change operations. A change to language-dependent content is triggered as follows, among other ways:</p>
+        <p>
+          </p><div class="itemizedlist"><ul type="disc"><li>
+              <p>Confirm the dialog with the language-dependent content</p>
+            </li><li>
+              <p>Create a command that contains a language-dependent section</p>
+            </li><li>
+              <p>Insert a command that was copied from other function test editor</p>
+            </li></ul></div><p>
+        </p>
+        <p>Changes made to language-dependent content using the undo/redo function are considered.</p>
+      </div>
+    </div>
+    
+    <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="Funktionstesteditor.Allgemeine_Funktionalitaet.Textneutralit%C3%A4t_pr%C3%BCfen"></a>7.14.3.16.&nbsp;Check text neutrality</h5></div></div></div>
+    
+      <p>This function can be used to check the function test editor at any time to see which action elements contain texts relevant to translation. The user does not necessarily have to save their changes separately via the function <a class="xref" href="ar01s07s14s03.html#Funktionstesteditor.Allgemeine_Funktionalitaet.Speichern" title="7.14.3.2.&nbsp;Save">Section&nbsp;7.14.3.2, &#8220;Save&#8221;</a>. The function detects the user changes and saves them automatically. It then checks nodes for translation-relevant texts. The check always applies to the currently active function test and can be performed via the menu bar, <span class="inlinemediaobject"><img src="images/textneutralitaet_schwarz.png"></span>using the key combination <span class="bold"><strong>Ctrl+N</strong></span>, in the selection menu <span class="bold"><strong>Extras &gt;&gt; Check text neutrality</strong></span> or by calling it up via the context menu.</p>
+        <p>The status of the text neutrality check is displayed in three stages as follows:</p>
+      <p>
+        </p><div class="itemizedlist"><ul type="disc"><li>
+            <p>Black(<span class="inlinemediaobject"><img src="images/textneutralitaet_schwarz.png"></span>): Indicates that text neutrality has not yet been calculated.</p>
+          </li><li>
+            <p>Red(<span class="inlinemediaobject"><img src="images/textneutralitaet_rot.png"></span>): Indicates that translation-relevant texts are available in the function test</p>
+          </li><li>
+            <p>Green(<span class="inlinemediaobject"><img src="images/textneutralitaet_gruen.png"></span>): Indicates that translation-relevant texts are not available in the function test</p>
+          </li></ul></div><p>
+      </p>
+      <p>In the user settings in the &#8220;Function test editor&#8221; area, you can specify whether the <span class="bold"><strong>text neutrality</strong></span> function should be executed when the test sequence of the function test is opened (see <a class="xref" href="ar01s07s14s03.html#figure.Funktionstesteditor.Allgemeine_Funktionalitaet.Textneutralit%C3%A4t_pr%C3%BCfen" title="Figure&nbsp;346.&nbsp;Change Display for Translation-Relevant Texts: Red">Figure&nbsp;346, &#8220;Change Display for Translation-Relevant Texts: Red&#8221;</a>). The <span class="bold"><strong>Execute text neutrality</strong></span> checkbox is deactivated by default, which means that the function is not executed.</p>
+      <p>When the function test editor is opened, the status is loaded from the database and displayed in the properties window of the editor.</p>
+      <p>
+        </p><div class="itemizedlist"><ul type="disc"><li>
+            <p>Not calculated: If the checkbox is deactivated, the text neutrality icon is displayed in black after the test sequence is opened. If the &#8220;<span class="bold"><strong>Execute text neutrality</strong></span>&#8221; checkbox is activated, the text neutrality check will be performed. The &#8220;Text neutrality&#8221; tab will open and the symbol will be displayed in either red or green, depending on the test result.</p>
+          </li><li>
+            <p>Yes: The function test is text-neutral and the icon is displayed in green after the test sequence is opened. The Text neutrality tab is only displayed if the checkbox is activated.</p>            
+          </li><li>
+            <p>No: The function test is not text-neutral and the icon is displayed in red after the test sequence is opened. The Text neutrality tab is only displayed if the checkbox is activated.</p>
+          </li></ul></div><p>
+      </p>
+      <p>
+          </p><div class="figure"><a name="figure.Funktionstesteditor.Allgemeine_Funktionalitaet.Textneutralit%C3%A4t_pr%C3%BCfen"></a><div class="figure-contents">
+            
+            <div class="mediaobject"><img src="images/fte_benutzereinstellungen_textneutraltaet.png" alt="Image: change display for translation-relevant texts: red"></div>
+          </div><p class="title"><b>Figure&nbsp;346.&nbsp;Change Display for Translation-Relevant Texts: Red</b></p></div><p><br class="figure-break">
+        </p>
+      <p>The action elements that are not text-neutral in terms of content are displayed in the text neutrality view in the order in which they are used <a class="xref" href="ar01s07s14s27.html" title="7.14.27.&nbsp;Text Neutrality (View)">Section&nbsp;7.14.27, &#8220;Text Neutrality (View)&#8221;</a>.</p> 
+    </div>
+    
+  </div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ar01s07s14s02.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="ar01s07s14.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="ar01s07s14s04.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">7.14.2.&nbsp;Menus and Tool Bars&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;7.14.4.&nbsp;Drag and Drop</td></tr></table></div></body></html>

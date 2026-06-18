@@ -1,0 +1,366 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>7.14.5.&nbsp;Test Steps (View)</title><link rel="stylesheet" href="mystyle.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.73.1"><link rel="start" href="index.html" title="ODIS Creator Help"><link rel="up" href="ar01s07s14.html" title="7.14.&nbsp;Function Test Editor"><link rel="prev" href="ar01s07s14s04.html" title="7.14.4.&nbsp;Drag and Drop"><link rel="next" href="ar01s07s14s06.html" title="7.14.6.&nbsp;Using Variables">
+<script type="text/javascript" src="../../../advanced/synchWithToc.js"></script>
+
+<link rel="stylesheet" href="../../../content/org.eclipse.help.webapp/advanced/breadcrumbs.css" charset="ISO-8859-1" type="text/css"></link>
+<script type="text/javascript" src="../../../content/org.eclipse.help/livehelp.js"> </script>
+<script type="text/javascript">
+if( self == top ){
+  var  anchorParam = location.hash.length > 0 ? '\u0026anchor=' + location.hash.substr(1) : '';
+  window.location.replace( "../../../index.jsp?topic=%2FMasterData_Client_Control%2Fhtml%2Far01s07s14s05.html" + anchorParam);
+}
+</script>
+</head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="help_breadcrumbs"><a href="index.html">ODIS Creator Help</a> > <a href="ar01s07.html">7&#46; ODIS Creator Editing Process</a> > <a href="ar01s07s14.html">7&#46;14&#46; Function Test Editor</a></div>
+<div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">7.14.5.&nbsp;Test Steps (View)</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ar01s07s14s04.html">Prev</a>&nbsp;</td><th width="60%" align="center">7.14.&nbsp;Function Test Editor</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ar01s07s14s06.html">Next</a></td></tr></table><hr></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="Funktionstesteditor.Testschritte_View"></a>7.14.5.&nbsp;Test Steps (View)</h4></div></div></div>
+    
+    <p>The basic structure for a test module consists of:</p><div class="itemizedlist"><ul type="disc"><li>
+          <p><span class="bold"><strong>Global Start</strong></span> and</p>
+        </li><li>
+          <p><span class="bold"><strong>Global End</strong></span></p>
+        </li><li>
+          <p>Between the two elements <span class="bold"><strong>Global Start</strong></span> and <span class="bold"><strong>Global End</strong></span>, you can add "Step", "Select", and "Sub-program" test steps.</p>
+        </li><li>
+          <p>You can add a test step interruption after the <span class="bold"><strong>Global End</strong></span> element. This test step is only executed in the operating system if the operating system executes the "Cancel test" function.</p>
+        </li></ul></div>
+    <p>A test module can consist of any number of test steps. You can detail a test step in the desktop with any number of commands. Generally, there are 3 to 10 commands per test step.</p>
+    <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="Funktionstesteditor.Testschritte_View.Spezielle_Testschritte"></a>7.14.5.1.&nbsp;Test Steps and Sub-Programs</h5></div></div></div>
+      
+      <div class="section" lang="en"><div class="titlepage"><div><div><h6 class="title"><a name="Funktionstesteditor.Testschritte_View.Spezielle_Testschritte.Global_Start"></a>7.14.5.1.1.&nbsp;Global Start Test Step</h6></div></div></div>
+        
+        <p>This test step contains the global command part 1 for specification of variables ("Declare") and keywords ("Definition") and is always run by the program. Other global commands can be defined here, such as a document command.</p>
+        <p>The command part 1 runs at the start of the test module before the manually created test steps. Its commands apply initially for all test steps that follow. However, you can override individual test steps using local commands.</p>
+        <p>Double-clicking on a test step opens the test module settings dialog. See <a class="xref" href="ar01s07s14s05.html#figure.Funktionstesteditor.Testschritte_View.Spezielle_Testschritte.Global_Start" title="Figure&nbsp;348.&nbsp;Test Module Settings">Figure&nbsp;348, &#8220;Test Module Settings&#8221;</a>.</p>
+        <p>The dialog contains three tabs:</p><div class="itemizedlist"><ul type="disc"><li>
+              <p>Function test: this tab has an input field that can be used to change the title of the function test, and the test ID is displayed.</p>
+            </li><li>
+              <p>Tester description: here you can add information about the function test in formatted text that will display on the tester.</p>
+            </li><li>
+              <p>Engineering description: for comments from the authors that are not displayed on the tester.</p>
+            </li></ul></div>
+        <div class="figure"><a name="figure.Funktionstesteditor.Testschritte_View.Spezielle_Testschritte.Global_Start"></a><div class="figure-contents">
+          
+          <div class="mediaobject"><img src="images/fte_Global_Start.png" alt="Image: test module settings"></div>
+        </div><p class="title"><b>Figure&nbsp;348.&nbsp;Test Module Settings</b></p></div><br class="figure-break">
+      </div>
+      <div class="section" lang="en"><div class="titlepage"><div><div><h6 class="title"><a name="Funktionstesteditor.Testschritte_View.Spezielle_Testschritte.Global_End"></a>7.14.5.1.2.&nbsp;Global End Test Step</h6></div></div></div>
+        
+        <p>This test step represents the "Static suspicion list" and "OK" list status indicators that are returned after the program on the tester operating system ends.</p>
+        <p>When you double-click on the test step, the dialog explained below appears. See <a class="xref" href="ar01s07s14s05.html#figure.Funktionstesteditor.Testschritte_View.Spezielle_Testschritte.Global_End" title="Figure&nbsp;349.&nbsp;End Dialog Test Module">Figure&nbsp;349, &#8220;End Dialog Test Module&#8221;</a>.</p>
+        <p>Diagnostic objects that have been added are displayed here in a list. Use the button labeled "..." (available at the end of each line in the table) if you have defined diagnostic objects as variables.</p>
+        <p>This makes it possible to run so-called "rough tests" whose results are instant but not 100% informative. If no fault was found in the vehicle by the end of the diagnostic session, the search can continue in any child nodes that may be present. This saves the technician from having to go through all tests systemically if the probability of a fault in a particular location is relatively low.</p>
+        <p><span class="bold"><strong>Suspicion list</strong></span></p>
+        <p>Static suspicion list: if you enter an object here, it will always be entered in the test plan regardless of the test sequence (statically). The suspicion list is also available in the "Set status" command. Because this action element can be located at any place in the function test, meaning after an If command, this is referred to as a "dynamic suspicion list".</p>
+        <p><span class="bold"><strong>OK list</strong></span></p>
+        <p>Static OK list: if you enter an object here, the object status will always be "OK" regardless of the function test sequence (static). Diagnostic objects that indicate suspicion relations cannot be set to "OK" with this function. Therefore, this function is only suitable for objects in the equipment network. The OK list is also available in the "Set status" command. This allows a more flexible usage at each location in the function test and is called a "dynamic OK list".</p>
+        <div class="figure"><a name="figure.Funktionstesteditor.Testschritte_View.Spezielle_Testschritte.Global_End"></a><div class="figure-contents">
+          
+          <div class="mediaobject"><img src="images/fte_Global_End.png" alt="Image: end dialog test module"></div>
+        </div><p class="title"><b>Figure&nbsp;349.&nbsp;End Dialog Test Module</b></p></div><br class="figure-break">
+        <p>Elements can be added, removed, or moved using the plus/minus/arrow buttons. See <a class="xref" href="ar01s07s14s05.html#figure.Funktionstesteditor.Testschritte_View.Spezielle_Testschritte.Steuerfelder" title="Figure&nbsp;350.&nbsp;Controls Settings">Figure&nbsp;350, &#8220;Controls Settings&#8221;</a>.</p>
+        <div class="figure"><a name="figure.Funktionstesteditor.Testschritte_View.Spezielle_Testschritte.Steuerfelder"></a><div class="figure-contents">
+          
+          <div class="mediaobject"><img src="images/fte_pmpf.png" alt="Image: controls settings"></div>
+        </div><p class="title"><b>Figure&nbsp;350.&nbsp;Controls Settings</b></p></div><br class="figure-break">
+      </div>
+    </div>
+    <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="Funktionstesteditor.Testschritte_View.Testschritte_Titelzeile"></a>7.14.5.2.&nbsp;Test Step View</h5></div></div></div>
+      
+      <p>The test step view is displayed on the left side by default. The buttons for adding new test steps and sub-programs are located above the test step view. There is a separating line between the test step view and the command page that can be moved horizontally using the mouse. The following <a class="xref" href="ar01s07s14s05.html#figure.Funktionstesteditor.Testschritte_View.Testschritte_Ansicht_Integriert" title="Figure&nbsp;351.&nbsp;Test Step View in Function Test Editor">Figure&nbsp;351, &#8220;Test Step View in Function Test Editor&#8221;</a> shows an example for the resulting function test editor with arranged views.</p>
+      <p>
+        </p><div class="figure"><a name="figure.Funktionstesteditor.Testschritte_View.Testschritte_Ansicht_Integriert"></a><div class="figure-contents">
+          
+          <div class="mediaobject"><img src="images/fte_testschritte_testschrittanzeige_integriert.png" alt="Image: test step view in function test editor"></div>
+        </div><p class="title"><b>Figure&nbsp;351.&nbsp;Test Step View in Function Test Editor</b></p></div><p><br class="figure-break">
+      </p>
+      <p>The following <a class="xref" href="ar01s07s14s05.html#figure.Funktionstesteditor.Testschritte_View.Testschritte_Ansicht_Nebeneinander" title="Figure&nbsp;352.&nbsp;Side-By-Side Function Tests">Figure&nbsp;352, &#8220;Side-By-Side Function Tests&#8221;</a> shows an example of two function tests open at the same time with their test step views.</p>
+      <p>
+        </p><div class="figure"><a name="figure.Funktionstesteditor.Testschritte_View.Testschritte_Ansicht_Nebeneinander"></a><div class="figure-contents">
+          
+          <div class="mediaobject"><img src="images/fte_testschritte_testschrittanzeige_nebeneinander.png" alt="Image: side-by-side function tests"></div>
+        </div><p class="title"><b>Figure&nbsp;352.&nbsp;Side-By-Side Function Tests</b></p></div><p><br class="figure-break">
+      </p>
+      <p>Some functions depend on the area that is currently active, either test step view or editor. For example, the editing functions are based on the element currently selected in the active area. The test step view gives a response about the graphic view where the user is currently located. The background color of the button tool bar changes depending on the selected area (see <a class="xref" href="ar01s07s14s05.html#figure.Funktionstesteditor.Testschritte_View.Testschritte_Ansicht_Fokuswechsel" title="Figure&nbsp;353.&nbsp;Test Step View Focus Change">Figure&nbsp;353, &#8220;Test Step View Focus Change&#8221;</a>).</p>
+      <p>
+        </p><div class="figure"><a name="figure.Funktionstesteditor.Testschritte_View.Testschritte_Ansicht_Fokuswechsel"></a><div class="figure-contents">
+          
+          <div class="mediaobject"><img src="images/fte_testschritte_testschrittanzeige_fokuswechsel.png" alt="Image: test step focus change"></div>
+        </div><p class="title"><b>Figure&nbsp;353.&nbsp;Test Step View Focus Change</b></p></div><p><br class="figure-break">
+      </p>
+      <p>In addition to clicking on the test step view with the mouse, the user can change the focus to the test step area by clicking on an empty area of the button toolbar.</p>
+    </div>
+    <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="Funktionstesteditor.Testschritte_View.Testschritte_Erzeugen"></a>7.14.5.3.&nbsp;Adding Test Steps, Selections, Sub-programs and Sub-program Selections</h5></div></div></div>
+      
+      <p>Test steps/selections or sub-program/function alls can be created in the left working window using the "Test step", "Test selection", "Sub-program" and "Sub-program selection" functions. See <a class="xref" href="ar01s07s14s05.html#figure.Funktionstesteditor.Testschritte_View.Testschritte_Erzeugen.Steuerfelder" title="Figure&nbsp;354.&nbsp;Creating Test Steps">Figure&nbsp;354, &#8220;Creating Test Steps&#8221;</a>.</p>
+      <div class="itemizedlist"><ul type="disc"><li>
+          <p>"Test step" generates an element with two outputs (OK/NOT OK). Commands for self-contained procedures can be compiled in them. The connections between them organize the test steps into a functional context.</p>
+        </li><li>
+          <p>"Test selection" generates an element with any number of outputs (multiple branches). The connections between them organize the test steps into a functional context.</p>
+        </li><li>
+          <p>"Sub-program" generates an element with two outputs (OK/NOT OK) that calls up a sub-program or another function test. See also <a class="xref" href="ar01s07s14s05.html#Funktionstesteditor.Testschritte_View.Testschritte_Erzeugen.Aufruf" title="7.14.5.3.1.&nbsp;Sub-Program">Section&nbsp;7.14.5.3.1, &#8220;Sub-Program&#8221;</a>.</p>
+        </li><li>
+          <p>"Sub-program selection" generates an element with any number of outputs (multiple branches) that calls up a sub-program or another function test. See also <a class="xref" href="ar01s07s14s05.html#Funktionstesteditor.Testschritte_View.Testschritte_Erzeugen.Aufruf" title="7.14.5.3.1.&nbsp;Sub-Program">Section&nbsp;7.14.5.3.1, &#8220;Sub-Program&#8221;</a>.</p>
+        </li></ul></div>
+      <p>The individual elements can be added using the buttons in the upper area of the views, the context menu, or the <span class="bold"><strong>Add</strong></span> menu item.</p>
+      <p>
+        </p><div class="figure"><a name="figure.Funktionstesteditor.Testschritte_View.Testschritte_Erzeugen.Steuerfelder"></a><div class="figure-contents">
+          
+          <div class="mediaobject"><img src="images/fte_Testschritte_Steuerfelder.png" alt="Image: buttons for creating test step elements"></div>
+        </div><p class="title"><b>Figure&nbsp;354.&nbsp;Creating Test Steps</b></p></div><p><br class="figure-break">
+      </p>
+      <p>Click one of the buttons. The mouse cursor changes to an arrow that is pointing up (the sensitive area is at the point of the arrow).</p>
+      <p>Place the mouse cursor in the test steps view and click the left mouse button. The new test step is added.</p>
+      <p>When a new test step is added, you will see the <span class="bold"><strong>Edit test steps</strong></span> dialog. See <a class="xref" href="ar01s07s14s05.html#figure.Funktionstesteditor.Testschritte_View.Testschritte_Erzeugen" title="Figure&nbsp;355.&nbsp;Edit Test Step">Figure&nbsp;355, &#8220;Edit Test Step&#8221;</a>. The test step title field is a mandatory field. Variables and keywords can also be used in the title.</p>
+      <p>Enter an informative title that is up to 50 characters long for the test step here. The function test is displayed in the information window on the test with each command.</p>
+      <p>The decision between an OK/NOT OK test step and a SELEKT can be revised again in this dialog.</p>
+      <p>
+        </p><div class="figure"><a name="figure.Funktionstesteditor.Testschritte_View.Testschritte_Erzeugen"></a><div class="figure-contents">
+          
+          <div class="mediaobject"><img src="images/fte_Testschritt_Bearbeiten.png" alt="Image: edit test step"></div>
+        </div><p class="title"><b>Figure&nbsp;355.&nbsp;Edit Test Step</b></p></div><p><br class="figure-break">
+      </p>
+      <p>A test step with multiple branches (SELECT) can have an unlimited number of outputs, as described previously. The outputs can be specified in the test step itself using the <span class="bold"><strong>Set status</strong></span> or <span class="bold"><strong>Query</strong></span> commands. This specification always applies only to the current test step, but it can also be evaluated using the "While", "If" or "Switch/Case" control structures.</p>
+      <div class="section" lang="en"><div class="titlepage"><div><div><h6 class="title"><a name="Funktionstesteditor.Testschritte_View.Testschritte_Erzeugen.Aufruf"></a>7.14.5.3.1.&nbsp;Sub-Program</h6></div></div></div>
+        
+        <p>The "sub-program" button represents a test step from which you can call up a sub-program ("general" type) or another function test ("function test" type). The nesting depth is theoretically unlimited, meaning it is only limited by the natural limits of the programming language that is used. The "sub-program" test step has the logical outputs OK and NOT OK. "Sub-program selection" has multiple branches (SELECT) and has an unlimited number of outputs.</p>
+        <p>If the sub-program has transfer parameters, then the transfer values (values of variables, keywords, arrays, or literal) can be transferred using the Interface variables and Interface keywords tables, as well as have returns on variables in the main program assigned. The selection options depend on the transfer type for the sub-program variables / the sub-program keyword.</p>
+        <p>The <a class="xref" href="ar01s07s14s05.html#figure.Funktionstesteditor.Testschritte_View.Testschritte_Unterprogramm" title="Figure&nbsp;356.&nbsp;Edit Sub-Program">Figure&nbsp;356, &#8220;Edit Sub-Program&#8221;</a> shows the example of a sub-program with interface variables and interface keywords. The individual entires can be sorted using the table header and the context menu.</p>
+        <p>
+          </p><div class="figure"><a name="figure.Funktionstesteditor.Testschritte_View.Testschritte_Unterprogramm"></a><div class="figure-contents">
+            
+            <div class="mediaobject"><img src="images/fte_Unterprogramm_Bearbeiten.png" alt="Image: edit sub-program"></div>
+          </div><p class="title"><b>Figure&nbsp;356.&nbsp;Edit Sub-Program</b></p></div><p><br class="figure-break">
+        </p>
+        <p>If a sub-program is added, a special dialog opens. Compare to <a class="xref" href="ar01s07s14s20.html#figure.Funktionstesteditor.Testschritte_View.Testschritte_Erzeugen.Aufruf2" title="Figure&nbsp;535.&nbsp;Sub-Program Action Element">Figure&nbsp;535, &#8220;Sub-Program Action Element&#8221;</a>.</p>
+        <p><span class="bold"><strong>Sub-Program</strong></span></p>
+        <p>Enter the name for the program to be called up here, or select it using access to the function test management ("Selection" button) If you click the "Edit" button, you can display the sub-program entered in a second function test editor and edit it if necessary.</p>
+        <p>Not every type of function code can be used in every function code. The following table shows which function codes can be selected on the test step side for a sub-program.</p>
+        <p>
+          </p><div class="table"><a name="d4e15837"></a><div class="table-contents">
+            <table summary="Sub-Program Calls in Function Codes" border="1"><colgroup><col align="left"><col align="left"></colgroup><thead><tr bgcolor="#EEEEEE"><th align="left">Source</th><th align="left">Objective</th></tr></thead><tbody><tr><td align="left">Function test</td><td align="left">Function test, general test</td></tr><tr><td align="left">Traversal test</td><td align="left">General test</td></tr><tr><td align="left">General test</td><td align="left">Function test, general test</td></tr></tbody></table>
+          </div><p class="title"><b>Table&nbsp;72.&nbsp;Sub-Program Calls in Function Codes</b></p></div><p><br class="table-break">
+        </p>
+        <p>When using an incorrect function test, a fatal error will be displayed in the problems view. It is then not possible to close the sub-program dialog or save the function code.</p>
+        <p><span class="bold"><strong>Interface variables</strong></span></p>
+        <p>The contents of the global variables listed here is adopted and returned by the sub-program if the content is declared correctly there.</p>
+        <div class="itemizedlist"><ul type="disc"><li>
+            <p>"Main program" column: specification of a variable from the main program. A new variable can also be created in the main program using the field. It is also possible to specify direct TextIDs for variables with &#8220;Transfer&#8221; call-up type.</p>
+          </li><li>
+            <p>"Sub-program" column: contains the variable from the sub-program with specification of the data type of the variable.</p>
+          </li><li>
+            <p>"Sub-program preconfiguration": if the variable from the sub-program has a preconfiguration, it will be displayed here.</p>
+          </li><li>
+            <p>"Sub-program comments" column: if the variable in the sub-program has comments, they will be displayed here.</p>
+          </li></ul></div>
+        <p><span class="bold"><strong>Interface keywords</strong></span></p>
+        <p>The contents of the global keywords listed here is adopted by the sub-program if the content is declared correctly there.</p>
+        <div class="itemizedlist"><ul type="disc"><li>
+            <p>"Main program" column: specification of a keyword from the main program. A new keyword can also be created in the main program using the field. It is also possible to specify a TextID directly.</p>
+          </li><li>
+            <p>"Sub-program" column: contains the keyword from the sub-program with specification of the data type of the keyword.</p>
+          </li><li>
+            <p>"Sub-program preconfiguration": if the keyword from the sub-program has a preconfiguration, it will be displayed here.</p>
+          </li><li>
+            <p>"Sub-program comments" column: if the keyword in the sub-program has comments, they will be displayed here.</p>
+          </li></ul></div>
+        <p><span class="bold"><strong>OK</strong></span></p>
+        <p>Use this button to transfer the input into the command and close the dialog.</p>
+        <p><span class="bold"><strong>Cancel</strong></span></p>
+        <p>Use this button to close the diesel without transferring the input into the command.</p>
+        <p><span class="bold"><strong>Sub-program on the command page</strong></span></p>
+        <p>A sub-program (including sub-program selection) in the test step view is also displayed on the command page (see <a class="xref" href="ar01s07s14s20.html#Funktionstesteditor.Arbeitsflaeche.Aktionselemente_Kategorie_Sonstige.Aufruf_Testprozedur" title="7.14.20.4.&nbsp;Action Element - Sub-Program">Section&nbsp;7.14.20.4, &#8220;Action Element - Sub-Program&#8221;</a>). A start node (round circle) in the sequence display indicates the location of the sub-program integrated between the processes for test step, pre-run, post-run and other sub-programs. The circle symbol is overwritten with the system name (without location code) and contains no functions to be expanded or collapsed. The <a class="xref" href="ar01s07s14s05.html#Funktionstesteditor.Testschritte_View.Testschritte_Erzeugen.UP-Anweisungsseite" title="Figure&nbsp;357.&nbsp;Sub-program on the command page">Figure&nbsp;357, &#8220;Sub-program on the command page&#8221;</a> shows the sub-program display on the command page.</p>
+        <p>
+          </p><div class="figure"><a name="Funktionstesteditor.Testschritte_View.Testschritte_Erzeugen.UP-Anweisungsseite"></a><div class="figure-contents">
+            
+            <div class="mediaobject"><img src="images/fte_Unterprogramm_Anweisungsseite.png" alt="Image: sub-program"></div>
+          </div><p class="title"><b>Figure&nbsp;357.&nbsp;Sub-program on the command page</b></p></div><p><br class="figure-break">
+        </p>
+        <p>The symbol serves exclusively as the display. It has the following properties:</p>
+        <div class="itemizedlist"><ul type="disc"><li>
+            <p>If you click on the node, the sub-program will be selected in the test step view.</p>
+          </li><li>
+            <p>A tool tip with the sub-program properties is displayed above the node.</p>
+          </li></ul></div>
+        <p>The printout and SVG export for the function test also contain this symbol with the symbol title.</p>
+          <div class="section" lang="en"><div class="titlepage"><div><div><h6 class="title"><a name="d4e15907"></a>7.14.5.3.1.1.&nbsp;Adding and Modifying Sub-Program Calls Using Drag and Drop</h6></div></div></div>
+              
+              <p>In the test step view, existing sub-program calls can be modified or replaced by dragging and dropping the function tests or general tests to the sub-program call. To do this, select an object from the navigation tree function library and drag and drop it to the sub-program that you wish to modify. The sub-program dialog is opened automatically. The existing interface table is compared and updated with the new interface table:</p><div class="itemizedlist"><ul type="square"><li style="list-style-type: square">
+                          <p>Identical variables/key words will remail as they were.</p>
+                      </li><li style="list-style-type: square">
+                          <p>Old variables/key words that are not in the new sub-program will be deleted.</p>
+                      </li><li style="list-style-type: square">
+                          <p>New variables/key words that are not in the old sub-program are added.</p>
+                      </li></ul></div><p>The type of sub-program call is retained (IO/NIO or Select)</p>
+              <p>By dragging and dropping the function tests or general tests to a test step connection, the sub-program call is inserted below the test step connection source and the output of the newly inserted sub-program is set to &#8220;Next&#8221;. In this case, the sub-program dialog is also opened automatically.</p>
+              <p>Drag and drop is not possible if a sub-program editor is already open.</p>
+          </div>
+      </div>
+    </div>
+    <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="Funktionstesteditor.Testschritte_View.AbbruchTestschritt_erstellen"></a>7.14.5.4.&nbsp;Adding a Test Step Interruption</h5></div></div></div>
+      
+      <p>A special test step is added in the left working window using the "Test Step Interruption" function. You can use this test step to create a secure status, for example, if the "Cancel test" function is activated in the operating system. This may make sense if there is a basic setting running or during an actuator test, for example.</p>
+      <p><span class="bold"><strong>Warning: if the "Cancel' test" function is activated in the operating system, it will not jump to Global 2.</strong></span></p>
+      <p>The <a class="xref" href="ar01s07s14s05.html#figure.Funktionstesteditor.Testschritte_View.Testschritte_Erzeugen.AbbruchTS" title="Figure&nbsp;358.&nbsp;Cancel Test Step">Figure&nbsp;358, &#8220;Cancel Test Step&#8221;</a> shows the cancel test step in the test step view.</p>
+      <p>
+        </p><div class="figure"><a name="figure.Funktionstesteditor.Testschritte_View.Testschritte_Erzeugen.AbbruchTS"></a><div class="figure-contents">
+          
+          <div class="mediaobject"><img src="images/fte_Testschritte_abbruchtestschritt.png" alt="Image: cancel test step"></div>
+        </div><p class="title"><b>Figure&nbsp;358.&nbsp;Cancel Test Step</b></p></div><p><br class="figure-break">
+      </p>
+      <p>The cancel test step can be added using the buttons in the upper area of the views, the context menu, or the <span class="bold"><strong>Add</strong></span> menu item. The location where the cancel test step is added cannot be selected using the mouse, as with other commands. The cancel test step is always added below "Global 2".</p>
+      <p>
+        </p><div class="figure"><a name="figure.Funktionstesteditor.Testschritte_View.Testschritte_Erzeugen.SteuerfelderAbbruchTS"></a><div class="figure-contents">
+          
+          <div class="mediaobject"><img src="images/fte_Testschritte_Steuerfelder.AbbruchTS.png" alt="Image: button for creating a cancel test step"></div>
+        </div><p class="title"><b>Figure&nbsp;359.&nbsp;Creating a Cancel Test Step</b></p></div><p><br class="figure-break">
+      </p>
+      <p>A function test can only have one cancel test step. The function test editor ensures this. The cancel test step is located below Global 2 and can neither be moved to another location in the function test nor be linked with a connection.</p>
+      <p>The cancel test step can be edited using the "Cut", "Add", "Copy" and "Delete" functions. For details on pasting from the clipboard, see <a class="xref" href="ar01s07s14s05.html#Funktionstesteditor.Testschritte_View.Testschritte_Erzeugen.BearbeitenAbbruchTS" title="7.14.5.4.1.&nbsp;Adding from the Clipboard">Section&nbsp;7.14.5.4.1, &#8220;Adding from the Clipboard&#8221;</a>.</p>
+      <p>The cancel test step can contain all commands that can also be used within test step and selections. The cancel test step does not have any other parameters and no dialog screen.</p>
+      <p>The cancel test step always initially has the test step status OK and selection: -1 for runtime. Changes to the test step status do not affect the surrounding function test. In contrast to Global 2 (post-run), the status of the function test remains unchanged.</p>
+      <div class="section" lang="en"><div class="titlepage"><div><div><h6 class="title"><a name="Funktionstesteditor.Testschritte_View.Testschritte_Erzeugen.BearbeitenAbbruchTS"></a>7.14.5.4.1.&nbsp;Adding from the Clipboard</h6></div></div></div>
+        
+        <p>Test steps can be added mainly from the clipboard. The function test editor ensures that only one cancel test step is present in each function test. There is a differentiation between a single cancel test step and a multiple selection with cancel test step in the clipboard.</p>
+        <p><span class="bold"><strong>Exclusive adding</strong></span></p>
+        <p>The function for adding from the clipboard is inactive if there is already a cancel test step in the function test. Otherwise, the function is active. In this case, the add function can be used with any element in the test step view. The cancel test step is always added after Global 2.</p>
+        <p><span class="bold"><strong>Adding from a multiple selection</strong></span></p>
+        <p>If the content of the clipboard is a mixture of elements from the test step view and a cancel test step, then it may not be possible to add all of the elements. The following information is shown to the user.</p><div class="figure"><a name="figure.Funktionstesteditor.Testschritte_View.Testschritte_Erzeugen.AbbruchTSeinfuegen"></a><div class="figure-contents">
+            
+            <div class="mediaobject"><img src="images/fte_Testschritte_AbbruchTS_meldungbereitsvorhanden.png" alt="Image: cancel test cannot be added"></div>
+          </div><p class="title"><b>Figure&nbsp;360.&nbsp;Cancel Test Cannot Be Added</b></p></div><p><br class="figure-break"></p>
+        <p>In this case, the entire content of the clipboard is added except the cancel test step.</p>
+      </div>
+    </div>
+    <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="Funktionstesteditor.Testschritte_View.Verbindungen_herstellen"></a>7.14.5.5.&nbsp;Establishing Connections</h5></div></div></div>
+      
+      <p>Test step connections are created by selecting a selection in a test step and dragging it to another test step while holding the mouse button.</p>
+      <p>The behavior of test steps with two outputs (OK/NOT OKAY) takes place accordingly.</p>
+      <p><span class="bold"><strong>Detailed description:</strong></span></p>
+      <p>The connection is always drawn from an output to an input. The drawing of connections is always the same in principle.</p>
+      <div class="orderedlist"><ol type="1"><li>
+          <p>Click on the OK or NOT OK field for the test step from where the connection should begin (output). The activated test step is highlight and its output filed is marked in blue.</p>
+        </li><li>
+          <p>Open the "Connection" function using the context menu. Move the mouse to the target test step. Once you move the cursor onto the upper part of a test step, its input field will be highlighted in blue. The blue connection between both test steps is displayed dynamically. The cursor displays the add symbol while this is happening.</p>
+        </li><li>
+          <p>When the desired connection is displayed, click on the left mouse button to create the connection statically. The cursor returns to its normal form.</p>
+        </li></ol></div>
+      <p><span class="bold"><strong>Note</strong></span></p>
+      <p>If there is already a connection to an output, it will be replaced with the new connection that was drawn.</p>
+    </div>
+    <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="Funktionstesteditor.Testschritte_View.Verbindungen_aufloesen"></a>7.14.5.6.&nbsp;Deleting Connections</h5></div></div></div>
+      
+      <p>A connection is deleted by selecting the arrow that is display and then clicking the delete button or using the context menu. The selection from which the connection begins is set to BREAK.</p>
+      <p>Or, each selection can be set to NEXT, BREAK, or STEP using the context menu, which also serves to remove the connection. See <a class="xref" href="ar01s07s14s05.html#figure.Funktionstesteditor.Testschritte_View.Verbindungen_aufloesen" title="Figure&nbsp;361.&nbsp;Context Menu - Deleting Connections">Figure&nbsp;361, &#8220;Context Menu - Deleting Connections&#8221;</a>.</p>
+      <p>The behavior of test steps with two outputs (OK/NOT OKAY) takes place accordingly.</p>
+      <p>
+        </p><div class="figure"><a name="figure.Funktionstesteditor.Testschritte_View.Verbindungen_aufloesen"></a><div class="figure-contents">
+          
+          <div class="mediaobject"><img src="images/fte_Kontext_Verbindung_Loesen.png" alt="Image: context menu - deleting connections"></div>
+        </div><p class="title"><b>Figure&nbsp;361.&nbsp;Context Menu - Deleting Connections</b></p></div><p><br class="figure-break">
+      </p>
+    </div>
+    <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="Funktionstesteditor.Testschritte_View.Testschritttyp_aendern"></a>7.14.5.7.&nbsp;Changing Test Step Type</h5></div></div></div>
+      
+      <p>The type of the test step can be changed between test selection and test step using the context menu or the menu bar.</p>
+    </div>
+    <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="Funktionstesteditor.Testschritte_View.VerbundenerTestschritt"></a>7.14.5.8.&nbsp;Connected Test Step</h5></div></div></div>
+      
+      <p>If there is a connection selected between test steps, the action "Connected test step" can be activated. The action is located in the menu bar (edit) and in the context menu for connections. The target test step for the selected connection is marked.</p>
+    </div>
+    <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="Funktionstesteditor.Testschritte_View.UnterprogrammOeffnen"></a>7.14.5.9.&nbsp;Opening a Sub-Program</h5></div></div></div>
+      
+      <p>The function can be triggered using the context menu and the global menu. It is visible or active when an individual sub-program command is selected. The function is available for sub-program commands on both the test step page as well as the command page. It is opened without checking out and the function test editor tab of the sub-program is automatically activated and brought to the front. The main program remains open.</p>
+      <p>
+        </p><div class="figure"><a name="figure.Funktionstesteditor.Testschritte_View.UnterprogrammOeffnen"></a><div class="figure-contents">
+          
+          <div class="mediaobject"><img src="images/fte_Testschritte_UPOeffnen.png" alt="Image: context menu - opening a sub-program"></div>
+        </div><p class="title"><b>Figure&nbsp;362.&nbsp;Context Menu - Opening a Sub-Program</b></p></div><p><br class="figure-break">
+      </p>
+    </div>
+    <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="Funktionstesteditor.Testschritte_View.Testschritte_selektieren"></a>7.14.5.10.&nbsp;Selecting Test Steps</h5></div></div></div>
+      
+      <p>Test steps can be selected by clicking in the title area but not by selecting the area.</p>
+      <p>If a test step is selected, the window will move to the beginning of the test step.</p>
+    </div>
+    <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="Funktionstesteditor.Testschritte_View.Testschritte_loeschen"></a>7.14.5.11.&nbsp;Deleting Test Steps</h5></div></div></div>
+      
+      <p>Test steps can be selected by clicking in the title area but not by selecting the area.</p>
+      <p>The deleting can be done using the menu bar, the delete button, or the context menu.</p>
+    </div>
+    <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="Funktionstesteditor.Testschritte_View.Testschritte_Kopieren"></a>7.14.5.12.&nbsp;Copying Test Steps</h5></div></div></div>
+      
+      <p>Test steps can be selected by clicking in the title area but not by selecting the area.</p>
+      <p>The copying is done using the menu bar, the keyboard shortcut CTRL+C, the context menu, or by dragging and dropping.</p>
+      <p>When dragging and dropping, the selected element is moved into the area between two test step while the mouse button is pressed and held.</p>
+    </div>
+    <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="Funktionstesteditor.Testschritte_View.Testschritte_Ausschneiden"></a>7.14.5.13.&nbsp;Cutting Test Steps</h5></div></div></div>
+      
+      <p>Test steps can be selected by clicking in the title area but not by selecting the area.</p>
+      <p>The cutting is done using the menu bar, the keyboard shortcut CTRL + X, or the context menu.</p>
+    </div>
+    <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="Funktionstesteditor.Testschritte_View.Testschritte_Einfuegen"></a>7.14.5.14.&nbsp;Adding Test Steps</h5></div></div></div>
+      
+      <p>To add test steps, the arrow between the two test steps must be selected. This is indicated by a thicker line.</p>
+      <p>The adding is done using the menu bar, the keyboard shortcut CTRL + V, or the context menu.</p>
+    </div>
+    <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="Funktionstesteditor.Testschritte_View.Bearbeitungshistorie"></a>7.14.5.15.&nbsp;Undoing/Repeating Test Steps</h5></div></div></div>
+      
+      <p>In the test step graphic display, user actions can be undone or repeated by right-clicking the mouse on a context menu.</p>
+      <p>The keyboard shortcuts CTRL+Z, CTRL+Y, and the corresponding functions in the menu bar and the buttons can also be used. See <a class="xref" href="ar01s07s14s05.html#figure.Funktionstesteditor.Testschritte_View.Bearbeitungshistorie" title="Figure&nbsp;363.&nbsp;Editing History">Figure&nbsp;363, &#8220;Editing History&#8221;</a>.</p>
+      <p>
+        </p><div class="figure"><a name="figure.Funktionstesteditor.Testschritte_View.Bearbeitungshistorie"></a><div class="figure-contents">
+          
+          <div class="mediaobject"><img src="images/fte_Bearbeitungshistorie.png" alt="Image: undo/repeat editing history"></div>
+        </div><p class="title"><b>Figure&nbsp;363.&nbsp;Editing History</b></p></div><p><br class="figure-break">
+      </p>
+    </div>
+    <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="Funktionstesteditor.Allgemeine_Funktionalitaet.Testschrittfilter"></a>7.14.5.16.&nbsp;Test Step Filter</h5></div></div></div>
+      
+      <p>In larger function tests, similar test step content may occur in multiple test steps. For this reason, there is a "test step" display that filters the function test to the selected test step. Only test step content for the selected test step is shown. The filter can be adjusted so that you can switch between the complete view or the filtered view.</p>
+      <p>The buttons for activating/deactivating the test step filter are available in the toolbar (see <a class="xref" href="ar01s07s14s05.html#figure.Funktionstesteditor.Testschritte_View.Testschrittfilter.Toolleiste" title="Figure&nbsp;364.&nbsp;Test Step Filter in the Toolbar">Figure&nbsp;364, &#8220;Test Step Filter in the Toolbar&#8221;</a>). The menu under view also has a "Test step filter" menu item (see <a class="xref" href="ar01s07s14s05.html#figure.Funktionstesteditor.Testschritte_View.Testschrittfilter.Menu" title="Figure&nbsp;365.&nbsp;Test Step Filter in the Menu">Figure&nbsp;365, &#8220;Test Step Filter in the Menu&#8221;</a>).</p>
+      <p>
+        </p><div class="figure"><a name="figure.Funktionstesteditor.Testschritte_View.Testschrittfilter.Toolleiste"></a><div class="figure-contents">
+          
+          <div class="mediaobject"><img src="images/fte_testschritte_testschrittfilter_toolleiste.png" alt="Image: test step filter in the toolbar"></div>
+        </div><p class="title"><b>Figure&nbsp;364.&nbsp;Test Step Filter in the Toolbar</b></p></div><p><br class="figure-break">
+      </p>
+      <p>
+        </p><div class="figure"><a name="figure.Funktionstesteditor.Testschritte_View.Testschrittfilter.Menu"></a><div class="figure-contents">
+          
+          <div class="mediaobject"><img src="images/fte_testschritte_testschrittfilter_menu.png" alt="Image: test step filter in the menu"></div>
+        </div><p class="title"><b>Figure&nbsp;365.&nbsp;Test Step Filter in the Menu</b></p></div><p><br class="figure-break">
+      </p>
+      <p>Depending on the test step filter selection, either all function test commands are displayed in the editor or only the commands for the selected test step. Both versions can be seen in <a class="xref" href="ar01s07s14s05.html#figure.Funktionstesteditor.Testschritte_View.Testschrittfilter.Anzeige.deaktiv" title="Figure&nbsp;366.&nbsp;Test Step Filter Deactivated">Figure&nbsp;366, &#8220;Test Step Filter Deactivated&#8221;</a> and <a class="xref" href="ar01s07s14s05.html#figure.Funktionstesteditor.Testschritte_View.Testschrittfilter.Anzeige.aktiv" title="Figure&nbsp;367.&nbsp;Test Step Filter Activated">Figure&nbsp;367, &#8220;Test Step Filter Activated&#8221;</a>.</p>
+      <p>
+        </p><div class="figure"><a name="figure.Funktionstesteditor.Testschritte_View.Testschrittfilter.Anzeige.deaktiv"></a><div class="figure-contents">
+          
+          <div class="mediaobject"><img src="images/fte_testschritte_testschrittfilter_anzeige_deaktiv.png" alt="Image: test step filter deactivated"></div>
+        </div><p class="title"><b>Figure&nbsp;366.&nbsp;Test Step Filter Deactivated</b></p></div><p><br class="figure-break">
+      </p>
+      <p>
+        </p><div class="figure"><a name="figure.Funktionstesteditor.Testschritte_View.Testschrittfilter.Anzeige.aktiv"></a><div class="figure-contents">
+          
+          <div class="mediaobject"><img src="images/fte_testschritte_testschrittfilter_anzeige_aktiv.png" alt="Image: test step filter activated"></div>
+        </div><p class="title"><b>Figure&nbsp;367.&nbsp;Test Step Filter Activated</b></p></div><p><br class="figure-break">
+      </p>
+      <p>The test step filter is a filter for the function test editor command page. The filter is always used when a node is selected in the test step view. When the test step filter is activated, the function test editor shows the following properties:</p>
+      <p>
+        </p><div class="itemizedlist"><ul type="disc"><li>
+            <p>Initially after opening the function test, all commands are displayed on the function test editor command page.</p>
+          </li><li>
+            <p>When multiple test steps are selected, only the content of the first test step marked is displayed.</p>
+          </li><li>
+            <p>If a previously selected test step has been erased, then all commands are shown on the function test command page.</p>
+          </li><li>
+            <p>For display-specific functions (print, SVG export), only the visible nodes are printed or exported. Structure nodes hidden on the command page remain hidden. To print or export everything, the test step filter must be deactivated first.</p>
+          </li><li>
+            <p>The command can also switch automatically between the test steps (for example, when selecting problem navigation, search object navigation, debugging). In these cases, the command page is also filtered when the test step filter is active.</p>
+          </li><li>
+            <p>Clicking on the empty area in the test step view resets the selection. All commands are shown again.</p>
+          </li></ul></div><p>
+      </p>
+      <p>The setting for the "test step filter" is stored locally for the Windows user that is currently logged into the workspace, and it will be restored the next time ODIS Creator starts. The initial default setting for the test step filter is deactivated.</p>
+      <p>When the test step filter is activated using the menu or the toolbar, the test step filter is applied to all open function tests. If a test step is selected, it will be used to filter the command page. If multiple test steps are selected, only the first will be used for filtering. When the test step filter is deactivated, the hidden steps in all open function tests are made visible again on the command page.</p>
+    </div>
+  </div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ar01s07s14s04.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="ar01s07s14.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="ar01s07s14s06.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">7.14.4.&nbsp;Drag and Drop&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;7.14.6.&nbsp;Using Variables</td></tr></table></div></body></html>
