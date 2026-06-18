@@ -1,0 +1,103 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>7.4.&nbsp;Equipment Network</title><link rel="stylesheet" href="mystyle.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.73.1"><link rel="start" href="index.html" title="ODIS Creator Help"><link rel="up" href="ar01s07.html" title="7.&nbsp;ODIS Creator Editing Process"><link rel="prev" href="ar01s07s03s04.html" title="7.3.4.&nbsp;Search Results"><link rel="next" href="ar01s07s04s01.html" title="7.4.1.&nbsp;Create New Brand">
+<script type="text/javascript" src="../../../advanced/synchWithToc.js"></script>
+
+<link rel="stylesheet" href="../../../content/org.eclipse.help.webapp/advanced/breadcrumbs.css" charset="ISO-8859-1" type="text/css"></link>
+<script type="text/javascript" src="../../../content/org.eclipse.help/livehelp.js"> </script>
+<script type="text/javascript">
+if( self == top ){
+  var  anchorParam = location.hash.length > 0 ? '\u0026anchor=' + location.hash.substr(1) : '';
+  window.location.replace( "../../../index.jsp?topic=%2FMasterData_Client_Control%2Fhtml%2Far01s07s04.html" + anchorParam);
+}
+</script>
+</head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="help_breadcrumbs"><a href="index.html">ODIS Creator Help</a> > <a href="ar01s07.html">7&#46; ODIS Creator Editing Process</a></div>
+<div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">7.4.&nbsp;Equipment Network</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ar01s07s03s04.html">Prev</a>&nbsp;</td><th width="60%" align="center">7.&nbsp;ODIS Creator Editing Process</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ar01s07s04s01.html">Next</a></td></tr></table><hr></div><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a name="ausstattungsnetz"></a>7.4.&nbsp;Equipment Network</h3></div></div></div>
+        
+        <p>Equipment characteristics for the vehicle models are described for the individual brands in the equipment network. The navigator permits the access to the features that are structured in a hierarchical tree. Within the navigator tree, you can access information on the individual levels. Depending on the level selection, the assigned selection options in the context or selection menu will change. ODIS Creator assists you in the allocation by checking at which locations new objects are permitted and the corresponding commands are also only then offered.</p>
+        <p>Each equipment network object can be labeled as <span class="bold"><strong>internal</strong></span><a class="indexterm" name="d4e11283"></a>. This label regulates the visibility on the interface of the processing system. As <span class="bold"><strong>internally</strong></span> labeled objects, they are also prepared as the other objects, however they are not displayed in the processing system.</p>
+        <p>The additional attributes are described for the individual object types. To identify equipment characteristics that actually exist in a real vehicle, a traversal test can be assigned to an equipment characteristic (see <a class="xref" href="ar01s07s04s11.html" title="7.4.11.&nbsp;Create Traversal Test">Section&nbsp;7.4.11, &#8220;Create Traversal Test&#8221;</a>).</p>
+        <p>
+            </p><div class="figure"><a name="figure.ausstattungsnetz"></a><div class="figure-contents">
+                
+                <div class="mediaobject"><img src="images/ausstattungsnetz.png" alt="Image: navigator tree for equipment network"></div>
+            </div><p class="title"><b>Figure&nbsp;232.&nbsp;Navigator Tree for Equipment Network</b></p></div><p><br class="figure-break">
+        </p>
+        <p>The structure tree hierarchy is structured as follows:</p>
+        <p>
+            </p><div class="itemizedlist"><ul type="square"><li style="list-style-type: square">
+                    <p>Brand<a class="indexterm" name="d4e11302"></a></p>
+                    <div class="itemizedlist"><ul type="square"><li style="list-style-type: square">
+                            <p>Vehicle type<a class="indexterm" name="d4e11308"></a></p>
+                            <div class="itemizedlist"><ul type="square"><li style="list-style-type: square">
+                                    <p>Model year<a class="indexterm" name="d4e11314"></a></p>
+                                    <div class="itemizedlist"><ul type="square"><li style="list-style-type: square">
+                                            <p>Version<a class="indexterm" name="d4e11320"></a></p>
+                                            <div class="itemizedlist"><ul type="square"><li style="list-style-type: square">
+                                                  <p>Motor<a class="indexterm" name="d4e11326"></a></p>
+                                                  <div class="itemizedlist"><ul type="square"><li style="list-style-type: square">
+                                                  <p>XOR Nodes<a class="indexterm" name="d4e11332"></a></p>
+                                                  <div class="itemizedlist"><ul type="disc"><li>
+                                                  <p>Control Module Configuration<a class="indexterm" name="d4e11338"></a></p>
+                                                  </li><li>
+                                                  <p>Equipment without diagnostic interface<a class="indexterm" name="d4e11343"></a></p>
+                                                  </li></ul></div>
+                                                  </li><li style="list-style-type: square">
+                                                  <p>Control Module Configuration</p>
+                                                  </li><li style="list-style-type: square">
+                                                  <p>Equipment without diagnostic interface</p>
+                                                  </li></ul></div>
+                                                </li></ul></div>
+                                        </li><li style="list-style-type: square">
+                                            <p>Engine code nodes<a class="indexterm" name="d4e11352"></a></p>
+                                            <div class="itemizedlist"><ul type="square"><li style="list-style-type: square">
+                                                  <p>Motor<a class="indexterm" name="d4e11358"></a></p>
+                                                  <div class="itemizedlist"><ul type="square"><li style="list-style-type: square">
+                                                  <p>XOR Nodes<a class="indexterm" name="d4e11364"></a></p>
+                                                  <div class="itemizedlist"><ul type="disc"><li>
+                                                  <p>Control Module Configuration<a class="indexterm" name="d4e11370"></a></p>
+                                                  </li><li>
+                                                  <p>Equipment without diagnostic interface<a class="indexterm" name="d4e11375"></a></p>
+                                                  </li></ul></div>
+                                                  </li><li style="list-style-type: square">
+                                                  <p>Control Module Configuration</p>
+                                                  </li><li style="list-style-type: square">
+                                                  <p>Equipment without diagnostic interface</p>
+                                                  </li></ul></div>
+                                                </li></ul></div>
+                                        </li><li style="list-style-type: square">
+                                            <p>Engine default nodes<a class="indexterm" name="d4e11384"></a></p>
+                                            <div class="itemizedlist"><ul type="square"><li style="list-style-type: square">
+                                                  <p>Motor<a class="indexterm" name="d4e11390"></a></p>
+                                                  <div class="itemizedlist"><ul type="square"><li style="list-style-type: square">
+                                                  <p>XOR Nodes<a class="indexterm" name="d4e11396"></a></p>
+                                                  <div class="itemizedlist"><ul type="disc"><li>
+                                                  <p>Control Module Configuration<a class="indexterm" name="d4e11402"></a></p>
+                                                  </li><li>
+                                                  <p>Equipment without diagnostic interface<a class="indexterm" name="d4e11407"></a></p>
+                                                  </li></ul></div>
+                                                  </li><li style="list-style-type: square">
+                                                  <p>Control Module Configuration</p>
+                                                  </li><li style="list-style-type: square">
+                                                  <p>Equipment without diagnostic interface</p>
+                                                  </li></ul></div>
+                                                </li></ul></div>
+                                        </li></ul></div>
+                                </li></ul></div>
+                        </li></ul></div>
+                </li></ul></div><p>
+        </p>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ar01s07s03s04.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="ar01s07.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="ar01s07s04s01.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">7.3.4.&nbsp;Search Results&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;7.4.1.&nbsp;Create New Brand</td></tr></table></div></body></html>

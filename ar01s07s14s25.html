@@ -1,0 +1,66 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>7.14.25.&nbsp;Problems (View)</title><link rel="stylesheet" href="mystyle.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.73.1"><link rel="start" href="index.html" title="ODIS Creator Help"><link rel="up" href="ar01s07s14.html" title="7.14.&nbsp;Function Test Editor"><link rel="prev" href="ar01s07s14s24.html" title="7.14.24.&nbsp;Java Code (View)"><link rel="next" href="ar01s07s14s26.html" title="7.14.26.&nbsp;Search (View)">
+<script type="text/javascript" src="../../../advanced/synchWithToc.js"></script>
+
+<link rel="stylesheet" href="../../../content/org.eclipse.help.webapp/advanced/breadcrumbs.css" charset="ISO-8859-1" type="text/css"></link>
+<script type="text/javascript" src="../../../content/org.eclipse.help/livehelp.js"> </script>
+<script type="text/javascript">
+if( self == top ){
+  var  anchorParam = location.hash.length > 0 ? '\u0026anchor=' + location.hash.substr(1) : '';
+  window.location.replace( "../../../index.jsp?topic=%2FMasterData_Client_Control%2Fhtml%2Far01s07s14s25.html" + anchorParam);
+}
+</script>
+</head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="help_breadcrumbs"><a href="index.html">ODIS Creator Help</a> > <a href="ar01s07.html">7&#46; ODIS Creator Editing Process</a> > <a href="ar01s07s14.html">7&#46;14&#46; Function Test Editor</a></div>
+<div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">7.14.25.&nbsp;Problems (View)</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ar01s07s14s24.html">Prev</a>&nbsp;</td><th width="60%" align="center">7.14.&nbsp;Function Test Editor</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ar01s07s14s26.html">Next</a></td></tr></table><hr></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="Funktionstesteditor.Zusaetzliche_Views.Probleme_View"></a>7.14.25.&nbsp;Problems (View)</h4></div></div></div>
+    
+    <p>The errors that occurred during function test validation and compilation are displayed in this view. See <a class="xref" href="ar01s07s14s25.html#figure.Funktionstesteditor.Zusaetzliche_Views.Probleme_View" title="Figure&nbsp;543.&nbsp;Problems View">Figure&nbsp;543, &#8220;Problems View&#8221;</a>.</p>
+    <p>Events with different weights (information, warning, error) and origin are displayed in table form in the problems view. The events are based on commands (column: Location). A detailed text about the event is given in the Description column.</p>
+    <p>The origin of a problem can be:</p>
+    <p>
+      </p><div class="itemizedlist"><ul type="disc"><li>
+          <p>Compile: compilation of the GFF Java code</p>
+        </li><li>
+          <p>Syntax: syntax check in GFF</p>
+        </li><li>
+          <p>Empty: empty instructions in GFF</p>
+        </li><li>
+          <p>Migration: migration of data into ODIS Creator</p>
+        </li><li>
+          <p>EcuUsageUpdate: import of control modules into ODIS Creator</p>
+        </li><li>
+          <p>Transformation: removal of redundant format instructions in XML</p>
+        </li><li>
+          <p>Replace: replace function in the function test editor</p>
+        </li><li>
+          <p>TextIdUsage: usage of text IDs</p>
+        </li><li>
+          <p>Parameter: parameter assignment of sub-programs</p>
+        </li><li>
+          <p>Import: import function of ODIS Creator</p>
+        </li></ul></div><p>
+    </p>
+    <p>The problems view is updated after opening a function test and after performing a test (called up by saving, among other things). The problems are sorted in descending order based on weight (error, warning, information) and, within the weight, based on the vertical location of the node. The Problems view is also updated when an instruction dialog is confirmed and when instructions are pasted in from the clipboard, but this does not move the view into the front.</p>
+    <p>
+      </p><div class="figure"><a name="figure.Funktionstesteditor.Zusaetzliche_Views.Probleme_View"></a><div class="figure-contents">
+        
+        <div class="mediaobject"><img src="images/fte_Probleme_View.png" alt="Image: function test editor - additional views - problems"></div>
+      </div><p class="title"><b>Figure&nbsp;543.&nbsp;Problems View</b></p></div><p><br class="figure-break">
+    </p>
+    <p>The default sorting can be replaced by alphabetical sorting of the columns in three stages (natural, ascending, descending). Click on the column headers for the columns that you would like to sort.</p>
+    <p>The two buttons in the upper right corner trigger the following functions from left to right:</p><div class="itemizedlist"><ul type="disc"><li>
+          <p>Check and display errors again</p>
+        </li><li>
+          <p>Detail view</p>
+        </li></ul></div>
+    <p>In addition to these two functions, you can also double-click on the entries. The corresponding dialog is then opened where the described error exists.</p>
+    <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="Funktionstesteditor.Zusaetzliche_Views.Probleme_View.SGB_Import"></a>7.14.25.1.&nbsp;Messages in the View based on Control Module Description Imports</h5></div></div></div>
+      
+      <p>Importing control module descriptions can lead to various conflicts in existing function code objects. If these systems cannot be resolved automatically by the system, they will be displayed in the list and also listed in a control module import log file. This will allow you to make the necessary modifications to function code objects for the changed control module descriptions. As with other error messages, you can open the corresponding ASAM dialog where the error is located by double-clicking on an entry. After the corrections have been made, the changes must be confirmed by clicking OK in the dialog. The problem entries are cleared from the list when a new compilation process is run.</p>
+      <p>All error messages that may occurring during an import of control module descriptions are listed in <a class="xref" href="ar01s07s14s25.html#table.Probleme_View.Problembeschreibung" title="Table&nbsp;128.&nbsp;Possible Warnings after Control Module Import">Table&nbsp;128, &#8220;Possible Warnings after Control Module Import&#8221;</a>. The table also contains a brief description (second column) about the meaning of the error message and how the error can be corrected (third column).</p>
+      <div class="table"><a name="table.Probleme_View.Problembeschreibung"></a><div class="table-contents">
+        <table summary="Possible Warnings after Control Module Import" border="1"><colgroup><col align="left"><col align="left"><col align="left"></colgroup><thead><tr bgcolor="#EEEEEE"><th align="left">Warning in problem view for the FTE</th><th align="left">Explanation</th><th align="left">Correction instructions</th></tr></thead><tbody valign="top"><tr><td align="left" valign="top">The value for parameter 'X' in operation 'Y' is no longer compatible with the new version of the control module description.</td><td align="left" valign="top">The current version of the control module description contains other Enum values for the parameter 'X' from the function 'Y'.</td><td align="left" valign="top">Select the current version of the control module description in the system in the "Control module variant" input field. Set the operation parameter to another value that is present.</td></tr><tr><td align="left" valign="top">The type for parameter 'X' in operation 'Y' is no longer compatible with the new version of the control module description.</td><td align="left" valign="top">The type of parameter 'X' for the operation 'Y' has changed with the current version of the control module description.</td><td align="left" valign="top">Select the current version of the control module description in the system in the "Control module variant" input field. The type and value of the operation parameters change accordingly.</td></tr><tr><td align="left" valign="top">The check parameter 'X' for operation 'Y' is no longer contained in the new version of the control module description.</td><td align="left" valign="top">The current version of the control module description no longer contains the check parameter 'X' for the operation 'Y'.</td><td align="left" valign="top">Select the current version of the control module description in the system in the "Control module variant" input field. Set a different check parameter for the corresponding operation.</td></tr><tr><td align="left" valign="top">The response parameter 'X' for operation 'Y' is no longer contained in the new version of the control module description.</td><td align="left" valign="top">The current version of the control module description no longer contains the response parameter 'X' for the operation 'Y'.</td><td align="left" valign="top">Select the current version of the control module description in the system in the "Control module variant" input field. Set a different response parameter for the corresponding operation.</td></tr><tr><td align="left" valign="top">Operation 'X' is no longer contained in the new version of the control module description.</td><td align="left" valign="top">The logical link for the current version of the control module description no longer contains operation 'X'.</td><td align="left" valign="top">Select the current version of the control module description in the system in the "Control module variant" input field. Select another operation in the "Diagnostic service" field.</td></tr><tr><td align="left" valign="top">Logical link 'X' is no longer contained in the new version of the control module description.</td><td align="left" valign="top">The logical link for the current version of the control module description is not compatible with the value in the 'Logical link' field for the ASAM Ecukom dialog.</td><td align="left" valign="top">Select the current version of the control module description in the system in the "Control module variant" input field. Set parameters for the corresponding operation. This automatically adapts the values in the 'Logical link' selection field so you can then select a new suitable value.</td></tr><tr><td align="left" valign="top">Logical links are no longer compatible with the new version of the control module description.</td><td align="left" valign="top">The logical link for the current version of the control module description is not compatible with the values in the 'Logical link' selection field for the ASAM Ecukom dialog.</td><td align="left" valign="top">Select the current version of the control module description in the system in the "Control module variant" input field. Set parameters for the corresponding operation. This adapts the values in the 'Logical link' selection field automatically.</td></tr><tr><td align="left" valign="top">There is no current version for the control module description; the old version will be used.</td><td align="left" valign="top">The ASAM Ecukom element uses an old version of the control module description that was not updated during the last control module import.</td><td align="left" valign="top">Select a control module description that exists in the system with corresponding operation and parameters.</td></tr><tr><td align="left" valign="top">The control module description is ambiguous (ID missing). A check for the new version of the control module description is not possible.</td><td align="left" valign="top">The ASAM Ecukom element (in the XML file) does not contain an ID for the control module description that is used. It may not have been possible to set this during the data migration.</td><td align="left" valign="top">Select a control module description that exists in the system with a corresponding operation and parameters so that the ID can be set.</td></tr><tr><td align="left" valign="top">The reference for the control module description was replaced by the current version.</td><td align="left" valign="top">Information that the control module description was successfully replaced by the system.</td><td align="left" valign="top">No need for action.</td></tr></tbody></table>
+      </div><p class="title"><b>Table&nbsp;128.&nbsp;Possible Warnings after Control Module Import</b></p></div><br class="table-break">
+    </div>
+  </div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ar01s07s14s24.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="ar01s07s14.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="ar01s07s14s26.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">7.14.24.&nbsp;Java Code (View)&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;7.14.26.&nbsp;Search (View)</td></tr></table></div></body></html>

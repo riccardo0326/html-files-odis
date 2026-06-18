@@ -1,0 +1,53 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>7.1.13.&nbsp;Branching Editorial Objects</title><link rel="stylesheet" href="mystyle.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.73.1"><link rel="start" href="index.html" title="ODIS Creator Help"><link rel="up" href="ar01s07s01.html" title="7.1.&nbsp;Editorial Object General Information"><link rel="prev" href="ar01s07s01s12.html" title="7.1.12.&nbsp;Delete Editorial Objects"><link rel="next" href="ar01s07s01s14.html" title="7.1.14.&nbsp;Editorial Object Complaints">
+<script type="text/javascript" src="../../../advanced/synchWithToc.js"></script>
+
+<link rel="stylesheet" href="../../../content/org.eclipse.help.webapp/advanced/breadcrumbs.css" charset="ISO-8859-1" type="text/css"></link>
+<script type="text/javascript" src="../../../content/org.eclipse.help/livehelp.js"> </script>
+<script type="text/javascript">
+if( self == top ){
+  var  anchorParam = location.hash.length > 0 ? '\u0026anchor=' + location.hash.substr(1) : '';
+  window.location.replace( "../../../index.jsp?topic=%2FMasterData_Client_Control%2Fhtml%2Far01s07s01s13.html" + anchorParam);
+}
+</script>
+</head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="help_breadcrumbs"><a href="index.html">ODIS Creator Help</a> > <a href="ar01s07.html">7&#46; ODIS Creator Editing Process</a> > <a href="ar01s07s01.html">7&#46;1&#46; Editorial Object General Information</a></div>
+<div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">7.1.13.&nbsp;Branching Editorial Objects</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ar01s07s01s12.html">Prev</a>&nbsp;</td><th width="60%" align="center">7.1.&nbsp;Editorial Object General Information</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ar01s07s01s14.html">Next</a></td></tr></table><hr></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="redaktion.branchen"></a>7.1.13.&nbsp;Branching Editorial Objects</h4></div></div></div>
+			
+			<p>While continuing to develop an editorial object, it may be necessary under certain circumstances to perform a quick adjustment due to responses from other systems. At the same time, the new adjustments to this editorial object are not scheduled for a publication yet, and therefore the editorial object cannot be released simply by the normal workflow. For this scenario, there is the option to create a branch for an editorial object.</p>
+			<p>As the foundation for a branch, every release version of the editorial object can be used.</p>
+			<div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="redaktion.branchen.start"></a>7.1.13.1.&nbsp;Start Branching</h5></div></div></div>
+				
+				<p>To be able to start the branch for an editorial object, there must already be at least one released version for this editorial object. Based on the last released version, a new working version must still exist and this must be in the "in processing" status.</p>
+				<p>If all these conditions are met, "Create branch object" can be initiated through the context menu in the navigator. This will start the branching and a dialog will open to select the base version.</p>
+				<p>
+					</p><div class="figure"><a name="figure.branch.dialog"></a><div class="figure-contents">
+						
+						<div class="mediaobject"><img src="images/Auswahl_Branch_Basisobjekt.png" alt="Image: selection dialog for creating a branch object"></div>
+					</div><p class="title"><b>Figure&nbsp;196.&nbsp;Selection Dialog for Creating a Branch Object</b></p></div><p><br class="figure-break">
+				</p>
+				<p>If the current version is already a branch version, then a dialog will appear indicating that the editorial object is already a branch version.</p>
+				<p>
+					</p><div class="figure"><a name="figure.branch.hinweis"></a><div class="figure-contents">
+						
+						<div class="mediaobject"><img src="images/hinweis_branchen.png" alt="Image: message dialog for revised branch"></div>
+					</div><p class="title"><b>Figure&nbsp;197.&nbsp;Message Dialog for Revised Branch</b></p></div><p><br class="figure-break">
+				</p>
+				<p>The current working version is shaded in the background. This makes it no longer visible to the author. A new working version is created based on the selected released version.</p>
+				<p>The branch object is assigned to the currently set context. If no order context is set when creating a branch object, then the order context dialog appears to select an order.</p>
+			</div>
+			<div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="redaktion.branchen.durchfuehren"></a>7.1.13.2.&nbsp;Executing the Branching Process</h5></div></div></div>
+				
+				<p>After starting the branching process, the author can make all desired changes to the editorial object as usual. The usual processes from the workflow of the editorial object, such as complete and release, are available as before.</p>
+				<p>While the working version is shaded and the branch version is not released, the branch object will be rebuilt in test baselines. Furthermore, the last released version that has reached its market introduction date, is included in the production baseline.</p>
+			</div>
+			<div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="redaktion.branchen.end"></a>7.1.13.3.&nbsp;Ending the Branching Process</h5></div></div></div>
+				
+				<p>Branching is normally ended automatically. Through the risk-release of the branch version, the original working version, that was shaded until now and therefore not visible, is reactivated and can be viewed as the current working version in the navigator. The branch version will be the last released version of the editorial object.</p>
+				<p>Branch objects are each arranged at the end of the version history, even if they relate to another previously released version (base version). The version from which the branch object was created is also displayed in the editorial object history.</p>
+				<p>If other released versions are located between the branch version and the base version, then this does not change. The changes applied in the branch version are not transferred to these versions. The transfer of changes to the subsequent restored version is also still the responsibility of the appropriate author. The restored working version is ordered in the version history at the end, thus behind the branch version.</p>
+				<p>Now the working version, which was previously shaded, is not contained in test baselines. The released branch version is first included in the production baselines when the market introduction date is reached.</p>
+				<p>The branching will manually end, if you discard and delete the branch version. This will automatically make the shaded old version active again and will display in the navigator.</p>
+			</div>
+		</div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ar01s07s01s12.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="ar01s07s01.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="ar01s07s01s14.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">7.1.12.&nbsp;Delete Editorial Objects&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;7.1.14.&nbsp;Editorial Object Complaints</td></tr></table></div></body></html>

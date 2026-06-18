@@ -1,0 +1,241 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>5.6.3.&nbsp;Text ID</title><link rel="stylesheet" href="mystyle.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.73.1"><link rel="start" href="index.html" title="ODIS Creator Help"><link rel="up" href="ar01s05s06.html" title="5.6.&nbsp;Text Library"><link rel="prev" href="ar01s05s06s02.html" title="5.6.2.&nbsp;Requests"><link rel="next" href="ar01s05s06s04.html" title="5.6.4.&nbsp;Sorting and Filtering in the Text Library">
+<script type="text/javascript" src="../../../advanced/synchWithToc.js"></script>
+
+<link rel="stylesheet" href="../../../content/org.eclipse.help.webapp/advanced/breadcrumbs.css" charset="ISO-8859-1" type="text/css"></link>
+<script type="text/javascript" src="../../../content/org.eclipse.help/livehelp.js"> </script>
+<script type="text/javascript">
+if( self == top ){
+  var  anchorParam = location.hash.length > 0 ? '\u0026anchor=' + location.hash.substr(1) : '';
+  window.location.replace( "../../../index.jsp?topic=%2FMasterData_Client_Control%2Fhtml%2Far01s05s06s03.html" + anchorParam);
+}
+</script>
+</head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="help_breadcrumbs"><a href="index.html">ODIS Creator Help</a> > <a href="ar01s05.html">5&#46; ODIS Creator Administration Process</a> > <a href="ar01s05s06.html">5&#46;6&#46; Text Library</a></div>
+<div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">5.6.3.&nbsp;Text ID</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ar01s05s06s02.html">Prev</a>&nbsp;</td><th width="60%" align="center">5.6.&nbsp;Text Library</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ar01s05s06s04.html">Next</a></td></tr></table><hr></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="textbib.textID"></a>5.6.3.&nbsp;Text ID</h4></div></div></div>
+            
+            <p>A text ID contains text, other text IDs or a placeholder for a variable or keyword. Special characters and ANSI characters are controlled by the category above the text ID.</p>
+            <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="textbib.textid.anlegen"></a>5.6.3.1.&nbsp;Creating a Text ID</h5></div></div></div>
+                
+                <p>A text ID can be created through the category node or a text ID with the <span class="bold"><strong>text ID</strong></span> context menu entry. You can also select the <span class="bold"><strong>Add -&gt; Text ID</strong></span> entry in the menu instead. It will open in the <a class="xref" href="ar01s05s06s03.html#figure.admin.textbib.textid_anlegen" title="Figure&nbsp;89.&nbsp;Text ID Object Editor">Figure&nbsp;89, &#8220;Text ID Object Editor&#8221;</a> editor shown. You must specify a version comment and text content.</p>
+                <p>
+                    </p><div class="figure"><a name="figure.admin.textbib.textid_anlegen"></a><div class="figure-contents">
+                        
+                        <div class="mediaobject"><img src="images/textbib_textid_anlegen.jpg" alt="Text ID Object Editor"></div>
+                    </div><p class="title"><b>Figure&nbsp;89.&nbsp;Text ID Object Editor</b></p></div><p><br class="figure-break">
+                </p>
+                <p>The text ID receives a text ID number from the system when saving. The number will be created according to the scheme &lt;category number&gt;.&lt;serial number&gt;.</p>
+                <p>A text ID can be copied from one category to another. In the menu, select <span class="bold"><strong>Edit &gt; Copy</strong></span> to do this. This is however only possible if both categories use the same additional options. For example, it is not possible to copy a text ID from a category with ANSI characters to a category without ANSI characters. A text ID can likewise not be added to a category, which contains text IDs from automatic population (for example, from a master component list import).</p>
+                <p>
+                    </p><div class="table"><a name="table.hinweis.3"></a><div class="table-contents">
+                        <table summary="Text ID Note" border="1"><colgroup><col align="center"><col align="left"></colgroup><tbody valign="top"><tr><td align="center" valign="top"><span class="inlinemediaobject"><img src="images/info.png" alt="Note symbol"></span></td><td align="left" valign="top"><span class="bold"><strong>Note:</strong></span> Text IDs cannot be created under categories that are automatically populated, for example, from a master component list import.</td></tr></tbody></table>
+                    </div><p class="title"><b>Table&nbsp;25.&nbsp;Text ID Note</b></p></div><p><br class="table-break">
+                </p>
+                <p>If you open the text ID editor in read mode, then you will see the entered text content in a preview field with the format of the superordinate category.</p>
+                <p>
+                    </p><div class="figure"><a name="figure.admin.textbib.vorschau"></a><div class="figure-contents">
+                        
+                        <div class="mediaobject"><img src="images/textbib_vorschau_textinhalt.jpg" alt="Text ID Content Preview"></div>
+                    </div><p class="title"><b>Figure&nbsp;90.&nbsp;Text ID Content Preview</b></p></div><p><br class="figure-break">
+                </p>
+                <p>No formatting is displayed while editing text content. For text IDs in a category with additional functions ("text module", "text module (ANSI characters)" and "placeholder"), the text cannot be edited when the editor is open in write mode. Here, only used text IDs can then be replaced or be added to, or the placeholder can be changed.</p>
+                <p>In the read or write mode of a text ID, you can view the entered text with formatting and any special characters in a separate dialog through the <span class="bold"><strong>Preview</strong></span> button in the editor. You can take the text content preview dialog out of the ODIS Creator as its own window and thus compare the different text content.</p>
+            </div>
+            <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="textbib.textid.zusatzfunktion"></a>5.6.3.2.&nbsp;Text ID Editor</h5></div></div></div>
+                
+                <p>There are different buttons in the editor for a text ID depending on the selected additional function for the category.</p>
+                <p>
+                    </p><div class="itemizedlist"><ul type="disc"><li>
+                            <p><span class="bold"><strong>Text module:</strong></span> the additional "text module" function in the text ID editor allows the <span class="bold"><strong>text library</strong></span> and <span class="bold"><strong>preview</strong></span> buttons to appear.</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Text module (ANSI characters):</strong></span> the additional "text module (ANSI characters)" function in the text ID editor allows the <span class="bold"><strong>text library</strong></span> and <span class="bold"><strong>preview</strong></span> buttons to appear.</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Placeholder:</strong></span> the additional "placeholder" function in the text ID editor allows the <span class="bold"><strong>placeholder</strong></span> and <span class="bold"><strong>preview</strong></span> buttons to appear.</p>
+                        </li></ul></div><p>
+                </p>
+                <p>You can select other text IDs through the <span class="bold"><strong>text library</strong></span> button, which should be used in the current text ID. You can create a new placeholder in the text ID using the <span class="bold"><strong>placeholder</strong></span> button.</p>
+                <p>The tables "used", "used by" and "details for translation" are given in the text ID editor. The "used" table contains text IDs that are used by the currently selected text ID. This table is only for texts IDs from a category with the additional functions "text module" and "text module (ANSI characters). The "used by" table contains text IDs which use the currently selected text ID.</p>
+                <p>Like at other locations in ODIS Creator, it is also possible to jump to the objects from the "used" and "used by" tables. For this, you will select the desired object in the respective table and it opens the corresponding navigator with the object and the object editor in read mode. It is necessary that you have the necessary rights to the target object for this.</p>
+                <p>The "details for translation" table will display the current translation status for each target language. For text modules, the respective lowest status of the corresponding, used text IDs is displayed.</p>
+            </div>
+            <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="textbib.textbaustein"></a>5.6.3.3.&nbsp;Using Text IDs in Text Modules</h5></div></div></div>
+                
+                <p>A text ID from a category with the additional "text module" function consists of various text IDs. To add a text ID to a text module, open the text module in the editor and select the "text library" button. In the open dialog, you can enter a text and text IDs will be suggested per auto completion.</p>
+                <p>
+                    </p><div class="figure"><a name="figure.admin.textbib.ansi"></a><div class="figure-contents">
+                        
+                        <div class="mediaobject"><img src="images/textbib_textid_ansi.jpg" alt="Dialog for editing a text module (ANSI characters)"></div>
+                    </div><p class="title"><b>Figure&nbsp;91.&nbsp;Dialog for editing a text module (ANSI characters)</b></p></div><p><br class="figure-break">
+                </p>
+                <p>For a category with "text module (ANSI characters) as the additional function, you can specify the desired ANSI characters in the dialog (see <a class="xref" href="ar01s05s06s03.html#figure.admin.textbib.ansi" title="Figure&nbsp;91.&nbsp;Dialog for editing a text module (ANSI characters)">Figure&nbsp;91, &#8220;Dialog for editing a text module (ANSI characters)&#8221;</a>). You can also select text IDs through auto completion, where text content should be added.</p>
+                <p>In <a class="xref" href="ar01s05s06s03.html#figure.admin.textbib.ansi" title="Figure&nbsp;91.&nbsp;Dialog for editing a text module (ANSI characters)">Figure&nbsp;91, &#8220;Dialog for editing a text module (ANSI characters)&#8221;</a>, you will see the editing dialog for a "text module (ANSI characters)" with the applicable preview in the text ID editor.</p>
+                <p>For a category with "text module" as the additional function, you can select the desired text ID through auto completion and insert additional content separated by spaces and breaks.</p>
+                <p>
+                    </p><div class="figure"><a name="figure.admin.textbib.textbaustein"></a><div class="figure-contents">
+                        
+                        <div class="mediaobject"><img src="images/textbib_textid_textbaustein.jpg" alt="Dialog for editing a text module"></div>
+                    </div><p class="title"><b>Figure&nbsp;92.&nbsp;Dialog for editing a text module</b></p></div><p><br class="figure-break">
+                </p>
+                <p>In <a class="xref" href="ar01s05s06s03.html#figure.admin.textbib.textbaustein" title="Figure&nbsp;92.&nbsp;Dialog for editing a text module">Figure&nbsp;92, &#8220;Dialog for editing a text module&#8221;</a>, you will see the editing dialog for a "text module" with the applicable preview in the text ID editor.</p>
+                <p>The text content of the text ID cannot be changed in the text module. You only have the option to replace the used text IDs with others or to expand it. These adjustments can be performed again through the "text library" interface.</p>
+            </div>
+            <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="textbib.platzhalter"></a>5.6.3.4.&nbsp;Using Placeholders in Text IDs</h5></div></div></div>
+                
+                <p>You can add a placeholder to a text ID. Select the <span class="bold"><strong>placeholder</strong></span> button when text ID editor is open in write mode. The dialog to be seen will open in <a class="xref" href="ar01s05s06s03.html#figure.admin.textbib.platzhalter" title="Figure&nbsp;93.&nbsp;Dialog for editing a placeholder">Figure&nbsp;93, &#8220;Dialog for editing a placeholder&#8221;</a>, in which the placeholder name as well as a German and English comment must be entered.</p>
+                <p>
+                    </p><div class="figure"><a name="figure.admin.textbib.platzhalter"></a><div class="figure-contents">
+                        
+                        <div class="mediaobject"><img src="images/textbib_textid_platzhalter.jpg" alt="Dialog for editing a placeholder"></div>
+                    </div><p class="title"><b>Figure&nbsp;93.&nbsp;Dialog for editing a placeholder</b></p></div><p><br class="figure-break">
+                </p>
+                <p>%&lt;VariableName&gt; is then used in the text ID preview instead of the text, which is also seen in the above image.</p>
+            </div>
+            <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="textbib.autovervollstaendigung"></a>5.6.3.5.&nbsp;Auto Completion</h5></div></div></div>
+                
+                <p>The selection of a text ID through auto completion is given as an independent dialog (see <a class="xref" href="ar01s05s06s03.html#figure.admin.textbib.autov" title="Figure&nbsp;94.&nbsp;Dialog for Auto Completion Results">Figure&nbsp;94, &#8220;Dialog for Auto Completion Results&#8221;</a>), that will open at the same time. Functionalities, such as favorites and bookmarking, are available per the context menu for the text library.</p>
+                <p>
+                    </p><div class="figure"><a name="figure.admin.textbib.autov"></a><div class="figure-contents">
+                        
+                        <div class="mediaobject"><img src="images/textbib_textid_autovervollstaendig_ergebnis.jpg" alt="Dialog for Auto Completion Results"></div>
+                    </div><p class="title"><b>Figure&nbsp;94.&nbsp;Dialog for Auto Completion Results</b></p></div><p><br class="figure-break">
+                </p>
+                <p>In <a class="xref" href="ar01s05s06s03.html#figure.admin.textbib.autov" title="Figure&nbsp;94.&nbsp;Dialog for Auto Completion Results">Figure&nbsp;94, &#8220;Dialog for Auto Completion Results&#8221;</a>, you will see an input dialog for a text module and the applicable auto completion list.</p>
+                <p>If the dialog is not open, it will open automatically as soon as something is typed in either of the dialogs for recording a text module or an ANSI text module. The following rules apply for this:</p>
+                <p>
+                    </p><div class="itemizedlist"><ul type="disc"><li>
+                            <p>A search will always start if the user has entered at least one word or word fragment followed by a space. The space will always act as the trigger.</p>
+                        </li><li>
+                            <p>All search terms that begin with # are interpreted as a category name or part of a category name. This allows the text ID to be narrowed down even more to one or more categories. Depending on the set user interface language, it will search for the German or English category names for this. Example: the author enters "#F component #Ha". It will search for all text IDs that contain the word component as a word or portion of the word and is assigned to a category that begins with F or Ha. The search for text IDs and categories is not case sensitive.</p>
+                        </li><li>
+                            <p>All words left of the current cursor position are always entered as the search parameter. It only ever considers the words that are after the last period, line break or the last text ID.</p>
+                        </li><li>
+                            <p>There are three adjusters that the group administrator can use to set parameters, which can be used to adjust settings for individual brands.</p><div class="itemizedlist"><ul type="circle"><li>
+                                        <p><span class="bold"><strong>Linking of search terms:</strong></span> you can select if search terms should be linked with &#8220;AND&#8221; (the text ID must contain all terms) or with &#8220;OR&#8221; (the text ID must contain at least one of the terms). The default setting is to list both search options.</p>
+                                    </li><li>
+                                        <p><span class="bold"><strong>Automatic use of wildcards:</strong></span> you can select if wildcards should be added before and after each search automatically. The default setting is to list both search options.</p>
+                                    </li><li>
+                                        <p><span class="bold"><strong>Maximum number of hits:</strong></span> you can select the maximum number of hits (including entries in favorites) that should be displayed as search results.</p>
+                                    </li></ul></div>
+                        </li><li>
+                            <p>If present, results will always be shown in the dialog even if the number of hits without favorites includes more elements than the limit that is set. If the search finds too many hits, only the X hits with the highest score are shown (X is the selected limit).</p>
+                        </li><li>
+                            <p>It will automatically search for text IDs that contain the entered terms. Depending on the setting (&#8220;automatic use of wildcards&#8221;, see above), this also applies for part of a word. Entering additional wildcards is not necessary. Entered wildcards are understood as standard search symbols, for example, "steered" and "understeered" will be found with "steer".</p>
+                        </li><li>
+                            <p>The search is not case-sensitive, meaning it does not differentiate between capital and lower case letters. For example, depending on the setting (&#8220;automatic use of wildcards&#8221;, see above), the search will find both &#8220;control module&#8221; and &#8220;engine control module&#8221; if you search for &#8220;control&#8221;.</p>
+                        </li><li>
+                            <p>The terms can be entered in any order, but depending on the setting (&#8220;linking of search terms&#8221; and &#8220;automatic use of wildcards&#8221;, see above), either all (partial) terms may need to be present in a text ID. For example, &#8220;component follow&#8221; will also find &#8220;following illustrated component&#8221;.</p>
+                        </li><li>
+                            <p>The user can apply a text ID by double clicking.</p>
+                        </li><li>
+                            <p>When transferring a text ID, only the characters from the cursor position up to the last period, line break or text ID will be replaced by the selected text ID text. If a text area is marked, then only the marked text will be replaced, regardless of any periods, line breaks, or text IDs that are marked.</p>
+                        </li><li>
+                            <p>The opening of the dialog will not inhibit typing. Therefore, the focal point remains in the current input field and the dialog at the same time as when the non-modal dialog opens.</p>
+                        </li></ul></div><p>
+                </p>
+                <p>Only text IDs that are active, approved and completely translated are available for selection in the auto completion. Text requests are an exception to this. They can be used by their author directly after creating them. If this dialog is called up when authoring a "text module" or "text module (ANSI character)", then the displayed text IDs may also be only default text IDs or placeholders, however no "text modules" or "text modules (ANSI characters)".</p>
+                <p>All found text IDs are displayed in a tree diagram. The upper level represents categories and the second represents text IDs. In contrast to the "text library" navigator, the text ID numbers are not displayed but rather the plain text in the data language currently set is displayed here. Only category nodes are displayed, for which text IDs were found. These are closed when opening the dialog, however they can be individually opened when needed.</p>
+                <p>You can move the selection of a text ID upward or downward in the tree structure using both arrow buttons. If the tree structure is too large for the current view, then a scroll bar will appear. If this is the case, you can move the structure with the mouse upward or downward. The current selection will remain selected during this. You can change the size of the whole dialog, however there is a set minimum size that you cannot go below.</p>
+                <p>
+                    </p><div class="table"><a name="table.hinweis.Autovervollstaendigung"></a><div class="table-contents">
+                        <table summary="Data Language Note" border="1"><colgroup><col align="center"><col align="left"></colgroup><tbody valign="top"><tr><td align="center" valign="top"><span class="inlinemediaobject"><img src="images/info.png" alt="Note symbol"></span></td><td align="left" valign="top"><span class="bold"><strong>Note: </strong></span> in the auto propagation dialog, the text IDs are displayed in the data language set in ODIS Creator (see <a class="xref" href="ar01s09s03.html" title="9.3.&nbsp;Data Language">Section&nbsp;9.3, &#8220;Data Language&#8221;</a>).</td></tr></tbody></table>
+                    </div><p class="title"><b>Table&nbsp;26.&nbsp;Data Language Note</b></p></div><p><br class="table-break">
+                </p>
+                <div class="section" lang="en"><div class="titlepage"><div><div><h6 class="title"><a name="antrag.textbib"></a>5.6.3.5.1.&nbsp;Requests</h6></div></div></div>
+                    
+                    <p>In the text library selection dialog, authors have the option of using their own newly-created text IDs without having them go through the approval process. When selecting a requested text in the text selection dialog, the free text will be entered in the usage location accordingly. Replacing the requested text with a text ID results in replacing the text in all areas where it used with the text ID.</p>
+                    <p>
+                        </p><div class="table"><a name="table.hinweis.Antragautovervollstaendigung"></a><div class="table-contents">
+                            <table summary="Request Notes" border="1"><colgroup><col align="center"><col align="left"></colgroup><tbody valign="top"><tr><td align="center" valign="top"><span class="inlinemediaobject"><img src="images/info.png" alt="Note symbol"></span></td><td align="left" valign="top"><span class="bold"><strong>Note: </strong></span>the auto-complete dialog only shows the author&#8217;s own texts that they have requested, not those from other authors.</td></tr></tbody></table>
+                        </div><p class="title"><b>Table&nbsp;27.&nbsp;Request Notes</b></p></div><p><br class="table-break">
+                    </p>
+                </div>
+                <div class="section" lang="en"><div class="titlepage"><div><div><h6 class="title"><a name="fav.textbib"></a>5.6.3.5.2.&nbsp;Favorites</h6></div></div></div>
+                    
+                    <p>There is the option to mark text IDs as favorites (see <a class="xref" href="ar01s05s06s03.html#figure.admin.textbib.autov.fav" title="Figure&nbsp;95.&nbsp;Favorites in the Auto Completion Results">Figure&nbsp;95, &#8220;Favorites in the Auto Completion Results&#8221;</a>). These will always be displayed in the dialog at the topmost position. Otherwise, all entries shown (category and text IDs) are sorted according to their score (or alphanumerically for those with identical scores), with text IDs being sorted within their respective category. The currently set "favorites" are always saved when the dialog is closed and will be displayed again when the next selection is made. They were also be saved when ODIS Creator restarts. The text IDs for the favorite nodes are always displayed regardless of the search parameters. Text IDs that are set to inactive are no longer displayed in the favorites, however will remain stored as a favorite in case it is reactivated later.</p>
+                    <p>
+                        </p><div class="figure"><a name="figure.admin.textbib.autov.fav"></a><div class="figure-contents">
+                            
+                            <div class="mediaobject"><img src="images/textbib_autovervollstaendigen_favoriten.JPG" alt="Favorites in the Auto Completion Results"></div>
+                        </div><p class="title"><b>Figure&nbsp;95.&nbsp;Favorites in the Auto Completion Results</b></p></div><p><br class="figure-break">
+                    </p>
+                    <p>You can manage your favorites under <span class="bold"><strong>Help &gt; Settings &gt; Text ID Favorites Settings</strong></span>. There you can remove favorites using the context menu or add new ones using the search function.</p>
+                    <p>
+                        </p><div class="figure"><a name="figure.admin.textbib.fav"></a><div class="figure-contents">
+                            
+                            <div class="mediaobject"><img src="images/benutzervorgaben_favoriten.png" alt="Managing Favorites"></div>
+                        </div><p class="title"><b>Figure&nbsp;96.&nbsp;Managing Favorites</b></p></div><p><br class="figure-break">
+                    </p>
+                </div>
+                <div class="section" lang="en"><div class="titlepage"><div><div><h6 class="title"><a name="d4e3214"></a>5.6.3.5.3.&nbsp;Pin Function</h6></div></div></div>
+                    
+                    <p>In addition to marking favorites, there is also the "Pin" function (see <a class="xref" href="ar01s05s06s03.html#figure.admin.textbib.autov.festp" title="Figure&nbsp;97.&nbsp;Pinning Results in the Auto Completion">Figure&nbsp;97, &#8220;Pinning Results in the Auto Completion&#8221;</a>). When pinning, the selected text IDs within the category will be moved upward. In the image, the first three text IDs are pinned under the components category (code behind). This resorting is only temporary for the currently open selection dialog and will be discarded when the dialog is closed or when conducting a new search. A new search will then begin when the user starts the auto completion of a text ID in a different input field than the current one. Until then the bookmarked entries will be kept even if they are no longer in the results after the search parameters have changed. The &#8220;permanently pinned&#8221; text IDs are sorted among themselves based on their score.</p>
+                    <p>
+                        </p><div class="figure"><a name="figure.admin.textbib.autov.festp"></a><div class="figure-contents">
+                            
+                            <div class="mediaobject"><img src="images/textbib_autovervollstaendigen_festpinnen.JPG" alt="Pinning Results in the Auto Completion"></div>
+                        </div><p class="title"><b>Figure&nbsp;97.&nbsp;Pinning Results in the Auto Completion</b></p></div><p><br class="figure-break">
+                    </p>
+                </div>
+            </div>
+            <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="textbib.statusmodell"></a>5.6.3.6.&nbsp;Text ID Status Model</h5></div></div></div>
+                
+                <p>A text ID can assume different statuses. A newly created text ID has the status "in progress". As soon as the text administrator completes the compilation, they can start the release process. First of all, a text ID completion message is given when all tests have been successfully performed. Then the text administrator can release the text ID. The completion message and release can also be initiated in one step by the text administrator; this will also release the text ID immediately when there is a successful completion message.</p>
+                <p>A text ID can be edited when in the "released" status and then reverts to the "in progress" status, and the version is automatically increased by one. The old version can continue to be used in the released status.</p>
+                <p>A consistency check will be performed when a completion message for a text ID is given. During this consistency check, which can also be initiated manually by the text administrator, the following items will be checked:</p>
+                <p>
+                    </p><div class="itemizedlist"><ul type="disc"><li>
+                            <p>Check if all required data is in place. =&gt; If negative, this test receives the "Error" status for consistency.</p>
+                        </li><li>
+                            <p>It checks if all the used text IDs are sill active for text modules and ANSI text modules. =&gt; If negative, this test receives the "Warning" status for consistency.</p>
+                        </li><li>
+                            <p>It checks if only text IDs without a special function, placeholders, spaces, tabs and line breaks are used in text modules and ANSI text modules. =&gt; If negative, this test receives the "Error" status for consistency.</p>
+                        </li></ul></div><p>
+                </p>
+                <p>If separate consistency check steps for an error, a warning or a note occurs, then a corresponding entry will be made in a test log. The created test log matches the layout and appearance of that in editing. If no discrepancies result from this check, then no test log will be created.</p>
+            </div>
+            <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="textbib.deaktivieren"></a>5.6.3.7.&nbsp;Deactivating/Activating Text IDs</h5></div></div></div>
+                
+                <p>A text ID can be deactivated and activated. To do this, select "Activate" or "Deactivate" in the text ID context menu. A text ID that is inactive will no longer be available at the usage locations. Usage continues to be allowed at the usage locations still available.</p>
+            </div>
+            <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="textbib.reklamation"></a>5.6.3.8.&nbsp;Make a Text ID Complaint</h5></div></div></div>
+                
+                <p>The translation of a text ID can be contested like that of an editorial object. See <a class="xref" href="ar01s07s01s14.html" title="7.1.14.&nbsp;Editorial Object Complaints">Section&nbsp;7.1.14, &#8220;Editorial Object Complaints&#8221;</a>. Note that the rolls and the teams refer to the <a class="link" href="ar01s03s03s01.html" title="3.3.1.&nbsp;Description of Roles">text administrator</a> here.</p>
+            </div>
+            <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="textbib.textid.beantragen"></a>5.6.3.9.&nbsp;Request Text IDs</h5></div></div></div>
+                
+                <p>New text IDs can be requested using the text library selection dialog. The dialog for requesting a new text ID is reached using the &#8220;New&#8221; button in the text library selection dialog.</p><div class="figure"><a name="figure.auswahldialogneu"></a><div class="figure-contents">
+                        
+                        <div class="mediaobject"><img src="images/textbib_textid_neu_option.png" alt="Illustration: Selection dialog with &#8220;New&#8221; option"></div>
+                    </div><p class="title"><b>Figure&nbsp;98.&nbsp;New Button in the Selection Dialog</b></p></div><p><br class="figure-break">
+                </p>
+                <p>Note: a text entry can only be created or linked in objects that have been saved at least once and that were opened in write mode. For example, if a function test is open in read-only mode, the &#8220;New&#8221; button will be inactive. If a diagnostic object is still not saved, there will first be a dialog asking if the object should be saved.</p>
+                <p>Note: replacing a free text with a text ID using a text entry is subject to certain rules. The replacement will <span class="emphasis"><em>not</em></span> be made if the following characters directly follow or are after the text to be replaced (without spaces between):</p><div class="itemizedlist"><ul type="disc"><li><p>Numbers</p></li><li><p>Letters (upper case or lower case)</p></li><li><p>,</p></li><li><p>&#8222;</p></li><li><p>"</p></li><li><p>(</p></li><li><p>)</p></li><li><p>&lt;</p></li><li><p>&gt;</p></li></ul></div><p>
+                </p>
+                <p>The &#8220;Text ID to be requested&#8221; field in the &#8220;Requesting a Text ID&#8221; dialog is mandatory. The content of the new text ID is specified here. The usage locations can also be selected in the &#8220;Usage location&#8221; area. It is an optional field, so it is also possible to leave it blank. The &#8220;Comments&#8221; field is also optional. The &#8220;Request type&#8221;, &#8220;Text type&#8221;, and &#8220;Text ID in OC&#8221; fields are automatically populated.</p>
+                <p>
+                    </p><div class="figure"><a name="figure.beantragungsdialog"></a><div class="figure-contents">
+                        
+                        <div class="mediaobject"><img src="images/textbib_textid_neu_dialog.png" alt="Illustration: Dialog for requesting a new text ID"></div>
+                    </div><p class="title"><b>Figure&nbsp;99.&nbsp;Request Dialog for New Text IDs</b></p></div><p><br class="figure-break">
+                </p>
+            </div>
+            <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="textbib.textid.aenderung"></a>5.6.3.10.&nbsp;Requesting a Text ID Change</h5></div></div></div>
+                
+                <p>Changes to text IDs can be requested using the text library selection dialog. The dialog for requesting a text ID change is reached using the &#8220;Change&#8221; button in the text library selection dialog.</p><div class="figure"><a name="figure.auswahldialogaendern"></a><div class="figure-contents">
+                        
+                        <div class="mediaobject"><img src="images/textbib_textid_aenderungsoption.png" alt="Illustration: Selection dialog with &#8220;Change&#8221; option"></div>
+                    </div><p class="title"><b>Figure&nbsp;100.&nbsp;Change Button in the Selection Dialog</b></p></div><p><br class="figure-break">The &#8220;Text ID to be requested&#8221; field in the &#8220;Requesting a Text ID&#8221; dialog is mandatory. The content of the desired change to the text ID is specified here. The &#8220;Comments&#8221; field is optional. The &#8220;Request type&#8221;, &#8220;Text type&#8221;, and &#8220;Text ID in OC&#8221; fields are automatically populated.</p><div class="figure"><a name="figure.aenderungsdialog"></a><div class="figure-contents">
+                        
+                        <div class="mediaobject"><img src="images/textbib_textid_aenderungsdialog.png" alt="Illustration: Dialog for requesting a text ID change"></div>
+                    </div><p class="title"><b>Figure&nbsp;101.&nbsp;Request Dialog for a Text ID Change</b></p></div><p><br class="figure-break"></p>
+            </div>
+            <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="textbib.textid.beantragen.ausdruck"></a>5.6.3.11.&nbsp;Request Text IDs in Expressions</h5></div></div></div>
+                
+                <p>New text IDs are added to expressions using the text library selection dialog. This does not occur using the auto-complete feature, but is triggered using the text library button in the expression dialog. If the text library button is selected in the expression dialog, the text library expression dialog will appear in a new window. A text ID can be entered using the New button (changing a text ID is similar). To use the new text ID, it must be selected from the selection dialog by double-clicking to have it displayed within the expression dialog.</p>
+            </div>
+            <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="textbib.textid.loeschen"></a>5.6.3.12.&nbsp;Deleting Text IDs</h5></div></div></div>
+                
+                <p>Text IDs that are no longer used in any version and were deactivated, are regularly deleted from the system through a job.</p>
+            </div>
+        </div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ar01s05s06s02.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="ar01s05s06.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="ar01s05s06s04.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">5.6.2.&nbsp;Requests&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;5.6.4.&nbsp;Sorting and Filtering in the Text Library</td></tr></table></div></body></html>

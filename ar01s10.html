@@ -1,0 +1,51 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>10.&nbsp;ODIS Creator Affiliated Systems</title><link rel="stylesheet" href="mystyle.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.73.1"><link rel="start" href="index.html" title="ODIS Creator Help"><link rel="up" href="index.html" title="ODIS Creator Help"><link rel="prev" href="ar01s09s05.html" title="9.5.&nbsp;DIDB"><link rel="next" href="ar01s11.html" title="11.&nbsp;Appendix">
+<script type="text/javascript" src="../../../advanced/synchWithToc.js"></script>
+
+<link rel="stylesheet" href="../../../content/org.eclipse.help.webapp/advanced/breadcrumbs.css" charset="ISO-8859-1" type="text/css"></link>
+<script type="text/javascript" src="../../../content/org.eclipse.help/livehelp.js"> </script>
+<script type="text/javascript">
+if( self == top ){
+  var  anchorParam = location.hash.length > 0 ? '\u0026anchor=' + location.hash.substr(1) : '';
+  window.location.replace( "../../../index.jsp?topic=%2FMasterData_Client_Control%2Fhtml%2Far01s10.html" + anchorParam);
+}
+</script>
+</head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="help_breadcrumbs"><a href="index.html">ODIS Creator Help</a> > </div>
+<div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">10.&nbsp;ODIS Creator Affiliated Systems</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ar01s09s05.html">Prev</a>&nbsp;</td><th width="60%" align="center">&nbsp;</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ar01s11.html">Next</a></td></tr></table><hr></div><div class="section" lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="umfeldsysteme"></a>10.&nbsp;ODIS Creator Affiliated Systems</h2></div></div></div>
+		
+		<p>In this section, the affiliated systems are only described with the properties that are relevant in the ODIS Creator context. The affiliated systems relevant to the ODIS Creator business process are (alphabetical order):</p>
+		<p><a name="efa"></a><span class="bold"><strong>EFA (Standard Fault Description Language)</strong></span></p>
+		<p>In the EFA system, error symptoms are depicted in a complex structure together with their dependencies for the error analysis.</p>
+		<p><a name="gocat"></a><span class="bold"><strong>GOCAT</strong></span></p>
+		<p>GOCAT is a group-wide translation portal, that supports the process for all document translations given by Volkswagen AG in an order. The software organizes all steps of the document translation. This begins when a translation order is manually or automatically created, the optional addition of the settings relevant to translation, with the order placement to an agency, assigning to a translation, performing the translation up to quality control and creation of a delivery order as a PDF.</p>
+		<p><a name="dels"></a><span class="bold"><strong>DELS</strong></span></p>
+		<p>DELS is a new group-wide translation portal that supports the process for all document translations commissioned by Volkswagen AG. DELS is a successor to GoCAT and organizes all steps of document translation. The main difference between DELS and GoCAT is the API interface. From a user perspective, the translation process remains the same.</p>
+		<p><a name="internet"></a><span class="bold"><strong>Internet</strong></span></p>
+		<p>The interface makes the link of editorial objects to documents, that are available on the Internet, possible.</p>
+		<p><a name="livas3"></a><span class="bold"><strong>LIVAS3 (literature, information, processing and handling system)</strong></span></p>
+		<p>LIVAS3 is the editing system for workshop information (for example, repair manuals). LIVAS3 currently contains the MOVE component to manage multimedia objects. So that you can look up LIVAS document and can look up and commission MOVE images and objects, you must be recognized with your user name in LIVAS3.</p>
+		<p><a name="move"></a><span class="bold"><strong>MOVE (multimedia object management)</strong></span></p>
+		<p>MOVE is a component to manage the multimedia objects that are currently integrated in LIVAS3.</p>
+		
+		<p><a name="TPS/CONNECT"></a><span class="bold"><strong>TPS/CONNECT</strong></span></p>
+		<p>CONNECT is a REST API that can be used to make requests to access image objects in the TPS database. The actual search for images is facilitated by a separate REST API named CORA that processes the search request for image data.</p>
+		<p>TPS/CONNECT is the successor system to LIVAS3. In the future, images will no longer be referenced from the MOVE database, but rather from the TPS database and assigned to the supplementary documents. You can search for image objects in a dialog window using the image number. A successful login to the CONNECT interface is required to do this.</p>		
+		
+		<p><a name="ria"></a><span class="bold"><strong>Mirror Server 2 (formerly RIA Retail Integration Architecture)</strong></span></p>
+		<p>Mirror Server 2 is the distribution system, from which the customers can obtain the diagnostic data online.</p>
+		<p><a name="tpi"></a><span class="bold"><strong>TSB Repository</strong></span></p>
+		<p>From the TSB repository from the <a class="link" href="ar01s11.html#HST" title="HST">HST</a> (Technical Service Handbook) system, the available Technical Service Bulletins are determined to assist in fault repairs in the workshop. The Technical Service Bulletins can either correlate to DISS codes or give general information, that is separate from the DISS code (for example, messages for reporting requirement, message for software updates).</p>
+		<p><a name="vaudas"></a><span class="bold"><strong>ODIS Service</strong></span></p>
+		<p>The diagnostic processing system ODIS Service assists the technician in the workshop with the instruments of Guided Fault Finding (GFF) and the Guided Functions (GF), to identify the fault source based on the error codes read from the vehicle and error symptoms detected by the technician during the service process. In the ODIS Creator context, ODIS Service is only directly addressed in the scope of development-related tests for the created function test that incorporates a vehicle.</p>
+		<p><a name="anmerkungen"></a><span class="bold"><strong>Comments</strong></span></p>
+		<p>Comments on systems, rolls, and concepts in the extended peripherals of ODIS Creator:</p>
+		<p>
+			</p><div class="itemizedlist"><ul type="disc"><li>
+					<p>The Technical Service Bulletins, from the <a class="link" href="ar01s11.html#HST" title="HST">HST</a> (Technical Service Handbook) editing system required to correct faults in the workshop, are determined and displayed based on the DISS codes at the diagnostic object being transferred by ODIS Service into the <span class="bold"><strong>ELSA</strong></span> service information system.</p>
+				</li><li>
+					<p>The service information system <span class="bold"><strong>ELSA (electronic service information system)</strong></span> supports the mechanics in the workshop when correcting an identified error. The applicable repair manuals, wiring diagrams, and Technical Service Bulletins are displayed corresponding to any fault sources identified in the off-board diagnosis by the ODIS Service processing system and the linking information from ODIS Creator.</p>
+				</li></ul></div><p>
+		</p>
+	</div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ar01s09s05.html">Prev</a>&nbsp;</td><td width="20%" align="center">&nbsp;</td><td width="40%" align="right">&nbsp;<a accesskey="n" href="ar01s11.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">9.5.&nbsp;DIDB&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;11.&nbsp;Appendix</td></tr></table></div></body></html>

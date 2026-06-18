@@ -1,0 +1,72 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>8.2.2.&nbsp;Configuration Editor</title><link rel="stylesheet" href="mystyle.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.73.1"><link rel="start" href="index.html" title="ODIS Creator Help"><link rel="up" href="ar01s08s02.html" title="8.2.&nbsp;Production Settings"><link rel="prev" href="ar01s08s02s01.html" title="8.2.1.&nbsp;Brand Navigator"><link rel="next" href="ar01s08s03.html" title="8.3.&nbsp;Test Baseline">
+<script type="text/javascript" src="../../../advanced/synchWithToc.js"></script>
+
+<link rel="stylesheet" href="../../../content/org.eclipse.help.webapp/advanced/breadcrumbs.css" charset="ISO-8859-1" type="text/css"></link>
+<script type="text/javascript" src="../../../content/org.eclipse.help/livehelp.js"> </script>
+<script type="text/javascript">
+if( self == top ){
+  var  anchorParam = location.hash.length > 0 ? '\u0026anchor=' + location.hash.substr(1) : '';
+  window.location.replace( "../../../index.jsp?topic=%2FMasterData_Client_Control%2Fhtml%2Far01s08s02s02.html" + anchorParam);
+}
+</script>
+</head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="help_breadcrumbs"><a href="index.html">ODIS Creator Help</a> > <a href="ar01s08.html">8&#46; ODIS Creator Preparation Process</a> > <a href="ar01s08s02.html">8&#46;2&#46; Production Settings</a></div>
+<div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">8.2.2.&nbsp;Configuration Editor</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ar01s08s02s01.html">Prev</a>&nbsp;</td><th width="60%" align="center">8.2.&nbsp;Production Settings</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ar01s08s03.html">Next</a></td></tr></table><hr></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="konfigurationseditor"></a>8.2.2.&nbsp;Configuration Editor</h4></div></div></div>
+				
+				<p>Within the editor, the settings are structured by theme as follows and compiled in individual tabs:</p>
+				<p>
+					</p><div class="orderedlist"><ol type="1"><li>
+							<p>Creation interval for the production baseline (see <a class="xref" href="ar01s08s02s02.html#figure.produktiv.baseline.konfig.editor1" title="Figure&nbsp;605.&nbsp;Creation Interval">Figure&nbsp;605, &#8220;Creation Interval&#8221;</a>)</p>
+						</li><li>
+							<p>Specifications for the automatic creation of the production baseline descriptions (see <a class="xref" href="ar01s08s02s02.html#figure.produktiv.baseline.konfig.editor2" title="Figure&nbsp;606.&nbsp;Specifications for Automatic Creation">Figure&nbsp;606, &#8220;Specifications for Automatic Creation&#8221;</a>)</p>
+						</li></ol></div><p>
+				</p>
+				<p>
+					</p><div class="figure"><a name="figure.produktiv.baseline.konfig.editor1"></a><div class="figure-contents">
+						
+						<div class="mediaobject"><img src="images/produktiv_baseline_konfig1.png" alt="Image: creation interval"></div>
+					</div><p class="title"><b>Figure&nbsp;605.&nbsp;Creation Interval</b></p></div><p><br class="figure-break">
+				</p>
+				<p>
+					</p><div class="figure"><a name="figure.produktiv.baseline.konfig.editor2"></a><div class="figure-contents">
+						
+						<div class="mediaobject"><img src="images/produktiv_baseline_konfig2.png" alt="Image: specifications for automatic creation"></div>
+					</div><p class="title"><b>Figure&nbsp;606.&nbsp;Specifications for Automatic Creation</b></p></div><p><br class="figure-break">
+				</p>
+				<p>The location administrator enters the times or conditions for the regular preparation in the configuration dialog in the <span class="bold"><strong>Creation</strong></span> tab and is separated for the incremental and full baselines.</p>
+				<p>For incremental production baselines, the location administrator can set a period in days for how often an incremental production baseline is automatically created and a specific time for the creation.</p>
+				<p>Three alternatives are defined for full production baselines:</p><div class="itemizedlist"><ul type="disc"><li>
+							<p>Period in days with a time specification</p>
+						</li><li>
+							<p>Recurring date each month with a time specification</p>
+						</li><li>
+							<p>Subject to the size of an incremental installation package that is due:</p>
+							<div class="itemizedlist"><ul type="circle"><li>
+									<p>if one incremental package would exceed nn% of the full version size</p>
+								</li><li>
+									<p>if all incremental packages since the last full version would exceed nn% of the full version size.</p>
+								</li></ul></div>
+						</li></ul></div>
+				<p>The location administrator enters the specifications for the automatically created names for full or incremental production baselines, the market name and any comments in the <span class="bold"><strong>Full or Incremental</strong></span> tab in the configuration dialog. Furthermore, an exclusion list must be selected.</p>
+				<p>The <span class="bold"><strong>market name</strong></span> field is an optional field, which the location administrator can use to integrate a market name into the rebuild, in order to communicate it to the GFF user in advance. The market name may only consist of the following characters.</p><div class="itemizedlist"><ul type="disc"><li>
+							<p>Digits 0-9</p>
+						</li><li>
+							<p>Hyphen "-"</p>
+						</li><li>
+							<p>Underscore "_"</p>
+						</li><li>
+							<p>Period "."</p>
+						</li><li>
+							<p>Letters A-Z or a-z</p>
+						</li><li>
+							<p>Space " "</p>
+						</li></ul></div><p>
+				</p>
+				<p>The location administrator must specify a TFD brand baseline. The version of the TFD baseline to be used for the creation of the production baseline is selected from the available data of TFD baselines on the replacement drive for the applicable brand. The list of available TFD baselines for the brand is provided in the selection field in the display, so that you can select the TFD baseline to be used for the creation of the production baseline. The last selected TFD baseline for this market is loaded in the selection field by default.</p>
+				<p>The exclusion list is selected through a file selection dialog. The file path of the selected file is displayed in the dialogs for configuration and for the creation of production baselines and can only be filled out with the file selection dialog. The display is empty at first. The file selection dialog is preallocated with the folder path from which you selected the last exclusion list. The selected file is checked against a schema after closing the file selection dialog. If errors in the schema are detected, then the following message is displayed: "The selected file is not a valid exclusion list. Please select a valid exclusion list." The detailed list of schema errors is transferred to the engine.log.</p>
+				<p>The list for "unauthorized DTC memory entries" is selected through a file selection dialog. The file selection dialog is preallocated with the folder path, from which you selected the last list. The selected file is checked against a schema after closing the file selection dialog. If errors in the schema are detected, then the following message is displayed: "The selected file is not a valid list for 'unauthorized DTC memory entries'. The schema validation has failed when verifying the X field. Please select a valid list for 'unauthorized DTC memory entries'." The detailed list of schema errors is transferred to the engine.log. If the list is valid, then the current version of the list will be displayed after loading. If you do not want to use the list, you are able to import an empty list (only structure without content). When deploying, the file is stored on the replacement drive in a sub-folder related to the order in the baseline folder, for example "..\BRAND-V\1.0.0\DTC_Exclusion\20160316_163726\DtcExclusion.xml".</p>
+				<p>The list for "evaluation factors for verification calculation" is selected through a file selection dialog. The file selection dialog is preallocated with the folder path, from which you selected the last list. The selected file is checked against a schema after closing the file selection dialog. If errors in the schema are detected, then the following message is displayed: "The selected file is not a valid list for 'evaluation factors for verification calculation'. The schema validation has failed when verifying the X field. Please select a valid list for 'evaluation factors for verification calculation'." The detailed list of schema errors is transferred to the engine.log. If you do not want to use the list, you are able to import an empty list (only structure without content). When deploying, the file is stored on the replacement drive in a sub-folder related to the order in the baseline folder, for example "..\BRAND-V\1.0.0\DTC_Factors\20160316_163726\DtcFactors.xml".</p>
+				<p>The fields for the version of the baseline to be created and service references are filled in by the system and cannot be edited. In these fields, the respective version of the service references or XML reference tables currently available in the system are displayed.</p>
+			</div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ar01s08s02s01.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="ar01s08s02.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="ar01s08s03.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">8.2.1.&nbsp;Brand Navigator&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;8.3.&nbsp;Test Baseline</td></tr></table></div></body></html>

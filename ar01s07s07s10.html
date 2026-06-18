@@ -1,0 +1,50 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>7.7.10.&nbsp;Error Types</title><link rel="stylesheet" href="mystyle.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.73.1"><link rel="start" href="index.html" title="ODIS Creator Help"><link rel="up" href="ar01s07s07.html" title="7.7.&nbsp;Control Module Tree"><link rel="prev" href="ar01s07s07s09.html" title="7.7.9.&nbsp;Control Module Version Groups"><link rel="next" href="ar01s07s08.html" title="7.8.&nbsp;DTC Memory Tree">
+<script type="text/javascript" src="../../../advanced/synchWithToc.js"></script>
+
+<link rel="stylesheet" href="../../../content/org.eclipse.help.webapp/advanced/breadcrumbs.css" charset="ISO-8859-1" type="text/css"></link>
+<script type="text/javascript" src="../../../content/org.eclipse.help/livehelp.js"> </script>
+<script type="text/javascript">
+if( self == top ){
+  var  anchorParam = location.hash.length > 0 ? '\u0026anchor=' + location.hash.substr(1) : '';
+  window.location.replace( "../../../index.jsp?topic=%2FMasterData_Client_Control%2Fhtml%2Far01s07s07s10.html" + anchorParam);
+}
+</script>
+</head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="help_breadcrumbs"><a href="index.html">ODIS Creator Help</a> > <a href="ar01s07.html">7&#46; ODIS Creator Editing Process</a> > <a href="ar01s07s07.html">7&#46;7&#46; Control Module Tree</a></div>
+<div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">7.7.10.&nbsp;Error Types</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ar01s07s07s09.html">Prev</a>&nbsp;</td><th width="60%" align="center">7.7.&nbsp;Control Module Tree</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ar01s07s08.html">Next</a></td></tr></table><hr></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="sgbaum.Fehlerarten"></a>7.7.10.&nbsp;Error Types</h4></div></div></div>
+			
+			<p>It is possible to check fault location suspicions in relation to the fault type 1 and 2 for KWP or UDS control module descriptions.</p>
+			<div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="sgbaum.Fehlerarten.Objekteditor"></a>7.7.10.1.&nbsp;Display in Object Editor</h5></div></div></div>
+				
+				<p>In addition to the respective suspicion rules of diagnostic objects and function codes, the suspicion of fault locations in a table can be checked.</p>
+				<p>For fault locations from UDS control module groups, no fault type 1 can be selected when linking (for example, suspicion rule in a diagnostic object); therefore, no value will be displayed for fault type 1 in the table. For KWP control module groups, fault type 1 and fault type 2 can be selected for a fault location and are also displayed respectively.</p>
+				<p>
+					</p><div class="figure"><a name="figure.redaktion.redaktioneditor"></a><div class="figure-contents">
+						
+						<div class="mediaobject"><img src="images/verdaechtige_Fehlerorte.png" alt="Image: &#34;suspected fault locations&#34; - Table in editor"></div>
+					</div><p class="title"><b>Figure&nbsp;287.&nbsp;"Suspected Fault Locations" - Table In Editor</b></p></div><p><br class="figure-break">
+				</p>
+				<p>By double clicking on the fault location in the "suspected fault locations" table, you are taken to the fault location in the control module tree navigator, while a usage location dialog appears beforehand where you can select the respective path.</p>
+			</div>
+			<div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="sgbaum.Fehlerarten.sgbaum"></a>7.7.10.2.&nbsp;Display from the Control Module Tree</h5></div></div></div>
+				
+				<p>It is also possible, for a concrete fault location to display all function codes and diagnostic objects (see <a class="xref" href="ar01s07s07s10.html#figure.redaktion.fktdgo" title="Figure&nbsp;289.&nbsp;Usage Locations of Fault Locations in the Function Library">Figure&nbsp;289, &#8220;Usage Locations of Fault Locations in the Function Library&#8221;</a>), that suspect these fault locations. This amount of concrete fault locations can also be limited.</p>
+				<p>
+					</p><div class="figure"><a name="figure.redaktion.menue_verdaechtigung"></a><div class="figure-contents">
+						
+						<div class="mediaobject"><img src="images/Verdaechtigung_anzeigen_menu.png" alt="Image: context menu at a fault location"></div>
+					</div><p class="title"><b>Figure&nbsp;288.&nbsp;Context Menu at a Fault Location</b></p></div><p><br class="figure-break">
+				</p>
+				<p>To do this, select a fault location or a fault type 1/2 in the control module tree and select <span class="bold"><strong>Display suspicions</strong></span> (see <a class="xref" href="ar01s07s07s10.html#figure.redaktion.menue_verdaechtigung" title="Figure&nbsp;288.&nbsp;Context Menu at a Fault Location">Figure&nbsp;288, &#8220;Context Menu at a Fault Location&#8221;</a>) in the menu. It opens a dialog, which displays all function codes or diagnostic objects that suspect the corresponding fault location in the name context of the higher-level control module group. Depending on the selected fault type node, the amount of results is still filtered down to the respective fault type 1 or to the combination of fault type 1 and 2.</p>
+				<p>The display of diagnostic objects or function codes is only possible at the used locations. For example, a diagnostic object under a fault location is only then displayed if this link has no fault type 1 or 2.</p>
+				<p>
+					</p><div class="figure"><a name="figure.redaktion.fktdgo"></a><div class="figure-contents">
+						
+						<div class="mediaobject"><img src="images/verwendungsstellen_auf_fehlerorte.png" alt="Image: usage locations of fault locations in the function library"></div>
+					</div><p class="title"><b>Figure&nbsp;289.&nbsp;Usage Locations of Fault Locations in the Function Library</b></p></div><p><br class="figure-break">
+				</p>
+				<p>When there is a fault location suspicion, it is always selected in the context of a control module group (BV). In the function test editor, "fault location" is at an IF command (see <a class="xref" href="ar01s07s14s13.html#Funktionstesteditor.Arbeitsflaeche.Aktionselemente_Kategorie_Ablauf.IF-Anweisung" title="7.14.13.1.&nbsp;Action Element - IF Command">Section&nbsp;7.14.13.1, &#8220;Action Element - IF Command&#8221;</a>)&lt;Name of BV&gt; -&gt; &lt;Name of fault location&gt; [-&gt; &lt;Fault type 1&gt;] [-&gt; &lt;Fault type 2&gt;] and the base version context for the respective fault location is in the action element editor (see <a class="xref" href="ar01s07s14s13.html#figure.Funktionstesteditor.Arbeitsflaeche.Aktionselemente_Kategorie_Ablauf.IF-Symptome" title="Figure&nbsp;418.&nbsp;IF Command with Symptoms Action Element">Figure&nbsp;418, &#8220;IF Command with Symptoms Action Element&#8221;</a>). The BV context for the fault location in the suspicion rule is displayed in the diagnostic objects.</p>
+			</div>
+		</div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ar01s07s07s09.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="ar01s07s07.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="ar01s07s08.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">7.7.9.&nbsp;Control Module Version Groups&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;7.8.&nbsp;DTC Memory Tree</td></tr></table></div></body></html>

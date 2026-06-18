@@ -1,0 +1,66 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>7.4.7.&nbsp;Country Sessions in the Equipment Network</title><link rel="stylesheet" href="mystyle.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.73.1"><link rel="start" href="index.html" title="ODIS Creator Help"><link rel="up" href="ar01s07s04.html" title="7.4.&nbsp;Equipment Network"><link rel="prev" href="ar01s07s04s06.html" title="7.4.6.&nbsp;Vehicle Recognition in Equipment Network"><link rel="next" href="ar01s07s04s08.html" title="7.4.8.&nbsp;Determining the Engine Code from the Engine Control Module">
+<script type="text/javascript" src="../../../advanced/synchWithToc.js"></script>
+
+<link rel="stylesheet" href="../../../content/org.eclipse.help.webapp/advanced/breadcrumbs.css" charset="ISO-8859-1" type="text/css"></link>
+<script type="text/javascript" src="../../../content/org.eclipse.help/livehelp.js"> </script>
+<script type="text/javascript">
+if( self == top ){
+  var  anchorParam = location.hash.length > 0 ? '\u0026anchor=' + location.hash.substr(1) : '';
+  window.location.replace( "../../../index.jsp?topic=%2FMasterData_Client_Control%2Fhtml%2Far01s07s04s07.html" + anchorParam);
+}
+</script>
+</head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="help_breadcrumbs"><a href="index.html">ODIS Creator Help</a> > <a href="ar01s07.html">7&#46; ODIS Creator Editing Process</a> > <a href="ar01s07s04.html">7&#46;4&#46; Equipment Network</a></div>
+<div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">7.4.7.&nbsp;Country Sessions in the Equipment Network</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ar01s07s04s06.html">Prev</a>&nbsp;</td><th width="60%" align="center">7.4.&nbsp;Equipment Network</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ar01s07s04s08.html">Next</a></td></tr></table><hr></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="ausstattungsnetz.landessetzung"></a>7.4.7.&nbsp;Country Sessions in the Equipment Network</h4></div></div></div>
+            
+            <p>It is possible to specify country sessions in the equipment network.<a class="indexterm" name="d4e11634"></a>They can then be used to automatically fill in the vehicle features dialog in the operating system. (see <a class="xref" href="ar01s07s04s07.html#figure.redaktion.ausstattungsnetz.landessetzung" title="Figure&nbsp;241.&nbsp;Country session">Figure&nbsp;241, &#8220;Country session&#8221;</a>)<a class="indexterm" name="d4e11637"></a></p>
+            <p>
+                </p><div class="figure"><a name="figure.redaktion.ausstattungsnetz.landessetzung"></a><div class="figure-contents">
+                    
+                    <div class="mediaobject"><img src="images/landessetzung.png" alt="Image: country session"></div>
+                </div><p class="title"><b>Figure&nbsp;241.&nbsp;Country session</b></p></div><p><br class="figure-break">
+            </p>
+            <p>One or more country sessions can be specified for an editorial object in the &#8220;Vehicle type&#8221; in an input field designed for this. Entering a country session is optional. It consists of three characters, such as &#8220;X0A&#8221;.</p>
+            <p>A &#8220;negation&#8221; (minus symbol) is permitted when specifying the country version. Multiple country versions that are not permitted should be enclosed in parentheses with the minus symbol in front of the parentheses. A negative or positive list must be specified in the field. Multiple country sessions should be separated by a comma or blank space, regardless of whether the list is a positive list or negative list.</p>
+            <p>The following characters may be entered:</p>
+            <p>
+                </p><div class="itemizedlist"><ul type="disc"><li>
+                        <p>A through Z</p>
+                    </li><li>
+                        <p>Capital and lower case letters</p>
+                    </li><li>
+                        <p>0 through 9</p>
+                    </li><li>
+                        <p>?</p>
+                    </li><li>
+                        <p>,</p>
+                    </li><li>
+                        <p>()</p>
+                    </li><li>
+                        <p>- (minus)</p>
+                    </li></ul></div><p>
+            </p>
+            <p>Examples of entries in the "Country session&#8221; field:</p>
+            <p>
+                </p><div class="itemizedlist"><ul type="disc"><li>
+                        <p>X0A</p>
+                    </li><li>
+                        <p>-X0A</p>
+                    </li><li>
+                        <p>X0?</p>
+                    </li><li>
+                        <p>X??</p>
+                    </li><li>
+                        <p>?0?</p>
+                    </li><li>
+                        <p>X0A,X2A,X3A</p>
+                    </li><li>
+                        <p>-(X0A,X2A,X3A)</p>
+                    </li><li>
+                        <p>-(X0A,?2?,X?A,???)</p>
+                    </li><li>
+                        <p>X0A,?2?,X?A,???</p>
+                    </li></ul></div><p>If information is entered incorrectly, there will be an error message. The vehicle type editor is not stored and also not closed.</p>
+        </div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ar01s07s04s06.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="ar01s07s04.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="ar01s07s04s08.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">7.4.6.&nbsp;Vehicle Recognition in Equipment Network&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;7.4.8.&nbsp;Determining the Engine Code from the Engine Control Module</td></tr></table></div></body></html>

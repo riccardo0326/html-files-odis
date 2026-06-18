@@ -1,0 +1,33 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>7.1.11.&nbsp;References Between Objects</title><link rel="stylesheet" href="mystyle.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.73.1"><link rel="start" href="index.html" title="ODIS Creator Help"><link rel="up" href="ar01s07s01.html" title="7.1.&nbsp;Editorial Object General Information"><link rel="prev" href="ar01s07s01s10.html" title="7.1.10.&nbsp;Editorial Object Brand Codes"><link rel="next" href="ar01s07s01s12.html" title="7.1.12.&nbsp;Delete Editorial Objects">
+<script type="text/javascript" src="../../../advanced/synchWithToc.js"></script>
+
+<link rel="stylesheet" href="../../../content/org.eclipse.help.webapp/advanced/breadcrumbs.css" charset="ISO-8859-1" type="text/css"></link>
+<script type="text/javascript" src="../../../content/org.eclipse.help/livehelp.js"> </script>
+<script type="text/javascript">
+if( self == top ){
+  var  anchorParam = location.hash.length > 0 ? '\u0026anchor=' + location.hash.substr(1) : '';
+  window.location.replace( "../../../index.jsp?topic=%2FMasterData_Client_Control%2Fhtml%2Far01s07s01s11.html" + anchorParam);
+}
+</script>
+</head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="help_breadcrumbs"><a href="index.html">ODIS Creator Help</a> > <a href="ar01s07.html">7&#46; ODIS Creator Editing Process</a> > <a href="ar01s07s01.html">7&#46;1&#46; Editorial Object General Information</a></div>
+<div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">7.1.11.&nbsp;References Between Objects</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ar01s07s01s10.html">Prev</a>&nbsp;</td><th width="60%" align="center">7.1.&nbsp;Editorial Object General Information</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ar01s07s01s12.html">Next</a></td></tr></table><hr></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="redaktion.referenzen"></a>7.1.11.&nbsp;References Between Objects</h4></div></div></div>
+			
+			<p>When deleting editorial objects and when creating references between editorial objects, an order context is always required in the foreground. Even if it turns out that this will not be used in a later process. The order context is necessary, since a reference between the parent object and the reused or moved editorial object is created respectively. If the parent object is released, then this will be set in the currently set order context with a new working version. The released parent object will likewise be taken into processing, if a reference is deleted.</p>
+			<p>The following apply as a parent object:</p>
+			<p>
+				</p><div class="itemizedlist"><ul type="disc"><li>
+						<p>a structuring node (documentation category, function library, etc.)</p>
+					</li><li>
+						<p>a root node</p>
+					</li><li>
+						<p>an object from a vehicle project, control module or fault location tree.</p>
+					</li><li>
+						<p>its reference is a content reference, for which there is already a working version of the parent object by definition.</p>
+					</li></ul></div><p>
+			</p>
+			<p><span class="bold"><strong>Example:</strong></span> a working version of a vehicle model references a released version of a model year. If the working version of the vehicle model is deleted now, then one does not need an order context for this. This will also cause the released version of the model year to be deleted. However, an order context is now mandatory for this deletion process of a released version.</p>
+			<p>If no order context is set when creating a reference, then the order context dialog appears to select an order.</p>
+		</div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ar01s07s01s10.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="ar01s07s01.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="ar01s07s01s12.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">7.1.10.&nbsp;Editorial Object Brand Codes&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;7.1.12.&nbsp;Delete Editorial Objects</td></tr></table></div></body></html>

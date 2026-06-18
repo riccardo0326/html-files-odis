@@ -1,0 +1,53 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>6.4.5.&nbsp;Commissioning Translations Manually</title><link rel="stylesheet" href="mystyle.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.73.1"><link rel="start" href="index.html" title="ODIS Creator Help"><link rel="up" href="ar01s06s04.html" title="6.4.&nbsp;Translation"><link rel="prev" href="ar01s06s04s04.html" title="6.4.4.&nbsp;Translation Requirements"><link rel="next" href="ar01s06s04s06.html" title="6.4.6.&nbsp;Translation Jobs">
+<script type="text/javascript" src="../../../advanced/synchWithToc.js"></script>
+
+<link rel="stylesheet" href="../../../content/org.eclipse.help.webapp/advanced/breadcrumbs.css" charset="ISO-8859-1" type="text/css"></link>
+<script type="text/javascript" src="../../../content/org.eclipse.help/livehelp.js"> </script>
+<script type="text/javascript">
+if( self == top ){
+  var  anchorParam = location.hash.length > 0 ? '\u0026anchor=' + location.hash.substr(1) : '';
+  window.location.replace( "../../../index.jsp?topic=%2FMasterData_Client_Control%2Fhtml%2Far01s06s04s05.html" + anchorParam);
+}
+</script>
+</head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="help_breadcrumbs"><a href="index.html">ODIS Creator Help</a> > <a href="ar01s06.html">6&#46; ODIS Creator Order Management Process</a> > <a href="ar01s06s04.html">6&#46;4&#46; Translation</a></div>
+<div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">6.4.5.&nbsp;Commissioning Translations Manually</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ar01s06s04s04.html">Prev</a>&nbsp;</td><th width="60%" align="center">6.4.&nbsp;Translation</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ar01s06s04s06.html">Next</a></td></tr></table><hr></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="uebersetzung.manuell.beauftragen"></a>6.4.5.&nbsp;Commissioning Translations Manually</h4></div></div></div>
+            
+            <p>Translation coordinators can also define translation packages manually at any time. Select the translation objects that should be translated and define a translation package from that. Now enter a deadline when you would like the translation to be delivered and click the <span class="bold"><strong>Commission translation package</strong></span> <a class="link" href="ar01s02s02.html#schaltflaeche">button</a> (see <a class="xref" href="ar01s06s04.html#figure.auftragsverwaltung.uebersetzung" title="Figure&nbsp;147.&nbsp;Translation Overview">Figure&nbsp;147, &#8220;Translation Overview&#8221;</a>). A warning message will be given in the following scenarios:</p>
+            <p>
+                </p><div class="itemizedlist"><ul type="disc"><li>
+                        <p>The selected deadline does not correlate to the expected initial deployment deadline of the editorial object.</p>
+                    </li><li>
+                        <p>The selected deadline does not match the range of time needed for the translation <a class="xref" href="ar01s06s04s01.html" title="6.4.1.&nbsp;Define Translation Parameters">Section&nbsp;6.4.1, &#8220;Define Translation Parameters&#8221;</a>.</p>
+                    </li></ul></div><p>
+            </p>
+            <p>The translation package is exported anyway after confirming the warning message. In this case, it is the translation coordinator's responsibility to ensure the translation packages are translated on time and imported into the ODIS Creator system.</p>
+            <p>The translation coordinator will be informed if clone languages are included when manually building packages.</p>
+            <p>
+                </p><div class="figure"><a name="figure.auftragsverwaltung.uebersetzung.clone"></a><div class="figure-contents">
+                    
+                    <div class="mediaobject"><img src="images/uebrestzung_beauf_clone_hinweis.png" alt="Image: clone language translation note"></div>
+                </div><p class="title"><b>Figure&nbsp;156.&nbsp;Clone Language Translation Note</b></p></div><p><br class="figure-break">
+            </p>
+            <p>To optimize the timing when manually ordering translation packages, a dialog with a note that the package was created is displayed. The dialog gives the user the option to display the package that was just created in the navigator or to continue working with the current display. It may take longer to display the new package in the navigator. This can depend on the number of existing packages in the target language for the editing location.</p>
+            <p>
+                </p><div class="figure"><a name="figure.auftragsverwaltung.uebersetzung.jump"></a><div class="figure-contents">
+                    
+                    <div class="mediaobject"><img src="images/uebersetzung_beauf_jump_hinweis.png" alt="Image: translation note for completed package"></div>
+                </div><p class="title"><b>Figure&nbsp;157.&nbsp;Translation Note for Completed Package</b></p></div><p><br class="figure-break">
+            </p>
+            <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="uebersetzung.export"></a>6.4.5.1.&nbsp;Exporting Translation Packages with Clone Languages</h5></div></div></div>
+                
+                <p>If the target language of the translation package is defined as a clone language in the location of the package, then the translation requests for all languages in the clone language group will be considered. The translation status for all requests that are considered will be set to &#8220;In translation&#8221;.</p>
+                <p>If one or more objects in the clone language are packaged manually, the requirements from the cloned language will be removed after the action is completed. On the other hand, if one or more objects in the cloned language are packaged manually, the package will be created in the clone language and the requirements will be removed from the clone language.</p>
+                <p>The languages in the clone language group that are valid at the time of the export will be stored in the translation package.</p>
+                <p>The clone language settings for the Wolfsburg location are considered for administrative translation packages.</p>
+            </div>
+            <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="uebersetzung.import"></a>6.4.5.2.&nbsp;Importing Translation Packages with Clone Languages</h5></div></div></div>
+                
+                <p>If cloned languages are included in imported translation packages, the imported texts in all of the cloned languages contained in the package will be used as the translation and their translation status will be changed to Completed (translated).</p>
+                <p>When importing using the expert function, the clone languages contained in the package are not considered.</p>
+            </div>
+        </div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ar01s06s04s04.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="ar01s06s04.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="ar01s06s04s06.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">6.4.4.&nbsp;Translation Requirements&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;6.4.6.&nbsp;Translation Jobs</td></tr></table></div></body></html>

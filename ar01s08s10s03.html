@@ -1,0 +1,62 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>8.10.3.&nbsp;Placeholder</title><link rel="stylesheet" href="mystyle.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.73.1"><link rel="start" href="index.html" title="ODIS Creator Help"><link rel="up" href="ar01s08s10.html" title="8.10.&nbsp;Plausibility and Completeness Checks"><link rel="prev" href="ar01s08s10s02.html" title="8.10.2.&nbsp;Performing the Plausibility and Completeness Check Manually"><link rel="next" href="ar01s08s10s04.html" title="8.10.4.&nbsp;Performing the Plausibility and Completeness Checks">
+<script type="text/javascript" src="../../../advanced/synchWithToc.js"></script>
+
+<link rel="stylesheet" href="../../../content/org.eclipse.help.webapp/advanced/breadcrumbs.css" charset="ISO-8859-1" type="text/css"></link>
+<script type="text/javascript" src="../../../content/org.eclipse.help/livehelp.js"> </script>
+<script type="text/javascript">
+if( self == top ){
+  var  anchorParam = location.hash.length > 0 ? '\u0026anchor=' + location.hash.substr(1) : '';
+  window.location.replace( "../../../index.jsp?topic=%2FMasterData_Client_Control%2Fhtml%2Far01s08s10s03.html" + anchorParam);
+}
+</script>
+</head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="help_breadcrumbs"><a href="index.html">ODIS Creator Help</a> > <a href="ar01s08.html">8&#46; ODIS Creator Preparation Process</a> > <a href="ar01s08s10.html">8&#46;10&#46; Plausibility and Completeness Checks</a></div>
+<div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">8.10.3.&nbsp;Placeholder</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ar01s08s10s02.html">Prev</a>&nbsp;</td><th width="60%" align="center">8.10.&nbsp;Plausibility and Completeness Checks</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ar01s08s10s04.html">Next</a></td></tr></table><hr></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="prozess.bereitstellung.pruefung.platzhalter"></a>8.10.3.&nbsp;Placeholder</h4></div></div></div>
+            
+            <p>The placeholders, that can be specified when creating a test, and a precise description of their values are given in the following table.</p>
+            <p>
+                </p><div class="table"><a name="table.bereitstellung.pruefung.platzhalter"></a><div class="table-contents">
+                    
+                    <table summary="Placeholder description" border="1"><colgroup><col align="left"><col align="left"></colgroup><thead><tr bgcolor="#EEEEEE"><th align="left">Placeholder</th><th align="left">Value</th></tr></thead><tbody valign="top"><tr><td align="left" valign="top">Brand</td><td align="left" valign="top">The name of the preselected brand.</td></tr><tr><td align="left" valign="top">Test date</td><td align="left" valign="top">The date on which the test object was created; in the format DD.MM.YYYY.</td></tr><tr><td align="left" valign="top">Test time</td><td align="left" valign="top">The time that the test object was created, in 24-hour format hh.mm.ss.</td></tr><tr><td align="left" valign="top">Baseline version</td><td align="left" valign="top">For tests that are started after a baseline is created, the version of the respective baseline is entered here.</td></tr><tr><td align="left" valign="top">Test type</td><td align="left" valign="top">
+                                    <div class="itemizedlist"><ul type="disc"><li>
+                                            <p>full_product_baseline</p>
+                                        </li><li>
+                                            <p>incr_product_baseline</p>
+                                        </li><li>
+                                            <p>testbaseline</p>
+                                        </li><li>
+                                            <p>rolloutbaseline</p>
+                                        </li><li>
+                                            <p>full_enddate</p>
+                                        </li><li>
+                                            <p>incr_enddate</p>
+                                        </li></ul></div>
+                                </td></tr><tr><td align="left" valign="top">Test trigger</td><td align="left" valign="top">
+                                    <div class="itemizedlist"><ul type="disc"><li>
+                                            <p>"manual" for manual tests</p>
+                                        </li><li>
+                                            <p>"automatic" for automatic tests</p>
+                                        </li></ul></div>
+                                </td></tr><tr><td align="left" valign="top">Test sort</td><td align="left" valign="top">
+                                    <p>The following tests simulate a baseline creation:</p>
+                                    <p>
+                                        </p><div class="itemizedlist"><ul type="disc"><li>
+                                                <p>Complete production baseline</p>
+                                            </li><li>
+                                                <p>Incremental production baseline</p>
+                                            </li><li>
+                                                <p>Test Baseline</p>
+                                            </li><li>
+                                                <p>End date complete</p>
+                                            </li><li>
+                                                <p>End date incremental</p>
+                                            </li></ul></div><p>
+                                    </p>
+                                    <p>The "simulated" value is entered in this case.</p>
+                                    <p>For tests that are started after a baseline is created, the "real" value is entered here.</p>
+                                </td></tr><tr><td align="left" valign="top">Number of days after the deadline</td><td align="left" valign="top">For tests started automatically after the deadline is reached, the word amount is replaced by the entered days after deadline. The word deadline is replaced by the given deadline in the format DD.MM.YYYY. Example: 3_days_after_enddate_01.07.2016</td></tr><tr><td align="left" valign="top">Baseline market name</td><td align="left" valign="top">For tests that are started after a baseline is created, the market name of the respective baseline is entered here.</td></tr><tr><td align="left" valign="top">Baseline date</td><td align="left" valign="top">For tests that are started after a baseline is created, the creation date of the respective baseline is entered here.</td></tr><tr><td align="left" valign="top">Baseline time</td><td align="left" valign="top">For tests that are started after a baseline is created, the time at which the respective baseline was created is entered here in a 24-hour format (hh.mm.ss).</td></tr></tbody></table>
+                </div><p class="title"><b>Table&nbsp;143.&nbsp;Placeholder description</b></p></div><p><br class="table-break">
+            </p>
+        </div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ar01s08s10s02.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="ar01s08s10.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="ar01s08s10s04.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">8.10.2.&nbsp;Performing the Plausibility and Completeness Check Manually&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;8.10.4.&nbsp;Performing the Plausibility and Completeness Checks</td></tr></table></div></body></html>

@@ -1,0 +1,121 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>3.2.3.&nbsp;Navigator</title><link rel="stylesheet" href="mystyle.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.73.1"><link rel="start" href="index.html" title="ODIS Creator Help"><link rel="up" href="ar01s03s02.html" title="3.2.&nbsp;Program Structure"><link rel="prev" href="ar01s03s02s02.html" title="3.2.2.&nbsp;Edited Order (Order Context)"><link rel="next" href="ar01s03s02s04.html" title="3.2.4.&nbsp;Properties window">
+<script type="text/javascript" src="../../../advanced/synchWithToc.js"></script>
+
+<link rel="stylesheet" href="../../../content/org.eclipse.help.webapp/advanced/breadcrumbs.css" charset="ISO-8859-1" type="text/css"></link>
+<script type="text/javascript" src="../../../content/org.eclipse.help/livehelp.js"> </script>
+<script type="text/javascript">
+if( self == top ){
+  var  anchorParam = location.hash.length > 0 ? '\u0026anchor=' + location.hash.substr(1) : '';
+  window.location.replace( "../../../index.jsp?topic=%2FMasterData_Client_Control%2Fhtml%2Far01s03s02s03.html" + anchorParam);
+}
+</script>
+</head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="help_breadcrumbs"><a href="index.html">ODIS Creator Help</a> > <a href="ar01s03.html">3&#46; ODIS Creator Basic Information</a> > <a href="ar01s03s02.html">3&#46;2&#46; Program Structure</a></div>
+<div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">3.2.3.&nbsp;Navigator</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ar01s03s02s02.html">Prev</a>&nbsp;</td><th width="60%" align="center">3.2.&nbsp;Program Structure</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ar01s03s02s04.html">Next</a></td></tr></table><hr></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="navigator"></a>3.2.3.&nbsp;Navigator</h4></div></div></div>
+				
+				<p>In the navigator,<a class="indexterm" name="d4e727"></a>all entries are hierarchically sorted in a structure tree (for example <a class="xref" href="ar01s03s02s03.html#figure.navigator" title="Figure&nbsp;27.&nbsp;Order Navigator">Figure&nbsp;27, &#8220;Order Navigator&#8221;</a>). An entry can contain additional entries, which can be shown or hidden by clicking on the main entry. Displayed before a main entry that can be opened. <span class="inlinemediaobject"><img src="images/Plus01.png"></span> Displayed before a main entry that is open. <span class="inlinemediaobject"><img src="images/minus.png"></span> . If you click on an entry, its properties will be shown underneath it in the <a class="link" href="ar01s03s02s04.html" title="3.2.4.&nbsp;Properties window">properties window</a> and the <a class="link" href="ar01s03s02s05.html" title="3.2.5.&nbsp;Editor">editor</a> view with the details will be opened in the right <a class="link" href="ar01s02s02.html#rahmen">frame</a>.</p><div class="figure"><a name="figure.navigator"></a><div class="figure-contents">
+						
+						<div class="mediaobject"><img src="images/Navigator.png" alt="Image: order navigator"></div>
+					</div><p class="title"><b>Figure&nbsp;27.&nbsp;Order Navigator</b></p></div><p><br class="figure-break"></p>
+				<p>The navigator is configured so that when it starts, it displays the entries that are most helpful for you in the open view. Some navigators have a separate tool bar (green border in <a class="xref" href="ar01s03s02s03.html#figure.navigator" title="Figure&nbsp;27.&nbsp;Order Navigator">Figure&nbsp;27, &#8220;Order Navigator&#8221;</a>). There you can define the filter to limit or expand the displayed entries and retrieve a table overview of the entries.</p>
+				<div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="navigator.filter.definieren"></a>3.2.3.1.&nbsp;Defining the filter</h5></div></div></div>
+					
+					<p>With a filter,<a class="indexterm" name="d4e751"></a>you can limit or expand the number of entries displayed in the navigator. You can specify criteria in the filter, which the displayed entries must fulfill. If the navigator displays multiple different types of entries, you can define a separate filter for each type.</p>
+					<p>
+						</p><div class="figure"><a name="figure.benachrichtigungsfilter"></a><div class="figure-contents">
+							
+							<div class="mediaobject"><img src="images/benachrichtigungsfilter.png" alt="Image: notification filter"></div>
+						</div><p class="title"><b>Figure&nbsp;28.&nbsp;Notification filter</b></p></div><p><br class="figure-break">
+					</p>
+					<p>So that entries do not appear without reference in the navigator structure tree, ODIS Creator makes sure that superordinate entries are also then displayed only if their subordinate entries match the filter criteria. In this context, the filter in the <a class="link" href="ar01s07.html" title="7.&nbsp;ODIS Creator Editing Process">editing</a> process represents an exception, which only applies to the already expanded navigator entries (see <a class="xref" href="ar01s07s01s05.html" title="7.1.5.&nbsp;Apply Filter">Section&nbsp;7.1.5, &#8220;Apply Filter&#8221;</a>).</p>
+					<p>For each type of entry, you can specify which of their attributes must conform to which criteria. To do this, press the button, <span class="inlinemediaobject"><img src="images/plus.png" alt="Symbol: Add button"></span>to create a new condition. You can link these conditions through the logical AND or OR. When the logical link is the same, the filter conditions are strictly analyzed in the order they are displayed. When there are a number of logical conditions, the AND has a stronger functional effect than the OR and will be analyzed first according to that. This is always comparable to the multiplication before addition rule. The first condition in a table or parentheses may not contain an AND or OR, since no condition is given that can be linked to this condition.</p>
+					<p>To clarify the function, filter functions based on a simple but atypical example (types of fruit) are illustrated in the following.</p>
+					<p>If you give the condition [<span class="citation">Fruit = Apple</span>][<span class="citation">OR Fruit = Pear AND Color = Green</span>], pears and apples of every color will be filtered but not green apples or green pears.</p>
+					<p>
+						</p><div class="table"><a name="d4e776"></a><div class="table-contents">
+							<table summary="Defining a Filter - Example 1" border="1"><colgroup><col><col><col><col></colgroup><thead><tr bgcolor="#EEEEEE"><th>AND/OR</th><th>Attribute name</th><th>Condition</th><th>Value</th></tr></thead><tbody valign="top"><tr><td valign="top">&nbsp;</td><td valign="top">Fruit</td><td valign="top">=</td><td valign="top">Apple</td></tr><tr><td valign="top">OR</td><td valign="top">Fruit</td><td valign="top">=</td><td valign="top">Pear</td></tr><tr><td valign="top">AND</td><td valign="top">Color</td><td valign="top">=</td><td valign="top">Green</td></tr></tbody></table>
+						</div><p class="title"><b>Table&nbsp;7.&nbsp;Defining a Filter - Example 1</b></p></div><p><br class="table-break">
+					</p>
+					<p>You can put parentheses in the filter dialog, in which you specify either only AND or OR and then include the first filter condition within the parentheses in the next line. The parentheses are automatically closed with the next AND/OR line or with the last line.</p>
+					<p>If you would like to filter apples or pears and both types of fruit should be green, then specify the following conditions:</p>
+					<div class="table"><a name="d4e807"></a><div class="table-contents">
+						<table summary="Defining a Filter - Example 2" border="1"><colgroup><col><col><col><col></colgroup><thead><tr bgcolor="#EEEEEE"><th>AND/OR</th><th>Attribute name</th><th>Condition</th><th>Value</th></tr></thead><tbody valign="top"><tr><td valign="top">&nbsp;</td><td valign="top">Fruit</td><td valign="top">=</td><td valign="top">Apple</td></tr><tr><td valign="top">OR</td><td valign="top">Fruit</td><td valign="top">=</td><td valign="top">Pear</td></tr><tr><td valign="top">AND</td><td valign="top">&nbsp;</td><td valign="top">&nbsp;</td><td valign="top">&nbsp;</td></tr><tr><td valign="top">&nbsp;</td><td valign="top">Color</td><td valign="top">=</td><td valign="top">Green</td></tr></tbody></table>
+					</div><p class="title"><b>Table&nbsp;8.&nbsp;Defining a Filter - Example 2</b></p></div><br class="table-break">
+					<p>If the placement of parentheses is too complicated, you can also simply remove the parentheses for this simple example based on the rule:</p>
+					<p>[<span class="citation">(Apple OR Pear) AND green =</span>]</p>
+					<p>[<span class="citation">Apple AND green OR Pear AND green</span>]</p>
+					<div class="table"><a name="d4e847"></a><div class="table-contents">
+							<table summary="Defining a Filter - Example 3" border="1"><colgroup><col><col><col><col></colgroup><thead><tr bgcolor="#EEEEEE"><th>AND/OR</th><th>Attribute name</th><th>Condition</th><th>Value</th></tr></thead><tbody valign="top"><tr><td valign="top">&nbsp;</td><td valign="top">Fruit</td><td valign="top">=</td><td valign="top">Apple</td></tr><tr><td valign="top">AND</td><td valign="top">Color</td><td valign="top">=</td><td valign="top">Green</td></tr><tr><td valign="top">OR</td><td valign="top">Fruit</td><td valign="top">=</td><td valign="top">Pear</td></tr><tr><td valign="top">AND</td><td valign="top">Color</td><td valign="top">=</td><td valign="top">Green</td></tr></tbody></table>
+						</div><p class="title"><b>Table&nbsp;9.&nbsp;Defining a Filter - Example 3</b></p></div><p><br class="table-break">It is always possible to omit the parentheses. However, it will cause complex filters to be composed of a lot of conditions.</p>
+					<p>Different conditions can be selected based on the selected attribute. The following list explains the available conditions.</p>
+					<div class="table"><a name="table.filterbedingungen"></a><div class="table-contents">
+						
+						<table summary="Filter Conditions" border="1"><colgroup><col align="left"><col align="left"></colgroup><thead><tr bgcolor="#EEEEEE"><th align="left"><span class="bold"><strong>Condition</strong></span></th><th align="left"><span class="bold"><strong>Description</strong></span></th></tr></thead><tbody valign="top"><tr><td align="left" valign="top">=</td><td align="left" valign="top">
+										<p>Filters all entries in which the attribute matches the specified value exactly:</p>
+										<p>the condition [<span class="citation">= Apple</span>] will find every [Apple] but not [apple], [apples], [applesauce], [pineapple], [scrapple], [grapple]</p>
+									</td></tr><tr><td align="left" valign="top">&lt;&gt;</td><td align="left" valign="top">
+										<p>Filters all entries in which the attribute does not match the specified value:</p>
+										<p>The condition [<span class="citation">!= Apple</span>] finds [pears], [cherries] and also [apple], [apples], [applesauce], [pineapple], [scrapple], [grapple], but not [Apple].</p>
+									</td></tr><tr><td align="left" valign="top">&lt;</td><td align="left" valign="top">
+										<p>Filters all entries in which the attribute is less than the specified value:</p>
+										<p>the condition [<span class="citation">&lt; 01.02.2008</span>] will find every date that comes before 01.02.2008, but not 01.02.2008 itself.</p>
+									</td></tr><tr><td align="left" valign="top">&gt;</td><td align="left" valign="top">
+										<p>Filters all entries in which the attribute is greater than the specified value:</p>
+										<p>the condition [<span class="citation">&lt; 01.02.2008</span>] will find every date that comes after 01.02.2008, but not 01.02.2008 itself.</p>
+									</td></tr><tr><td align="left" valign="top">&lt;= , &gt;=</td><td align="left" valign="top">Behaves like &lt; and &gt;, however it will also find the specified value.</td></tr><tr><td align="left" valign="top">like</td><td align="left" valign="top">
+										<p>Filters all entries in which the attribute contains the specified value: * marks the place in the value where any symbols could be:</p>
+										<p>the condition [<span class="citation">like Apple*</span>] finds [Apple] and [Applesauce] but not [apple], [apples], [scrapple]</p>
+										<p>the condition [<span class="citation">like*Apple</span>] will only find [Apple] but not [apple], [apples], [applesauce], [pineapple], [scrapple], [grapple]</p>
+										<p>the condition [<span class="citation">like *apple</span>] finds [apple] and [pineapple] but not [Apple], [apples], [applesauce].</p>
+										<p>the condition [<span class="citation">like *pple*</span>] will find [Apple], [apple], [apples], [applesauce], [pineapple], [scrapple], [grapple]</p>
+									</td></tr></tbody></table>
+					</div><p class="title"><b>Table&nbsp;10.&nbsp;Filter Conditions</b></p></div><br class="table-break">
+					<p>As you saw in the examples, the values are case sensitive. If you would like to find both upper case and lower case values, formulate two equal conditions and link them with OR. Alternatively, you can also formulate a like-condition and replace the first letter with *.</p>
+					<p>If you would like to find an [<span class="citation">Apple</span>] as well as [<span class="citation">apple</span>], enter</p>
+					<p>[<span class="citation">Fruit = Apple OR Fruit = apple</span>] or</p>
+					<p>[<span class="citation">Fruit like *pple</span>].</p>
+				</div>
+				<div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="navigator.filter.speichern"></a>3.2.3.2.&nbsp;Saving a Filter</h5></div></div></div>
+					
+					<p>As seen in the previous <a class="xref" href="ar01s03s02s03.html#navigator.filter.definieren" title="3.2.3.1.&nbsp;Defining the filter">Section&nbsp;3.2.3.1, &#8220;Defining the filter&#8221;</a>, defined filters can definitely assume complex sizes. So that you do not have to define a filter again every time ODIS Creator restarts, there is the option to save a defined filter.</p>
+					<p>To save a defined filter, use the 'Save' button that is above the table in every filter dialog (see <a class="xref" href="ar01s03s02s03.html#figure.benachrichtigungsfilter" title="Figure&nbsp;28.&nbsp;Notification filter">Figure&nbsp;28, &#8220;Notification filter&#8221;</a>). After pressing the 'Save' button, it will offer for you to enter a filter name (see <a class="xref" href="ar01s03s02s03.html#figure.filterspeichern" title="Figure&nbsp;29.&nbsp;Save Dialog for Filters">Figure&nbsp;29, &#8220;Save Dialog for Filters&#8221;</a>). The entered name should be as informative as possible so that you can quickly identify the saved filter for later use. The name of the saved filter can be changed at any time in the <a class="link" href="ar01s03s02s03.html#navigator.filter.speichern.administration" title="3.2.3.4.&nbsp;Saved Filter Administration">filter administration</a>.</p>
+					<div class="figure"><a name="figure.filterspeichern"></a><div class="figure-contents">
+						
+						<div class="mediaobject"><img src="images/filterdialog_speichern.png" alt="Image: save dialog"></div>
+					</div><p class="title"><b>Figure&nbsp;29.&nbsp;Save Dialog for Filters</b></p></div><br class="figure-break">
+					<p>Filters that have already been saved can be selected using the selection field, which is provided in every filter dialog above the table (see <a class="xref" href="ar01s03s02s03.html#figure.benachrichtigungsfilter" title="Figure&nbsp;28.&nbsp;Notification filter">Figure&nbsp;28, &#8220;Notification filter&#8221;</a>). Since the filter is saved based on the tree type, you can, for example, also reuse a saved notification filter only in the notification filter dialog. Filters from different tree types are not displayed in the selection field.</p>
+					<p>If you use a previously defined filter, then it can also be revised within the filter dialog. If you press the 'Save' button again after revising, you will receive the option to overwrite the previously saved filter or to enter a new name to save the filter under a new name.</p>
+					<p>Saved filters can also be released for other users. You must enable the checkbox for this with the name entry during the save process. The release of a filter can be changed at any time in the <a class="link" href="ar01s03s02s03.html#navigator.filter.speichern.administration" title="3.2.3.4.&nbsp;Saved Filter Administration">filter administration</a>.</p>
+				</div>
+				<div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="navigator.filter.memento"></a>3.2.3.3.&nbsp;Filter Reminder</h5></div></div></div>
+					
+					<p>If you use a saved filter in a navigation tree and this filter is still active when closing the navigation tree or when ending the ODIS Creator Client, then this setting will be stored in the local Windows user folder on the computer. When the corresponding navigation tree is next opened, ODIS Creator will recognize that a previously saved filter was set and reactivates it again. Therefore you can reuse the filter that was used and saved in the last session, without having the additional step of selecting it through the filter dialog and setting it.</p>
+				</div>
+				<div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="navigator.filter.speichern.administration"></a>3.2.3.4.&nbsp;Saved Filter Administration</h5></div></div></div>
+					
+					<p>You can open the filter administration at any time by clicking on the <span class="bold"><strong>Help</strong></span> and then <span class="bold"><strong>Settings</strong></span> <a class="link" href="ar01s02s02.html#schaltflaeche">buttons</a> in the <a class="link" href="ar01s02s02.html#menuleiste">menu bar</a>. If necessary, you must select the entry <span class="bold"><strong>Filter settings</strong></span> on the left side to go to <a class="xref" href="ar01s03s02s03.html#figure.filteradministration" title="Figure&nbsp;30.&nbsp;Filter Administration">Figure&nbsp;30, &#8220;Filter Administration&#8221;</a>.</p>
+					<p>You can change the name and the release of the saved filter in the filter administration. Filters that are no longer required can be deleted by pressing the button <span class="inlinemediaobject"><img src="images/minus.png" alt="Symbol: Delete button"></span> .</p>
+					<div class="figure"><a name="figure.filteradministration"></a><div class="figure-contents">
+						
+						<div class="mediaobject"><img src="images/Filteradministration.png" alt="Image: filter administration"></div>
+					</div><p class="title"><b>Figure&nbsp;30.&nbsp;Filter Administration</b></p></div><br class="figure-break">
+					<p>If you select the button '<span class="bold"><strong>Display available filters</strong></span>', then you will receive an overview of all saved filters that were released by other users (see <a class="xref" href="ar01s03s02s03.html#figure.filteradministration.copy" title="Figure&nbsp;31.&nbsp;Filters Released by Other Users">Figure&nbsp;31, &#8220;Filters Released by Other Users&#8221;</a>). Here you can see the filters from other users and if desired, you can copy it using the button '<span class="bold"><strong>Apply filter</strong></span>'. When it is copied, the current status of the other user's filter is copied to the appropriate filters. The copy is a snapshot, a later comparison between the original and the copy is not planned. The name of the copied filter is preceded by 'Copy-' in order to indicate the copied filter in the particular overview. This addition is only set initially and can be removed at any time.</p>
+					<div class="figure"><a name="figure.filteradministration.copy"></a><div class="figure-contents">
+						
+						<div class="mediaobject"><img src="images/Filteradministration_Copydialog.png" alt="Image: filters released by other users"></div>
+					</div><p class="title"><b>Figure&nbsp;31.&nbsp;Filters Released by Other Users</b></p></div><br class="figure-break">
+				</div>
+				<div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="navigator.listenansicht"></a>3.2.3.5.&nbsp;List View</h5></div></div></div>
+					
+					<p>The list view displays the entries in the navigator in a <a class="link" href="ar01s03s02s06.html" title="3.2.6.&nbsp;Tables and Lists">table</a>. The list view is useful if you could like to compare the details of many different entries at a glance. The entries displayed in the list are the same as what you see in the navigator. The filter also applies to the list.</p>
+				</div>
+				<div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="navigatoren.sync"></a>3.2.3.6.&nbsp;Multiple Navigators with the Same Type</h5></div></div></div>
+					
+					<p>When two navigators are the same in editing (see <a class="xref" href="ar01s07s01.html" title="7.1.&nbsp;Editorial Object General Information">Section&nbsp;7.1, &#8220;Editorial Object General Information&#8221;</a>), the difference is made between the primary and secondary navigator. The primary navigator is the navigator on the left side and the secondary navigator is opened on the right side next to the primary navigator. A navigator instance can be opened through the view bar or through the global menu <span class="bold"><strong>Insert &gt; Reference</strong></span>.</p>
+					<p>Both these navigators can be used independently from each other. All functions of the respective navigator are available for the primary and secondary navigator.</p>
+					<p>The path of an editorial object is selected in the navigator from which the editor was originally opened. The link function from a used/used by table affects the navigator from which the object was originally opened, as long as the usage location remains in the same type context.</p>
+					<p>The editors for editorial objects are always opened in the primary instance through operations that are independent of a navigator; for example, restoring from the recycle bin, display from the search result or link functions from outside the editing view.</p>
+				</div>
+			</div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ar01s03s02s02.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="ar01s03s02.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="ar01s03s02s04.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">3.2.2.&nbsp;Edited Order (Order Context)&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;3.2.4.&nbsp;Properties window</td></tr></table></div></body></html>
