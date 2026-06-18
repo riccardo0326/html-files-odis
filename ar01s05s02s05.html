@@ -1,0 +1,131 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>5.2.5.&nbsp;Import</title><link rel="stylesheet" href="mystyle.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.73.1"><link rel="start" href="index.html" title="ODIS Creator Help"><link rel="up" href="ar01s05s02.html" title="5.2.&nbsp;Managing Master Data"><link rel="prev" href="ar01s05s02s04.html" title="5.2.4.&nbsp;Creating a Brand"><link rel="next" href="ar01s05s02s06.html" title="5.2.6.&nbsp;Location Data">
+<script type="text/javascript" src="../../../advanced/synchWithToc.js"></script>
+
+<link rel="stylesheet" href="../../../content/org.eclipse.help.webapp/advanced/breadcrumbs.css" charset="ISO-8859-1" type="text/css"></link>
+<script type="text/javascript" src="../../../content/org.eclipse.help/livehelp.js"> </script>
+<script type="text/javascript">
+if( self == top ){
+  var  anchorParam = location.hash.length > 0 ? '\u0026anchor=' + location.hash.substr(1) : '';
+  window.location.replace( "../../../index.jsp?topic=%2FMasterData_Client_Control%2Fhtml%2Far01s05s02s05.html" + anchorParam);
+}
+</script>
+</head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="help_breadcrumbs"><a href="index.html">ODIS Creator Help</a> > <a href="ar01s05.html">5&#46; ODIS Creator Administration Process</a> > <a href="ar01s05s02.html">5&#46;2&#46; Managing Master Data</a></div>
+<div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">5.2.5.&nbsp;Import</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ar01s05s02s04.html">Prev</a>&nbsp;</td><th width="60%" align="center">5.2.&nbsp;Managing Master Data</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ar01s05s02s06.html">Next</a></td></tr></table><hr></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="administration.import"></a>5.2.5.&nbsp;Import</h4></div></div></div>
+            
+            <p>The <span class="bold"><strong>Import</strong></span> entry in the master data navigator (<a class="link" href="ar01s05s02.html#figure.stammdatennavigator" title="Figure&nbsp;47.&nbsp;Master Data Navigator">2</a>) is used for the import of <span class="bold"><strong>master component lists</strong></span>, <span class="bold"><strong>reference tables</strong></span>, , <span class="bold"><strong>VWG reference tables</strong></span>, <span class="bold"><strong>LT3 text tables</strong></span>, the <span class="bold"><strong>measured value standard display</strong></span>, <span class="bold"><strong>tool lists</strong></span>, <span class="bold"><strong>control module parameter mapping</strong></span>, <span class="bold"><strong>TimeMeasurementExclusion</strong></span>, <span class="bold"><strong>DSGVO match word list</strong></span>, <span class="bold"><strong>Cyclone text tables</strong></span>, <span class="bold"><strong>VFA reference tables</strong></span>, <span class="bold"><strong>HV module characteristic curves </strong></span>and <span class="bold"><strong>config.ini (operating system).</strong></span> The group administrator manages the import.</p>
+            <p>In addition to the data type, the current version of the imported database, the timestamp for the last import, and the user who performed the import are displayed in the <a class="link" href="ar01s03s02s05.html" title="3.2.5.&nbsp;Editor">editor</a> (for example, for a reference table import). Furthermore, there is the option to display an <span class="bold"><strong>import log</strong></span>.</p>
+            <p>
+                </p><div class="figure"><a name="figure.referenztabellen.importieren"></a><div class="figure-contents">
+                    
+                    <div class="mediaobject"><img src="images/administration_referenztabellen_importieren.png" alt="Image: &#34;Reference table&#8221; import editor"></div>
+                </div><p class="title"><b>Figure&nbsp;49.&nbsp;"Reference Table&#8221; Import Editor</b></p></div><p><br class="figure-break">
+            </p>
+            <p>The <span class="bold"><strong>Import new...</strong></span> <a class="link" href="ar01s02s02.html#schaltflaeche">button</a> starts the import of the selected data. It will open a dialog to select an import file. By selecting an import file, the import of the contained data will start.</p>
+            <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="administration.mutterlistenimport"></a>5.2.5.1.&nbsp;Master Components List Import</h5></div></div></div>
+                
+                <p>When importing master components lists, the length and language of the master component terms are checked. If the master component term is too long, the group administrator receives a notification for each master component term that was shortened during the import. The maximum length for a master component term is 330 bytes.</p>
+                <p>If a language code is in the master components list, that is not included in the ODIS Creator, then the group administrator will also receive a notification with the unknown language code.</p>
+            </div>
+            <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="administration.lt3texttabellen"></a>5.2.5.2.&nbsp;LT3 text tables</h5></div></div></div>
+                
+                <p>The import of LT3 text tables for the Crafter runs separately from the group data. There are no correlations or dependencies between the imports. The fault location objects generated from the LT3 table are listed under the "Crafter" structure node.</p>
+                <p>The version of the structure file and the associated text file will be verified during the import. If they match, then the import can be performed. If they do not match, then a corresponding message will be given in the import log and the import will be canceled.</p>
+                <p>Another test will check if only files with the DTC_Table_S_Crafter format are included in the TableConfig.xml. If these conditions are not met, the import will be canceled correspondingly.</p>
+            </div>
+            <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="administration.cyclonetexttabellen"></a>5.2.5.3.&nbsp;Cyclone text tables</h5></div></div></div>
+                
+                <p>The import of Cyclone text tables for Cyclone runs separately from the group data. There are no correlations or dependencies between the imports. The fault location objects generated from the Cyclone table are listed under the "Cyclone" structure node. Fault location objects that cannot be allocated in the corresponding subfolders in the &#8220;Cyclone&#8221; structure nodes according to the P/U/B/C codes will be assigned to the separate &#8220;PUBC&#8221; collective folder in the &#8220;Cyclone&#8221; structure nodes.</p>
+                <p>The version of the structure file and the associated text file will be verified during the import. If they match, then the import can be performed. If they do not match, then a corresponding message will be given in the import log and the import will be canceled.</p>
+                <p>Another test will check if only files with the DTC_Table_S_Cyclone format are included in the TableConfig.xml. If these conditions are not met, the import will be canceled correspondingly.</p>
+            </div>
+            <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="administration.referencetabellen.vfa"></a>5.2.5.4.&nbsp;VFA Reference Tables</h5></div></div></div>
+                
+                <p>The import of VFA reference tables runs separately from group data. There are no correlations or dependencies between the imports. The fault location objects generated from the VFA reference tables are listed under the "Cyclone" structure node. Fault location objects that cannot be allocated in the corresponding subfolders in the &#8220;Cyclone&#8221; structure nodes according to the P/U/B/C codes will be assigned to the separate &#8220;PUBC&#8221; collective folder in the &#8220;Cyclone&#8221; structure nodes.</p>
+                <p>The version of the structure file and the associated text file will be verified during the import. If they match, then the import can be performed. If they do not match, then a corresponding message will be given in the import log and the import will be canceled.</p>
+                <p>Another test will check if only files with the DTC_VFA format are included in the TableConfig.xml. If these conditions are not met, the import will be canceled correspondingly.</p>
+            </div>
+            <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="administration.messwertnormanzeige"></a>5.2.5.5.&nbsp;Measured value default display</h5></div></div></div>
+                
+                <p>When importing the <span class="bold"><strong>measured value default display</strong></span>, each user is responsible for making sure that the file to be imported matches the schema. ODIS Creator does not perform a schema check.</p>
+            </div>
+            <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="administration.werkzeugliste"></a>5.2.5.6.&nbsp;Tool list</h5></div></div></div>
+                
+                <p>The tool lists import is performed in the following order:</p><div class="itemizedlist"><ul type="disc"><li>
+                            <p>Consistency check</p>
+                            <p>If inconsistencies are detected when checking the XML file for conformity to the XML schema werkzeugliste.xsd, an error message will appear and the import will be canceled.</p>
+                        </li><li>
+                            <p>Tool list import</p>
+                            <p>The import is done asynchronously in the server. The user can continue to work with the ODIS Creator system without limitations.</p>
+                        </li><li>
+                            <p>Logging</p>
+                            <p>The import is logged in the import log the same as the usual group data imports. The import log of the last completed tool lists import can be displayed with the "Display import log" button.</p>
+                        </li></ul></div>
+                <p>The data processing is displayed in the status bar with a status message and a progress indicator. After the import is complete, a notification in the "order" structure node with the status of the running job is displayed.</p>
+                <p>If the tool lists contains a language that is not available in ODIS Creator, this will not be imported and the group administrator will receive a notification about the issue.</p>
+                <p>The tool list version, which was used during the last import, will also be displayed in the editor for the tool list import.</p>
+            </div>
+            <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="administration.dsgvoimport"></a>5.2.5.7.&nbsp;DSGVO match word list</h5></div></div></div>
+                
+                <p>The match word list can be edited in OC. When saving, an import for the DSGVO consistency check is executed asynchronously in the server. The user can continue to work with the ODIS Creator system without limitations.</p>
+                <p>The match words must be separated in the editor by line breaks and/or semi-colons.</p>
+            </div>
+            <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="administration.sgparametermappingimport"></a>5.2.5.8.&nbsp;Control Module Parameter Mapping</h5></div></div></div>
+                
+                <p>The Control Module Parameter Mapping import is performed in the following order:</p><div class="itemizedlist"><ul type="disc"><li>
+                            <p>Consistency check</p>
+                            <p>If inconsistencies are detected when checking the XML file (MapUDSReqRespParameter.xml) for conformity to the XML schema MapUDSReqRespParameter.xsd, an error message and the result from the check will appear and the import process will be canceled.</p>
+                        </li><li>
+                            <p>Import of Control Module Parameter Mapping</p>
+                            <p>The import is done asynchronously in the server. The user can continue to work with the ODIS Creator system without limitations.</p>
+                        </li><li>
+                            <p>Logging</p>
+                            <p>The import is logged in the import log the same as the usual group data imports. The import log of the last completed Control Module Parameter Mapping list import can be displayed with the "Display import log" button.</p>
+                        </li></ul></div>
+                <p>In addition to the import function, there is also an export function here. The export process exports the Control Module Parameter Mapping that was last imported to a desired location as an XML file. The default name for the XML file is MapUDSReqRespParameter.xml.</p>
+            </div>
+            <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="administration.timemeasurementexclusion"></a>5.2.5.9.&nbsp;TimeMeasurementExclusion</h5></div></div></div>
+                
+                <p>The TimeMeasurementExclusion import is performed in the following order:</p><div class="itemizedlist"><ul type="disc"><li>
+                            <p>Consistency check</p>
+                            <p>If inconsistencies are detected when checking the XML file for conformity to the TimeMeasurementExclusion.xsd XML schema, an error message and the result from the check will be displayed temporarily in the log window (until the editor is closed) and the import process will be canceled.</p>
+                        </li><li>
+                            <p>Content check</p>
+                            <p>The import process for the &#8220;TimeMeasurementExclusion&#8221; will be canceled, an error message will be displayed, and the result will be logged temporarily in the import log if</p>
+                            <p>- The function code is not present in the OC database</p>
+                            <p>- The brand allocation of the function code in the OC does not match the brand allocation of the function code in the &#8220;TimeMeasurementExclusion&#8221; XML file</p>
+                            <p>- The brand is not present in the OC database</p>
+                        </li><li>
+                            <p>Import of TimeMeasurementExclusion</p>
+                            <p>The import is done asynchronously in the server. The user can continue to work with the ODIS Creator system without limitations.</p>
+                        </li><li>
+                            <p>Logging</p>
+                            <p>The import is logged in the import log the same as the usual group data imports. The import log of the last completed TimeMeasurementExclusion import can be displayed with the "Display import log" button.</p>
+                        </li></ul></div>
+                <p>The data processing is displayed in the status bar with a status message and a progress indicator.</p>
+            </div>
+            <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="administration.hvmodulkennlinien"></a>5.2.5.10.&nbsp;HV module characteristic curves</h5></div></div></div>
+                
+                <p>When importing the HV module characteristic curves, a synchronous REST-API request is made to the Bitbucket repository set up in the server configuration. All commits and their version information (tag version and commit date) of the XML file for HV modules are read out and displayed in the dialog "Adopt version number of HV module characteristic curves&#8221; (see <a class="xref" href="ar01s05s02s05.html#figure.hv.modul" title="Figure&nbsp;50.&nbsp;Dialog - Adopt the version number of the HV module characteristic curves">Figure&nbsp;50, &#8220;Dialog - Adopt the version number of the HV module characteristic curves&#8221;</a>).</p>
+                <p>
+                    </p><div class="figure"><a name="figure.hv.modul"></a><div class="figure-contents">
+                        
+                        <div class="mediaobject"><img src="images/administration_hv_modul_kennlinien.png" alt="Figure: Dialog - Adopt the version number of the HV module characteristic curves"></div>
+                    </div><p class="title"><b>Figure&nbsp;50.&nbsp;Dialog - Adopt the version number of the HV module characteristic curves</b></p></div><p><br class="figure-break">
+                </p>
+                <p>The user can select a tag version so that this is played out for provisions (production [complete and incremental], rollout, correction of the production or rollout baseline) in the order file.</p>
+            </div>
+            <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="administration.osconfigini"></a>5.2.5.11.&nbsp;config.ini (Operating System)</h5></div></div></div>
+                
+                <p>When importing the config.ini (operating system) file, a synchronous REST-API request is made to the Bitbucket repository set up in the server configuration. All commits and their version information (tag version and commit date) of the file for config.ini (operating system) are read out and displayed in the dialog "Tag (version) name&#8221; (see <a class="xref" href="ar01s05s02s05.html#figure.os.configini" title="Figure&nbsp;51.&nbsp;Tag (Version) Name Dialog">Figure&nbsp;51, &#8220;Tag (Version) Name Dialog&#8221;</a>).</p>
+                <p>
+                    </p><div class="figure"><a name="figure.os.configini"></a><div class="figure-contents">
+                        
+                        <div class="mediaobject"><img src="images/administration_os_config_ini.png" alt="Image: Tag (Version) Name Dialog"></div>
+                    </div><p class="title"><b>Figure&nbsp;51.&nbsp;Tag (Version) Name Dialog</b></p></div><p><br class="figure-break">
+                </p>
+                <p>The user can select a tag version so that this is played out for provisions (production [complete and incremental], rollout, correction of the production or rollout baseline) in the order file.</p>
+            </div>
+        </div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ar01s05s02s04.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="ar01s05s02.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="ar01s05s02s06.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">5.2.4.&nbsp;Creating a Brand&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;5.2.6.&nbsp;Location Data</td></tr></table></div></body></html>

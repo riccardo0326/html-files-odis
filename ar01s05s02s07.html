@@ -1,0 +1,77 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>5.2.7.&nbsp;Job Configurations</title><link rel="stylesheet" href="mystyle.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.73.1"><link rel="start" href="index.html" title="ODIS Creator Help"><link rel="up" href="ar01s05s02.html" title="5.2.&nbsp;Managing Master Data"><link rel="prev" href="ar01s05s02s06.html" title="5.2.6.&nbsp;Location Data"><link rel="next" href="ar01s05s02s08.html" title="5.2.8.&nbsp;Server Configuration">
+<script type="text/javascript" src="../../../advanced/synchWithToc.js"></script>
+
+<link rel="stylesheet" href="../../../content/org.eclipse.help.webapp/advanced/breadcrumbs.css" charset="ISO-8859-1" type="text/css"></link>
+<script type="text/javascript" src="../../../content/org.eclipse.help/livehelp.js"> </script>
+<script type="text/javascript">
+if( self == top ){
+  var  anchorParam = location.hash.length > 0 ? '\u0026anchor=' + location.hash.substr(1) : '';
+  window.location.replace( "../../../index.jsp?topic=%2FMasterData_Client_Control%2Fhtml%2Far01s05s02s07.html" + anchorParam);
+}
+</script>
+</head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="help_breadcrumbs"><a href="index.html">ODIS Creator Help</a> > <a href="ar01s05.html">5&#46; ODIS Creator Administration Process</a> > <a href="ar01s05s02.html">5&#46;2&#46; Managing Master Data</a></div>
+<div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">5.2.7.&nbsp;Job Configurations</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ar01s05s02s06.html">Prev</a>&nbsp;</td><th width="60%" align="center">5.2.&nbsp;Managing Master Data</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ar01s05s02s08.html">Next</a></td></tr></table><hr></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="administration.jobkonfig"></a>5.2.7.&nbsp;Job Configurations</h4></div></div></div>
+            
+            <p>The <span class="bold"><strong>job configuration</strong></span> entry in the master data navigator (<a class="link" href="ar01s05s02.html#figure.stammdatennavigator" title="Figure&nbsp;47.&nbsp;Master Data Navigator">2</a>) is managed by the administrators.</p>
+            <div class="table"><a name="table.administration.jobkonfig"></a><div class="table-contents">
+                
+                <table summary="Job Configuration" border="1"><colgroup><col align="left"><col align="left"></colgroup><thead><tr bgcolor="#EEEEEE"><th align="left"><span class="bold"><strong>Data</strong></span></th><th align="left"><span class="bold"><strong>Description</strong></span></th></tr></thead><tbody valign="top"><tr><td align="left" valign="top">Job monitor<a class="indexterm" name="d4e1906"></a></td><td align="left" valign="top">In this editor the administrator can see which jobs are currently running from ODIS Creator on the server and how much time is potentially needed until the end of the process. Only the information for the editing and import of control module descriptions are currently displayed.</td></tr><tr><td align="left" valign="top">P-Differ Export<a class="indexterm" name="d4e1912"></a></td><td align="left" valign="top">The administrator can configure the parameters for a P-differ export in this editor.</td></tr><tr><td align="left" valign="top">Mass Data Translation Job<a class="indexterm" name="d4e1918"></a></td><td align="left" valign="top">The group administrator can configure the mass data translation job in this editor (see <a class="xref" href="ar01s06s04s06.html#massendaten_job" title="6.4.6.2.&nbsp;Mass Data Translation Job">Section&nbsp;6.4.6.2, &#8220;Mass Data Translation Job&#8221;</a>).</td></tr><tr><td align="left" valign="top">Editorial Translation Job<a class="indexterm" name="d4e1925"></a></td><td align="left" valign="top">The group administrator can configure the company-wide editorial translation job in this editor (see <a class="xref" href="ar01s06s04s06.html#redaktioneller_job_standortuebergreifend" title="6.4.6.1.1.&nbsp;Cross-Location Editorial Translation Job">Section&nbsp;6.4.6.1.1, &#8220;Cross-Location Editorial Translation Job&#8221;</a>).</td></tr><tr><td align="left" valign="top">GOCAT inquiry interval<a class="indexterm" name="d4e1932"></a></td><td align="left" valign="top">In this editor, the interval for the GOCAT inquiry can be set per location. The default value is one hour and it must be at least 10 minutes.</td></tr><tr><td align="left" valign="top">Tool Lists Export<a class="indexterm" name="d4e1938"></a></td><td align="left" valign="top">The automated tool list export can be configured in this editor.</td></tr></tbody></table>
+            </div><p class="title"><b>Table&nbsp;18.&nbsp;Job Configuration</b></p></div><br class="table-break">
+            <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="p.differ"></a>5.2.7.1.&nbsp;P-Differ Export</h5></div></div></div>
+                
+                <p>In the administrator view, the <span class="bold"><strong>P-differ editor</strong></span> (<a class="xref" href="ar01s05s02s07.html#p.differ.export" title="Figure&nbsp;52.&nbsp;P-Differ Editor">Figure&nbsp;52, &#8220;P-Differ Editor&#8221;</a>) can be opened through an entry in the <span class="bold"><strong>master data navigator</strong></span> (<a class="link" href="ar01s05s02.html#figure.stammdatennavigator" title="Figure&nbsp;47.&nbsp;Master Data Navigator">2</a>) for the configuration of automatic P-differ exports <a class="link" href="ar01s03s02s05.html" title="3.2.5.&nbsp;Editor">to be edited</a>.</p>
+                <p>
+                    </p><div class="figure"><a name="p.differ.export"></a><div class="figure-contents">
+                        
+                        <div class="mediaobject"><img src="images/p-differ-export.png" alt="Image: P-differ editor"></div>
+                    </div><p class="title"><b>Figure&nbsp;52.&nbsp;P-Differ Editor</b></p></div><p><br class="figure-break">
+                </p>
+                <p>The <span class="bold"><strong>location</strong></span> is selected in the upper <a class="link" href="ar01s02s02.html#auswahlfeld">selection field</a> in the P-differ editor. All locations are offered to the group administrator for selection. The location administrator is only offered the locations they are responsible for. If an export job has already been previously configured for a selected location, then the corresponding values are displayed in the editor.</p>
+                <p>So that the export can be started automatically with the displayed configuration, the <a class="link" href="ar01s02s02.html#kontrollfeld">checkbox</a> in front of "automatic export" must be activated. If the checkbox is deactivated, then the displayed export job is deactivated.</p>
+                <p>To control the time of the export, the days of the week and the time for the automatic creation can be selected. The P-Differ export is then started every week on each of the selected days at the specified time. If no day of the week is selected, the automatic P-Differ export will be deactivated when saving.</p>
+                <p>Which object status should be exported is determined by enabling the corresponding <a class="link" href="ar01s02s02.html#kontrollfeld">checkboxes</a>.</p>
+                <p>Changes to the configuration will only be saved for the location that is currently selected.</p>
+            </div>
+            <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="gocat-abfrage"></a>5.2.7.2.&nbsp;GOCAT inquiry interval</h5></div></div></div>
+                
+                <p>In the administrator view, the <span class="bold"><strong>GOCAT inquiry interval editor</strong></span> (<a class="xref" href="ar01s05s02s07.html#gocat-abfrage.editor" title="Figure&nbsp;53.&nbsp;GOCAT Inquiry Interval Editor">Figure&nbsp;53, &#8220;GOCAT Inquiry Interval Editor&#8221;</a>) to configure the interval at which information from GOCAT is accessed, can be opened <a class="link" href="ar01s03s02s05.html" title="3.2.5.&nbsp;Editor">for editing</a> through an entry in the <span class="bold"><strong>master data navigator</strong></span> (<a class="link" href="ar01s05s02.html#figure.stammdatennavigator" title="Figure&nbsp;47.&nbsp;Master Data Navigator">2</a>).</p>
+                <p>
+                    </p><div class="figure"><a name="gocat-abfrage.editor"></a><div class="figure-contents">
+                        
+                        <div class="mediaobject"><img src="images/gocat_abfrage_editor.png" alt="Image: GOCAT inquiry interval editor"></div>
+                    </div><p class="title"><b>Figure&nbsp;53.&nbsp;GOCAT Inquiry Interval Editor</b></p></div><p><br class="figure-break">
+                </p>
+                <p>The <span class="bold"><strong>location</strong></span> is selected in the upper <a class="link" href="ar01s02s02.html#auswahlfeld">selection field</a> in the GOCAT inquiry interval editor. All locations are offered to the group administrator for selection. The location administrator is only offered the locations they are responsible for.</p>
+                <p>The interval will be given underneath in hours (from 0 to 23) and minutes (from 0 to 59).</p>
+            </div>
+            <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="werkzeugliste"></a>5.2.7.3.&nbsp;Tool Lists Export</h5></div></div></div>
+                
+                <p>In the administrator view, the <span class="bold"><strong>tool lists export editor</strong></span> (<a class="xref" href="ar01s05s02s07.html#werkzeuglisten.export" title="Figure&nbsp;54.&nbsp;Tool Lists Export Editor">Figure&nbsp;54, &#8220;Tool Lists Export Editor&#8221;</a>) can be opened through an entry in the <span class="bold"><strong>master data navigator</strong></span> (<a class="link" href="ar01s05s02.html#figure.stammdatennavigator" title="Figure&nbsp;47.&nbsp;Master Data Navigator">2</a>) to configure the automatic tool lists export <a class="link" href="ar01s03s02s05.html" title="3.2.5.&nbsp;Editor">for editing</a>.</p>
+                <p>
+                    </p><div class="figure"><a name="werkzeuglisten.export"></a><div class="figure-contents">
+                        
+                        <div class="mediaobject"><img src="images/werkzeuglisten-export.png" alt="Image: tool lists export editor"></div>
+                    </div><p class="title"><b>Figure&nbsp;54.&nbsp;Tool Lists Export Editor</b></p></div><p><br class="figure-break">
+                </p>
+                <p>The following settings can be applied by the group administrator:</p><div class="itemizedlist"><ul type="disc"><li>
+                            <p>Storage folder</p>
+                        </li><li>
+                            <p>Schedule settings</p>
+                        </li></ul></div>
+                <p>A valid path to a folder on the server must be specified for the storage folder, in which the files created during the automatic and manual tool lists export process are stored. While saving the configuration, it checks if the input field has been populated and if the specified folder exists on the server.</p>
+                <p>Because the storage folder is also required for the manual implementation of jobs, the configuration must be edited before the first request for manual implementation. Automatic implementation can be blocked with the "Disable automatic tool list creation" <a class="link" href="ar01s02s02.html#kontrollfeld">checkbox</a>.</p>
+                <p>If the "Disable automatic tool list creation" checkbox has not been selected, the "used tools analysis" job will start according to the specifications in the schedule.</p>
+                <p>The batch jobs implementation process is displayed on the server in the job monitor.</p>
+                <p>Notifications are not generated after the automatic implementation of the "used tools analysis" job is complete. Exception: if this type of job is already running during an automatic start, the start is canceled and a notification is generated.</p>
+                <div class="section" lang="en"><div class="titlepage"><div><div><h6 class="title"><a name="werkzeugliste.manuell"></a>5.2.7.3.1.&nbsp;Manual Tool Lists Export</h6></div></div></div>
+                    
+                    <p>Group administrators or location administrators have the option to start the tool lists export manually. There is a button in the tool bar for this and also a menu item in the menu <span class="bold"><strong>File &gt; Used tools analysis</strong></span>.</p>
+                    <p>When the function is selected, a new "used tools analysis job" is created without further confirmation; it is then started in the server asynchronously by the batch job scheduler within the next several minutes. This will be indicated with a corresponding message. Before creating a new job, ODIS Creator checks if this type of job is already running. If this is the case, a message will appear and a new job will not be created. A new job can start only when the currently running job has finished.</p>
+                    <p>The user can work without limitations in the ODIS Creator system while the job is being performed. The user can monitor the progress of the asynchronous execution of the batch job on the server in the job monitor.</p>
+                    <p>After the batch job is complete, a notification is created in the "order" structure node with the final status (successful or unsuccessful) of the running job. The notification is sent to all teams with the "group administrator" or "location administrator" roles, where the user, who initiated the job, belongs.</p>
+                </div>
+            </div>
+        </div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ar01s05s02s06.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="ar01s05s02.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="ar01s05s02s08.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">5.2.6.&nbsp;Location Data&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;5.2.8.&nbsp;Server Configuration</td></tr></table></div></body></html>

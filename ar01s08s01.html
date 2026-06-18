@@ -1,0 +1,33 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>8.1.&nbsp;Production Baselines</title><link rel="stylesheet" href="mystyle.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.73.1"><link rel="start" href="index.html" title="ODIS Creator Help"><link rel="up" href="ar01s08.html" title="8.&nbsp;ODIS Creator Preparation Process"><link rel="prev" href="ar01s08.html" title="8.&nbsp;ODIS Creator Preparation Process"><link rel="next" href="ar01s08s01s01.html" title="8.1.1.&nbsp;Production Baseline Browser">
+<script type="text/javascript" src="../../../advanced/synchWithToc.js"></script>
+
+<link rel="stylesheet" href="../../../content/org.eclipse.help.webapp/advanced/breadcrumbs.css" charset="ISO-8859-1" type="text/css"></link>
+<script type="text/javascript" src="../../../content/org.eclipse.help/livehelp.js"> </script>
+<script type="text/javascript">
+if( self == top ){
+  var  anchorParam = location.hash.length > 0 ? '\u0026anchor=' + location.hash.substr(1) : '';
+  window.location.replace( "../../../index.jsp?topic=%2FMasterData_Client_Control%2Fhtml%2Far01s08s01.html" + anchorParam);
+}
+</script>
+</head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="help_breadcrumbs"><a href="index.html">ODIS Creator Help</a> > <a href="ar01s08.html">8&#46; ODIS Creator Preparation Process</a></div>
+<div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">8.1.&nbsp;Production Baselines</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ar01s08.html">Prev</a>&nbsp;</td><th width="60%" align="center">8.&nbsp;ODIS Creator Preparation Process</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ar01s08s01s01.html">Next</a></td></tr></table><hr></div><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a name="baselines.produktiv"></a>8.1.&nbsp;Production Baselines</h3></div></div></div>
+			
+			<p>A production baseline includes the editorial objects of a brand in their most recent released version at the selected time. A complete production baseline contains all released editorial objects and the editorial objects used by a brand up to the selected date. For an incremental production baseline, only those editorial objects are included that were released with the previous production baseline. In general, a production baseline corresponds to a delivery condition in the format of an installation package.</p>
+			<p>If available, the translations in the production baseline are exported for all exported editorial objects. In an additional language package, the translation-relevant texts of the respective editorial object is exported in the source language for each editorial object contained in the preparation, in which the applicable editorial object was created. With this, texts that are not translated are displayed in their original language in the processing system.</p>
+			<p>The version numbers of the correctly exported production baselines (complete and incremental) create a continuous row without spaces. Production baselines that were canceled due to an error as well as 'empty' incremental production baselines do not interrupt this row. If, for example, there are one or more incremental baselines that contain no objects (they are empty) after a complete production baseline with version number <span class="bold"><strong>1.3.0</strong></span>, then the following incremental production baseline that contains objects will have the version number <span class="bold"><strong>1.3.1</strong></span> regardless.</p>
+			<p>An order file is created for each production baseline. These order files are automatically created for the update creator tool in ODIS Creator after exporting the data for a production baseline. Starting the update creator tool then occurs manually. The progress of the data preparation by the update creator tool is logged in an OUT status file. These OUT status files are read out by the &#8216;SplExportBaselinesToDIDB&#8217; job when exporting a baseline for DIDB creation and by ODIS Creator when calling and updating the display of the baselines in the deployment view. The current status is displayed in the application interface. This checks the integrity of the OUT status file. If this check fails, the OUT status file is not read out and the author is notified via a warning dialog (see <a class="xref" href="ar01s08s01.html#figure.produktiv.baseline.integritiydialog" title="Figure&nbsp;600.&nbsp;Problems with the OUT Status File">Figure&nbsp;600, &#8220;Problems with the OUT Status File&#8221;</a>) about which baselines could not be verified in the OUT status files. This allows the data preparation step of the update creator tool to be monitored through the ODIS Creator user interface. The order files for the update creator tool contain the versions of all components necessary for the creation and application of the prepared data.</p>
+			<p>
+				</p><div class="figure"><a name="figure.produktiv.baseline.integritiydialog"></a><div class="figure-contents">
+					
+					<div class="mediaobject"><img src="images/dialog_Probleme_mit_der_OUT_Status_Datei.jpg" alt="Image: problems with the OUT status file"></div>
+				</div><p class="title"><b>Figure&nbsp;600.&nbsp;Problems with the OUT Status File</b></p></div><p><br class="figure-break">
+			</p>
+			
+			
+			
+			
+			
+		</div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ar01s08.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="ar01s08.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="ar01s08s01s01.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">8.&nbsp;ODIS Creator Preparation Process&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;8.1.1.&nbsp;Production Baseline Browser</td></tr></table></div></body></html>

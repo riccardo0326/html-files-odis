@@ -1,0 +1,27 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>7.4.3.&nbsp;Inheriting through Engine Code Nodes</title><link rel="stylesheet" href="mystyle.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.73.1"><link rel="start" href="index.html" title="ODIS Creator Help"><link rel="up" href="ar01s07s04.html" title="7.4.&nbsp;Equipment Network"><link rel="prev" href="ar01s07s04s02.html" title="7.4.2.&nbsp;Creating Additional Basic Features"><link rel="next" href="ar01s07s04s04.html" title="7.4.4.&nbsp;Inheriting through Engine Default Nodes">
+<script type="text/javascript" src="../../../advanced/synchWithToc.js"></script>
+
+<link rel="stylesheet" href="../../../content/org.eclipse.help.webapp/advanced/breadcrumbs.css" charset="ISO-8859-1" type="text/css"></link>
+<script type="text/javascript" src="../../../content/org.eclipse.help/livehelp.js"> </script>
+<script type="text/javascript">
+if( self == top ){
+  var  anchorParam = location.hash.length > 0 ? '\u0026anchor=' + location.hash.substr(1) : '';
+  window.location.replace( "../../../index.jsp?topic=%2FMasterData_Client_Control%2Fhtml%2Far01s07s04s03.html" + anchorParam);
+}
+</script>
+</head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="help_breadcrumbs"><a href="index.html">ODIS Creator Help</a> > <a href="ar01s07.html">7&#46; ODIS Creator Editing Process</a> > <a href="ar01s07s04.html">7&#46;4&#46; Equipment Network</a></div>
+<div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">7.4.3.&nbsp;Inheriting through Engine Code Nodes</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ar01s07s04s02.html">Prev</a>&nbsp;</td><th width="60%" align="center">7.4.&nbsp;Equipment Network</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ar01s07s04s04.html">Next</a></td></tr></table><hr></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="ausstattungsnetz.mkk"></a>7.4.3.&nbsp;Inheriting through Engine Code Nodes</h4></div></div></div>
+            
+            <p>To optimize editing processes, an additional structure node called an engine code node can be added below a model year. The engine code nodes are not prepared. The object structure created under the engine code nodes is inherited completely from parallel versions that do not contain their own object structure. The inheriting takes places at the time of preparation. The engine code node inherits the market applicability from the model year above it.</p>
+            <p>Only one engine code node can be created per model year. When creating a new engine code node, if there is already one for that model year in the recycle bin, the nodes in the recycle bin will be permanently deleted. However, you can restore the nodes in the recycle bin.</p>
+            <p>All child objects are inherited (engine, traversal test, and auxiliary document). The inheriting mechanism only includes the variants that do not have their own object structure. For example, if a variant has a &#8220;traversal test&#8221; child node, then it will not inherit the child objects from a parallel engine code node. The following illustration shows a model year with an engine code node. In this case, only the &#8220;Coupe&#8221; variant is inherited because it does not have its own child object structure.</p>
+            <p>
+                </p><div class="figure"><a name="figure.redaktion.ausstattungsnetz.mkk"></a><div class="figure-contents">
+                    
+                    <div class="mediaobject"><img src="images/ausstattungsnetz_mkk.png" alt="Illustration: model year with engine code nodes"></div>
+                </div><p class="title"><b>Figure&nbsp;235.&nbsp;Model Year with Engine Code Nodes</b></p></div><p><br class="figure-break">
+            </p>
+        </div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ar01s07s04s02.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="ar01s07s04.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="ar01s07s04s04.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">7.4.2.&nbsp;Creating Additional Basic Features&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;7.4.4.&nbsp;Inheriting through Engine Default Nodes</td></tr></table></div></body></html>

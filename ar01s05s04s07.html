@@ -1,0 +1,23 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>5.4.7.&nbsp;Import of ECU Increments</title><link rel="stylesheet" href="mystyle.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.73.1"><link rel="start" href="index.html" title="ODIS Creator Help"><link rel="up" href="ar01s05s04.html" title="5.4.&nbsp;Importing Control Module Descriptions"><link rel="prev" href="ar01s05s04s06.html" title="5.4.6.&nbsp;Display OC input baseline"><link rel="next" href="ar01s05s04s08.html" title="5.4.8.&nbsp;Changing Comments for a Control Module Later">
+<script type="text/javascript" src="../../../advanced/synchWithToc.js"></script>
+
+<link rel="stylesheet" href="../../../content/org.eclipse.help.webapp/advanced/breadcrumbs.css" charset="ISO-8859-1" type="text/css"></link>
+<script type="text/javascript" src="../../../content/org.eclipse.help/livehelp.js"> </script>
+<script type="text/javascript">
+if( self == top ){
+  var  anchorParam = location.hash.length > 0 ? '\u0026anchor=' + location.hash.substr(1) : '';
+  window.location.replace( "../../../index.jsp?topic=%2FMasterData_Client_Control%2Fhtml%2Far01s05s04s07.html" + anchorParam);
+}
+</script>
+</head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="help_breadcrumbs"><a href="index.html">ODIS Creator Help</a> > <a href="ar01s05.html">5&#46; ODIS Creator Administration Process</a> > <a href="ar01s05s04.html">5&#46;4&#46; Importing Control Module Descriptions</a></div>
+<div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">5.4.7.&nbsp;Import of ECU Increments</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ar01s05s04s06.html">Prev</a>&nbsp;</td><th width="60%" align="center">5.4.&nbsp;Importing Control Module Descriptions</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ar01s05s04s08.html">Next</a></td></tr></table><hr></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="sgbimport.inkrement"></a>5.4.7.&nbsp;Import of ECU Increments</h4></div></div></div>
+            
+            <p>If ECU increments are imported, ODIS Creator ensures that they are always imported completely according to their generation history. This ensures consistency of technical data.</p>
+            <p>During the import, the generation history is checked using "contentVersion". The check ensures that increments are only imported if their previous versions (increment or complete) are already present in the system.</p>
+            <p>Example:</p>
+            <p>A vehicle project with version "contentVersion='3040000060.2.85'&#8221; was already imported. If an attempt is now made to start importing increments in version "contentVersion='3040000080.2.91'", the import will be canceled because the intermediate version "contentVersion='3040000070.2.87'" is not present. The import of the vehicle project will be canceled and the status of the control module import will be set to &#8220;Canceled&#8221;. This has no effect on parallel imported vehicle projects.</p>
+            <p>The failure of the vehicle project import will be recorded in the control module import log. The log file will contain the following entry: "Vehicle project with name %s not imported, because version history is inconsistent with version '%s'.".</p>
+        </div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ar01s05s04s06.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="ar01s05s04.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="ar01s05s04s08.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">5.4.6.&nbsp;Display OC input baseline&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;5.4.8.&nbsp;Changing Comments for a Control Module Later</td></tr></table></div></body></html>

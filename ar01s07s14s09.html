@@ -1,0 +1,248 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>7.14.9.&nbsp;Desktop</title><link rel="stylesheet" href="mystyle.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.73.1"><link rel="start" href="index.html" title="ODIS Creator Help"><link rel="up" href="ar01s07s14.html" title="7.14.&nbsp;Function Test Editor"><link rel="prev" href="ar01s07s14s08.html" title="7.14.8.&nbsp;Use SwitchKey Variables"><link rel="next" href="ar01s07s14s10.html" title="7.14.10.&nbsp;Category - Dialog">
+<script type="text/javascript" src="../../../advanced/synchWithToc.js"></script>
+
+<link rel="stylesheet" href="../../../content/org.eclipse.help.webapp/advanced/breadcrumbs.css" charset="ISO-8859-1" type="text/css"></link>
+<script type="text/javascript" src="../../../content/org.eclipse.help/livehelp.js"> </script>
+<script type="text/javascript">
+if( self == top ){
+  var  anchorParam = location.hash.length > 0 ? '\u0026anchor=' + location.hash.substr(1) : '';
+  window.location.replace( "../../../index.jsp?topic=%2FMasterData_Client_Control%2Fhtml%2Far01s07s14s09.html" + anchorParam);
+}
+</script>
+</head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="help_breadcrumbs"><a href="index.html">ODIS Creator Help</a> > <a href="ar01s07.html">7&#46; ODIS Creator Editing Process</a> > <a href="ar01s07s14.html">7&#46;14&#46; Function Test Editor</a></div>
+<div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">7.14.9.&nbsp;Desktop</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ar01s07s14s08.html">Prev</a>&nbsp;</td><th width="60%" align="center">7.14.&nbsp;Function Test Editor</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ar01s07s14s10.html">Next</a></td></tr></table><hr></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="Funktionstesteditor.Arbeitsflaeche"></a>7.14.9.&nbsp;Desktop</h4></div></div></div>
+    
+    <p>There is a test module in the second level of editing on the desktop. It is divided at a high level into test steps in the first level. Each test step must now be filled with content. A test step can contain up to 125 action elements.</p>
+    <p>A test step is displayed graphically in a vertical structure on the desktop. To edit it, you can call up the functions using:</p>
+    <div class="itemizedlist"><ul type="disc"><li>
+        <p>the menu bar</p>
+      </li><li>
+        <p>the buttons in the toolbar</p>
+      </li><li>
+        <p>a context menu</p>
+      </li></ul></div>
+    <p><span class="bold"><strong>Dialogs</strong></span></p>
+    <p>Dialogs from the right side of the function test editor desktop open as separate windows that are listed separately in the operating system task bar. The dialogs can be moved to the background and back to the foreground, as with normal window applications. While a dialog is open, a second one from the same function test cannot be opened (exactly one dialog may be opened for each function test). While a dialog is open, the editing functions for the function test editor are restricted. For example, the delete/add/move/cut functions and undo/redo mechanism cannot be used.</p>
+    <p>Dialogs for the test step view behave differently: they are opened within the function test editor and nothing else can be edited at the same time.</p>
+    <p><span class="bold"><strong>Brief notes</strong></span></p>
+    <p>If you move the mouse cursor over an action element and hold it there for approximately 2 seconds without executing a function, a brief message will appear as with a test step.</p>
+    <p>The following table gives an overview about the tools available in the toolbar and the functions of the menu bar <span class="bold"><strong>Add &gt;&gt; New action element</strong></span>, with which you can add action elements in the work area.</p>
+    <p>Note the restrictions for using action elements in identification programs. Note the restrictions in <span class="bold"><strong>Start (background) modules</strong></span>. Refer to <a class="xref" href="ar01s07s05s03.html#verwendet.beziehung.spezifizieren.Konsistenz" title="7.5.3.1. Permitted Action Elements in Start (background) Modules">Abschnitt&nbsp;7.5.3.1, &#8222;Permitted Action Elements in Start (background) Modules&#8220;</a>.</p>
+    <p>
+      </p><div class="table"><a name="d4e16250"></a><div class="table-contents">
+        <table summary="Action Elements" border="1"><colgroup><col align="left"><col align="left"><col align="left"></colgroup><thead><tr bgcolor="#EEEEEE"><th align="left">Action element</th><th align="left">Group in menu</th><th align="left">Purpose</th></tr></thead><tbody><tr><td align="left">Set test module title</td><td align="left">Dialog</td><td align="left">Change the content of the left information window 3 (LIW3) on the tester.</td></tr><tr><td align="left">Question (only up to three responses for identification programs)</td><td align="left">Dialog</td><td align="left">Create a question for the user Yes/no/unknown decisions or a selection from up to eight options is possible as a response.</td></tr><tr><td align="left">Input (not for identification programs)</td><td align="left">Dialog</td><td align="left">Input option for data on the tester using a virtual keyboard. Transfer the data into a variable.</td></tr><tr><td align="left">Help (not for identification programs)</td><td align="left">Dialog</td><td align="left">Create a help for the user that can be called up when needed using "Function test help".</td></tr><tr><td align="left">Message</td><td align="left">Dialog</td><td align="left">Create a message text with different continuations depending on the confirmation.</td></tr><tr><td align="left">Vehicle Status</td><td align="left">Dialog</td><td align="left">Create a system default text for recurring situations, such as "Ignition on".</td></tr><tr><td align="left">Lock Button</td><td align="left">Dialog</td><td align="left">Lock or unlock buttons on the tester.</td></tr><tr><td align="left">Progress Bars</td><td align="left">Dialog</td><td align="left">Create a progress bar in a message. Control bars in a loop using variables or start/stop.</td></tr><tr><td align="left">BZD</td><td align="left">Dialog</td><td align="left">Triggers the equipment status documentation and saves the results for additional processing.</td></tr><tr><td align="left">Declare</td><td align="left">Definition</td><td align="left">Declaration and value allocation of variables in a selectable type.</td></tr><tr><td align="left">Keyword</td><td align="left">Definition</td><td align="left">Definition and value allocations of keywords.</td></tr><tr><td align="left">Expression</td><td align="left">Mapping</td><td align="left">Create mathematical, logical, or alphanumeric (string) expressions.</td></tr><tr><td align="left">Set Status</td><td align="left">Mapping</td><td align="left">Set test status (OK, NOT OK, unknown, diagnosis created and component repaired) and "Select". Manage a dynamic suspicion or OK list. Set the "VIN" and "Equipment" to support automatic identification.</td></tr><tr><td align="left">If... Then... Else</td><td align="left">Procedure</td><td align="left">Create a branch, depending on a two-part condition (status, "Select", mathematical comparison, vehicle status or immobilizer, DTC memory, or ERE).</td></tr><tr><td align="left">Loop, Break Loop</td><td align="left">Procedure</td><td align="left">Create a loop with different interruption options (conformation, number, timeout)</td></tr><tr><td align="left">While, While Not, Break While</td><td align="left">Procedure</td><td align="left">Create a loop with a condition included (test status: "Select", mathematical comparison or vehicle status).</td></tr><tr><td align="left">Wait</td><td align="left">Procedure</td><td align="left">Create a wait loop with the time specified in milliseconds.</td></tr><tr><td align="left">Switch</td><td align="left">Procedure</td><td align="left">Begins a multiple branch. The reaction can be set to String, Select, Constant, Vehicle status, Immobilizer, DTC memory, ERE, or Equipment. The "Switch" action element follows "Case" action elements.</td></tr><tr><td align="left">Case</td><td align="left">Procedure</td><td align="left">Division of a multiple branch. There are multiple "Case" action elements one after the other after a "Switch" action element in a program.</td></tr><tr><td align="left">Measuring channel</td><td align="left">Measurements</td><td align="left">Generates an adaptation command to the user to connect the measuring cable and sensors. The action element is only needed if the display of a measurement on the tester should be suppressed (NODISPLAY).</td></tr><tr><td align="left">Measure voltage, measure current, measure resistance, measure diode</td><td align="left">Measurements</td><td align="left">Creates measuring commands for voltage, current, and resistance measurements as well as diode tests. The settings for the measuring devices and the specification of results variables is done in individual customized action elements.</td></tr><tr><td align="left">Measure pressure</td><td align="left">Measurements</td><td align="left">Creates a measuring command for one of four adaptable pressure sensors.</td></tr><tr><td align="left">Measure temperature</td><td align="left">Measurements</td><td align="left">Creates a measuring command for temperature measurement.</td></tr><tr><td align="left">Oscilloscope</td><td align="left">Measurements</td><td align="left">Creates measuring commands for DSO.</td></tr><tr><td align="left">High-voltage block</td><td align="left">Measurements</td><td align="left">Creates a procedure that is specifically for high voltage.</td></tr><tr><td align="left">High-voltage break</td><td align="left">Measurements</td><td align="left">Ends a procedure that is specifically for high voltage.</td></tr><tr><td align="left">High-voltage measurement data</td><td align="left">Measurements</td><td align="left">Checks high-voltage measured values or the high-voltage measurement status.</td></tr><tr><td align="left">Ecukom, Ecukom fault message</td><td align="left">Ecukom</td><td align="left">Creates a communication command to a control module. All parameters are called up from selection lists. The fault codes for a control module can be hidden if needed using the "Ecukom fault message" action element.</td></tr><tr><td align="left">Code gateway</td><td align="left">Ecukom</td><td align="left">Calls up "Coding 2" OBD function, calls up "Check specified components list" job, or calls up "Check specified components list with equipment network update" job.</td></tr><tr><td align="left">Read measured values</td><td align="left">Ecukom</td><td align="left">Creates an action element to read KWP measured values according to the specifications from the measured value table (Administration).</td></tr><tr><td align="left">Read ASAM measured values</td><td align="left">Ecukom</td><td align="left">Creates an action element to display UDS measured values.</td></tr><tr><td align="left">ASAM Ecukom</td><td align="left">Ecukom</td><td align="left">Creates a communication command to an ASAM ODX control module. All parameters are called up from selection lists. The stored results can be evaluated using the "ASAM result" action element.</td></tr><tr><td align="left">ASAM result</td><td align="left">Ecukom</td><td align="left">Creates an action element for evaluating results from an ASAM Ecukom action element.</td></tr><tr><td align="left">ASAM identification</td><td align="left">Ecukom</td><td align="left">Creates an action element for determining the control module group ID</td></tr><tr><td align="left">ASAM variant identification</td><td align="left">Ecukom</td><td align="left">Creates an action element for determining the control module variant</td></tr><tr><td align="left">ASAM hex service</td><td align="left">Ecukom</td><td align="left">Creates an action element for setting parameters for a physical/functional protocol data unit (PDU)</td></tr><tr><td align="left">Update log book</td><td align="left">Ecukom</td><td align="left">Generates an action element for updating the log book with identification data from master and sub-systems</td></tr><tr><td align="left">Recalculate test plan</td><td align="left">Ecukom</td><td align="left">Generates an action element to recalculate the test plan</td></tr><tr><td align="left">Qualify Test Plan</td><td align="left">Ecukom</td><td align="left">Generates an action element to qualify the test plan</td></tr><tr><td align="left">Read file</td><td align="left">File</td><td align="left">Reads data from a file.</td></tr><tr><td align="left">Write file</td><td align="left">File</td><td align="left">Writes data in a file.</td></tr><tr><td align="left">Delete file</td><td align="left">File</td><td align="left">Deletes data in a file.</td></tr><tr><td align="left">Login</td><td align="left">Online connection</td><td align="left">Creates a connection to the online database.</td></tr><tr><td align="left">Log out</td><td align="left">Online connection</td><td align="left">Disconnects a connection to the online database.</td></tr><tr><td align="left">Write XML/XML IA</td><td align="left">Online connection</td><td align="left">Transfers data from the function test to an XML working file.</td></tr><tr><td align="left">Expand XML</td><td align="left">Online connection</td><td align="left">Transfers data of the same type from the function test to an XML working file.</td></tr><tr><td align="left">Expand XML IA</td><td align="left">Online connection</td><td align="left">Transfers data of the same type from the function test to an XML working file.</td></tr><tr><td align="left">XML set count</td><td align="left">Online connection</td><td align="left">Specifies the number of data sets in an XML working file.</td></tr><tr><td align="left">Read XML sentence</td><td align="left">Online connection</td><td align="left">Reads data of the same type from the XML working file into a function test.</td></tr><tr><td align="left">Read XML</td><td align="left">Online connection</td><td align="left">Transmits variables from a working file.</td></tr><tr><td align="left">Read XML IA</td><td align="left">Online connection</td><td align="left">Transmits variables from a working file.</td></tr><tr><td align="left">Send online</td><td align="left">Online connection</td><td align="left">Sends the working file to the online database.</td></tr><tr><td align="left">Receive online</td><td align="left">Online connection</td><td align="left">Receives the working file from the online database.</td></tr><tr><td align="left">Expand log</td><td align="left">Online connection</td><td align="left">Expands the online diagnostic log to include variables and their content.</td></tr><tr><td align="left">Send log</td><td align="left">Online connection</td><td align="left">Selection of a DTC memory or diagnostic log.</td></tr><tr><td align="left">Check PR numbers</td><td align="left">Online connection</td><td align="left">Generates an action element to check the PR numbers in the operating system</td></tr><tr><td align="left">Check SecurityKey (VFA)</td><td align="left">Online connection</td><td align="left">Generates an action element to check the SecurityKey for Cyclone in the operating system</td></tr><tr><td align="left">Request Download (VFA)</td><td align="left">Online connection</td><td align="left">Generates an action element to request the control module software update from the cooperation partner via the D&sup3; server.</td></tr><tr><td align="left">Delete flash files (VFA)</td><td align="left">Online connection</td><td align="left">Generates an action element to delete the flash folder on the tester.</td></tr><tr><td align="left">Write JSON</td><td align="left">Online connection</td><td align="left">Generate an action element to create and enhance a JSON request by specifying a reference.</td></tr><tr><td align="left">Send/receive JSON</td><td align="left">Online connection</td><td align="left">Generate an action element to send a JSON request and receive a JSON response.</td></tr><tr><td align="left">Read JSON</td><td align="left">Online connection</td><td align="left">Generate an action element to evaluate a JSON response.</td></tr><tr><td align="left">Determining the MBs</td><td align="left">Module balancing</td><td align="left">Creates an action element for determining the usable module balancers.</td></tr><tr><td align="left">MB connection</td><td align="left">Module balancing</td><td align="left">Creates an action element for establishing or ending the connection to the module balancer.</td></tr><tr><td align="left">Module data request</td><td align="left">Module balancing</td><td align="left">Creates an action element for determining the tool number of the adapter cable that is suitable for the HV module.</td></tr><tr><td align="left">Start balancing procedure</td><td align="left">Module balancing</td><td align="left">Creates an action item for initiating the charging/discharging process in the module balancer.</td></tr><tr><td align="left">Request (dis)charging parameters</td><td align="left">Module balancing</td><td align="left">Creates an action element for the (cyclical) query of the charging/discharging parameters for the balancing process.</td></tr><tr><td align="left">MB qualification report</td><td align="left">Module balancing</td><td align="left">Creates an action element for calling up the qualification data of the module balancer and for the module balancer release.</td></tr><tr><td align="left">MB process status request</td><td align="left">Module balancing</td><td align="left">Creates an action element for determining the balancing process status.</td></tr><tr><td align="left">Request module hardware info</td><td align="left">Module balancing</td><td align="left">Creates an action element for determining the parts and serial number as well as the type of input made.</td></tr><tr><td align="left">MB error message</td><td align="left">Module balancing</td><td align="left">Creates an action element for suppressing the MB error and notice messages.</td></tr><tr><td align="left">MB info request</td><td align="left">Module balancing</td><td align="left">Creates an action element for querying the version and calibration information of the module balancer.</td></tr><tr><td align="left">MB status request</td><td align="left">Module balancing</td><td align="left">Creates an action element for querying the status of the module balancer.</td></tr><tr><td align="left">MB classification report</td><td align="left">Module balancing</td><td align="left">Creation of an action element to call up classification data from the new module to be classified by the module balancer and for initiation of classification on the module balancer.</td></tr><tr><td align="left">Flash path</td><td align="left">Flash</td><td align="left">Determines the flash path from a control table.</td></tr><tr><td align="left">Flash container</td><td align="left">Flash</td><td align="left">Determines the flash container from a control table.</td></tr><tr><td align="left">Create flash control file</td><td align="left">Flash</td><td align="left">Creation of flash control file.</td></tr><tr><td align="left">Parallel Flashing</td><td align="left">Flash</td><td align="left">Performing parallel flashing using a flash control file.</td></tr><tr><td align="left">Documents</td><td align="left">Other</td><td align="left">Command to display documents on the tester.</td></tr><tr><td align="left">Comment</td><td align="left">Other</td><td align="left">Creates a "Comment" action element in order to introduce notices in the structure of the test program; no display on the tester.</td></tr><tr><td align="left">Java box</td><td align="left">Other</td><td align="left">Direct embedding of a Java source code.</td></tr><tr><td align="left">Sub-Program</td><td align="left">Other</td><td align="left">Creates a sub-program that calls up other function tests.</td></tr><tr><td align="left">Log</td><td align="left">Other</td><td align="left">Activates or deactivates the diagnostic log.</td></tr></tbody></table>
+      </div><p class="title"><b>Table&nbsp;73.&nbsp;Action Elements</b></p></div><p><br class="table-break">
+    </p>
+    <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="Funktionstesteditor.Arbeitsflaeche.Einstellungen"></a>7.14.9.1.&nbsp;Settings</h5></div></div></div>
+      
+      <p>Any settings are retained once they have been saved. This means that a newly-opened function test will have the same settings, such as in regard to the palette, as the last saved function test.</p>
+    </div>
+    <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="Funktionstesteditor.Arbeitsflaeche.Bearbeitungshistorie"></a>7.14.9.2.&nbsp;Revision History (Undo/Repeat)</h5></div></div></div>
+      
+      <p>In the function test graphic display, user actions can be undone or repeated by right-clicking the mouse on a context menu. The keyboard shorts CTRL+Z and CTRL+Y, and the corresponding functions in the menu bar and the buttons can also be used. See <a class="xref" href="ar01s07s14s09.html#figure.Funktionstesteditor.Arbeitsflaeche.Bearbeitungshistorie" title="Figure&nbsp;374.&nbsp;Editing History">Figure&nbsp;374, &#8220;Editing History&#8221;</a>.</p>
+      <p>
+        </p><div class="figure"><a name="figure.Funktionstesteditor.Arbeitsflaeche.Bearbeitungshistorie"></a><div class="figure-contents">
+          
+          <div class="mediaobject"><img src="images/fte_Bearbeitungshistorie.png" alt="Image: Redo/Undo revision history"></div>
+        </div><p class="title"><b>Figure&nbsp;374.&nbsp;Editing History</b></p></div><p><br class="figure-break">
+      </p>
+    </div>
+    <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="Funktionstesteditor.Arbeitsflaeche.Aktionselemente_Anlegen"></a>7.14.9.3.&nbsp;Create Action Element</h5></div></div></div>
+      
+      <p>To create, an action element is selected from the palette and is added between two existing elements or at the start/end point of the test step by clicking the arrow. The following add modes are available:</p>
+      <div class="itemizedlist"><ul type="disc"><li>
+          <p>Adding with the Shift key pressed opens the dialog for the action element after adding.</p>
+        </li><li>
+          <p>Adding with the CTRL key pressed allows you to enter action elements multiple times.</p>
+        </li></ul></div>
+      <p>The action element appears in the corresponding location in the test sequence, but still has a red border and text. See <a class="xref" href="ar01s07s14s09.html#figure.Funktionstesteditor.Arbeitsflaeche.Aktionselemente_Anlegen" title="Figure&nbsp;375.&nbsp;New Action Element Created">Figure&nbsp;375, &#8220;New Action Element Created&#8221;</a>. The function test can still be saved with the unedited action elements.</p>
+      <p>
+        </p><div class="figure"><a name="figure.Funktionstesteditor.Arbeitsflaeche.Aktionselemente_Anlegen"></a><div class="figure-contents">
+          
+          <div class="mediaobject"><img src="images/fte_rote_Elemente.png" alt="Image: new action element created"></div>
+        </div><p class="title"><b>Figure&nbsp;375.&nbsp;New Action Element Created</b></p></div><p><br class="figure-break">
+      </p>
+      <p>The unedited action elements are listed in the <a class="link" href="ar01s07s14s25.html" title="7.14.25.&nbsp;Problems (View)">Problem view</a>. See <a class="xref" href="ar01s07s14s09.html#figure.Funktionstesteditor.Arbeitsflaeche.Aktionselemente_Anlegen2" title="Figure&nbsp;376.&nbsp;Problem View - Unedited Elements">Figure&nbsp;376, &#8220;Problem View - Unedited Elements&#8221;</a>.</p>
+      <p>
+        </p><div class="figure"><a name="figure.Funktionstesteditor.Arbeitsflaeche.Aktionselemente_Anlegen2"></a><div class="figure-contents">
+          
+          <div class="mediaobject"><img src="images/fte_Problem_unbearbeitet.png" alt="Image: problem view - unedited elements"></div>
+        </div><p class="title"><b>Figure&nbsp;376.&nbsp;Problem View - Unedited Elements</b></p></div><p><br class="figure-break">
+      </p>
+    </div>
+    <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="Funktionstesteditor.Arbeitsflaeche.Aktionselement_Dialog"></a>7.14.9.4.&nbsp;Edit Action Element</h5></div></div></div>
+      
+      <p>Parameters can be set for the attributes of an action element using the respective dialog.</p>
+      <p>The dialog can be opened by double-clicking on the respective action element. Or the element can also be marked and then the "Edit" item can be selected in the context menu. See <a class="xref" href="ar01s07s14s09.html#figure.Funktionstesteditor.Arbeitsflaeche.Aktionselement_Dialog" title="Figure&nbsp;377.&nbsp;Edit Action Element">Figure&nbsp;377, &#8220;Edit Action Element&#8221;</a>.</p>
+      <p>
+        </p><div class="figure"><a name="figure.Funktionstesteditor.Arbeitsflaeche.Aktionselement_Dialog"></a><div class="figure-contents">
+          
+          <div class="mediaobject"><img src="images/fte_Kontext_Bearbeiten.png" alt="Image: edit action element"></div>
+        </div><p class="title"><b>Figure&nbsp;377.&nbsp;Edit Action Element</b></p></div><p><br class="figure-break">
+      </p>
+      <p>As a third option, the dialog can be opened using the Edit main menu (menu item: Edit).</p>
+      <p>The associated attributes can be changed in the dialog. After closing the dialog, the attributes are validated and, if the validation was successful, the action element is then shown with a red border and black text. See <a class="xref" href="ar01s07s14s09.html#figure.Funktionstesteditor.Arbeitsflaeche.Aktionselement_Dialog2" title="Figure&nbsp;378.&nbsp;Valid Action Element">Figure&nbsp;378, &#8220;Valid Action Element&#8221;</a>. The corresponding entry in the problem view is removed.</p>
+      <p>
+        </p><div class="figure"><a name="figure.Funktionstesteditor.Arbeitsflaeche.Aktionselement_Dialog2"></a><div class="figure-contents">
+          
+          <div class="mediaobject"><img src="images/fte_Valide.png" alt="Image: valid action element"></div>
+        </div><p class="title"><b>Figure&nbsp;378.&nbsp;Valid Action Element</b></p></div><p><br class="figure-break">
+      </p>
+      <p>If the validation could not be completed successfully, the dialog cannot be closed unless the entire editing procedure is canceled. This means you can only edit the attributes of an action element in a valid form.</p>
+    </div>
+    <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="Funktionstesteditor.Arbeitsflaeche.Aktionselement_Kopieren"></a>7.14.9.5.&nbsp;Copy Action Element</h5></div></div></div>
+      
+      <p>Action elements can be selected by clicking on them and by area selection. The copying is done using the menu bar, the keyboard shortcut CTRL+C, the context menu, or by dragging and dropping.</p>
+      <p>When dragging and dropping, the selected element is moved into the area between two action elements while the left mouse button is pressed and held.</p>
+      <p>Action elements can be moved from the editor onto a test step in the test step view by dragging and dropping. They are added at the beginning of the test step.</p>
+    </div>
+    <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="Funktionstesteditor.Arbeitsflaeche.Aktionselement_Ausschneiden"></a>7.14.9.6.&nbsp;Cut Action Element</h5></div></div></div>
+      
+      <p>Action elements can be selected by clicking on them and by area selection. The cutting is done using the menu bar, the keyboard shortcut CTRL + X, or the context menu.</p>
+    </div>
+    <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="Funktionstesteditor.Arbeitsflaeche.Aktionselement_Einfuegen"></a>7.14.9.7.&nbsp;Insert Action Element</h5></div></div></div>
+      
+      <p>To insert, the arrow between two action elements or the start/end point must be selected. This is indicated by a thicker line.</p>
+      <p>The adding is done using the menu bar, the keyboard shortcut CTRL + V, or the context menu.</p>
+    </div>
+    <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="Funktionstesteditor.Arbeitsflaeche.Aktionselement_Selektieren"></a>7.14.9.8.&nbsp;Select Action Element</h5></div></div></div>
+      
+      <p>Action elements can be selected by clicking on them and by area selection.</p>
+    </div>
+    <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="Funktionstesteditor.Arbeitsflaeche.Aktionselemente_Loeschen"></a>7.14.9.9.&nbsp;Delete Action Elements</h5></div></div></div>
+      
+      <p>Action elements can be selected by clicking on them and by area selection. The deleting can be done using the menu bar, the delete button, or the context menu.</p>
+    </div>
+    <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="Funktionstesteditor.Arbeitsflaeche.Tooltips"></a>7.14.9.10.&nbsp;Tool tips</h5></div></div></div>
+      
+      <p>If you move the mouse cursor over a test step and hold it there for approximately two seconds without triggering a function, a yellow text field that lists the current parameters for the selected symbol appears.</p>
+      <p>Tool tips appear if the mouse cursor is held over the action element for an extended period of time. See <a class="xref" href="ar01s07s14s09.html#figure.Funktionstesteditor.Arbeitsflaeche.Tooltips" title="Figure&nbsp;379.&nbsp;Tool tips">Figure&nbsp;379, &#8220;Tool tips&#8221;</a>.</p>
+      <p>The tool tip contains the same information as the properties view (see <a class="xref" href="ar01s07s14s21.html" title="7.14.21.&nbsp;Properties (View)">Section&nbsp;7.14.21, &#8220;Properties (View)&#8221;</a>), namely the name and the attributes of the action element.</p>
+      <p>
+        </p><div class="figure"><a name="figure.Funktionstesteditor.Arbeitsflaeche.Tooltips"></a><div class="figure-contents">
+          
+          <div class="mediaobject"><img src="images/fte_Tooltip.png" alt="Image: tool tips"></div>
+        </div><p class="title"><b>Figure&nbsp;379.&nbsp;Tool tips</b></p></div><p><br class="figure-break">
+      </p>
+    </div>
+    <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="Funktionstesteditor.Arbeitsflaeche.Palette"></a>7.14.9.11.&nbsp;Palette</h5></div></div></div>
+      
+      <p>The action elements are displayed in the palette on the right side of the screen. To insert, select the desired action element in the palette (click with left mouse button). Then, position the mouse cursor at the location in the function test (at the connecting lines) where the action element should be inserted. Then press the left mouse button again.</p>
+      <p>
+        </p><div class="figure"><a name="figure.Funktionstesteditor.Arbeitsflaeche.Palette"></a><div class="figure-contents">
+          
+          <div class="mediaobject"><img src="images/fte_arbeitsflaeche_allgemein_Palette.png" alt="Image: palette"></div>
+        </div><p class="title"><b>Figure&nbsp;380.&nbsp;Palette</b></p></div><p><br class="figure-break">
+      </p>
+      <p>The action elements are organized in the palette in multiple categories (sections):</p>
+      <div class="itemizedlist"><ul type="disc"><li>
+          <p><a class="xref" href="ar01s07s14s10.html" title="7.14.10.&nbsp;Category - Dialog">Section&nbsp;7.14.10, &#8220;Category - Dialog&#8221;</a></p>
+        </li><li>
+          <p><a class="xref" href="ar01s07s14s11.html" title="7.14.11.&nbsp;Category - Definition">Section&nbsp;7.14.11, &#8220;Category - Definition&#8221;</a></p>
+        </li><li>
+          <p><a class="xref" href="ar01s07s14s12.html" title="7.14.12.&nbsp;Category - Mapping">Section&nbsp;7.14.12, &#8220;Category - Mapping&#8221;</a></p>
+        </li><li>
+          <p><a class="xref" href="ar01s07s14s13.html" title="7.14.13.&nbsp;Category - Process">Section&nbsp;7.14.13, &#8220;Category - Process&#8221;</a></p>
+        </li><li>
+          <p><a class="xref" href="ar01s07s14s14.html" title="7.14.14.&nbsp;Category - Measurement">Section&nbsp;7.14.14, &#8220;Category - Measurement&#8221;</a></p>
+        </li><li>
+          <p><a class="xref" href="ar01s07s14s15.html" title="7.14.15.&nbsp;Category - Ecukom">Section&nbsp;7.14.15, &#8220;Category - Ecukom&#8221;</a></p>
+        </li><li>
+          <p><a class="xref" href="ar01s07s14s16.html" title="7.14.16.&nbsp;Category - File">Section&nbsp;7.14.16, &#8220;Category - File&#8221;</a></p>
+        </li><li>
+          <p><a class="xref" href="ar01s07s14s17.html" title="7.14.17.&nbsp;Category - Connection">Section&nbsp;7.14.17, &#8220;Category - Connection&#8221;</a></p>
+        </li><li>
+          <p><a class="xref" href="ar01s07s14s18.html" title="7.14.18.&nbsp;Category - Module balancing">Section&nbsp;7.14.18, &#8220;Category - Module balancing&#8221;</a></p>
+        </li><li>
+          <p><a class="xref" href="ar01s07s14s19.html" title="7.14.19.&nbsp;Category - Flash">Section&nbsp;7.14.19, &#8220;Category - Flash&#8221;</a></p>
+        </li><li>
+          <p><a class="xref" href="ar01s07s14s20.html" title="7.14.20.&nbsp;Category - Miscellaneous">Section&nbsp;7.14.20, &#8220;Category - Miscellaneous&#8221;</a></p>
+        </li></ul></div>
+      <p>The palette is a separate window in ODIS Creator. If multiple function tests are opened at the same time, the palette will only be displayed once. If the palette is closed, you can display it again using the "Reset view" function.</p>
+      <p>The width of the palette can be changed manually. The categories (sections) can be opened, pinned, and closed. These changes to the display, location, and size of the palette are not saved.</p>
+      <p>
+        </p><div class="figure"><a name="figure.Funktionstesteditor.Arbeitsflaeche.Palette.Kontextmenue"></a><div class="figure-contents">
+          
+          <div class="mediaobject"><img src="images/fte_arbeitsflaeche_allgemein_Palette_kontextmenue.png" alt="Image: palette context menu"></div>
+        </div><p class="title"><b>Figure&nbsp;381.&nbsp;Palette Context Menu</b></p></div><p><br class="figure-break">
+      </p>
+      <p>The following technical functions can be accessed using the palette context menu:</p>
+      <div class="itemizedlist"><ul type="disc"><li>
+          <p><a class="xref" href="ar01s07s14s09.html#Funktionstesteditor.Arbeitsflaeche.Palette.anpassen" title="Modify Palette">the section called &#8220;Modify Palette&#8221;</a></p>
+        </li><li>
+          <p><a class="xref" href="ar01s07s14s09.html#Funktionstesteditor.Arbeitsflaeche.Palette.einstellen" title="Adjust Palette">the section called &#8220;Adjust Palette&#8221;</a></p>
+        </li><li>
+          <p><a class="xref" href="ar01s07s14s09.html#Funktionstesteditor.Arbeitsflaeche.Palette.zuruecksetzen" title="Reset Palette">the section called &#8220;Reset Palette&#8221;</a></p>
+        </li></ul></div>
+      <div class="simplesect" lang="en"><div class="titlepage"><div><div><h6 class="title"><a name="Funktionstesteditor.Arbeitsflaeche.Palette.anpassen"></a>Modify Palette</h6></div></div></div>
+        
+        <p>The dialog that follows will open after selecting the "Modify..." menu item.</p>
+        <p>
+          </p><div class="figure"><a name="figure.Funktionstesteditor.Arbeitsflaeche.Palette.anpassen"></a><div class="figure-contents">
+            
+            <div class="mediaobject"><img src="images/fte_arbeitsflaeche_allgemein_Palette_anpassen.png" alt="Image: modify palette"></div>
+          </div><p class="title"><b>Figure&nbsp;382.&nbsp;Modify Palette</b></p></div><p><br class="figure-break">
+        </p>
+        <p>The dialog can be used to change the entries in the palette:</p>
+        <div class="itemizedlist"><ul type="disc"><li>
+            <p>Create, edit, and delete palette entries (including sections or palette groups and separating lines).</p>
+          </li><li>
+            <p>Sort the entries with the "Move down" and "Move up" buttons.</p>
+          </li><li>
+            <p>Delete or hide palette entries (including sections and separating lines).</p>
+          </li></ul></div>
+        <p>The modifications to the palette are saved in the working area for that Windows user across all sessions.</p>
+      </div>
+      <div class="simplesect" lang="en"><div class="titlepage"><div><div><h6 class="title"><a name="Funktionstesteditor.Arbeitsflaeche.Palette.einstellen"></a>Adjust Palette</h6></div></div></div>
+        
+        <p>The dialog that follows will open after selecting the "Settings..." menu item.</p>
+        <p>
+          </p><div class="figure"><a name="figure.Funktionstesteditor.Arbeitsflaeche.Palette.einstellen"></a><div class="figure-contents">
+            
+            <div class="mediaobject"><img src="images/fte_arbeitsflaeche_allgemein_Palette_einstellen.png" alt="Image: adjust palette"></div>
+          </div><p class="title"><b>Figure&nbsp;383.&nbsp;Adjust Palette</b></p></div><p><br class="figure-break">
+        </p>
+        <p>The text type, the layout, and the options for the sections or palette groups can be changed using the palette settings dialog. The settings are saved for that Windows user across all sessions.</p>
+      </div>
+      <div class="simplesect" lang="en"><div class="titlepage"><div><div><h6 class="title"><a name="Funktionstesteditor.Arbeitsflaeche.Palette.zuruecksetzen"></a>Reset Palette</h6></div></div></div>
+        
+        <p>The default palette is restored after selecting the "Reset palette" menu item.</p>
+      </div>
+    </div>
+    <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="Funktionstesteditor.Arbeitsflaeche.Layout"></a>7.14.9.12.&nbsp;Layout</h5></div></div></div>
+      
+      <p>The layout describes the display type for action elements and their textual additional information. The action elements each contain a title and brief command information. Additional information is also given at the edges of the branches and blocks. The default is shown in the following image.</p>
+      <p>
+        </p><div class="figure"><a name="figure.Funktionstesteditor.Arbeitsflaeche.DefaultLayout"></a><div class="figure-contents">
+          
+          <div class="mediaobject"><img src="images/fte_Arbeitsflaeche_Layout.png" alt="Image: default layout"></div>
+        </div><p class="title"><b>Figure&nbsp;384.&nbsp;Default Layout</b></p></div><p><br class="figure-break">
+      </p>
+      <p>The layout can be changed under settings. This way, you can configure your own layout according to your needs. The settings are located in the dialog under &#8220;Function test editor &gt;&gt; Layout&#8221;. The settings are opened as usual in the menu under &#8220;Help &gt;&gt; User settings&#8221;. The settings are stored locally in the user directory on the computer and only apply to that user on the same computer.</p>
+      <p>
+        </p><div class="figure"><a name="figure.Funktionstesteditor.Arbeitsflaeche.DefaultLayout.Benutzervorgaben.Default"></a><div class="figure-contents">
+          
+          <div class="mediaobject"><img src="images/fte_Arbeitsflaeche_Layout_Benutzervorgaben_Default.png" alt="Image: default layout"></div>
+        </div><p class="title"><b>Figure&nbsp;385.&nbsp;Default Layout</b></p></div><p><br class="figure-break">
+      </p>
+      <p>The user settings for the commands layout are considered expert settings and may result in desired information no longer being visible in the function test editor. The user settings apply to the print settings and the SVG export as well as the display in the function test editor.</p>
+      <p>
+        </p><div class="figure"><a name="figure.Funktionstesteditor.Arbeitsflaeche.DefaultLayout.Benutzervorgaben.LayoutGroessen"></a><div class="figure-contents">
+          
+          <div class="mediaobject"><img src="images/fte_Arbeitsflaeche_Layout_Benutzervorgaben_LayoutGroessen.png" alt="Image: layout sizes for configuration"></div>
+        </div><p class="title"><b>Figure&nbsp;386.&nbsp;Layout Sizes for Configuration</b></p></div><p><br class="figure-break">
+      </p>
+      <p>The following settings can be changed:</p><div class="itemizedlist"><ul type="disc"><li>
+            <p>Command width and height</p>
+          </li><li>
+            <p>Horizontal and vertical grid spacing (grid X, grid Y)</p>
+          </li><li>
+            <p>Activating and deactivating content in the commands (title, brief information, +/- symbol, command icon)</p>
+          </li></ul></div><p>After applying the user settings, only some of the settings will be applied immediately in the open function test editor. To apply the layout completely, you must close the affected function test editor and reopen it.</p><div class="table"><a name="table.hinweis.fte.benutzervorgabe"></a><div class="table-contents">
+          <table summary="Note about Known Eclipse Error" border="1"><colgroup><col align="center"><col align="left"></colgroup><tbody valign="top"><tr><td align="center" valign="top"><span class="inlinemediaobject"><img src="images/info.png" alt="Note symbol"></span></td><td align="left" valign="top"><span class="bold"><strong>Note:</strong></span> There is a known eclipse error when selecting the font type in the settings. Additional fields for color and script are displayed in the system dialog. These do not have any effect on the selected color in the settings. There is an additional selection for color in the settings (for command title and the brief command information).</td></tr></tbody></table>
+        </div><p class="title"><b>Table&nbsp;74.&nbsp;Note about Known Eclipse Error</b></p></div><p><br class="table-break">The modified user settings for layout can be reset to the default values under settings.</p>
+    </div>
+  </div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ar01s07s14s08.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="ar01s07s14.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="ar01s07s14s10.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">7.14.8.&nbsp;Use SwitchKey Variables&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;7.14.10.&nbsp;Category - Dialog</td></tr></table></div></body></html>

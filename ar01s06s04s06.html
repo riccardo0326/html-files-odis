@@ -1,0 +1,106 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>6.4.6.&nbsp;Translation Jobs</title><link rel="stylesheet" href="mystyle.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.73.1"><link rel="start" href="index.html" title="ODIS Creator Help"><link rel="up" href="ar01s06s04.html" title="6.4.&nbsp;Translation"><link rel="prev" href="ar01s06s04s05.html" title="6.4.5.&nbsp;Commissioning Translations Manually"><link rel="next" href="ar01s06s04s07.html" title="6.4.7.&nbsp;Translation Packages">
+<script type="text/javascript" src="../../../advanced/synchWithToc.js"></script>
+
+<link rel="stylesheet" href="../../../content/org.eclipse.help.webapp/advanced/breadcrumbs.css" charset="ISO-8859-1" type="text/css"></link>
+<script type="text/javascript" src="../../../content/org.eclipse.help/livehelp.js"> </script>
+<script type="text/javascript">
+if( self == top ){
+  var  anchorParam = location.hash.length > 0 ? '\u0026anchor=' + location.hash.substr(1) : '';
+  window.location.replace( "../../../index.jsp?topic=%2FMasterData_Client_Control%2Fhtml%2Far01s06s04s06.html" + anchorParam);
+}
+</script>
+</head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="help_breadcrumbs"><a href="index.html">ODIS Creator Help</a> > <a href="ar01s06.html">6&#46; ODIS Creator Order Management Process</a> > <a href="ar01s06s04.html">6&#46;4&#46; Translation</a></div>
+<div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">6.4.6.&nbsp;Translation Jobs</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ar01s06s04s05.html">Prev</a>&nbsp;</td><th width="60%" align="center">6.4.&nbsp;Translation</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ar01s06s04s07.html">Next</a></td></tr></table><hr></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="uebersetzungsjobs"></a>6.4.6.&nbsp;Translation Jobs</h4></div></div></div>
+        
+        <p>The translation package includes two jobs, the <span class="bold"><strong>Editorial</strong></span> and the <span class="bold"><strong>Mass data translation job</strong></span>.</p>
+        <p>The editorial translation job includes the normal translation, that is triggered by the risk release or a link between editorial objects.</p>
+        <p>The mass data translation job is triggered by the link from new markets or new languages to markets on the equipment network. It is important here that the translation requirements for the mass data cannot be viewed on the interface.</p>
+        <p>The translation jobs can be individually deactivated and activated for every configuration. If all day-time entries are marked as inactive for a configuration, then the affiliated translation job is automatically deactivated. The visible job status in the configuration remains unaffected by this.</p>
+        <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="redaktioneller_job"></a>6.4.6.1.&nbsp;Editorial Translation Job</h5></div></div></div>
+            
+            <p>The management of the editorial translation job is controlled by the <a class="link" href="ar01s03s03s01.html" title="3.3.1.&nbsp;Description of Roles">translation coordinator</a>. In the translation view, the editorial translation job can be set in the translation parameters. There is an extra tab in the editor for this (see <a class="xref" href="ar01s06s04s06.html#figure.auftragsverwaltung.uebersetzung.redaktionellerJob" title="Figure&nbsp;158.&nbsp;Managing Location-Specific Editorial Translation Jobs">Figure&nbsp;158, &#8220;Managing Location-Specific Editorial Translation Jobs&#8221;</a>). You have the option to use the cross-location configuration or the location-specific configuration.</p>
+            <p>
+                </p><div class="figure"><a name="figure.auftragsverwaltung.uebersetzung.redaktionellerJob"></a><div class="figure-contents">
+                    
+                    <div class="mediaobject"><img src="images/uebersetzungsparameter_redaktionellerJob.jpg" alt="Image: managing location-specific editorial translation jobs"></div>
+                </div><p class="title"><b>Figure&nbsp;158.&nbsp;Managing Location-Specific Editorial Translation Jobs</b></p></div><p><br class="figure-break">
+            </p>
+            <p>As the translation coordinator, you will see the status for the editorial translation job. The status can assume one of the following values:</p>
+            <p>
+                </p><div class="itemizedlist"><ul type="disc"><li>
+                        <p>Active: used default configuration</p>
+                    </li><li>
+                        <p>Active: used location configuration</p>
+                    </li><li>
+                        <p>Active: job is being performed</p>
+                    </li><li>
+                        <p>Inactive: editorial translation job is discontinued</p>
+                    </li></ul></div><p>
+            </p>
+            <p></p>
+            <p>Up to five tuples of weekdays and times can be applied for the job start in the configuration. Every tuple can be activated or deactivated. When calculating the next start time of the editorial translation job, only the active configurations are considered.</p>
+            <p>In addition to the configuration, the translation coordinator can also manually start the editorial translation job. This function can be started through the global menu or the button. After confirming the action, you can select the desired location where the job should start, if multiple locations are assigned.</p>
+            <div class="section" lang="en"><div class="titlepage"><div><div><h6 class="title"><a name="redaktioneller_job_standortuebergreifend"></a>6.4.6.1.1.&nbsp;Cross-Location Editorial Translation Job</h6></div></div></div>
+                
+                <p>The cross-location configuration (see <a class="xref" href="ar01s06s04s06.html#figure.auftragsverwaltung.uebersetzung.redaktionellerJob_admin" title="Figure&nbsp;159.&nbsp;Managing Cross-Location Editorial Translation Jobs">Figure&nbsp;159, &#8220;Managing Cross-Location Editorial Translation Jobs&#8221;</a>) is done by the group administrator in the administration. For the configuration, there are likewise five tuples available to the group administrator of week days and times to execute the job. All adaptations are made across locations, as long as no location uses their own configurations.</p>
+                <p>
+                    </p><div class="figure"><a name="figure.auftragsverwaltung.uebersetzung.redaktionellerJob_admin"></a><div class="figure-contents">
+                        
+                        <div class="mediaobject"><img src="images/administration_redaktionellerJob.jpg" alt="Image: managing cross-location editorial translation jobs"></div>
+                    </div><p class="title"><b>Figure&nbsp;159.&nbsp;Managing Cross-Location Editorial Translation Jobs</b></p></div><p><br class="figure-break">
+                </p>
+                <p>You also have the option in the editor to see the job status for every location. The status can assume one of the following values:</p>
+                <p>
+                    </p><div class="itemizedlist"><ul type="disc"><li>
+                            <p>Active: used default configuration</p>
+                        </li><li>
+                            <p>Active: used location configuration</p>
+                        </li><li>
+                            <p>Active: job is being performed</p>
+                        </li><li>
+                            <p>Inactive: editorial translation job is discontinued</p>
+                        </li></ul></div><p>
+                </p>
+                <p>The status is not automatically updated when there are changes in the dialog. The update only occurs when the dialog opens.</p>
+                <p>Deactivating the editorial translation job can also be done here. However, this is then valid system-wide, thus for all locations. Jobs already started will be finished and not canceled.</p>
+            </div>
+        </div>
+        <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="massendaten_job"></a>6.4.6.2.&nbsp;Mass Data Translation Job</h5></div></div></div>
+            
+            <p>The mass data translation job is managed by the <a class="link" href="ar01s03s03s01.html" title="3.3.1.&nbsp;Description of Roles">group administrator</a> in the administration (see <a class="xref" href="ar01s06s04s06.html#figure.auftragsverwaltung.uebersetzung.massendatenJob" title="Figure&nbsp;160.&nbsp;Managing the Mass Data Translation Job">Figure&nbsp;160, &#8220;Managing the Mass Data Translation Job&#8221;</a>).</p>
+            <p>
+                </p><div class="figure"><a name="figure.auftragsverwaltung.uebersetzung.massendatenJob"></a><div class="figure-contents">
+                    
+                    <div class="mediaobject"><img src="images/administration_massendatenJob.jpg" alt="Image: managing mass data translation job"></div>
+                </div><p class="title"><b>Figure&nbsp;160.&nbsp;Managing the Mass Data Translation Job</b></p></div><p><br class="figure-break">
+            </p>
+            <p>As the group administrator, you can apply the mass data translation job configuration across locations as well as to individual locations. You have the option in the editor to select the location through a selection field. For every location, you can then select one of the following options.</p>
+            <p>
+                </p><div class="itemizedlist"><ul type="disc"><li>
+                        <p>Deactivate job for this location</p>
+                    </li><li>
+                        <p>Use cross-location configuration</p>
+                    </li><li>
+                        <p>Use location-specific configuration</p>
+                    </li></ul></div><p>
+            </p>
+            <p>Up to five tuples of weekdays and times can be applied for the job start in the configuration. Individual tuples can be activated or deactivated. The order of tuples does not play a role, because it will use the chronological order of the activated entries for determining the next start time for the mass data translation job.</p>
+            <p>It can also be seen in the editor, what the status of the mass data translation job is for each location. The status can be one of the following values:</p>
+            <p>
+                </p><div class="itemizedlist"><ul type="disc"><li>
+                        <p>Active: used default configuration</p>
+                    </li><li>
+                        <p>Active: used location configuration</p>
+                    </li><li>
+                        <p>Active: job is being performed</p>
+                    </li><li>
+                        <p>Inactive: mass data translation job is discontinued</p>
+                    </li></ul></div><p>
+            </p>
+            <p>Deactivating the mass data translation job can also be done here. However, this is then valid system-wide, thus for all locations.</p>
+            <p>To be able to respond flexibly to requests, there is the option to manually start the mass data translation job for a location. This can be done using the global menu or through a button. After confirming the action, you can select the desired location where the job should start, if multiple locations are assigned.</p>
+        </div>
+    </div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ar01s06s04s05.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="ar01s06s04.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="ar01s06s04s07.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">6.4.5.&nbsp;Commissioning Translations Manually&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;6.4.7.&nbsp;Translation Packages</td></tr></table></div></body></html>

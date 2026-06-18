@@ -1,0 +1,149 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>7.14.16.&nbsp;Category - File</title><link rel="stylesheet" href="mystyle.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.73.1"><link rel="start" href="index.html" title="ODIS Creator Help"><link rel="up" href="ar01s07s14.html" title="7.14.&nbsp;Function Test Editor"><link rel="prev" href="ar01s07s14s15.html" title="7.14.15.&nbsp;Category - Ecukom"><link rel="next" href="ar01s07s14s17.html" title="7.14.17.&nbsp;Category - Connection">
+<script type="text/javascript" src="../../../advanced/synchWithToc.js"></script>
+
+<link rel="stylesheet" href="../../../content/org.eclipse.help.webapp/advanced/breadcrumbs.css" charset="ISO-8859-1" type="text/css"></link>
+<script type="text/javascript" src="../../../content/org.eclipse.help/livehelp.js"> </script>
+<script type="text/javascript">
+if( self == top ){
+  var  anchorParam = location.hash.length > 0 ? '\u0026anchor=' + location.hash.substr(1) : '';
+  window.location.replace( "../../../index.jsp?topic=%2FMasterData_Client_Control%2Fhtml%2Far01s07s14s16.html" + anchorParam);
+}
+</script>
+</head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="help_breadcrumbs"><a href="index.html">ODIS Creator Help</a> > <a href="ar01s07.html">7&#46; ODIS Creator Editing Process</a> > <a href="ar01s07s14.html">7&#46;14&#46; Function Test Editor</a></div>
+<div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">7.14.16.&nbsp;Category - File</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ar01s07s14s15.html">Prev</a>&nbsp;</td><th width="60%" align="center">7.14.&nbsp;Function Test Editor</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ar01s07s14s17.html">Next</a></td></tr></table><hr></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="Funktionstesteditor.Arbeitsflaeche.Aktionselemente_Kategorie_Datei"></a>7.14.16.&nbsp;Category - File</h4></div></div></div>
+        
+        <p>This category contains action elements for interaction with files. The following action elements are used:</p>
+        <div class="itemizedlist"><ul type="disc"><li>
+                <p><a class="xref" href="ar01s07s14s16.html#Funktionstesteditor.Arbeitsflaeche.Aktionselemente_Kategorie_Datei.Lesen" title="7.14.16.1.&nbsp;Action Element - Read File">Section&nbsp;7.14.16.1, &#8220;Action Element - Read File&#8221;</a></p>
+            </li><li>
+                <p><a class="xref" href="ar01s07s14s16.html#Funktionstesteditor.Arbeitsflaeche.Aktionselemente_Kategorie_Datei.Schreiben" title="7.14.16.2.&nbsp;Action Element - Write File">Section&nbsp;7.14.16.2, &#8220;Action Element - Write File&#8221;</a></p>
+            </li><li>
+                <p><a class="xref" href="ar01s07s14s16.html#Funktionstesteditor.Arbeitsflaeche.Aktionselemente_Kategorie_Datei.Loeschen" title="7.14.16.3.&nbsp;Action Element - Delete File">Section&nbsp;7.14.16.3, &#8220;Action Element - Delete File&#8221;</a></p>
+            </li></ul></div>
+        <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="Funktionstesteditor.Arbeitsflaeche.Aktionselemente_Kategorie_Datei.Lesen"></a>7.14.16.1.&nbsp;Action Element - Read File</h5></div></div></div>
+            
+            <p>The "Read file" action element can be seen in <a class="xref" href="ar01s07s14s16.html#figure.Funktionstesteditor.Arbeitsflaeche.Aktionselemente_Kategorie_Datei.Lesen" title="Figure&nbsp;474.&nbsp;Read File Action Element">Figure&nbsp;474, &#8220;Read File Action Element&#8221;</a>.</p>
+            <p>
+                </p><div class="figure"><a name="figure.Funktionstesteditor.Arbeitsflaeche.Aktionselemente_Kategorie_Datei.Lesen"></a><div class="figure-contents">
+                    
+                    <div class="mediaobject"><img src="images/fte_arbeitsflaeche_datei_dateilesen.png" alt="Image: read file action element"></div>
+                </div><p class="title"><b>Figure&nbsp;474.&nbsp;Read File Action Element</b></p></div><p><br class="figure-break">
+            </p>
+            <p>Using this command, you can read data from a file in the function test. To do this, enter the file name, the read position within the file, the number of bytes, and a variable for the result. You can read variables from the "String" and "Byte" types. To read individual bytes one after the other, program a loop. Use the 'ASCII' option to read a string character-by-character from the file (coding: UTF 2-byte). Use the "Binary" option to read bytes from the file.</p>
+            <div class="section" lang="en"><div class="titlepage"><div><div><h6 class="title"><a name="d4e24993"></a>7.14.16.1.1.&nbsp;File name</h6></div></div></div>
+                
+                <p>The file name is used for access to the files based on the argument "File name with VIN" in order to access the files for runtime. If "File name with VIN" is set, then the VIN is added to the file name as a prefix. The file extension ".tpr" is also added to the file name.</p>
+            </div>
+            <div class="section" lang="en"><div class="titlepage"><div><div><h6 class="title"><a name="d4e24996"></a>7.14.16.1.2.&nbsp;Item</h6></div></div></div>
+                
+                <p>The "position" indicates the read position within the file.</p>
+            </div>
+            <div class="section" lang="en"><div class="titlepage"><div><div><h6 class="title"><a name="d4e24999"></a>7.14.16.1.3.&nbsp;Number of Bytes</h6></div></div></div>
+                
+                <p>The "Number of bytes" specifies the number of bytes to read from the file.</p>
+            </div>
+            <div class="section" lang="en"><div class="titlepage"><div><div><h6 class="title"><a name="d4e25002"></a>7.14.16.1.4.&nbsp;Result</h6></div></div></div>
+                
+                <p>Under "Result", a variable is specified in which the result of the read operation is stored.</p>
+            </div>
+            <div class="section" lang="en"><div class="titlepage"><div><div><h6 class="title"><a name="d4e25005"></a>7.14.16.1.5.&nbsp;Type</h6></div></div></div>
+                
+                <p>Using the "Type" option, you can select the data to be read (ASCII/binary).</p>
+            </div>
+            <div class="section" lang="en"><div class="titlepage"><div><div><h6 class="title"><a name="d4e25008"></a>7.14.16.1.6.&nbsp;File Name with VIN</h6></div></div></div>
+                
+                <p>The "File name with VIN" control field controls the file name prefix:</p>
+                <p>
+                    </p><div class="itemizedlist"><ul type="disc"><li>
+                            <p>If "File name with VIN" is set, then the VIN is added to the file name as a prefix. The VIN is separated from the rest of the file name with an underscore. The file extension ".tpr" is added to the file name. The final file name on the client is then as follows: '&lt;VIN&gt;_&lt;Filename&gt;.tpr'</p>
+                        </li><li>
+                            <p>Example: if the "foo" file name is used, then the resulting file will be named: 'WAUZZZ8R89A000675_foo.tpr'.</p>
+                        </li></ul></div><p>
+                </p>
+            </div>
+            <div class="section" lang="en"><div class="titlepage"><div><div><h6 class="title"><a name="d4e25017"></a>7.14.16.1.7.&nbsp;Variable</h6></div></div></div>
+            
+            <p>The description for selecting variables is found in <a class="xref" href="ar01s07s14s06.html" title="7.14.6.&nbsp;Using Variables">Section&nbsp;7.14.6, &#8220;Using Variables&#8221;</a>. The definition of variables is found in <a class="xref" href="ar01s07s14s11.html#Funktionstesteditor.Arbeitsflaeche.Aktionselemente_Kategorie_Definition.Deklariere_Variablen" title="7.14.11.1.&nbsp;Action Element - Declare Variable">Section&nbsp;7.14.11.1, &#8220;Action Element - Declare Variable&#8221;</a>.</p>
+        </div>
+        </div>
+        <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="Funktionstesteditor.Arbeitsflaeche.Aktionselemente_Kategorie_Datei.Schreiben"></a>7.14.16.2.&nbsp;Action Element - Write File</h5></div></div></div>
+            
+            <p>The "Write" action element can be seen in <a class="xref" href="ar01s07s14s16.html#figure.Funktionstesteditor.Arbeitsflaeche.Aktionselemente_Kategorie_Datei.Schreiben" title="Figure&nbsp;475.&nbsp;Write File Action Element">Figure&nbsp;475, &#8220;Write File Action Element&#8221;</a>.</p>
+            <p>
+                </p><div class="figure"><a name="figure.Funktionstesteditor.Arbeitsflaeche.Aktionselemente_Kategorie_Datei.Schreiben"></a><div class="figure-contents">
+                    
+                    <div class="mediaobject"><img src="images/fte_arbeitsflaeche_datei_dateilschreiben.png" alt="Image: write file action element"></div>
+                </div><p class="title"><b>Figure&nbsp;475.&nbsp;Write File Action Element</b></p></div><p><br class="figure-break">
+            </p>
+            <p>Using this command, you can read data from a function test in a file. To do this, enter the file name, the write position within the file, the number of bytes, and a variable for the source. You can write variables from the "String" and "Byte" types. To write individual bytes one after the other, program a loop. Use the 'ASCII' option to write a string character-by-character in the file (coding: UTF 2-byte). Use the "Binary" option to write bytes in the file.</p>
+            <div class="section" lang="en"><div class="titlepage"><div><div><h6 class="title"><a name="d4e25035"></a>7.14.16.2.1.&nbsp;File name</h6></div></div></div>
+                
+                <p>The file name is used for access to the files based on the argument "File name with VIN" in order to access the files for runtime. If "File name with VIN" is set, then the VIN is added to the file name as a prefix. The file extension ".tpr" is also added to the file name.</p>
+            </div>
+            <div class="section" lang="en"><div class="titlepage"><div><div><h6 class="title"><a name="d4e25038"></a>7.14.16.2.2.&nbsp;Item</h6></div></div></div>
+                
+                <p>The "position" indicates the write position within the file.</p>
+            </div>
+            <div class="section" lang="en"><div class="titlepage"><div><div><h6 class="title"><a name="d4e25041"></a>7.14.16.2.3.&nbsp;Number of Bytes</h6></div></div></div>
+                
+                <p>The "Number of bytes" specifies the number of bytes to written in the file.</p>
+            </div>
+            <div class="section" lang="en"><div class="titlepage"><div><div><h6 class="title"><a name="d4e25044"></a>7.14.16.2.4.&nbsp;Source</h6></div></div></div>
+                
+                <p>A variable that will be written in the file is specified under "Source".</p>
+            </div>
+            <div class="section" lang="en"><div class="titlepage"><div><div><h6 class="title"><a name="d4e25047"></a>7.14.16.2.5.&nbsp;Type</h6></div></div></div>
+                
+                <p>Using the "Type" option, you can select the data to be written (ASCII/binary).</p>
+            </div>
+            <div class="section" lang="en"><div class="titlepage"><div><div><h6 class="title"><a name="d4e25050"></a>7.14.16.2.6.&nbsp;File Name with VIN</h6></div></div></div>
+                
+                <p>The "File name with VIN" control field controls the file name prefix:</p>
+                <p>
+                    </p><div class="itemizedlist"><ul type="disc"><li>
+                            <p>If "File name with VIN" is set, then the VIN is added to the file name as a prefix. The VIN is separated from the rest of the file name with an underscore. The file extension ".tpr" is added to the file name. The final file name on the client is then as follows: '&lt;VIN&gt;_&lt;Filename&gt;.tpr'</p>
+                        </li><li>
+                            <p>Example: if the "foo" file name is used, then the resulting file will be named: 'WAUZZZ8R89A000675_foo.tpr'.</p>
+                        </li></ul></div><p>
+                </p>
+            </div>
+            <div class="section" lang="en"><div class="titlepage"><div><div><h6 class="title"><a name="d4e25059"></a>7.14.16.2.7.&nbsp;Variable</h6></div></div></div>
+            
+            <p>The description for selecting variables is found in <a class="xref" href="ar01s07s14s06.html" title="7.14.6.&nbsp;Using Variables">Section&nbsp;7.14.6, &#8220;Using Variables&#8221;</a>. The definition of variables is found in <a class="xref" href="ar01s07s14s11.html#Funktionstesteditor.Arbeitsflaeche.Aktionselemente_Kategorie_Definition.Deklariere_Variablen" title="7.14.11.1.&nbsp;Action Element - Declare Variable">Section&nbsp;7.14.11.1, &#8220;Action Element - Declare Variable&#8221;</a>.</p>
+        </div>
+        </div>
+        <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="Funktionstesteditor.Arbeitsflaeche.Aktionselemente_Kategorie_Datei.Loeschen"></a>7.14.16.3.&nbsp;Action Element - Delete File</h5></div></div></div>
+            
+            <p>The "Delete file" action element can be seen in <a class="xref" href="ar01s07s14s16.html#figure.Funktionstesteditor.Arbeitsflaeche.Aktionselemente_Kategorie_Datei.Loeschen" title="Figure&nbsp;476.&nbsp;Delete File Action Element">Figure&nbsp;476, &#8220;Delete File Action Element&#8221;</a>.</p>
+            <p>
+                </p><div class="figure"><a name="figure.Funktionstesteditor.Arbeitsflaeche.Aktionselemente_Kategorie_Datei.Loeschen"></a><div class="figure-contents">
+                    
+                    <div class="mediaobject"><img src="images/fte_arbeitsflaeche_datei_dateiloeschen.png" alt="Image: delete file action element"></div>
+                </div><p class="title"><b>Figure&nbsp;476.&nbsp;Delete File Action Element</b></p></div><p><br class="figure-break">
+            </p>
+            <p>You can delete a file using this action element.</p>
+
+            <div class="section" lang="en"><div class="titlepage"><div><div><h6 class="title"><a name="d4e25077"></a>7.14.16.3.1.&nbsp;File name</h6></div></div></div>
+                
+                <p>The file name is used for access to the files based on the argument "File name with VIN" in order to access the files for runtime. If "File name with VIN" is set, then the VIN is added to the file name as a prefix. The file extension ".tpr" is also added to the file name.</p>
+            </div>
+            <div class="section" lang="en"><div class="titlepage"><div><div><h6 class="title"><a name="d4e25080"></a>7.14.16.3.2.&nbsp;File Name with VIN</h6></div></div></div>
+                
+                <p>The "File name with VIN" control field controls the file name prefix:</p>
+                <p>
+                    </p><div class="itemizedlist"><ul type="disc"><li>
+                            <p>If "File name with VIN" is set, then the VIN is added to the file name as a prefix. The VIN is separated from the rest of the file name with an underscore. The file extension ".tpr" is added to the file name. The final file name on the client is then as follows: '&lt;VIN&gt;_&lt;Filename&gt;.tpr'</p>
+                        </li><li>
+                            <p>Example: if the "foo" file name is used, then the resulting file will be named: 'WAUZZZ8R89A000675_foo.tpr'.</p>
+                        </li></ul></div><p>
+                </p>
+            </div>
+            <div class="section" lang="en"><div class="titlepage"><div><div><h6 class="title"><a name="d4e25089"></a>7.14.16.3.3.&nbsp;Variable</h6></div></div></div>
+            
+            <p>The description for selecting variables is found in <a class="xref" href="ar01s07s14s06.html" title="7.14.6.&nbsp;Using Variables">Section&nbsp;7.14.6, &#8220;Using Variables&#8221;</a>. The definition of variables is found in <a class="xref" href="ar01s07s14s11.html#Funktionstesteditor.Arbeitsflaeche.Aktionselemente_Kategorie_Definition.Deklariere_Variablen" title="7.14.11.1.&nbsp;Action Element - Declare Variable">Section&nbsp;7.14.11.1, &#8220;Action Element - Declare Variable&#8221;</a>.</p>
+        </div>
+        </div>
+    </div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ar01s07s14s15.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="ar01s07s14.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="ar01s07s14s17.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">7.14.15.&nbsp;Category - Ecukom&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;7.14.17.&nbsp;Category - Connection</td></tr></table></div></body></html>

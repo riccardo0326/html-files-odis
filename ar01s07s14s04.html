@@ -1,0 +1,54 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>7.14.4.&nbsp;Drag and Drop</title><link rel="stylesheet" href="mystyle.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.73.1"><link rel="start" href="index.html" title="ODIS Creator Help"><link rel="up" href="ar01s07s14.html" title="7.14.&nbsp;Function Test Editor"><link rel="prev" href="ar01s07s14s03.html" title="7.14.3.&nbsp;Use cases"><link rel="next" href="ar01s07s14s05.html" title="7.14.5.&nbsp;Test Steps (View)">
+<script type="text/javascript" src="../../../advanced/synchWithToc.js"></script>
+
+<link rel="stylesheet" href="../../../content/org.eclipse.help.webapp/advanced/breadcrumbs.css" charset="ISO-8859-1" type="text/css"></link>
+<script type="text/javascript" src="../../../content/org.eclipse.help/livehelp.js"> </script>
+<script type="text/javascript">
+if( self == top ){
+  var  anchorParam = location.hash.length > 0 ? '\u0026anchor=' + location.hash.substr(1) : '';
+  window.location.replace( "../../../index.jsp?topic=%2FMasterData_Client_Control%2Fhtml%2Far01s07s14s04.html" + anchorParam);
+}
+</script>
+</head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="help_breadcrumbs"><a href="index.html">ODIS Creator Help</a> > <a href="ar01s07.html">7&#46; ODIS Creator Editing Process</a> > <a href="ar01s07s14.html">7&#46;14&#46; Function Test Editor</a></div>
+<div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">7.14.4.&nbsp;Drag and Drop</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ar01s07s14s03.html">Prev</a>&nbsp;</td><th width="60%" align="center">7.14.&nbsp;Function Test Editor</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ar01s07s14s05.html">Next</a></td></tr></table><hr></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="Funktionstesteditor.Allgemein.DragUndDrop"></a>7.14.4.&nbsp;Drag and Drop</h4></div></div></div>
+    
+      <p>In the test step view, new sub-program calls can be inserted or linked using the drag-and-drop function or existing sub-program calls can be modified. In the If, Case and Set status dialogs, it is possible to insert or link editorial objects to tables. The following entries can be dragged and dropped from the editing navigators to a table or within the test step view:</p>
+    <div class="table"><a name="d4e15589"></a><div class="table-contents">
+      <table summary="List of Possible Drag and Drop Operations" border="1"><colgroup><col align="left"><col align="left"><col align="left"></colgroup><thead><tr bgcolor="#EEEEEE"><th align="left">Source</th><th align="left">Objective</th><th align="left">Description</th></tr></thead><tbody><tr><td align="left">Function library navigator: functional tests, general tests</td><td align="left">Test step view: sub-program, test step connections</td><td align="left">For test step connections, the sub-program call is entered below the test step connection source. For existing sub-program calls, the existing one is modified or replaced. The sub-program dialog is opened automatically in both cases.</td></tr><tr><td align="left">Function library navigator: functional tests, general tests, test procedures</td><td align="left">Instruction page: sub-program, instruction connections</td><td align="left">For instruction connections, the sub-program call is entered below the test step connection source. For existing sub-program calls, the existing one is modified or replaced. The sub-program dialog is opened automatically in both cases.</td></tr><tr><td align="left">Equipment network navigator: equipment</td><td align="left">In the set status dialog: equipment list</td><td align="left">If the system names of equipment and the type are inserted at the applicable place in the table or overwrites an existing row upon request. The new/changed row is then marked.</td></tr><tr><td align="left">Knowledge base navigator: diagnostic object</td><td align="left">In Set status dialog: suspicion list, OK list</td><td align="left">If the system names of editorial objects are inserted at the applicable place in the table or overwrites an existing row upon request. The new/changed row is then marked.</td></tr><tr><td align="left">Control module tree, vehicle project navigator: fault location</td><td align="left">In the IF dialog, Case dialog: symptom rule</td><td align="left">The insertion replaces the fault location in the existing row or inserts a new row at the end of the table, if no target row was marked. It is not inserted between rows. The logical operator &#8222;Or&#8220; is set for new rows.</td></tr><tr><td align="left">Equipment network navigator: equipment</td><td align="left">In the IF dialog, Case dialog: equipment rule</td><td align="left">There must be at least one row. Inserting replaces the equipment in the present row.</td></tr></tbody></table>
+    </div><p class="title"><b>Table&nbsp;70.&nbsp;List of Possible Drag and Drop Operations</b></p></div><br class="table-break">
+    <p>The following image shows the process of the drag and drop operation. If the instruction dialog is in front of the ODIS Creator desktop, then click on an object in the navigator to move it to the background. If you use the mouse to move the selected object over the windows task bar, then the dialog will come back to the front. Now the object can be stored in the table or table row.</p>
+    <p>
+      </p><div class="figure"><a name="figure.Funktionstesteditor.Allgemeine_Funktionalitaet.DragUndDrop"></a><div class="figure-contents">
+        
+        <div class="mediaobject"><img src="images/fte_arbeitsflaeche_allgemein_dragunddrop.png" alt="Image: link with drag and drop"></div>
+      </div><p class="title"><b>Figure&nbsp;347.&nbsp;Link with Drag and Drop</b></p></div><p><br class="figure-break">
+    </p>
+    <p>The following table lists the individual steps on how to link editorial objects using drag and drop.</p>
+    <div class="table"><a name="d4e15635"></a><div class="table-contents">
+      <table summary="Steps to Link Objects" border="1"><colgroup><col align="left"><col align="left"></colgroup><thead><tr bgcolor="#EEEEEE"><th align="left">Steps</th><th align="left">Description</th></tr></thead><tbody><tr><td align="left">
+              <p>Double click to open the target dialog for the instructions.</p>
+              <p>(If necessary, bring the tab with the target table to the front in the instruction dialog.)</p>
+            </td><td align="left">
+              <p>The instruction dialog appears in the foreground.</p>
+            </td></tr><tr><td align="left">
+              <p>Insert a new row using the &#8222;+&#8220; button.</p>
+            </td><td align="left">
+              <p>A new empty row is inserted in the target table.</p>
+            </td></tr><tr><td align="left">
+              <p>Click on the view bar to open the navigator.</p>
+              <p>Then search for and mark the editorial object to be linked in the navigator.</p>
+              <p>(If necessary, cancel a prompt dialog to save the dialog entries.)</p>
+            </td><td align="left">
+              <p>The instruction dialog disappears into the background.</p>
+            </td></tr><tr><td align="left">
+              <p>Pull the editorial object out of the navigator using drag and drop. Without releasing the mouse button, move over the entry for ODIS Creator on the task bar.</p>
+              <p>Wait a moment, until the preview of the application window appears. Then hover over to the instruction dialog. Then wait until the instruction dialog appears in the foreground.</p>
+              <p>Then continue to drag the editorial object to the new line in the instruction dialog, and finally release the mouse button.</p>
+            </td><td align="left">
+              <p>The rows in the table are linked to the editorial object.</p>
+            </td></tr></tbody></table>
+    </div><p class="title"><b>Table&nbsp;71.&nbsp;Steps to Link Objects</b></p></div><br class="table-break">
+  </div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ar01s07s14s03.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="ar01s07s14.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="ar01s07s14s05.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">7.14.3.&nbsp;Use cases&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;7.14.5.&nbsp;Test Steps (View)</td></tr></table></div></body></html>

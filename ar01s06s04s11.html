@@ -1,0 +1,167 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>6.4.11.&nbsp;Excel Export of Translation Packages</title><link rel="stylesheet" href="mystyle.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.73.1"><link rel="start" href="index.html" title="ODIS Creator Help"><link rel="up" href="ar01s06s04.html" title="6.4.&nbsp;Translation"><link rel="prev" href="ar01s06s04s10.html" title="6.4.10.&nbsp;Translation Disputes"><link rel="next" href="ar01s07.html" title="7.&nbsp;ODIS Creator Editing Process">
+<script type="text/javascript" src="../../../advanced/synchWithToc.js"></script>
+
+<link rel="stylesheet" href="../../../content/org.eclipse.help.webapp/advanced/breadcrumbs.css" charset="ISO-8859-1" type="text/css"></link>
+<script type="text/javascript" src="../../../content/org.eclipse.help/livehelp.js"> </script>
+<script type="text/javascript">
+if( self == top ){
+  var  anchorParam = location.hash.length > 0 ? '\u0026anchor=' + location.hash.substr(1) : '';
+  window.location.replace( "../../../index.jsp?topic=%2FMasterData_Client_Control%2Fhtml%2Far01s06s04s11.html" + anchorParam);
+}
+</script>
+</head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="help_breadcrumbs"><a href="index.html">ODIS Creator Help</a> > <a href="ar01s06.html">6&#46; ODIS Creator Order Management Process</a> > <a href="ar01s06s04.html">6&#46;4&#46; Translation</a></div>
+<div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">6.4.11.&nbsp;Excel Export of Translation Packages</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ar01s06s04s10.html">Prev</a>&nbsp;</td><th width="60%" align="center">6.4.&nbsp;Translation</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ar01s07.html">Next</a></td></tr></table><hr></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="uebersetzung.excelexport"></a>6.4.11.&nbsp;Excel Export of Translation Packages</h4></div></div></div>
+            
+            <p>The excel export serves to export translation packages from different locations for different languages during a certain time period. The Excel file contains an overview table, which lists all effected translation packages. Furthermore, there is an individual table page for each of the listed translation packages, in which the specific package information is contained.</p>
+            <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="Excel.export"></a>6.4.11.1.&nbsp;Excel Export</h5></div></div></div>
+                
+                <p>The Excel export can be started by a <a class="link" href="ar01s03s03s01.html" title="3.3.1.&nbsp;Description of Roles">translation coordinator</a>. The function can be started through the context menu or through the file -&gt; <span class="bold"><strong>Excel export</strong></span>. The lower displayed dialog appears to enter the parameters for the export.</p>
+                <p>
+                    </p><div class="figure"><a name="figure.auftragsverwaltung.uebersetzung.excel"></a><div class="figure-contents">
+                        
+                        <div class="mediaobject"><img src="images/ExcelExport.jpg" alt="Image: Excel Export Dialog"></div>
+                    </div><p class="title"><b>Figure&nbsp;167.&nbsp;Excel Export Dialog</b></p></div><p><br class="figure-break">
+                </p>
+                <p>You can select the following parameters for the export. Some of these parameters are optional and some are mandatory.</p>
+                <p>
+                    </p><div class="itemizedlist"><ul type="disc"><li>
+                            <p><span class="bold"><strong>Target date</strong></span></p>
+                            <p>The user can give specifications in the dialog for the planned target date of the translation packages being exported. This specification is optional. If a date is set, it is possible to give a closed interval ("from" and "to") or give open intervals. The entered day is therefore always included.</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Creation date</strong></span></p>
+                            <p>The user can give specifications in the dialog for the created on date of the translation packages being exported. This specification is optional. If a date is set, it is possible to give a closed interval ("from" and "to") or give open intervals. The entered day is therefore always included.</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Import date</strong></span></p>
+                            <p>The user can give specifications in the dialog for the import date of the translation packages being exported. This specification is optional. If a date is set, it is possible to give a closed interval ("from" and "to") or give open intervals. The entered day is therefore always included. This specification is only effective if the user has also selected the package status as "imported".</p>
+                        </li><li>
+                            <p><span class="bold"><strong>"used by" number of entries</strong></span></p>
+                            <p>The user can specify in the dialog the maximum entries can be displayed in the "used by" column. The preset default value is 3. Correspondingly here, many paths to the root nodes (for example the brand of the equipment network or the knowledge base) of the released editorial objects, that use the respective editorial object, are given.</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Location</strong></span></p>
+                            <p>The user can select a number of locations, to which the translations packages should be exported. All locations can be selected by the role of "translation coordinator". Therefore at least one location must be selected.</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Target languages</strong></span></p>
+                            <p>The user can select a number of target languages, to which the translations packages should be exported. Therefore at least one target language should be selected.</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Package status</strong></span></p>
+                            <p>The user can select a number of translation package statuses, to which the translations packages should be exported. Therefore at least one status should be selected.</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Market name</strong></span></p>
+                            <p>The user can select one or more market names from a list, that has defined market names for the existing translation packages. To provide a better overview, the market designations can be filtered using a text field.</p>
+                        </li></ul></div><p>
+                </p>
+                <p>It may be found through the export parameter specification that no single matching translation package can be determined. If this is the case, an excel file will be exported which only contains the entered parameters in the data overview sheet. It is stated in the notification that no packages fitting the parameters could be identified.</p>
+                <p>
+                    </p><div class="figure"><a name="figure.auftragsverwaltung.uebersetzung.excel.timeout"></a><div class="figure-contents">
+                        
+                        <div class="mediaobject"><img src="images/timeout_meldung.jpg" alt="Image: timeout message"></div>
+                    </div><p class="title"><b>Figure&nbsp;168.&nbsp;Timeout Notification</b></p></div><p><br class="figure-break">
+                </p>
+                <p>An Excel export may cause a timeout if there is a very large amount of data. It is important that this timeout does not end the Excel export, but rather no message is given to the user after the export ends.</p>
+                <p>You will however be informed of the timeout as seen in <a class="xref" href="ar01s06s04s11.html#figure.auftragsverwaltung.uebersetzung.excel.timeout" title="Figure&nbsp;168.&nbsp;Timeout Notification">Figure&nbsp;168, &#8220;Timeout Notification&#8221;</a>.</p>
+            </div>
+            <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="excel.exportergebnis"></a>6.4.11.2.&nbsp;Export Results</h5></div></div></div>
+                
+                <p>The export result is stored as a notification in the system and is only visible to you. Notifications can be seen in the task navigator and in the translation navigator.</p>
+                <p>You can receive the excel export through the corresponding notification and save it locally on your computer. If a notification is marked with reference to an Excel export, then the function is visible in the context menu and under File &gt; <span class="bold"><strong>Save result</strong></span>. After specifying the target directory and confirming the dialog, the export result is stored in the specified target directory. If you do not have any authoring rights in the selected directory, then saving will be canceled with an error message.</p>
+                <p>
+                    </p><div class="figure"><a name="figure.auftragsverwaltung.uebersetzung.exceldatei1"></a><div class="figure-contents">
+                        
+                        <div class="mediaobject"><img src="images/ExcelExport_Uebersicht.jpg" alt="Image: Excel file overview table"></div>
+                    </div><p class="title"><b>Figure&nbsp;169.&nbsp;Excel File Overview Table</b></p></div><p><br class="figure-break">
+                </p>
+                <p>The first sheet of an Excel file can be seen in <a class="xref" href="ar01s06s04s11.html#figure.auftragsverwaltung.uebersetzung.exceldatei1" title="Figure&nbsp;169.&nbsp;Excel File Overview Table">Figure&nbsp;169, &#8220;Excel File Overview Table&#8221;</a>. All of the parameters specified by the user will be exported here. All fields from the unspecified, optional parameters will remain empty. The basic information about the identified translation packages is listed under the parameters. The following information will be exported by line for every translation package:</p>
+                <p>
+                    </p><div class="itemizedlist"><ul type="disc"><li>
+                            <p><span class="bold"><strong>Package name:</strong></span> Name of the translation package.</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Target date:</strong></span> the &#8220;planned end date&#8221; of the translation package, meaning when it will be expected back from GoCAT/DELS.</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Package number:</strong></span> The serial number of a package. It is counted separately per target language and location and is displayed at the end of the package name.</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Location:</strong></span> The responsible editorial location for the translation package.</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Source language:</strong></span> The source language of the translation package (ISO code display).</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Target language:</strong></span> The target language of the translation package (ISO code display).</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Object quantity:</strong></span> The amount of objects exported with the translation package.</p>
+                        </li><li>
+                            <p><span class="bold"><strong>File quantity:</strong></span> The amount of files exported with the translation package.</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Package creation date:</strong></span> The date the translation package was created (specification is in "dd.MM.yyyy" format).</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Created by:</strong></span> The creator of the translation package (User ID information or "automatic").</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Package status:</strong></span> The current status of the translation package (for example, "exported" or "reset", etc.).</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Import date:</strong></span> The date the translation package was imported (specification in "dd.MM.yyyy HH:mm:ss" format). Is only set when packages have the "imported" package status.</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Number of TRADOS matches (GoCAT only): 100%/context matches/repetitions.</strong></span> How many words fall under the 100%/context/repetitions category in GoCAT?</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Number of TRADOS matches: 99% - 95%.</strong></span> How many words fall under the 99% - 95% category in GoCAT?</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Number of TRADOS matches: 94% - 75%.</strong></span>How many words in the package fall under the 94% - 75% category in GoCAT?</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Number of TRADOS matches: 74% - 0%.</strong></span>How many words in the package fall under the 74% - 0% category in GoCAT?</p>
+                        </li></ul></div><p>
+                </p>
+                <p>
+                    </p><div class="figure"><a name="figure.auftragsverwaltung.uebersetzung.exceldatei2"></a><div class="figure-contents">
+                        
+                        <div class="mediaobject"><img src="images/ExcelExport_Paket.jpg" alt="Image: Excel file package content sheet"></div>
+                    </div><p class="title"><b>Figure&nbsp;170.&nbsp;Excel File Package Content</b></p></div><p><br class="figure-break">
+                </p>
+                <p>An example detail information sheet of the Excel export can be seen in <a class="xref" href="ar01s06s04s11.html#figure.auftragsverwaltung.uebersetzung.exceldatei2" title="Figure&nbsp;170.&nbsp;Excel File Package Content">Figure&nbsp;170, &#8220;Excel File Package Content&#8221;</a>. There is only one detail sheet for each export in the Excel file, which contains all objects from the exported translation packages. The following information (in the respective column) will be given for each object (in the respective line).</p>
+                <p>
+                    </p><div class="itemizedlist"><ul type="disc"><li>
+                            <p><span class="bold"><strong>Package name:</strong></span> Name of the translation package in which the object is contained.</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Package number:</strong></span> The serial number of the translation package in which the object is contained. It is counted separately per target language and location and is displayed at the end of the package name.</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Brand:</strong></span> The brand of the responsible editing location for the translation package in which the object is contained.</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Location:</strong></span> The responsible editing location for the translation package in which the object is contained.</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Source language:</strong></span> The source language of the translation package (ISO code display).</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Target language:</strong></span> The target language of the translation package (ISO code display).</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Order header:</strong></span> The order header of the editorial object.</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Order step:</strong></span> The order step of the editorial object.</p>
+                        </li><li>
+                            <p><span class="bold"><strong>System name:</strong></span> system name of the editorial object (without the location code specification).</p>
+                        </li><li>
+                            <p><span class="bold"><strong>System name addition:</strong></span> location code as an addition to the editorial object system name (e.g. "@00011"). The location code given here does not have any relation to the location responsible for the translation package.</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Version-specific ID:</strong></span> ID of the object version of the editorial object.</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Version-independent ID:</strong></span> Global ID of the editorial object which is valid over all versions.</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Used by:</strong></span> Path in the editorial system to the editorial object.</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Type:</strong></span> Object type for the editorial object, for example FCL_MEASUREMENT_TABLE.</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Initial deployment date:</strong></span> The date the editorial object was initially deployed (data is in "dd.MM.yyyy" format). Is only set if the editorial object is contained in a scheduled order context. This column remains empty for objects from AdHoc orders.</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Package creation date:</strong></span> The creation date of the translation package is contained in the object (given in the format "dd.MM.yyyy").</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Import date:</strong></span> The date the translation package was imported which contains the object (given in "dd.MM.yyyy HH:mm:ss" format). Is only set when packages have the "imported" package status.</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Package status:</strong></span> Status of the translation package in which the object is contained.</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Translation status:</strong></span> The current translation status of the editorial object version listed here for the specified target language.</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Object version:</strong></span> The display version of the editorial object.</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Author:</strong></span> The last author, who has edited the version of the editorial object listed here.</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Market name:</strong></span> The respective market name from the editorial object header is in this field.</p>
+                        </li></ul></div><p>
+                </p>
+            </div>
+        </div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ar01s06s04s10.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="ar01s06s04.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="ar01s07.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">6.4.10.&nbsp;Translation Disputes&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;7.&nbsp;ODIS Creator Editing Process</td></tr></table></div></body></html>

@@ -1,0 +1,61 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>8.4.2.&nbsp;Configuration Editor</title><link rel="stylesheet" href="mystyle.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.73.1"><link rel="start" href="index.html" title="ODIS Creator Help"><link rel="up" href="ar01s08s04.html" title="8.4.&nbsp;Test Settings"><link rel="prev" href="ar01s08s04s01.html" title="8.4.1.&nbsp;Brand Navigator"><link rel="next" href="ar01s08s05.html" title="8.5.&nbsp;Rollout Baseline">
+<script type="text/javascript" src="../../../advanced/synchWithToc.js"></script>
+
+<link rel="stylesheet" href="../../../content/org.eclipse.help.webapp/advanced/breadcrumbs.css" charset="ISO-8859-1" type="text/css"></link>
+<script type="text/javascript" src="../../../content/org.eclipse.help/livehelp.js"> </script>
+<script type="text/javascript">
+if( self == top ){
+  var  anchorParam = location.hash.length > 0 ? '\u0026anchor=' + location.hash.substr(1) : '';
+  window.location.replace( "../../../index.jsp?topic=%2FMasterData_Client_Control%2Fhtml%2Far01s08s04s02.html" + anchorParam);
+}
+</script>
+</head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="help_breadcrumbs"><a href="index.html">ODIS Creator Help</a> > <a href="ar01s08.html">8&#46; ODIS Creator Preparation Process</a> > <a href="ar01s08s04.html">8&#46;4&#46; Test Settings</a></div>
+<div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">8.4.2.&nbsp;Configuration Editor</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ar01s08s04s01.html">Prev</a>&nbsp;</td><th width="60%" align="center">8.4.&nbsp;Test Settings</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ar01s08s05.html">Next</a></td></tr></table><hr></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="konfigurationseditor.test"></a>8.4.2.&nbsp;Configuration Editor</h4></div></div></div>
+				
+				<p>Within the editor, the settings are structured by theme as follows and compiled in individual tabs:</p>
+				<p>
+					</p><div class="orderedlist"><ol type="1"><li>
+							<p>Creation interval for test baselines</p>
+						</li><li>
+							<p>Parameters for the automatic creation of the test baseline descriptions.</p>
+						</li><li>
+							<p>Specifications for the saved location of the created test baselines.</p>
+						</li></ol></div><p>
+				</p>
+				<p>The location administrator enters the times or conditions for the regular provision in the <span class="bold"><strong>Creation</strong></span> tab in the configuration dialog (see <a class="xref" href="ar01s08s04s02.html#figure.test.baseline.konfig.build" title="Figure&nbsp;607.&nbsp;Test Settings Editor - Creation Tab">Figure&nbsp;607, &#8220;Test Settings Editor - Creation Tab&#8221;</a>).</p>
+				<p>
+					</p><div class="figure"><a name="figure.test.baseline.konfig.build"></a><div class="figure-contents">
+						
+						<div class="mediaobject"><img src="images/testbaseline_konfig_build.png" alt="Image: test settings editor - Creation tab"></div>
+					</div><p class="title"><b>Figure&nbsp;607.&nbsp;Test Settings Editor - Creation Tab</b></p></div><p><br class="figure-break">
+				</p>
+				<p>The production base baseline used for the test baseline is the most recent, complete and explicitly released production baseline.</p>
+				<p>The location administrator can set a period in days of the week for how often a test baseline is automatically created and can select a time that the creation occurs. At least one day of the week must be selected. Changes from the automatic test baseline creation have immediate effect, even on test baselines from the same day.</p>
+				<p>The following configurations are possible for complete test baselines:</p>
+				<p>
+					</p><div class="itemizedlist"><ul type="disc"><li>
+							<p>Checkbox for activating/deactivating automatic creation of the test baseline</p>
+						</li><li>
+							<p>Time (UTC) can be set collectively for all days of the week</p>
+						</li><li>
+							<p>Checkboxes for each day of the week from Monday through Sunday</p>
+						</li></ul></div><p>
+				</p>
+				<p>The location administrator enters the specifications for the automatically created names for full test baselines and any comments in the <span class="bold"><strong>Description</strong></span> tab in the configuration dialog (see <a class="xref" href="ar01s08s04s02.html#figure.test.baseline.konfig.description" title="Figure&nbsp;608.&nbsp;Test Settings Editor - Description Tab">Figure&nbsp;608, &#8220;Test Settings Editor - Description Tab&#8221;</a>).</p>
+				<p>
+					</p><div class="figure"><a name="figure.test.baseline.konfig.description"></a><div class="figure-contents">
+						
+						<div class="mediaobject"><img src="images/testbaseline_konfig_description.png" alt="Image: test settings editor - Description tab"></div>
+					</div><p class="title"><b>Figure&nbsp;608.&nbsp;Test Settings Editor - Description Tab</b></p></div><p><br class="figure-break">
+				</p>
+				<p>The location administrator enters the specifications for the target folder of the rebuilt test baseline in the <span class="bold"><strong>save location</strong></span> tab in the configuration dialog (see <a class="xref" href="ar01s08s04s02.html#figure.test.baseline.konfig.path" title="Figure&nbsp;609.&nbsp;Test Settings Editor - Save Location Tab">Figure&nbsp;609, &#8220;Test Settings Editor - Save Location Tab&#8221;</a>). Specifying the save location is mandatory!</p>
+				<p>
+					</p><div class="figure"><a name="figure.test.baseline.konfig.path"></a><div class="figure-contents">
+						
+						<div class="mediaobject"><img src="images/testbaseline_konfig_path.png" alt="Image: test settings editor - Save location tab"></div>
+					</div><p class="title"><b>Figure&nbsp;609.&nbsp;Test Settings Editor - Save Location Tab</b></p></div><p><br class="figure-break">
+				</p>
+			</div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ar01s08s04s01.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="ar01s08s04.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="ar01s08s05.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">8.4.1.&nbsp;Brand Navigator&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;8.5.&nbsp;Rollout Baseline</td></tr></table></div></body></html>

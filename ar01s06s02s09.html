@@ -1,0 +1,130 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>6.2.9.&nbsp;Hotfix</title><link rel="stylesheet" href="mystyle.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.73.1"><link rel="start" href="index.html" title="ODIS Creator Help"><link rel="up" href="ar01s06s02.html" title="6.2.&nbsp;Orders"><link rel="prev" href="ar01s06s02s08.html" title="6.2.8.&nbsp;Determining the Market Supply"><link rel="next" href="ar01s06s03.html" title="6.3.&nbsp;Text request">
+<script type="text/javascript" src="../../../advanced/synchWithToc.js"></script>
+
+<link rel="stylesheet" href="../../../content/org.eclipse.help.webapp/advanced/breadcrumbs.css" charset="ISO-8859-1" type="text/css"></link>
+<script type="text/javascript" src="../../../content/org.eclipse.help/livehelp.js"> </script>
+<script type="text/javascript">
+if( self == top ){
+  var  anchorParam = location.hash.length > 0 ? '\u0026anchor=' + location.hash.substr(1) : '';
+  window.location.replace( "../../../index.jsp?topic=%2FMasterData_Client_Control%2Fhtml%2Far01s06s02s09.html" + anchorParam);
+}
+</script>
+</head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="help_breadcrumbs"><a href="index.html">ODIS Creator Help</a> > <a href="ar01s06.html">6&#46; ODIS Creator Order Management Process</a> > <a href="ar01s06s02.html">6&#46;2&#46; Orders</a></div>
+<div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">6.2.9.&nbsp;Hotfix</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ar01s06s02s08.html">Prev</a>&nbsp;</td><th width="60%" align="center">6.2.&nbsp;Orders</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ar01s06s03.html">Next</a></td></tr></table><hr></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="prozess.hotfix"></a>6.2.9.&nbsp;Hotfix</h4></div></div></div>
+		
+		<p>A hotfix is a supply of individual editorial objects that are connected to the equipment network. Some editorial objects, such as measured value tables and XML templates, must be used by a function code in order to be supplied. The author can select if only the selected or all of the referenced objects should be included in a hotfix. Editorial objects from different teams and with different statuses can be provided in a hotfix.</p>
+		<p>The creation may take a very long time when exporting with reference objects and because of this, occurs asynchronously in the background. The author can continue to work on editing while the hotfix exports.</p>
+		<p>The editor for creating a hotfix can be seen in <a class="xref" href="ar01s06s02s09.html#figure.hotfix.overview" title="Figure&nbsp;133.&nbsp;Hotfix Editor">Figure&nbsp;133, &#8220;Hotfix Editor&#8221;</a>. The objects from the desired order are displayed in the upper section. Objects are listed in the lower table, which are provided with the hotfix. In the column <span class="bold"><strong>Already referenced objects</strong></span>, it can be decided which option (see <a class="xref" href="ar01s06s02s09.html#table.hotfix.objekte" title="Table&nbsp;31.&nbsp;Options for the Incorporation of Referenced Objects">Table&nbsp;31, &#8220;Options for the Incorporation of Referenced Objects&#8221;</a>) should be selected for each object.</p>
+		<p>
+			</p><div class="figure"><a name="figure.hotfix.overview"></a><div class="figure-contents">
+				
+				<div class="mediaobject"><img src="images/Hotfix_Editor.jpg" alt="Editor for creating a hotfix"></div>
+			</div><p class="title"><b>Figure&nbsp;133.&nbsp;Hotfix Editor</b></p></div><p><br class="figure-break">
+		</p>
+		<div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="hotfix.aufgaben"></a>6.2.9.1.&nbsp;Create Hotfix</h5></div></div></div>
+			
+			<p>To create a hotfix, you must be in the author role. Click on the <span class="bold"><strong>Insert</strong></span> and <span class="bold"><strong>Hotfix</strong></span> <a class="link" href="ar01s02s02.html#schaltflaeche">buttons</a> in the <a class="link" href="ar01s02s02.html#menuleiste">menu bar</a> or use the corresponding buttons from the <a class="link" href="ar01s02s02.html#kontextmenu">context menu</a> in the order navigator to access an order header or order step. Select the desired authoring team in the <a class="link" href="ar01s02s02.html#auswahlfeld">selection field</a> in the following dialog.</p>
+			<p>The editor for defining hotfixes will open. Using the <a class="link" href="ar01s02s02.html#auswahlfeld">selection field</a> in the upper left side, you can select the order header, order step and team. The editorial objects from the currently selected order step will always be displayed. Alternatively, you can also select the entry used across teams for a location (for example "00021 - all locations"). Then all editorial objects can be selected, which belong to an order step from an authoring team at the selected location. In addition to this, the editorial objects in the order step must have been marked with the flag "hotfix". See <a class="xref" href="ar01s06s02s09.html#figure.hotfix.overview.team.location" title="Figure&nbsp;134.&nbsp;Editor for Hotfix with Cross-Location Selection">Figure&nbsp;134, &#8220;Editor for Hotfix with Cross-Location Selection&#8221;</a>.</p>
+			<p>
+				</p><div class="figure"><a name="figure.hotfix.overview.team.location"></a><div class="figure-contents">
+					
+					<div class="mediaobject"><img src="images/Hotfix_Editor_Standort.png" alt="Editor for creating a hotfix with all locations selection"></div>
+				</div><p class="title"><b>Figure&nbsp;134.&nbsp;Editor for Hotfix with Cross-Location Selection</b></p></div><p><br class="figure-break">
+			</p>
+			<p>The user pulls the desired editorial objects into the hotfix table via drag and drop. As soon as the desired editorial objects are placed together from the desired orders, then the author must still specify a name, a dealer code and a base line. Furthermore, a production baseline or a test baseline can be selected for the hotfix. After setting the baseline type, the baseline for creating the hotfix can be selected from the last baseline of the selected type.</p>
+			<p>By saving and checking in, the hotfix will be created and the author receives a notification, that the creation (see <a class="xref" href="ar01s06s02s09.html#figure.hotfix.info" title="Figure&nbsp;135.&nbsp;Hotfix Information">Figure&nbsp;135, &#8220;Hotfix Information&#8221;</a>) was started.</p>
+			<p>
+				</p><div class="figure"><a name="figure.hotfix.info"></a><div class="figure-contents">
+					
+					<div class="mediaobject"><img src="images/Hotfix_Info.jpg" alt="Information for creating a hotfix"></div>
+				</div><p class="title"><b>Figure&nbsp;135.&nbsp;Hotfix Information</b></p></div><p><br class="figure-break">
+			</p>
+			<p>After confirming the information, the author can continue to work editorially and they will received an additional message only when the hotfix preparation ends.</p>
+			<p>If the hotfix preparation was not successful, the user receives a message with a table in which the objects and the associated errors are listed (see <a class="xref" href="ar01s06s02s09.html#figure.hotfix.fehler" title="Figure&nbsp;136.&nbsp;Hotfix error">Figure&nbsp;136, &#8220;Hotfix error&#8221;</a>).</p>
+			<p>
+				</p><div class="figure"><a name="figure.hotfix.fehler"></a><div class="figure-contents">
+					
+					<div class="mediaobject"><img src="images/HotfixTabelle.jpg" alt="Hotfix error"></div>
+				</div><p class="title"><b>Figure&nbsp;136.&nbsp;Hotfix error</b></p></div><p><br class="figure-break">
+			</p>
+			<p>The user now has the option to double click in order to switch directly from the system names to the object in ODIS Creator. This will close all opened editors. If one or more editors or open in edit mode, then the user will be asked if they would like to save before closing. Excluded from this are hotfix editors that are open in edit mode; these will be closed without confirming and saving. Only if all editors could be successfully closed, then the editor will open to the editorial object.</p>
+			<p>The hotfix error table remains open when jumping to an editorial object. With the button "Open hotfix editor", the user goes back to the hotfix definition, for which the error has occurred. All open editors are closed when jumping to the editorial object.</p>
+			<p>The warning will be closed without additional actions using the button "Close".</p>
+			<p>If the hotfix is exported successfully, the user receives the information displayed in <a class="xref" href="ar01s06s02s09.html#figure.hotfix.erfolgreich" title="Figure&nbsp;137.&nbsp;Hotfix successful">Figure&nbsp;137, &#8220;Hotfix successful&#8221;</a>.</p>
+			<p>
+				</p><div class="figure"><a name="figure.hotfix.erfolgreich"></a><div class="figure-contents">
+					
+					<div class="mediaobject"><img src="images/Hotfix_erfolgreich.png" alt="Hotfix successful"></div>
+				</div><p class="title"><b>Figure&nbsp;137.&nbsp;Hotfix successful</b></p></div><p><br class="figure-break">
+			</p>
+			<p>If available, the translations for all exported editorial objects are exported in the hotfix. In an additional language package, the translation-relevant texts of the respective editorial object is exported in the source language for each editorial object contained in the hotfix, in which the applicable editorial object was created. With this, texts that are not translated are displayed in their original language in the processing system.</p>
+			<p>Depending on which baseline type was selected for a hotfix, the translation-relevant texts of the transferred objects are also exported. For hotfixes with production baselines, all available translations are always exported with the transferred objects. For hotfixes based on a text baseline, only the source language of the objects under the concatenated source language ISO code "OD-OD" is exported.</p>
+		</div>
+	    <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="hotfix.javaboxe"></a>6.2.9.2.&nbsp;Creating a Hotfix with a Function Code with the <span class="bold"><strong>In Processing</strong></span> Status</h5></div></div></div>
+	        
+	        <p>When a hotfix is exported, in the case of a production baseline, it is also checked for function code objects to see whether Java box(es) are included in the test sequence. If all existing Java boxes have the status <span class="bold"><strong> Accepted</strong></span>, the hotfix is successfully exported.</p>
+	        <p>The export cannot be created if:</p><div class="itemizedlist"><ul type="disc"><li>
+	                    <p>The function code has the &#8220;In Processing&#8221; status and at least one Java box is present within the test sequence.</p>
+	                </li><li>
+	                    <p>The function code has the &#8220;In testing&#8221; status and at least one unverified or rejected Java box is present within the test sequence.</p>
+	                </li></ul></div><p>An error message will inform the author of this (see <a class="xref" href="ar01s06s02s09.html#figure.hotfix.javabox" title="Figure&nbsp;138.&nbsp;Hotfix Java Box">Figure&nbsp;138, &#8220;Hotfix Java Box&#8221;</a>).</p>
+	              <p>
+	            </p><div class="figure"><a name="figure.hotfix.javabox"></a><div class="figure-contents">
+	                
+	                <div class="mediaobject"><img src="images/Hotfix_Javabox.jpg" alt="Hotfix Java Box"></div>
+	            </div><p class="title"><b>Figure&nbsp;138.&nbsp;Hotfix Java Box</b></p></div><p><br class="figure-break">
+	              </p>
+	    	<p>When a hotfix is exported, in the case of a test baseline, no checks are carried out on the function code objects, whether they contain Java boxes in test sequences and the status of the java boxes. The hotfix is successfully exported in any case.</p>
+	    </div>
+		<div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="hotfix.objekte"></a>6.2.9.3.&nbsp;Incorporation of Referenced Objects</h5></div></div></div>
+			
+			<p>Editorial objects can be prepared in a hotfix. The author can select which objects are included in a hotfix. There are four different options for how referenced objects can be included (see <a class="xref" href="ar01s06s02s09.html#table.hotfix.objekte" title="Table&nbsp;31.&nbsp;Options for the Incorporation of Referenced Objects">Table&nbsp;31, &#8220;Options for the Incorporation of Referenced Objects&#8221;</a>).</p>
+			<div class="table"><a name="table.hotfix.objekte"></a><div class="table-contents">
+				<table summary="Options for the Incorporation of Referenced Objects" border="1"><colgroup><col align="left"><col align="left"></colgroup><thead><tr bgcolor="#EEEEEE"><th align="left"><span class="bold"><strong>Option</strong></span></th><th align="left"><span class="bold"><strong>Description</strong></span></th></tr></thead><tbody valign="top"><tr><td align="left" valign="top">No referenced objects</td><td align="left" valign="top">Only the selected object itself can be applied to the hotfix. The object is however <span class="bold"><strong>only</strong></span> then applied to the hotfix, if the selected version of this object is <span class="bold"><strong>not included in the selected base line</strong></span>.</td></tr><tr><td align="left" valign="top">No parent objects</td><td align="left" valign="top">
+								<p>The selected object is applied to the hotfix, if the selected version of this object is <span class="bold"><strong>not included in the selected base line</strong></span>.</p>
+								<p>If the selected object is applied to the hotfix and there is <span class="bold"><strong>no diagnostic object</strong></span>, all of its <span class="bold"><strong>subordinate objects from the function library</strong></span> are applied to the hotfix. Only subordinate objects with the confirmed completed or released status are exported into the hotfix.</p>
+								<p>The search for subordinate objects is recursive. The recursion ends at a subordinate object, that is already in either the selected baseline itself or its version in the list of the primarily selected objects, that are applied to the hotfix. The object at which the recursion ends, is <span class="bold"><strong>not applied</strong></span> to the hotfix.</p>
+								<p><span class="bold"><strong>Note:</strong></span> All referenced objects (supplemental documents, function codes, other diagnostic objects as child objects) from the diagnostic object must be explicitly added by the authors.</p>
+							</td></tr><tr><td align="left" valign="top">No sub-objects</td><td align="left" valign="top">
+								<p>The selected object is applied to the hotfix, if the selected version of this object is <span class="bold"><strong>not included in the selected base line</strong></span>.</p>
+								<p>If the selected object itself is applied to the hotfix, all of its direct superordinate objects (parent objects) are considered. It checks if the version of the <span class="bold"><strong>direct</strong></span> parent object is included in the list of primary selected objects that are already applied to the hotfix. If not, then the parent object will be applied to the hotfix. This ensures that the access points of new objects are also included in the hotfix package and are included in the export for the ODIS Service.</p>
+								<p>The superordinate objects that are completely new or have newly released versions (relating to the hotfix) are added recursively. The recursion ends at a superordinate object:</p>
+								<div class="itemizedlist"><ul type="disc"><li>
+										<p>that is already included in the selected baseline. The object at which the recursion ends, is <span class="bold"><strong>applied</strong></span> to the hotfix.</p>
+									</li><li>
+										<p>its version is already included in the list of primary selected objects that are applied to the hotfix. The object at which the recursion ends, is <span class="bold"><strong>not</strong></span> <span class="bold"><strong>applied</strong></span> to the hotfix.</p>
+									</li></ul></div>
+							</td></tr><tr><td align="left" valign="top">All referenced objects</td><td align="left" valign="top">
+								<p><span class="bold"><strong>Default:</strong></span> The object itself and its superordinate and subordinate objects are applied to the hotfix. This selection is preallocated.</p>
+								<p>The selection of superordinate objects matches the selection of superordinate objects for the "No subobjects" option. The selection of subordinate objects matches the selection of subordinate objects for the "No parent objects" option.</p>
+							</td></tr></tbody></table>
+			</div><p class="title"><b>Table&nbsp;31.&nbsp;Options for the Incorporation of Referenced Objects</b></p></div><br class="table-break">
+			<p>
+				</p><div class="figure"><a name="figure.hotfix.objekte"></a><div class="figure-contents">
+					
+					<div class="mediaobject" align="center"><img src="images/ReferenzierteObjekte.png" align="middle" alt="Selection Menu for Incorporating Referenced Objects"></div>
+				</div><p class="title"><b>Figure&nbsp;139.&nbsp;Selection Menu for Incorporating Referenced Objects</b></p></div><p><br class="figure-break">
+			</p>
+			<p>The option for an individual or multiple editorial objects can be placed in ODIS Creator. <a class="xref" href="ar01s06s02s09.html#figure.hotfix.objekte" title="Figure&nbsp;139.&nbsp;Selection Menu for Incorporating Referenced Objects">Figure&nbsp;139, &#8220;Selection Menu for Incorporating Referenced Objects&#8221;</a> shows the selection menu for the object options.</p>
+			<p>To set the same option for multiple editorial objects, the editorial objects will be marked and then the desired option is selected via the context menu. (see <a class="xref" href="ar01s06s02s09.html#figure.hotfix.kontextmenu" title="Figure&nbsp;140.&nbsp;Context menu for including referenced objects">Figure&nbsp;140, &#8220;Context menu for including referenced objects&#8221;</a>)</p>
+			<p>
+				</p><div class="figure"><a name="figure.hotfix.kontextmenu"></a><div class="figure-contents">
+					
+					<div class="mediaobject" align="center"><img src="images/KontextmenuReferenzierteObjekte.png" align="middle" alt="Context menu for including referenced objects"></div>
+				</div><p class="title"><b>Figure&nbsp;140.&nbsp;Context menu for including referenced objects</b></p></div><p><br class="figure-break">
+			</p>
+		</div>
+		<div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="hotfix.redobjekte.markieren"></a>6.2.9.4.&nbsp;Mark Editorial Objects for Hotfix</h5></div></div></div>
+			
+			<p>So that an editorial object is available in the "all location" selection, it must be marked for this by the author. For this, you must open the order step, to which the editorial object is assigned, in the order management view for editing. Then you can activate the checkbox in the "hotfix" column from the editorial objects list or mark multiple editorial objects and select the entry <span class="bold"><strong>Mark for hotfix</strong></span> in the context menu (see <a class="xref" href="ar01s06s02s09.html#figure.hotfix.objekte.aktivieren" title="Figure&nbsp;141.&nbsp;Order step with the editorial object selection for a hotfix">Figure&nbsp;141, &#8220;Order step with the editorial object selection for a hotfix&#8221;</a>). With the entry <span class="bold"><strong>Delete hotfix flag</strong></span> in the context menu, you can revert the selection.</p>
+			<p>
+				</p><div class="figure"><a name="figure.hotfix.objekte.aktivieren"></a><div class="figure-contents">
+					
+					<div class="mediaobject"><img src="images/Auftragsschritt_Hotfix.png" alt="Order step with the editorial object selection for a hotfix"></div>
+				</div><p class="title"><b>Figure&nbsp;141.&nbsp;Order step with the editorial object selection for a hotfix</b></p></div><p><br class="figure-break">
+			</p>
+		</div>
+	</div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ar01s06s02s08.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="ar01s06s02.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="ar01s06s03.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">6.2.8.&nbsp;Determining the Market Supply&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;6.3.&nbsp;Text request</td></tr></table></div></body></html>

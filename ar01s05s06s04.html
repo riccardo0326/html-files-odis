@@ -1,0 +1,109 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>5.6.4.&nbsp;Sorting and Filtering in the Text Library</title><link rel="stylesheet" href="mystyle.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.73.1"><link rel="start" href="index.html" title="ODIS Creator Help"><link rel="up" href="ar01s05s06.html" title="5.6.&nbsp;Text Library"><link rel="prev" href="ar01s05s06s03.html" title="5.6.3.&nbsp;Text ID"><link rel="next" href="ar01s05s06s05.html" title="5.6.5.&nbsp;Translation Process for Text IDs">
+<script type="text/javascript" src="../../../advanced/synchWithToc.js"></script>
+
+<link rel="stylesheet" href="../../../content/org.eclipse.help.webapp/advanced/breadcrumbs.css" charset="ISO-8859-1" type="text/css"></link>
+<script type="text/javascript" src="../../../content/org.eclipse.help/livehelp.js"> </script>
+<script type="text/javascript">
+if( self == top ){
+  var  anchorParam = location.hash.length > 0 ? '\u0026anchor=' + location.hash.substr(1) : '';
+  window.location.replace( "../../../index.jsp?topic=%2FMasterData_Client_Control%2Fhtml%2Far01s05s06s04.html" + anchorParam);
+}
+</script>
+</head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="help_breadcrumbs"><a href="index.html">ODIS Creator Help</a> > <a href="ar01s05.html">5&#46; ODIS Creator Administration Process</a> > <a href="ar01s05s06.html">5&#46;6&#46; Text Library</a></div>
+<div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">5.6.4.&nbsp;Sorting and Filtering in the Text Library</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ar01s05s06s03.html">Prev</a>&nbsp;</td><th width="60%" align="center">5.6.&nbsp;Text Library</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ar01s05s06s05.html">Next</a></td></tr></table><hr></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="textbib.sortieren"></a>5.6.4.&nbsp;Sorting and Filtering in the Text Library</h4></div></div></div>
+            
+            <p>The entries can be sorted and filtered in the "text library" navigator.</p>
+            <p>Like at other points in ODIS Creator, you can sort the text library objects alphabetically using the button in the navigator. As default, the objects are sorted alphanumerically in ascending order, and you can sort the objects in descending order by pressing the button.</p>
+            <p>If you resort the objects, all categories and the text IDs underneath it are always resorted.</p>
+            <p>The filter in the "text library" navigator functions like at other points, such as the <a class="link" href="ar01s07s01s05.html" title="7.1.5.&nbsp;Apply Filter">editor</a>. There is one filter for categories and one for text IDs in the text library.</p>
+            <p>Categories can be filtered according to the following attributes: category name in German or English, creator or last editor. The attributes of text IDs are given in the following table:</p>
+            <p>
+                </p><div class="table"><a name="table.textbib.filter"></a><div class="table-contents">
+                    <table summary="Filter Attributes of Text IDs" border="1"><colgroup><col align="left"><col align="left"><col align="left"></colgroup><thead><tr bgcolor="#EEEEEE"><th align="left">Attribute</th><th align="left">Permitted operation</th><th align="left">Value input</th></tr></thead><tbody valign="top"><tr><td align="left" valign="top">Text ID</td><td align="left" valign="top">=; LIKE; &lt;&gt;</td><td align="left" valign="top">Free text</td></tr><tr><td align="left" valign="top">Version</td><td align="left" valign="top">=; LIKE; &lt;&gt;</td><td align="left" valign="top">Free text</td></tr><tr><td align="left" valign="top">Status</td><td align="left" valign="top">=; &lt;&gt;</td><td align="left" valign="top">
+                                    <p>Selection from range of values:</p>
+                                    <p>
+                                        </p><div class="itemizedlist"><ul type="disc"><li>
+                                                <p>In processing</p>
+                                            </li><li>
+                                                <p>Being completed</p>
+                                            </li><li>
+                                                <p>Confirmed completed</p>
+                                            </li><li>
+                                                <p>Released</p>
+                                            </li></ul></div><p>
+                                    </p>
+                                </td></tr><tr><td align="left" valign="top">Status date</td><td align="left" valign="top">=; &lt;&gt;; &gt;=; &gt;; &lt;=; &lt;</td><td align="left" valign="top">Dialog for date input</td></tr><tr><td align="left" valign="top">Approval date</td><td align="left" valign="top">=; &lt;&gt;; &gt;=; &gt;; &lt;=; &lt;</td><td align="left" valign="top">Dialog for date input</td></tr><tr><td align="left" valign="top">Translation status</td><td align="left" valign="top">=; &lt;&gt;</td><td align="left" valign="top">
+                                    <p>Selection from range of values:</p>
+                                    <p>
+                                        </p><div class="itemizedlist"><ul type="disc"><li>
+                                                <p>&lt;empty&gt;</p>
+                                            </li><li>
+                                                <p>Not translated</p>
+                                            </li><li>
+                                                <p>Ready for translation</p>
+                                            </li><li>
+                                                <p>Complete</p>
+                                            </li></ul></div><p>
+                                    </p>
+                                </td></tr><tr><td align="left" valign="top">Creator</td><td align="left" valign="top">=; LIKE; &lt;&gt;</td><td align="left" valign="top">Free text</td></tr><tr><td align="left" valign="top">Last editor</td><td align="left" valign="top">=; LIKE; &lt;&gt;</td><td align="left" valign="top">Free text</td></tr><tr><td align="left" valign="top">Consistency</td><td align="left" valign="top">=; &lt;&gt;</td><td align="left" valign="top">
+                                    <p>Selection from range of values:</p>
+                                    <p>
+                                        </p><div class="itemizedlist"><ul type="disc"><li>
+                                                <p>Canceled</p>
+                                            </li><li>
+                                                <p>Unchecked</p>
+                                            </li><li>
+                                                <p>In testing</p>
+                                            </li><li>
+                                                <p>Note</p>
+                                            </li><li>
+                                                <p>Warning</p>
+                                            </li><li>
+                                                <p>Error</p>
+                                            </li><li>
+                                                <p>Consistent</p>
+                                            </li></ul></div><p>
+                                    </p>
+                                </td></tr></tbody></table>
+                </div><p class="title"><b>Table&nbsp;28.&nbsp;Filter Attributes of Text IDs</b></p></div><p><br class="table-break">
+            </p>
+            <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="textbib.tabellen.filtern"></a>5.6.4.1.&nbsp;Filter Tables</h5></div></div></div>
+                
+                <p>It is possible to filter the column contents for the following tables.</p>
+                <p>
+                    </p><div class="itemizedlist"><ul type="disc"><li>
+                            <p>Overview of text IDs from this category</p>
+                        </li><li>
+                            <p>Text formatting overview</p>
+                        </li><li>
+                            <p>Overview of usage locations/editing view</p>
+                        </li><li>
+                            <p>Overview of usage locations/function test editor</p>
+                        </li></ul></div><p>
+                </p>
+                <p>
+                    </p><div class="figure"><a name="figure.admin.textbib.filtern"></a><div class="figure-contents">
+                        
+                        <div class="mediaobject"><img src="images/textbib_Verwendung_filtern.png" alt="Filters in the Usage Locations"></div>
+                    </div><p class="title"><b>Figure&nbsp;102.&nbsp;Filters in the Usage Locations</b></p></div><p><br class="figure-break">
+
+                </p>
+                <p>In <a class="xref" href="ar01s05s06s04.html#figure.admin.textbib.filtern" title="Figure&nbsp;102.&nbsp;Filters in the Usage Locations">Figure&nbsp;102, &#8220;Filters in the Usage Locations&#8221;</a>, a column filter for supplemental documents is given in the upper section and column 7 is in the lower section. The known filter label from ODIS Creator is given at the column.</p>
+                <p>To be able to set a column filter, you must select the header of the column to be filtered in the <span class="bold"><strong>filter</strong></span> context menu. All column contents are listed in the open dialog. Duplicate entries in the column are already combined into one entry, disregarding capitalized and lower case letters.</p>
+                <p>There are two available options to filter the column content. For one, you can hide the content that should not be displayed be removing the check mark. For the other, you can limit the content with the search term. Note that the entered search term will be searched for exactly as is. For example, if searching for "following component", it will not show any entry with a word between "following" and "component".</p>
+                <p>The auto filter offers the option to remove an already existing filter again. When entering a search term for this, the currently selected filter quantity are marked and hidden. While a search term is entered, a temporary list is displayed which results from the search term. Two entries are also placed at the beginning of the results list.</p>
+                <p>
+                    </p><div class="itemizedlist"><ul type="disc"><li>
+                            <p><span class="bold"><strong>Select all search results:</strong></span> This corresponds to "Select all" in the unfiltered results list.</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Add the current selection to the filter:</strong></span> With this item, you can add the temporary filter list currently selected in the view, or the existing filter list that existed before entering the search term.</p>
+                        </li></ul></div><p>
+                </p>
+                <p>The filter is set after confirming the dialog. There is no results preview in the table.</p>
+                <p>It is likewise possible to filter multiple columns. The filter will be marked individually for each column. The entries which satisfy both filters will be the result.</p>
+                <p>A set column filter can be removed again via the context menu on the column header with <span class="bold"><strong>Delete filter</strong></span>.</p>
+            </div>
+        </div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ar01s05s06s03.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="ar01s05s06.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="ar01s05s06s05.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">5.6.3.&nbsp;Text ID&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;5.6.5.&nbsp;Translation Process for Text IDs</td></tr></table></div></body></html>

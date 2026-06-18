@@ -1,0 +1,61 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>7.3.2.&nbsp;Full Text Search</title><link rel="stylesheet" href="mystyle.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.73.1"><link rel="start" href="index.html" title="ODIS Creator Help"><link rel="up" href="ar01s07s03.html" title="7.3.&nbsp;Search"><link rel="prev" href="ar01s07s03s01.html" title="7.3.1.&nbsp;Object Search"><link rel="next" href="ar01s07s03s03.html" title="7.3.3.&nbsp;ID Search">
+<script type="text/javascript" src="../../../advanced/synchWithToc.js"></script>
+
+<link rel="stylesheet" href="../../../content/org.eclipse.help.webapp/advanced/breadcrumbs.css" charset="ISO-8859-1" type="text/css"></link>
+<script type="text/javascript" src="../../../content/org.eclipse.help/livehelp.js"> </script>
+<script type="text/javascript">
+if( self == top ){
+  var  anchorParam = location.hash.length > 0 ? '\u0026anchor=' + location.hash.substr(1) : '';
+  window.location.replace( "../../../index.jsp?topic=%2FMasterData_Client_Control%2Fhtml%2Far01s07s03s02.html" + anchorParam);
+}
+</script>
+</head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="help_breadcrumbs"><a href="index.html">ODIS Creator Help</a> > <a href="ar01s07.html">7&#46; ODIS Creator Editing Process</a> > <a href="ar01s07s03.html">7&#46;3&#46; Search</a></div>
+<div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">7.3.2.&nbsp;Full Text Search</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ar01s07s03s01.html">Prev</a>&nbsp;</td><th width="60%" align="center">7.3.&nbsp;Search</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ar01s07s03s03.html">Next</a></td></tr></table><hr></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="redaktion.search.text"></a>7.3.2.&nbsp;Full Text Search</h4></div></div></div>
+			
+			<p>You can select which of the following areas should be searched in using the full text search (see <a class="xref" href="ar01s07s03s02.html#figure.suche" title="Figure&nbsp;229.&nbsp;Full Text Search">Figure&nbsp;229, &#8220;Full Text Search&#8221;</a>):</p>
+			<p>
+				</p><div class="itemizedlist"><ul type="square"><li style="list-style-type: square">
+						<p><span class="bold"><strong>Metadata:</strong></span> search in all object attributes, for example, the comments, version comments, etc.; exceptions are source language display names and the tester description for function codes</p>
+					</li></ul></div><p>
+				</p><div class="itemizedlist"><ul type="disc"><li>
+						<p><span class="bold"><strong>Source language content:</strong></span> search in the content of all source-language objects</p>
+					</li></ul></div><p>
+				</p><div class="itemizedlist"><ul type="disc"><li>
+						<p><span class="bold"><strong>Source language display names:</strong></span> search in the source language display names of all objects</p>
+					</li></ul></div><p>
+				</p><div class="itemizedlist"><ul type="disc"><li>
+						<p><span class="bold"><strong>Translated display names:</strong></span> search in the translated display names of every object that has a translation</p>
+					</li></ul></div><p>
+				</p><div class="itemizedlist"><ul type="disc"><li>
+						<p><span class="bold"><strong>Translated content:</strong></span> search in the content of every translated object</p>
+					</li></ul></div><p>
+			</p>
+			<p>One or more areas can be selected for the full-text search. The search functions similar to a web search. There is the option to search for individual words or multiple words, each with and without placeholders, such as "*". The search for an individual word only displays the results, if a field contains this individual word. It is important to note that when searching for an attribute text, such as the system name, words are separated by a special character (for example "-"). Excluded from this is the special character "_", because this symbol is used very frequently in system names and will represent no word limitation there. For example, if a system name consists of multiple words that are connected with a "_", then the character string will be recognized as one word in the full text search. When searching for multiple words, it can be decided to use a placeholder or not for each individual word.</p>
+			<p>If you would like to do a search with a placeholder, then the word must be placed in " " with the placeholders. It is important for the search that the string of characters without " " must consist of at least three characters (combination of a-z, A-Z and 0-9).</p>
+			<p><span class="emphasis"><em>Example:</em></span> the system name "Passat_06" can be found by searching <span class="bold"><strong>"Passat_06"</strong></span>, <span class="bold"><strong>"Passat*"</strong></span> or <span class="bold"><strong>"Passat*06"</strong></span>, whereas the system name "Passat-06" can also be found when searching for <span class="bold"><strong>Passat</strong></span>. However, if the system name "Passat06" is searched for, it will not be found with <span class="bold"><strong>Passat</strong></span>, but rather only found with <span class="bold"><strong>"Passat*"</strong></span> or <span class="bold"><strong>"Passat06"</strong></span>. The system name "AD-delete-read-DTC memory" can, for example, be found by searching for <span class="bold"><strong>Read DTC memory</strong></span> or <span class="bold"><strong>Read DTC*</strong></span>.</p>
+			<p>Texts that are not contained in the editorial object data are not included in the full-text search, but are rather just referenced:</p>
+			<p>
+				</p><div class="itemizedlist"><ul type="disc"><li>
+						<p>Texts from XML reference tables</p>
+					</li><li>
+						<p>General system texts and vehicle status texts</p>
+					</li><li>
+						<p>Default texts and texts from the text library</p>
+					</li><li>
+						<p>Texts from the master component list</p>
+					</li><li>
+						<p>EFA texts</p>
+					</li><li>
+						<p>Texts from control module descriptions</p>
+					</li></ul></div><p>
+			</p>
+			<p>
+				</p><div class="figure"><a name="figure.suche"></a><div class="figure-contents">
+					
+					<div class="mediaobject"><img src="images/volltextsuche.png" alt="Image: full text search"></div>
+				</div><p class="title"><b>Figure&nbsp;229.&nbsp;Full Text Search</b></p></div><p><br class="figure-break">
+			</p>
+		</div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ar01s07s03s01.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="ar01s07s03.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="ar01s07s03s03.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">7.3.1.&nbsp;Object Search&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;7.3.3.&nbsp;ID Search</td></tr></table></div></body></html>

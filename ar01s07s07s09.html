@@ -1,0 +1,111 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>7.7.9.&nbsp;Control Module Version Groups</title><link rel="stylesheet" href="mystyle.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.73.1"><link rel="start" href="index.html" title="ODIS Creator Help"><link rel="up" href="ar01s07s07.html" title="7.7.&nbsp;Control Module Tree"><link rel="prev" href="ar01s07s07s08.html" title="7.7.8.&nbsp;Using Control Module Descriptions"><link rel="next" href="ar01s07s07s10.html" title="7.7.10.&nbsp;Error Types">
+<script type="text/javascript" src="../../../advanced/synchWithToc.js"></script>
+
+<link rel="stylesheet" href="../../../content/org.eclipse.help.webapp/advanced/breadcrumbs.css" charset="ISO-8859-1" type="text/css"></link>
+<script type="text/javascript" src="../../../content/org.eclipse.help/livehelp.js"> </script>
+<script type="text/javascript">
+if( self == top ){
+  var  anchorParam = location.hash.length > 0 ? '\u0026anchor=' + location.hash.substr(1) : '';
+  window.location.replace( "../../../index.jsp?topic=%2FMasterData_Client_Control%2Fhtml%2Far01s07s07s09.html" + anchorParam);
+}
+</script>
+</head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="help_breadcrumbs"><a href="index.html">ODIS Creator Help</a> > <a href="ar01s07.html">7&#46; ODIS Creator Editing Process</a> > <a href="ar01s07s07.html">7&#46;7&#46; Control Module Tree</a></div>
+<div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">7.7.9.&nbsp;Control Module Version Groups</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ar01s07s07s08.html">Prev</a>&nbsp;</td><th width="60%" align="center">7.7.&nbsp;Control Module Tree</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ar01s07s07s10.html">Next</a></td></tr></table><hr></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="sgbaum.sgvariantengruppe"></a>7.7.9.&nbsp;Control Module Version Groups</h4></div></div></div>
+			
+			<div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="sgbaum.sgvariantengruppe.anlage"></a>7.7.9.1.&nbsp;Creating a Control Module Version Group</h5></div></div></div>
+				
+				<p>Control module version groups are treated the same as a standard editorial object. It is created by an author within an order context under the base version. The system name receives the prefix <span class="bold"><strong>"Group_"</strong></span> by default before the name of the base version. You can change this. There are no other required fields besides the version comments. The control modules version group is to make sure that all DTC memories of a control module version are referenced in one or more sections of a diagnostic object.</p>
+				<p>
+					</p><div class="figure"><a name="figure.sg-baum.sgvargruppe"></a><div class="figure-contents">
+						
+						<div class="mediaobject"><img src="images/sg_vargruppe_undefiniert.png" alt="Image: control module version group while editing"></div>
+					</div><p class="title"><b>Figure&nbsp;275.&nbsp;Control Module Version Group while Editing</b></p></div><p><br class="figure-break">
+				</p>
+				<p>To be able to make a comparison between the use of fault locations in a knowledge base and the fault locations of control module versions, you must first collect them. To do this, you can drag the control module versions and the diagnostic objects per drag and drop to a control module version group. The DTC memories that are assigned to the control module versions will be automatically transferred with. The outcome of these operations can be seen under <a class="xref" href="ar01s07s07s09.html#figure.sg-baum.sgvargruppe" title="Figure&nbsp;275.&nbsp;Control Module Version Group while Editing">Figure&nbsp;275, &#8220;Control Module Version Group while Editing&#8221;</a>.</p>
+			</div>
+			<div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="sgbaum.sgvariantengruppe.anwendung"></a>7.7.9.2.&nbsp;Application of a Control Module Version Group</h5></div></div></div>
+				
+				<p>An analysis is performed after the release of the control module version group. All diagnostic objects given within a control module version group and their subordinate diagnostic objects are searched for fault locations from the control module versions that are included in their suspicion rules. The results are portrayed with colored markings, which can also be seen in <a class="xref" href="ar01s07s07s09.html#figure.sg-baum.sgvargruppe.analyse" title="Figure&nbsp;276.&nbsp;Control Module Version Group After the Analysis">Figure&nbsp;276, &#8220;Control Module Version Group After the Analysis&#8221;</a>. Fault locations without a fill color are used by at least one diagnostic object. Fault locations with a red fill color are not used by any diagnostic objects. Fault locations with a blue fill color were marked by an author as intentionally not linked.</p>
+				<p>
+					</p><div class="figure"><a name="figure.sg-baum.sgvargruppe.analyse"></a><div class="figure-contents">
+						
+						<div class="mediaobject"><img src="images/sg_vargruppe_definiert.png" alt="Image: control module version group after the analysis"></div>
+					</div><p class="title"><b>Figure&nbsp;276.&nbsp;Control Module Version Group After the Analysis</b></p></div><p><br class="figure-break">
+				</p>
+				<p>You can provide a comment for each linked fault location. The comments can be viewed in the &#8220;Used&#8221; table in the editor of the control unit for the variant group. The dialog for editing the comment is displayed when you select the fault location in the navigator below the control unit for the variant group, and then select the value <span class="bold"><strong>&#8220;Edit comment&#8221;</strong></span> in the context menu. If only one fault location is selected, the existing comment is displayed in the dialog for revision. If multiple selections are made, an empty comment field is always displayed after opening the dialog, regardless of whether any comments have previously been entered.</p>
+				<p>
+					</p><div class="figure"><a name="figure.sg-baum.sgvargruppe.kommentar"></a><div class="figure-contents">
+						
+						<div class="mediaobject"><img src="images/sg_vargruppe_kommentar.png" alt="Image: editing the context menu at the fault location for comment"></div>
+					</div><p class="title"><b>Figure&nbsp;277.&nbsp;Editing the Context Menu at Fault Location For Comment</b></p></div><p><br class="figure-break">
+				</p>
+				<p>You can set the mark <span class="bold"><strong>&#8220;intentionally not linked&#8221;</strong></span> if you select the fault location in the navigator under the control module version group and then select the value <span class="bold"><strong>&#8220;intentionally not linked&#8221;</strong></span> in the context menu. This is shown in <a class="xref" href="ar01s07s07s09.html#figure.sg-baum.sgvargruppe.nicht.verlinkt" title="Figure&nbsp;278.&nbsp;Context Menu at Fault Location for Intentionally Not Linked">Figure&nbsp;278, &#8220;Context Menu at Fault Location for Intentionally Not Linked&#8221;</a>. When setting the status, there is the option to write a comment (see <a class="xref" href="ar01s07s07s09.html#figure.sg-baum.sgvargruppe.nicht.verlinkt.kommentar" title="Figure&nbsp;279.&nbsp;Comment Dialog for Intentionally Not Linked Action">Figure&nbsp;279, &#8220;Comment Dialog for Intentionally Not Linked Action&#8221;</a>). If you insert a comment and confirm the dialog by clicking &#8220;OK&#8221;, the comment is applied to all selected relationships. This overwrites any previously inserted comments. If you confirm the dialog by clicking &#8220;Status change only&#8221;, only the status is updated and the comments remain as before.</p>
+				<p>
+					</p><div class="figure"><a name="figure.sg-baum.sgvargruppe.nicht.verlinkt"></a><div class="figure-contents">
+						
+						<div class="mediaobject"><img src="images/sg_vargruppe_nicht_verlinkt.png" alt="Image: context menu at fault location for intentionally not linked"></div>
+					</div><p class="title"><b>Figure&nbsp;278.&nbsp;Context Menu at Fault Location for Intentionally Not Linked</b></p></div><p><br class="figure-break">
+				</p>
+				<p>
+					</p><div class="figure"><a name="figure.sg-baum.sgvargruppe.nicht.verlinkt.kommentar"></a><div class="figure-contents">
+						
+						<div class="mediaobject"><img src="images/sg_vargruppe_nicht_verlinkt_kommentar.png" alt="Figure: comment dialog for intentionally not linked action"></div>
+					</div><p class="title"><b>Figure&nbsp;279.&nbsp;Comment Dialog for Intentionally Not Linked Action</b></p></div><p><br class="figure-break">
+				</p>
+				<p>Since the background job for the analysis of the fault location usage may run into an error, you also have the option to start the test process actively. To do this, select the value <span class="bold"><strong>usage calculation</strong></span> in the context menu in the navigator on the control module version group, as seen in <a class="xref" href="ar01s07s07s09.html#figure.sg-baum.sgvargruppe.ermitteln" title="Figure&nbsp;280.&nbsp;Context Menu at the Control Module Version Group to Initiate the Analysis of Fault Location Usage">Figure&nbsp;280, &#8220;Context Menu at the Control Module Version Group to Initiate the Analysis of Fault Location Usage&#8221;</a>.</p>
+				<p>
+					</p><div class="figure"><a name="figure.sg-baum.sgvargruppe.ermitteln"></a><div class="figure-contents">
+						
+						<div class="mediaobject"><img src="images/sg_vargruppe_ermitteln.png" alt="Image: context menu on the control module version group to initiate the analysis of fault location usage"></div>
+					</div><p class="title"><b>Figure&nbsp;280.&nbsp;Context Menu at the Control Module Version Group to Initiate the Analysis of Fault Location Usage</b></p></div><p><br class="figure-break">
+				</p>
+			</div>
+			<div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="sgbaum.sgvariantengruppe.ueberpruefen"></a>7.7.9.3.&nbsp;Checking Fault Location Usage</h5></div></div></div>
+				
+				<div class="section" lang="en"><div class="titlepage"><div><div><h6 class="title"><a name="sgbaum.sgvariantengruppe.ueberpruefen.dialog"></a>7.7.9.3.1.&nbsp;Dialog for the Usage Status of Fault Locations</h6></div></div></div>
+					
+					<p>In the main menu under <span class="bold"><strong>File &gt; Check DTC usage</strong></span>, you have the option to search for the fault location usage independent of the navigator (see <a class="xref" href="ar01s07s07s09.html#figure.sg-baum.sgvargruppe.verwendung.menu" title="Figure&nbsp;281.&nbsp;Menu for Checking Fault Location Usage">Figure&nbsp;281, &#8220;Menu for Checking Fault Location Usage&#8221;</a>).</p>
+					<p>
+						</p><div class="figure"><a name="figure.sg-baum.sgvargruppe.verwendung.menu"></a><div class="figure-contents">
+							
+							<div class="mediaobject"><img src="images/dtc_verwendungen.png" alt="Image: menu for checking fault location usage"></div>
+						</div><p class="title"><b>Figure&nbsp;281.&nbsp;Menu for Checking Fault Location Usage</b></p></div><p><br class="figure-break">
+					</p>
+					<p>In the dialog for checking fault location usage, you have the option to select through vehicle projects (see <a class="xref" href="ar01s07s07s09.html#figure.sg-baum.sgvargruppe.verwendung.fzp" title="Figure&nbsp;282.&nbsp;Dialog for Fault Location Usage based on a Vehicle Project">Figure&nbsp;282, &#8220;Dialog for Fault Location Usage based on a Vehicle Project&#8221;</a>) and/or base control modules (see <a class="xref" href="ar01s07s07s09.html#figure.sg-baum.sgvargruppe.verwendung.sg" title="Figure&nbsp;283.&nbsp;Dialog for Fault Location Usage based on a Base Control Module">Figure&nbsp;283, &#8220;Dialog for Fault Location Usage based on a Base Control Module&#8221;</a>). You must perform one of the two selection options. You can set the status in the other selection field. You will initiate the search by pressing the <span class="bold"><strong>Display</strong></span> button. By double clicking on a line in the results, you can jump directly to the corresponding location in the control module navigator.</p>
+					<p>
+						</p><div class="figure"><a name="figure.sg-baum.sgvargruppe.verwendung.fzp"></a><div class="figure-contents">
+							
+							<div class="mediaobject"><img src="images/dtc_verwendungsstatus_fzp.png" alt="Image: menu for checking fault location usage"></div>
+						</div><p class="title"><b>Figure&nbsp;282.&nbsp;Dialog for Fault Location Usage based on a Vehicle Project</b></p></div><p><br class="figure-break">
+						</p><div class="figure"><a name="figure.sg-baum.sgvargruppe.verwendung.sg"></a><div class="figure-contents">
+							
+							<div class="mediaobject"><img src="images/dtc_verwendungsstatus_sg.png" alt="Image: menu for checking fault location usage"></div>
+						</div><p class="title"><b>Figure&nbsp;283.&nbsp;Dialog for Fault Location Usage based on a Base Control Module</b></p></div><p><br class="figure-break">
+					</p>
+				</div>
+				<div class="section" lang="en"><div class="titlepage"><div><div><h6 class="title"><a name="sgbaum.sgvariantengruppe.ueberpruefen.excel"></a>7.7.9.3.2.&nbsp;Excel Export for Fault Location Usage Status</h6></div></div></div>
+					
+					<p>You can export the current display for Excel with the button <span class="bold"><strong>Export</strong></span> from <a class="xref" href="ar01s07s07s09.html#figure.sg-baum.sgvargruppe.verwendung.fzp" title="Figure&nbsp;282.&nbsp;Dialog for Fault Location Usage based on a Vehicle Project">Figure&nbsp;282, &#8220;Dialog for Fault Location Usage based on a Vehicle Project&#8221;</a>. The export runs in the background and the dialog from <a class="xref" href="ar01s07s07s09.html#figure.sg-baum.sgvariantengruppe.ueberpruefen.excel.fertig" title="Figure&nbsp;284.&nbsp;Completion Message for the Excel Export of the Usage Status">Figure&nbsp;284, &#8220;Completion Message for the Excel Export of the Usage Status&#8221;</a> will notify you when it has ended. You will find the results in your notifications in the task navigator (see <a class="xref" href="ar01s07s07s09.html#figure.sg-baum.sgvariantengruppe.ueberpruefen.excel.benachrichtigung" title="Figure&nbsp;285.&nbsp;Notification for the Excel Export of the Usage Status">Figure&nbsp;285, &#8220;Notification for the Excel Export of the Usage Status&#8221;</a>). Here you can download it using the entry <span class="bold"><strong>Save results</strong></span> from the context menu.</p>
+					<p>
+						</p><div class="figure"><a name="figure.sg-baum.sgvariantengruppe.ueberpruefen.excel.fertig"></a><div class="figure-contents">
+							
+							<div class="mediaobject"><img src="images/dtc_excel_export_fertig.png" alt="Image: completion message for the usage status Excel export"></div>
+						</div><p class="title"><b>Figure&nbsp;284.&nbsp;Completion Message for the Excel Export of the Usage Status</b></p></div><p><br class="figure-break">
+						</p><div class="figure"><a name="figure.sg-baum.sgvariantengruppe.ueberpruefen.excel.benachrichtigung"></a><div class="figure-contents">
+							
+							<div class="mediaobject"><img src="images/dtc_excel_export_benachrichtigung.png" alt="Image: notification for the usage status Excel export"></div>
+						</div><p class="title"><b>Figure&nbsp;285.&nbsp;Notification for the Excel Export of the Usage Status</b></p></div><p><br class="figure-break">
+					</p>
+					<p>The Excel export, as seen in <a class="xref" href="ar01s07s07s09.html#figure.sg-baum.sgvariantengruppe.ueberpruefen.excel" title="Figure&nbsp;286.&nbsp;Excel Export of Usage Status">Figure&nbsp;286, &#8220;Excel Export of Usage Status&#8221;</a>, also contains the fault location and the IDs of objects in separate columns, in addition to the information from the dialog. You will find information about the selected content at the top.</p>
+					<p>
+						</p><div class="figure"><a name="figure.sg-baum.sgvariantengruppe.ueberpruefen.excel"></a><div class="figure-contents">
+							
+							<div class="mediaobject"><img src="images/dtc_excel_darstellung.png" alt="Image: Excel export of usage status"></div>
+						</div><p class="title"><b>Figure&nbsp;286.&nbsp;Excel Export of Usage Status</b></p></div><p><br class="figure-break">
+					</p>
+				</div>
+			</div>
+		</div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ar01s07s07s08.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="ar01s07s07.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="ar01s07s07s10.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">7.7.8.&nbsp;Using Control Module Descriptions&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;7.7.10.&nbsp;Error Types</td></tr></table></div></body></html>

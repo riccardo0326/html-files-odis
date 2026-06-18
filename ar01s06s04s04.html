@@ -1,0 +1,76 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>6.4.4.&nbsp;Translation Requirements</title><link rel="stylesheet" href="mystyle.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.73.1"><link rel="start" href="index.html" title="ODIS Creator Help"><link rel="up" href="ar01s06s04.html" title="6.4.&nbsp;Translation"><link rel="prev" href="ar01s06s04s03.html" title="6.4.3.&nbsp;Sorting Translations"><link rel="next" href="ar01s06s04s05.html" title="6.4.5.&nbsp;Commissioning Translations Manually">
+<script type="text/javascript" src="../../../advanced/synchWithToc.js"></script>
+
+<link rel="stylesheet" href="../../../content/org.eclipse.help.webapp/advanced/breadcrumbs.css" charset="ISO-8859-1" type="text/css"></link>
+<script type="text/javascript" src="../../../content/org.eclipse.help/livehelp.js"> </script>
+<script type="text/javascript">
+if( self == top ){
+  var  anchorParam = location.hash.length > 0 ? '\u0026anchor=' + location.hash.substr(1) : '';
+  window.location.replace( "../../../index.jsp?topic=%2FMasterData_Client_Control%2Fhtml%2Far01s06s04s04.html" + anchorParam);
+}
+</script>
+</head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="help_breadcrumbs"><a href="index.html">ODIS Creator Help</a> > <a href="ar01s06.html">6&#46; ODIS Creator Order Management Process</a> > <a href="ar01s06s04.html">6&#46;4&#46; Translation</a></div>
+<div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">6.4.4.&nbsp;Translation Requirements</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ar01s06s04s03.html">Prev</a>&nbsp;</td><th width="60%" align="center">6.4.&nbsp;Translation</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ar01s06s04s05.html">Next</a></td></tr></table><hr></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="uebersetzungsbedarfe"></a>6.4.4.&nbsp;Translation Requirements</h4></div></div></div>
+        
+        <p>All released (or confirmed completed, if this is set for the brand) editorial objects and administrative objects, that still do not have a translation for the current version, are initially checked for requirements and can then be automatically or manually sent to translation.</p>
+        <p>A translation requirement folder (see <a class="xref" href="ar01s06s04s04.html#figure.auftragsverwaltung.uebersetzung.bedarfsansicht" title="Figure&nbsp;153.&nbsp;Translation Requirements">Figure&nbsp;153, &#8220;Translation Requirements&#8221;</a>) contains information about location and target language for the editorial objects, as well as version, status, type, source language, translation status, market name, initial deployment date and author of the objects in the requirement folder.</p>
+        <p>If you are assigned to a team with the roll "read-only author" or "author", then you can double click on an editorial object to switch to the corresponding content in the editing view. Analogous to the already existing link functions in other modules, the usage location dialog is also displayed to the user here if the destination of the link cannot be clearly determined (for example, due to reusage).</p>
+        <p>
+            </p><div class="figure"><a name="figure.auftragsverwaltung.uebersetzung.bedarfsansicht"></a><div class="figure-contents">
+                
+                <div class="mediaobject"><img src="images/uebBedarfe.jpg" alt="Image: translation requirements"></div>
+            </div><p class="title"><b>Figure&nbsp;153.&nbsp;Translation Requirements</b></p></div><p><br class="figure-break">
+        </p>
+        <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="zieltermin.uebersetzungsbedarfe"></a>6.4.4.1.&nbsp;Changing the Deadline of Translation Requirements</h5></div></div></div>
+            
+            <p>If translation requirements for editorial objects in this order context are already completed in the system, then the initial deployment date of the order can no longer be changed. The reason is that the order header is locked from revision when it is in this status.</p>
+            <p>If this is the case, a drag and drop mechanism is implemented between the display of translation requirements and the navigation tree in the translation management. Translation coordinators can use this drag and drop mechanism to influence the last possible export data of translation requirements, therefore move the translation requirements from one date to another date or into the requirements folder without a date (undefined). It is also possible to move translation requirements from the requirement folder without a date (undefined) into a requirements folder with a date. (see <a class="xref" href="ar01s06s04s04.html#figure.auftragsverwaltung.uebersetzung.bedarfe" title="Figure&nbsp;154.&nbsp;Drag and Drop of Translation Requirements">Figure&nbsp;154, &#8220;Drag and Drop of Translation Requirements&#8221;</a>)</p>
+            <p>
+                </p><div class="figure"><a name="figure.auftragsverwaltung.uebersetzung.bedarfe"></a><div class="figure-contents">
+                    
+                    <div class="mediaobject"><img src="images/zieltermin_uebBedarfe.jpg" alt="Image: drag and drop of translation requirements"></div>
+                </div><p class="title"><b>Figure&nbsp;154.&nbsp;Drag and Drop of Translation Requirements</b></p></div><p><br class="figure-break">
+            </p>
+            <p>There are some restrictions that are listed in the following:</p>
+            <p>
+                </p><div class="itemizedlist"><ul type="disc"><li>
+                        <p>The drag and drop mechanism only goes over the existing date node in the tree. This means that only the date node specified there (same location and same source/target language combination) can also be used as new dates. It is especially not possible to drag objects to a date, that were deleted from the tree view, because translation requirements are no longer included from previous drag and drop actions. In this way, removed date nodes are then permanently lost as drop targets. For this reason, an info dialog is displayed to the user if a drag and drop action would delete a requirement folder. This dialog gives the user the option to perform or cancel their action.</p>
+                    </li><li>
+                        <p>It is not checked while using the drag and drop mechanism, if the translations of objects for the scheduled market introduction date are made available through the adjustment. The translation coordinator is responsible for the technical correctness of the adjustment. The translation coordinator is particularly responsible for maintaining the scheduled deadlines or to communicate any movement of translations that occurred.</p>
+                    </li></ul></div><p>
+            </p>
+        </div>
+        <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="uebersetzungsbedarfe.zuruecksetzen"></a>6.4.4.2.&nbsp;Resetting Translation Requirements</h5></div></div></div>
+            
+            <p>All existing translation requirements can be deleted for one or more objects. The action can no longer be performed in the object is already in translation for one or more target languages. Objects that are affected by this function are reset back to the initial status of the translation process. The function can only be performed for translation requirements for editorial objects.</p>
+            <p>
+                </p><div class="figure"><a name="figure.auftragsverwaltung.uebersetzung.bedarfe.zurueck"></a><div class="figure-contents">
+                    
+                    <div class="mediaobject"><img src="images/Uebersetzungsbedarf_zuruecksetzen.jpg" alt="Image: resetting translation requirements"></div>
+                </div><p class="title"><b>Figure&nbsp;155.&nbsp;Resetting Translation Requirements</b></p></div><p><br class="figure-break">
+            </p>
+            <p>Resetting translation requirements to administrative objects (such as default texts) is not possible, because there is no defined previous status here as opposed to translation requirements for editorial objects. Translation requirements for administrative objects are always created directly for all group languages.</p>
+            <p>To reset translation requirements, select the desired editorial objects in a requirement package and then select the entry in the context menu "Reset requirements" with the icon <span class="inlinemediaobject"><img src="images/Uebersetzung_zuruecksetzen.png"></span>. This function can also be accessed through the global menu and the toolbar.</p>
+            <p>When the action is performed, all required translations for all objects will be reset, except for required translations that are already in translation. After the action is successfully performed, the ODIS Creator interface is automatically updated.</p>
+        </div>
+        <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="uebersetzungsbedarfe.berechnen"></a>6.4.4.3.&nbsp;Determining Translation Requirements</h5></div></div></div>
+            
+            <p>Decisive for the respective deadline of translation requirements is the order context of the object to be translated. This means that if an object to be translated is linked to a scheduled order, then the deadline for the translation requirements is based on the set initial deployment date. This applies regardless of which location is ultimately assigned to the translation requirement.</p>
+            <p>Translation requirements, also when reusing objects, are always generated only for the target languages, that are necessary due to the links to the basic features and for which the respective editorial object does not have a corresponding translation yet. When reusing editorial objects, for which the user's editing language is still missing, new translation requirements are created for the authoring location. For all other target languages, translation requirements are generated for the user's location.</p>
+            <p>It is technically possible, that a user can reuse an unknown brand object, that is not yet in the user's editing language. The creator location of the respective editorial object being reused always assumes the costs incurred for the translation from the source language of the object to the editing language of the locations reusing it.</p>
+            <div class="section" lang="en"><div class="titlepage"><div><div><h6 class="title"><a name="d4e4903"></a>6.4.4.3.1.&nbsp;Deadline Calculation for Translation Requirements</h6></div></div></div>
+                
+                <p>The initial deployment deadline of the order header is used as the basis for calculating the deadline for translation requirements, if the editorial object to be translated is created in the context of a scheduled order. For this, the requirement deadlines are determined based on the respective translation period, so that the translations scheduled for the initial deployment deadline are returned.</p>
+                <p>If bridge languages are necessary in the translation process, then the deadline for the bridge languages must be set correspondingly, so that there is still enough time after that to translate the subsequent target languages. This regulation applies within the respective location. For the authoring location of an editorial object, the ODIS Creator system makes sure that the deadline for translation requirements correlates to the initial deployment date.</p>
+                <p>When reusing editorial objects across multiple locations, it cannot be ensured that the additional target languages of the location reusing it are available in time for the initial deployment deadline. An integration of set bridge languages across locations is not possible when calculating the deadline. Other deadlines may be necessary for the reused objects through the integration , as for the other objects of the creation location.</p>
+            </div>
+            <div class="section" lang="en"><div class="titlepage"><div><div><h6 class="title"><a name="d4e4908"></a>6.4.4.3.2.&nbsp;Reusing without Creator Usage</h6></div></div></div>
+                
+                <p>It may happen that an editorial object was set up and released by the brand that created it, however has not been used again. The option for a user from another brand to (re)use this object is then technically possible. If the calculation logic for translation requirements is carried out without the initial brand usage, then the other brand location will assume all translation costs incurred.</p>
+                <p>If the object is then used later by the actual creator brand, then this brand must still assume the additional translation costs for the target languages still missing. If a revision relevant to translation occurs later, then the creator brand is again considered as the leading brand.</p>
+            </div>
+        </div>
+    </div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ar01s06s04s03.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="ar01s06s04.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="ar01s06s04s05.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">6.4.3.&nbsp;Sorting Translations&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;6.4.5.&nbsp;Commissioning Translations Manually</td></tr></table></div></body></html>

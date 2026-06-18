@@ -1,0 +1,61 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>5.4.4.&nbsp;Analyzing the Import of Control Module Descriptions</title><link rel="stylesheet" href="mystyle.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.73.1"><link rel="start" href="index.html" title="ODIS Creator Help"><link rel="up" href="ar01s05s04.html" title="5.4.&nbsp;Importing Control Module Descriptions"><link rel="prev" href="ar01s05s04s03.html" title="5.4.3.&nbsp;Observing the Import of Control Module Descriptions"><link rel="next" href="ar01s05s04s05.html" title="5.4.5.&nbsp;Checking the Input Baseline for the Control Module Import">
+<script type="text/javascript" src="../../../advanced/synchWithToc.js"></script>
+
+<link rel="stylesheet" href="../../../content/org.eclipse.help.webapp/advanced/breadcrumbs.css" charset="ISO-8859-1" type="text/css"></link>
+<script type="text/javascript" src="../../../content/org.eclipse.help/livehelp.js"> </script>
+<script type="text/javascript">
+if( self == top ){
+  var  anchorParam = location.hash.length > 0 ? '\u0026anchor=' + location.hash.substr(1) : '';
+  window.location.replace( "../../../index.jsp?topic=%2FMasterData_Client_Control%2Fhtml%2Far01s05s04s04.html" + anchorParam);
+}
+</script>
+</head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="help_breadcrumbs"><a href="index.html">ODIS Creator Help</a> > <a href="ar01s05.html">5&#46; ODIS Creator Administration Process</a> > <a href="ar01s05s04.html">5&#46;4&#46; Importing Control Module Descriptions</a></div>
+<div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">5.4.4.&nbsp;Analyzing the Import of Control Module Descriptions</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ar01s05s04s03.html">Prev</a>&nbsp;</td><th width="60%" align="center">5.4.&nbsp;Importing Control Module Descriptions</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ar01s05s04s05.html">Next</a></td></tr></table><hr></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="sgbimport.analyse"></a>5.4.4.&nbsp;Analyzing the Import of Control Module Descriptions</h4></div></div></div>
+            
+            <p>When the control module import ends, the location administrator team, the group administrator team, and the user who started the import will receive a notification about the end of the import in the order management.</p>
+            <p>If the import is canceled with an error message, the vehicle project subfolders and the vehicle description file will not be deleted.</p>
+            <p>Various log files generate when importing control module descriptions. After the import has completed (see <a class="xref" href="ar01s05s04.html#figure.sgbimport.navigator" title="Figure&nbsp;65.&nbsp;Control module import view">Figure&nbsp;65, &#8220;Control module import view&#8221;</a>), these can be examined through the "Log" interface in the editor or saved in a user-defined folder through the "Download log" interface. The log files are located in the selected folder within the "ecuimportlog.zip" file.</p>
+            <p>There are the following types of log files:</p>
+            <div class="itemizedlist"><ul type="disc"><li>
+                    <p>ecuimport_error_log: contains any errors that occurred during the import.</p>
+                </li><li>
+                    <p>ecuimport_phase_check_error_log: Contains errors that occurred during the import while verifying the checksum.</p>
+                </li><li>
+                    <p>ecuimport_phase_vpt_vrt_error_log: Contains errors that occurred during the import while importing the VRT/ VPT.</p>
+                </li><li>
+                    <p>ecuimport_phase_import_vehicle_project_error_log: Contains the errors that occurred while importing control module extracts.</p>
+                </li><li>
+                    <p>ecuimport_phase_import_vehicle_project_general_log: Contains the progress information that occurred during the import of control module extracts.</p>
+                </li><li>
+                    <p>phase_relation_obj_error_log: Contains the errors that occurred while importing control module extracts.</p>
+                </li><li>
+                    <p>ecuimport_phase_relation_obj_error_log: Contains the progress information that applies during relationship processes of editorial objects.</p>
+                </li><li>
+                    <p>ecuimport_general_log: contains the progress information that occurred during the import.</p>
+                </li><li>
+                    <p>ecuimport_statistics_log: contains the time and quantity information that accrued during the import.</p>
+                </li><li>
+                    <p>ecuimport_ecuupdate_warnings_log: contains any accrued problems during the update of usage locations for control module descriptions. All editorial objects are listed which contain incompatibilities to the control module extracts.</p>
+                </li></ul></div>
+            <p>If an automatic update is not possible due to incompatibilities, then a notification regarding the entry in the log file ecuimport_ecuupdate_warnings_log will also be sent to the team responsible for the respective editorial object. New entries are also created in the consistency check log and in the problems tab for function code entries, as well as for the version being edited (if existing) and for the last risk-released version.</p>
+            <p>The following exceptions apply to editorial objects, which do not have the migration protection flag:</p><div class="itemizedlist"><ul type="disc"><li>
+                        <p>No notifications are created.</p>
+                    </li><li>
+                        <p>No new entries are created in the consistency check logs.</p>
+                    </li><li>
+                        <p>No new entries in the Problems tab are created for function codes.</p>
+                    </li></ul></div>
+            <p>The following rules apply to editorial objects, for which the control module description could be replaced by the new imported version of the control module description:</p><div class="itemizedlist"><ul type="disc"><li>
+                        <p>There is no notification.</p>
+                    </li><li>
+                        <p>No new entries are added to the consistency check log.</p>
+                    </li><li>
+                        <p>No new entries are added to the Problems tab for function codes.</p>
+                    </li><li>
+                        <p>The object version does not change including the version comments. It is merely the usage relationship that is converted to the new version of the control module description.</p>
+                    </li></ul></div><p>
+            </p>
+        </div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ar01s05s04s03.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="ar01s05s04.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="ar01s05s04s05.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">5.4.3.&nbsp;Observing the Import of Control Module Descriptions&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;5.4.5.&nbsp;Checking the Input Baseline for the Control Module Import</td></tr></table></div></body></html>

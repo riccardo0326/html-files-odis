@@ -1,0 +1,48 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>7.7.2.&nbsp;Tree View in the Control Module Tree</title><link rel="stylesheet" href="mystyle.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.73.1"><link rel="start" href="index.html" title="ODIS Creator Help"><link rel="up" href="ar01s07s07.html" title="7.7.&nbsp;Control Module Tree"><link rel="prev" href="ar01s07s07s01.html" title="7.7.1.&nbsp;Importing Control Module Descriptions"><link rel="next" href="ar01s07s07s03.html" title="7.7.3.&nbsp;Object Editor in Control Module Tree">
+<script type="text/javascript" src="../../../advanced/synchWithToc.js"></script>
+
+<link rel="stylesheet" href="../../../content/org.eclipse.help.webapp/advanced/breadcrumbs.css" charset="ISO-8859-1" type="text/css"></link>
+<script type="text/javascript" src="../../../content/org.eclipse.help/livehelp.js"> </script>
+<script type="text/javascript">
+if( self == top ){
+  var  anchorParam = location.hash.length > 0 ? '\u0026anchor=' + location.hash.substr(1) : '';
+  window.location.replace( "../../../index.jsp?topic=%2FMasterData_Client_Control%2Fhtml%2Far01s07s07s02.html" + anchorParam);
+}
+</script>
+</head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="help_breadcrumbs"><a href="index.html">ODIS Creator Help</a> > <a href="ar01s07.html">7&#46; ODIS Creator Editing Process</a> > <a href="ar01s07s07.html">7&#46;7&#46; Control Module Tree</a></div>
+<div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">7.7.2.&nbsp;Tree View in the Control Module Tree</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ar01s07s07s01.html">Prev</a>&nbsp;</td><th width="60%" align="center">7.7.&nbsp;Control Module Tree</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ar01s07s07s03.html">Next</a></td></tr></table><hr></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="sgbaum.baumansicht"></a>7.7.2.&nbsp;Tree View in the Control Module Tree</h4></div></div></div>
+			
+			<p>The control module tree lists all vehicle projects existing in the group under the structure node &#8222;base control modules&#8220;. The base control modules of the respective vehicle project are listed under a vehicle project and are sorted by the diagnostic address. The system name in the tree depends on the abbreviation according to the ASAM standard, for example, &#8222;0001_EnginContrModul1&#8220;. The <span class="bold"><strong>0001</strong></span> represents the diagnostic address and is displayed as a 4-digit hexadecimal number; migrated control module descriptions are an exception to this rule. These can also be 5 digits.</p>
+			<p>The control module versions are listed under the base control modules. The base versions of UDS as well as KWP control modules can be seen on the same level here. The level underneath it contains the ECU versions.</p>
+			<p>You can create any number of additional control module version groups under the UDS base version. This is to check the full use of DTC memories in the knowledge base. You can find additional information about this under <a class="xref" href="ar01s07s07s09.html" title="7.7.9.&nbsp;Control Module Version Groups">Section&nbsp;7.7.9, &#8220;Control Module Version Groups&#8221;</a>.</p>
+			<p>With the equal treatment of the KWP control modules and the UDS control modules, there is a difference now also made between the base and ECU versions. The classification of levels artificially produced here was described by the definition of the keyword log on the base versions level as well as by the definition of the transport log on the ECU versions level. The base version of a KWP control module is here, for example, the version "BV_EinginContrModul1KWP2000", the ECU version of this control module is then for example the version "EV_EnginContrModul1KWP2000CAN20".</p>
+			<p>
+				</p><div class="table"><a name="table.hinweis.sgbaum_benennung"></a><div class="table-contents">
+					<table summary="KWP Name" border="1"><colgroup><col align="center"><col align="left"></colgroup><tbody valign="top"><tr><td align="center" valign="top"><span class="inlinemediaobject"><img src="images/info.png" alt="Note symbol"></span></td><td align="left" valign="top"><span class="bold"><strong>Note:</strong></span> The name of control modules, services, and parameters in KWP have changed completely!</td></tr></tbody></table>
+				</div><p class="title"><b>Table&nbsp;61.&nbsp;KWP Name</b></p></div><p><br class="table-break">
+			</p>
+			<p>The control module descriptions with the <span class="bold"><strong>&#8222;in processing&#8220;</strong></span> status (<a class="link" href="ar01s07s07s02.html#figure.sgbaum_in_progress" title="Figure&nbsp;269.&nbsp;Structure Tree for Control Module Descriptions">1</a>) are offered in a separate structure tree comparable to the tree for Logical Links (<a class="link" href="ar01s07s07s02.html#figure.sgbaum_in_progress" title="Figure&nbsp;269.&nbsp;Structure Tree for Control Module Descriptions">2</a>).</p>
+			<p>
+				</p><div class="figure"><a name="figure.sgbaum_in_progress"></a><div class="figure-contents">
+					
+					<div class="mediaobject"><img src="images/sgbaum_in_bearbeitung.png" alt="Image: the structure tree for control module descriptions"></div>
+				</div><p class="title"><b>Figure&nbsp;269.&nbsp;Structure Tree for Control Module Descriptions</b></p></div><p><br class="figure-break">
+			</p>
+			<p>There are very many control module descriptions in the structure tree from the creation of new versions with every import of UDS control module descriptions. To make the search and use of the current version easier for you, there is the additional filter item <span class="bold"><strong>&#8222;Current&#8220;</strong></span> (see <a class="xref" href="ar01s07s07s02.html#figure.sgbaum_aktuell" title="Figure&nbsp;270.&nbsp;Structure Tree for Current Control Module Descriptions">Figure&nbsp;270, &#8220;Structure Tree for Current Control Module Descriptions&#8221;</a>) in the structure tree tool bar for the control module descriptions. With the activation, the display of control module descriptions is reduced to what is valid at that time. With the deactivation, all control module descriptions referenced in the last productive baseline are displayed. In the test log for the finishing of editorial objects, an entry is composed when control module descriptions are used that are no longer current.</p>
+			<p>
+				</p><div class="figure"><a name="figure.sgbaum_aktuell"></a><div class="figure-contents">
+					
+					<div class="mediaobject"><img src="images/sgbaum_aktuell.png" alt="Image: the structure tree for current control module descriptions"></div>
+				</div><p class="title"><b>Figure&nbsp;270.&nbsp;Structure Tree for Current Control Module Descriptions</b></p></div><p><br class="figure-break">
+			</p>
+			<p>By selecting <span class="bold"><strong>Validity</strong></span> in the navigator menu (<a class="xref" href="ar01s07s07s02.html#figure.sgbaum_aktuell.menu" title="Figure&nbsp;271.&nbsp;Structure Tree for Current Control Module Descriptions with Menu Selection">Figure&nbsp;271, &#8220;Structure Tree for Current Control Module Descriptions with Menu Selection&#8221;</a>), a combined display of control module descriptions currently valid and used in the last production baseline can be seen when <span class="bold"><strong>All</strong></span> is selected.</p>
+			<p>
+				</p><div class="figure"><a name="figure.sgbaum_aktuell.menu"></a><div class="figure-contents">
+					
+					<div class="mediaobject"><img src="images/sgbaum_aktuell_alles.png" alt="Image: the structure tree for current control module descriptions with menu selection"></div>
+				</div><p class="title"><b>Figure&nbsp;271.&nbsp;Structure Tree for Current Control Module Descriptions with Menu Selection</b></p></div><p><br class="figure-break">
+			</p>
+		</div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ar01s07s07s01.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="ar01s07s07.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="ar01s07s07s03.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">7.7.1.&nbsp;Importing Control Module Descriptions&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;7.7.3.&nbsp;Object Editor in Control Module Tree</td></tr></table></div></body></html>

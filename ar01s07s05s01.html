@@ -1,0 +1,41 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>7.5.1. Knowledge Base Root Node</title><link rel="stylesheet" href="mystyle.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.73.1"><link rel="start" href="index.html" title="ODIS Creator Help"><link rel="up" href="ar01s07s05.html" title="7.5. Knowledge base"><link rel="prev" href="ar01s07s05.html" title="7.5. Knowledge base"><link rel="next" href="ar01s07s05s02.html" title="7.5.2. Diagnostic objects">
+<script type="text/javascript" src="../../../advanced/synchWithToc.js"></script>
+
+<link rel="stylesheet" href="../../../content/org.eclipse.help.webapp/advanced/breadcrumbs.css" charset="ISO-8859-1" type="text/css"></link>
+<script type="text/javascript" src="../../../content/org.eclipse.help/livehelp.js"> </script>
+<script type="text/javascript">
+if( self == top ){
+  var  anchorParam = location.hash.length > 0 ? '\u0026anchor=' + location.hash.substr(1) : '';
+  window.location.replace( "../../../index.jsp?topic=%2FMasterData_Client_Control%2Fhtml%2Far01s07s05s01.html" + anchorParam);
+}
+</script>
+</head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="help_breadcrumbs"><a href="index.html">ODIS Creator Help</a> > <a href="ar01s07.html">7&#46; ODIS Creator Editing Process</a> > <a href="ar01s07s05.html">7&#46;5&#46; Knowledge base</a></div>
+<div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">7.5.1. Knowledge Base Root Node</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ar01s07s05.html">Zur&uuml;ck</a>&nbsp;</td><th width="60%" align="center">7.5. Knowledge base</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ar01s07s05s02.html">Weiter</a></td></tr></table><hr></div><div class="section" lang="de"><div class="titlepage"><div><div><h4 class="title"><a name="wissesbasis.wurzelknoten"></a>7.5.1. Knowledge Base Root Node</h4></div></div></div>
+			
+			<p>Every knowledge base has a knowledge base root node. This root node always represents the first level in the knowledge base navigation tree. The respective diagnostic object tree is then spread out under this root node. The function test, that can be in a child relationship to this root node, is declared as a module start and/or module end test (see <a class="xref" href="ar01s07s05s03.html#figure.redaktion.wissensbasis.verwendetbeziehung.wbs.funktionstest" title="Abbildung 263. Specifying Start/Start (background)/End Module">Abbildung&nbsp;263, &#8222;Specifying Start/Start (background)/End Module&#8220;</a>). These function tests are then used as initial or final tests on a vehicle.</p>
+
+			<div class="section" lang="de"><div class="titlepage"><div><div><h5 class="title"><a name="wissensbasis.anlegen"></a>7.5.1.1. Creating a New Knowledge Base Root Node<a class="indexterm" name="d4e11829"></a></h5></div></div></div>
+				
+				<p>You can create a new knowledge base root node by selecting an already existing knowledge base root node and then clicking on the menu item <span class="bold"><strong>New parallel node &gt; Knowledge base</strong></span> in the context menu or click on <span class="bold"><strong>Parallel node &gt; Knowledge base</strong></span> in the Insert selection menu.</p>
+				<p>A new knowledge base root node can also be created without selecting an already existing knowledge base object. For this, the menu item <span class="bold"><strong>Subnode &gt; Knowledge base</strong></span> must be selected in the context menu or in the selection menu.</p>
+				<p>The system name of the knowledge base may not contain any special characters, but rather only consists of the letters A-Z, numbers and underscores. Otherwise, it can cause problems in further processing when resolving the name (for example, when using it as a directory name).</p>
+			</div>
+			<div class="section" lang="de"><div class="titlepage"><div><div><h5 class="title"><a name="wissensbasis.attribute"></a>7.5.1.2. Knowledge Base Root Node Attributes<a class="indexterm" name="d4e11840"></a></h5></div></div></div>
+				
+				<div class="figure"><a name="figure.redaktion.wissensbasis.attribute"></a><div class="figure-contents">
+					
+					<div class="mediaobject"><img src="images/wbs_attribute.png" alt="Image: attribute of a knowledge base root node"></div>
+				</div><p class="title"><b>Abbildung 248. Knowledge Base Root Node Attributes</b></p></div><br class="figure-break">
+				<p><span class="bold"><strong>Migration protection:</strong></span></p>
+				<p>This attribute is explained in <a class="xref" href="ar01s07s01s01.html" title="7.1.1.&nbsp;Creating a New Editorial Object">Section&nbsp;7.1.1, &#8220;Creating a New Editorial Object&#8221;</a>.</p>
+				<p><span class="bold"><strong>Internal:</strong></span></p>
+				<p>The object is indeed prepared, however it is not displayed in ODIS Service on the interface or in the selection of components.</p>
+				<p><span class="bold"><strong>P-differ:</strong></span></p>
+				<p>Specifically, if referenced test programs have been collected at this diagnostic object for a P-differ export.</p>
+				<p><span class="bold"><strong>Remote diagnosis:</strong></span></p>
+				<p>Specifies if the knowledge base should be marked for usage in remote diagnosis. If the attribute is set, the respective object can be included in the export scope for remote diagnosis.</p>
+			</div>
+		</div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ar01s07s05.html">Zur&uuml;ck</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="ar01s07s05.html">Nach oben</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="ar01s07s05s02.html">Weiter</a></td></tr><tr><td width="40%" align="left" valign="top">7.5. Knowledge base&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html">Zum Anfang</a></td><td width="40%" align="right" valign="top">&nbsp;7.5.2. Diagnostic objects</td></tr></table></div></body></html>

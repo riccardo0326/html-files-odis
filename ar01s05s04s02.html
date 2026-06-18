@@ -1,0 +1,52 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>5.4.2.&nbsp;Control Module Import Phases</title><link rel="stylesheet" href="mystyle.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.73.1"><link rel="start" href="index.html" title="ODIS Creator Help"><link rel="up" href="ar01s05s04.html" title="5.4.&nbsp;Importing Control Module Descriptions"><link rel="prev" href="ar01s05s04s01.html" title="5.4.1.&nbsp;Initiating the Import of Control Module Descriptions"><link rel="next" href="ar01s05s04s03.html" title="5.4.3.&nbsp;Observing the Import of Control Module Descriptions">
+<script type="text/javascript" src="../../../advanced/synchWithToc.js"></script>
+
+<link rel="stylesheet" href="../../../content/org.eclipse.help.webapp/advanced/breadcrumbs.css" charset="ISO-8859-1" type="text/css"></link>
+<script type="text/javascript" src="../../../content/org.eclipse.help/livehelp.js"> </script>
+<script type="text/javascript">
+if( self == top ){
+  var  anchorParam = location.hash.length > 0 ? '\u0026anchor=' + location.hash.substr(1) : '';
+  window.location.replace( "../../../index.jsp?topic=%2FMasterData_Client_Control%2Fhtml%2Far01s05s04s02.html" + anchorParam);
+}
+</script>
+</head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="help_breadcrumbs"><a href="index.html">ODIS Creator Help</a> > <a href="ar01s05.html">5&#46; ODIS Creator Administration Process</a> > <a href="ar01s05s04.html">5&#46;4&#46; Importing Control Module Descriptions</a></div>
+<div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">5.4.2.&nbsp;Control Module Import Phases</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ar01s05s04s01.html">Prev</a>&nbsp;</td><th width="60%" align="center">5.4.&nbsp;Importing Control Module Descriptions</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ar01s05s04s03.html">Next</a></td></tr></table><hr></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="sgbimport.start.phasen"></a>5.4.2.&nbsp;Control Module Import Phases</h4></div></div></div>
+            
+            <p>A control module import is divided into three phases that are performed one after the other.</p>
+            <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="sgbimport.start.phasen.pruefsumme"></a>5.4.2.1.&nbsp;Phase 1: Checksum Check</h5></div></div></div>
+                
+                <p>During this phase, any checksums that are present are verified. If the verification of an extract file fails, the import of the surrounding vehicle project will be aborted. The control module import will be aborted completely with an error if all vehicle projects from the import folder are canceled in this way as a result of the check. As long as at least one vehicle project passes this check without errors, the import will continue in the next phase.</p>
+                <p>Each failed verification is written in the log file for this phase (ecuimport_phase_check_error_log).</p>
+            </div>
+
+            <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="sgbimport.start.phasen.importderdateien"></a>5.4.2.2.&nbsp;Phase 2: File Import</h5></div></div></div>
+                
+                <p>During the &#8220;File Import&#8221; phase, VRT/VPT vehicle projects or control module extracts are imported. The following checks are performed:</p>
+                <div class="itemizedlist"><ul type="disc"><li>
+                        <p>Schema violation of VRT/VPT files</p>
+                        <p>The import is aborted completely with an error if only the VRT/VPT files are to be imported. If vehicle project folders are also to be imported, the import will continue in the next phase.</p>
+                        <p>The errors that occur will be logged in "ecuimport_phase_vpt_vrt_error_log&#8221;.</p>
+                    </li><li>
+                        <p>VRT/VPT files not present</p>
+                        <p>If the folder only contains vehicle projects that already exist in the database, i.e. that are known, an import without VRP/VPT files is also possible. If all vehicle projects from the import folder are unknown, then the import will abort completely with an error.</p>
+                        <p>The errors that occur will be logged in "ecuimport_phase_vpt_vrt_error_log&#8221;.</p>
+                    </li><li>
+                        <p>Import of control module extracts</p>
+                        <p>In this phase, the history for incremental control module imports, the schema of the control module extracts, and the relationship between the control modules are checked.</p>
+                        <p>Anomalies or errors that occur will be logged in "ecuimport_phase_vpt_vrt_error_log&#8221;.</p>
+                    </li></ul></div>
+            </div>
+            <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="sgbimport.start.phasen.relationsverarbeitung"></a>5.4.2.3.&nbsp;Phase 3: Processing Relationships between Editorial Objects</h5></div></div></div>
+                
+                <p>The places where vehicle projects are used are updated during this phase.</p>
+                <p>The errors that occur will be logged in "ecuimport_phase_relation_obj_error_log"</p>
+            </div>
+            <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="sgbimport.start.phasen.status"></a>5.4.2.4.&nbsp;Control Module Import Status</h5></div></div></div>
+                
+                <p>If an error occurs in a phase and the import is not aborted completely with an error, this will be signaled by the final import status of &#8220;Completed with errors&#8221;. This status is indicated with a yellow exclamation point in the navigator.</p>
+            </div>
+
+        </div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ar01s05s04s01.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="ar01s05s04.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="ar01s05s04s03.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">5.4.1.&nbsp;Initiating the Import of Control Module Descriptions&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;5.4.3.&nbsp;Observing the Import of Control Module Descriptions</td></tr></table></div></body></html>

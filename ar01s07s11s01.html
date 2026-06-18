@@ -1,0 +1,270 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>7.11.1.&nbsp;Supplementary Document Editor</title><link rel="stylesheet" href="mystyle.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.73.1"><link rel="start" href="index.html" title="ODIS Creator Help"><link rel="up" href="ar01s07s11.html" title="7.11.&nbsp;Editors for Supplemental Documents"><link rel="prev" href="ar01s07s11.html" title="7.11.&nbsp;Editors for Supplemental Documents"><link rel="next" href="ar01s07s11s02.html" title="7.11.2.&nbsp;Hotspot Editor">
+<script type="text/javascript" src="../../../advanced/synchWithToc.js"></script>
+
+<link rel="stylesheet" href="../../../content/org.eclipse.help.webapp/advanced/breadcrumbs.css" charset="ISO-8859-1" type="text/css"></link>
+<script type="text/javascript" src="../../../content/org.eclipse.help/livehelp.js"> </script>
+<script type="text/javascript">
+if( self == top ){
+  var  anchorParam = location.hash.length > 0 ? '\u0026anchor=' + location.hash.substr(1) : '';
+  window.location.replace( "../../../index.jsp?topic=%2FMasterData_Client_Control%2Fhtml%2Far01s07s11s01.html" + anchorParam);
+}
+</script>
+</head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="help_breadcrumbs"><a href="index.html">ODIS Creator Help</a> > <a href="ar01s07.html">7&#46; ODIS Creator Editing Process</a> > <a href="ar01s07s11.html">7&#46;11&#46; Editors for Supplemental Documents</a></div>
+<div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">7.11.1.&nbsp;Supplementary Document Editor</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ar01s07s11.html">Prev</a>&nbsp;</td><th width="60%" align="center">7.11.&nbsp;Editors for Supplemental Documents</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ar01s07s11s02.html">Next</a></td></tr></table><hr></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="zdk"></a>7.11.1.&nbsp;Supplementary Document Editor</h4></div></div></div>
+            
+            <p>The supplementary document editor is an <span class="bold"><strong>internal OC editor</strong></span> to create text content for supplemental documents. Document elements such as text, icons, and references can be added. In most cases, the editor will display the formatted result directly (&#8220;WYSIWYG&#8221; editor, "What you see is what you get&#8221;, similar to Microsoft Word).</p>
+            <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="zdk.oeffnen"></a>7.11.1.1.&nbsp;Opening A Document in the Supplementary Document Editor</h5></div></div></div>
+                
+                <p>In the <span class="bold"><strong>Editing</strong></span> <a class="link" href="ar01s03s02s01.html" title="3.2.1.&nbsp;Views Bar">view</a>, click on the <span class="bold"><strong>Supplemental documents</strong></span> action element. Select the desired document in the supplemental documents navigator and open the corresponding <a class="link" href="ar01s03s02s05.html" title="3.2.5.&nbsp;Editor">revision editor</a>. Click in the gray area of the editor with the right mouse button. Click on the <span class="bold"><strong>Text</strong></span> and <span class="bold"><strong>Edit</strong></span> <a class="link" href="ar01s02s02.html#schaltflaeche">buttons</a> in the context menu (<a class="xref" href="ar01s07s11s01.html#figure.zdkeditor.oeffnen" title="Figure&nbsp;300.&nbsp;Opening the Supplementary Document Editor">Figure&nbsp;300, &#8220;Opening the Supplementary Document Editor&#8221;</a>).</p><div class="figure"><a name="figure.zdkeditor.oeffnen"></a><div class="figure-contents">
+                        
+                        <div class="mediaobject"><img src="images/epic_oeffnen.png" alt="Image: opening the supplementary document editor"></div>
+                    </div><p class="title"><b>Figure&nbsp;300.&nbsp;Opening the Supplementary Document Editor</b></p></div><p><br class="figure-break"></p>
+                <p>The document is opened in the supplementary document editor (<a class="xref" href="ar01s07s11s01.html#figure.zdk.editor" title="Figure&nbsp;301.&nbsp;Supplementary Document Editor">Figure&nbsp;301, &#8220;Supplementary Document Editor&#8221;</a>).</p><div class="figure"><a name="figure.zdk.editor"></a><div class="figure-contents">
+                        
+                        <div class="mediaobject"><img src="images/zdk_editor.png" alt="Image: supplementary document editor"></div>
+                    </div><p class="title"><b>Figure&nbsp;301.&nbsp;Supplementary Document Editor</b></p></div><p><br class="figure-break"></p>
+                <p>The editor is divided into two sections. The upper section of the internal editor contains the field for editing the title (<span class="bold"><strong>Caption</strong></span> XML element), while the lower section contains the field for editing the content. The font, style, color, and font size of the title can be formatted. In addition to the font type, style, color, and formatting, the following elements can be added in the content editor: Table, Anchor, AnchorRef, DocRef, List. Text is formatted and elements are added using buttons that are located to the left of and above the editor field. Many of the formatting options are similar to editing texts within function code dialogs (see <a class="xref" href="ar01s07s14s07.html" title="7.14.7.&nbsp;Editing Text">Section&nbsp;7.14.7, &#8220;Editing Text&#8221;</a>).</p>
+                <p>First, the <span class="bold"><strong>cursor</strong></span> (insertion symbol) must be at the desired input location in the document. To do this, use the mouse to click at the respective point in the document.</p>
+                <div class="section" lang="en"><div class="titlepage"><div><div><h6 class="title"><a name="zdk.transformation"></a>7.11.1.1.1.&nbsp;Conversion of Supplementary Document Content</h6></div></div></div>
+                    
+                    <p>When supplementary document content is opened in the internal editor for the first time, a conversion may be needed. The conversion ensures that certain XML elements are modified so that they can be processed by the internal editor. The display of texts in the diagnostic procedure is hardly changed during the conversion.</p>
+                    <p>In detail, the conversion involves the following elements:</p><div class="itemizedlist"><ul type="disc"><li>
+                                <p>ANSI characters instead of root elements</p>
+                                <p>The "Caution&#8221;, &#8220;Information&#8221;, and &#8220;Attention&#8221; XML elements that are defined in the upper location of the schema are replaced with ANSI symbols that have the same values. When this happens, the XML element</p>
+                                <div class="itemizedlist"><ul type="circle"><li>
+                                        <p>&#8220;Information&#8221; is replaced with the ANSI symbol &#8220;additional information&#8221;</p>
+                                    </li><li>
+                                        <p>&#8220;Caution&#8221; is replaced with the ANSI symbol &#8220;Note&#8221;</p>
+                                    </li><li>
+                                        <p>&#8220;Attention&#8221; is replaced with the ANSI symbol &#8220;Danger&#8221;</p>
+                                    </li></ul></div>
+                                <p>The text that is present is carried over when these elements are replaced.</p>
+                            </li><li>
+                                <p>Table layout information</p>
+                                <p>Cells that are combined into a row in a table using the &#8220;colspan&#8221; attribute cannot be edited in the internal editor. Therefore, this attribute is ignored. As a result, the display of table content may shift.</p>
+                            </li></ul></div><p>
+                    </p>
+                </div>
+            </div>
+
+            <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="zdk.kombiniertesspeichern"></a>7.11.1.2.&nbsp;Combined Save for Supplementary Documents</h5></div></div></div>
+                
+                <p>This function is similar to the Save function, except the linked object properties editor is also saved. By saving the object properties editor, the supplementary document is saved on the ODIS Creator server. You can continue working directly after the combined save: the supplementary document remains open and in the "In editing" status.</p>
+                <p>To be able to perform a combined save on a supplementary document, all mandatory fields must be filled out and changes must be made to the supplementary document. If a supplementary document is open, a combined save can be performed using the file menu and the toolbar.</p>
+                <p>
+                    </p><div class="figure"><a name="zdk.kombiniertesspeichern.image"></a><div class="figure-contents">
+                        
+                        <div class="mediaobject"><img src="images/kombiniertes-speichern-zdk.png" alt="Illustration: combined save of supplementary documents"></div>
+                    </div><p class="title"><b>Figure&nbsp;302.&nbsp;Combined Save of Supplementary Documents</b></p></div><p><br class="figure-break">
+                </p>
+            </div>
+
+            <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="zdk.textsize"></a>7.11.1.3.&nbsp;Changing Font Size</h5></div></div></div>
+                
+                <p>The text in auxiliary documents can be written in various font sizes. In contrast to texts in function codes (where only lower case and upper case font is possible), eleven different font sizes are available. The user can select any font size between 10 and 20 using a combo box.</p>
+                <p>The display in the combo box always represents the font size for the character to the left of the current cursor position. The exceptions to this are tables, special characters, and the cursor position 0 (at the beginning of a text field), where the selection will always show the value for the previous cursor position.</p>
+            </div>
+
+            <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="zdk.anchor"></a>7.11.1.4.&nbsp;Adding an Anchor</h5></div></div></div>
+                
+                <p>Pressing the &#8220;Anchor&#8221; button adds an anchor to the document. In the diagnostic process display, an anchor element serves as the target for a link within an document. The targets are not visible in the displayed document, but then can be focused on by selecting a corresponding anchor-ref.</p>
+                <div class="figure"><a name="figure.zdk.anchor"></a><div class="figure-contents">
+                    
+                    <div class="mediaobject"><img src="images/add_anchor.png" alt="Image: adding anchor"></div>
+                </div><p class="title"><b>Figure&nbsp;303.&nbsp;Adding Anchor</b></p></div><br class="figure-break">
+                <p>The name of the anchor must be specified.</p>
+                <div class="figure"><a name="figure.zdk.anchor.name"></a><div class="figure-contents">
+                    
+                    <div class="mediaobject"><img src="images/add_anchor_name.png" alt="Image: anchor name"></div>
+                </div><p class="title"><b>Figure&nbsp;304.&nbsp;Anchor Name</b></p></div><br class="figure-break">
+                <p>When the anchor name is entered, an anchor symbol appears in the editor interface.</p>
+                <div class="figure"><a name="figure.zdk.anchor.symbol"></a><div class="figure-contents">
+                    
+                    <div class="mediaobject"><img src="images/add_anchor_symbol.png" alt="Image: anchor symbol"></div>
+                </div><p class="title"><b>Figure&nbsp;305.&nbsp;Anchor Symbol</b></p></div><br class="figure-break">
+                <p>To edit an anchor, you must click the element to be edited with the mouse, then right-click and select the command "Edit anchor&#8221; from the context menu. When a menu item is selected, the filled-in dialog in which the anchor will be edited appears. <span class="bold"><strong>Caution:</strong></span> when an anchor ID is edited, anchor refs that already exist and that link to the anchor ID may be invalid. They must be edited or deleted before saving.</p>
+            </div>
+            <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="zdk.anchor.ref"></a>7.11.1.5.&nbsp;Adding an AnchorRef</h5></div></div></div>
+                
+                <p>To add an AnchorRef, first the anchor itself must be defined. Then, pressing the &#8220;AnchorRef&#8221; button adds an AnchorRef to the document. AnchorRef elements have displayed text and the ID of the referenced anchor that should be focused on when the link is used.</p>
+                <p>Any number of AnchorRefs can link to a single anchor, for example to allow the user to jump back to the beginning from certain places in the document.</p>
+                <div class="figure"><a name="figure.zdk.anchor.ref"></a><div class="figure-contents">
+                    
+                    <div class="mediaobject"><img src="images/add_anchor_ref.png" alt="Image: adding AnchorRef"></div>
+                </div><p class="title"><b>Figure&nbsp;306.&nbsp;Adding AnchorRef</b></p></div><br class="figure-break">
+                <p>The "Reference&#8221; to the anchor that has already been created and the &#8220;Link text&#8221; must be specified in a separate dialog.</p>
+                <div class="figure"><a name="figure.zdk.anchor.ref.link"></a><div class="figure-contents">
+                    
+                    <div class="mediaobject"><img src="images/add_anchor_ref_link.png" alt="Image: AnchorRef link"></div>
+                </div><p class="title"><b>Figure&nbsp;307.&nbsp;AnchorRef Link</b></p></div><br class="figure-break">
+                <p>If everything is entered correctly, an AnchorRef symbol will appear in the editor interface.</p>
+                <div class="figure"><a name="figure.zdk.anchor.ref.symbol"></a><div class="figure-contents">
+                    
+                    <div class="mediaobject"><img src="images/add_anchor_ref_symbol.png" alt="Image: AnchorRef symbol"></div>
+                </div><p class="title"><b>Figure&nbsp;308.&nbsp;AnchorRef Symbol</b></p></div><br class="figure-break">
+                <p>To edit an AnchorRef, you must click the reference to be edited with the mouse, then right-click and select the command "Edit anchor reference&#8221; from the context menu. When a menu item is selected, the filled-in dialog in which the anchor reference will be edited appears.</p>
+            </div>
+            <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="zdk.doc.ref"></a>7.11.1.6.&nbsp;Adding a DocRef</h5></div></div></div>
+                
+                <p>Pressing the &#8220;DocRef&#8221; button adds a DocRef to the document. DocRef elements are used to generate references to external documents within a supplementary document. Currently, only WWW references are permitted.</p>
+                <div class="figure"><a name="figure.zdk.doc.ref"></a><div class="figure-contents">
+                    
+                    <div class="mediaobject"><img src="images/add_docref.png" alt="Image: adding DocRef"></div>
+                </div><p class="title"><b>Figure&nbsp;309.&nbsp;Adding DocRef</b></p></div><br class="figure-break">
+                <p>The document category and the external reference target must be specified in a separate dialog.</p>
+                <div class="figure"><a name="figure.zdk.doc.ref.edit"></a><div class="figure-contents">
+                    
+                    <div class="mediaobject"><img src="images/add_docref_edit.png" alt="Image: DocRef category/reference"></div>
+                </div><p class="title"><b>Figure&nbsp;310.&nbsp;DocRef Category/Reference</b></p></div><br class="figure-break">
+                <p>If everything is entered correctly, a DocRef symbol will appear in the editor interface.</p>
+                <div class="figure"><a name="figure.zdk.doc.ref.symbol"></a><div class="figure-contents">
+                    
+                    <div class="mediaobject"><img src="images/add_docref_symbol.png" alt="Image: DocRef symbol"></div>
+                </div><p class="title"><b>Figure&nbsp;311.&nbsp;DocRef Symbol</b></p></div><br class="figure-break">
+                <p>To edit a DocRef, you must click the reference to be edited with the mouse, then right-click and select the command "Edit document reference&#8221; from the context menu.</p>
+                <div class="figure"><a name="figure.zdk.doc.ref.edit.docref.select"></a><div class="figure-contents">
+                    
+                    <div class="mediaobject"><img src="images/docRef_edit_menu.png" alt="Image: selecting the DocRef menu"></div>
+                </div><p class="title"><b>Figure&nbsp;312.&nbsp;Selecting the DocRef Menu</b></p></div><br class="figure-break">
+                <p>When a menu item is selected, the filled-in dialog in which the anchor reference will be edited appears.</p>
+                <div class="figure"><a name="figure.zdk.doc.ref.edit.docref.window"></a><div class="figure-contents">
+                    
+                    <div class="mediaobject"><img src="images/docRef_edit_menu_window.png" alt="Image: DocRef editor window"></div>
+                </div><p class="title"><b>Figure&nbsp;313.&nbsp;DocRef Editor Window</b></p></div><br class="figure-break">
+            </div>
+
+            <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="zdk.list"></a>7.11.1.7.&nbsp;Working with a List in the Supplementary Document Editor</h5></div></div></div>
+                
+                <p>Lists within supplementary documents are edited according to the WYSIWYG approach. This means that the visible elements in a list in the editor are also displayed that way in the operating system.</p>
+
+                <div class="section" lang="en"><div class="titlepage"><div><div><h6 class="title"><a name="zdk.list.create"></a>7.11.1.7.1.&nbsp;Creating a New List</h6></div></div></div>
+                    
+                    <p>There is a button in the toolbar for creating a new list. Pressing this button declares the current line in the document where the cursor is located as a list. If more than one line is selected in the editor, then all lines will be declared as a list. Each of the lines will form its own entry in the list.</p>
+                    <div class="figure"><a name="figure.zdk.list"></a><div class="figure-contents">
+                        
+                        <div class="mediaobject"><img src="images/add_list.png" alt="Image: adding a list"></div>
+                    </div><p class="title"><b>Figure&nbsp;314.&nbsp;Adding a List</b></p></div><br class="figure-break">
+                    <p>The list is laid out with bullet points that follow one after the other.</p>
+                    <p>The following items may not be used within a list:</p>
+
+                    <div class="itemizedlist"><ul type="disc"><li>
+                            <p>ANSI characters</p>
+                        </li><li>
+                            <p>Tables</p>
+                        </li><li>
+                            <p>Icons</p>
+                        </li></ul></div>
+                    <p>Note: if tables are added into lists using &#8220;Default text with table&#8221;, this may shift the display of the list in the operating system.</p>
+                    <div class="figure"><a name="figure.zdk.list.symbol"></a><div class="figure-contents">
+                        
+                        <div class="mediaobject"><img src="images/add_list_symbol.png" alt="Image: list symbol"></div>
+                    </div><p class="title"><b>Figure&nbsp;315.&nbsp;List Symbol</b></p></div><br class="figure-break">
+                </div>
+                <div class="section" lang="en"><div class="titlepage"><div><div><h6 class="title"><a name="zdk.list.delete"></a>7.11.1.7.2.&nbsp;Deleting a List</h6></div></div></div>
+                    
+                    <p>A list and its content can be completely deleted To do this, the user must mark the entire list and press the Delete button. A list bullet may remain, depending on how much is marked (if the line break for the last list item is included or not). It can be used as the basis for a new list. To remove the last bullet, the user must place the cursor in the line with the bullet and press the &#8220;Delete&#8221; button. The "Backspace&#8221; button moves the bullet up on line, if that line was previously empty. Otherwise, the bullet will be deleted.</p>
+                </div>
+                <div class="section" lang="en"><div class="titlepage"><div><div><h6 class="title"><a name="zdk.list.work"></a>7.11.1.7.3.&nbsp;Working with a List</h6></div></div></div>
+                    
+                    <div class="itemizedlist"><ul type="disc"><li>
+                            <p><span class="bold"><strong>New List Items</strong></span></p>
+                            <p>New list items can be created by pressing the Enter key. The bullets in the display indicate which lines are currently contained in the list. The lines directly below an existing list may be marked with a bullet to signal to the user that the line is empty and could possibly be used as a list item.</p>
+                            <p>If there is text in the line after the cursor when the Enter key is pressed, then that text will be turned into a new list item. You can also create empty list items. They will be kept and will then be displayed in the operating system as bullets without text. When creating empty list items, you must follow the requirements fro ending a list (see below).</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Deleting List Items</strong></span></p>
+                            <p>List items can be deleted by pressing the delete keys (Delete or Backspace). The cursor must be at the beginning or end of the line when doing so. The text content of the lines will then be combined into a single list item.</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Ending a List</strong></span></p>
+                            <p>In order to resume writing with normal text after the end of a list, the list must be ended. A list is ended when the user is in a blank line of the list and presses the Enter key again. If there are any items in the list after that, they will be &#8220;delisted&#8221;, meaning they will no longer be a part of the list and will not have bullets in front of them.</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Copying a List</strong></span></p>
+                            <p>If text is copied from one or more list items, it can be pasted into another location. If the location where it is pasted is in the same document, then the text will be inserted as a list.</p>
+                        </li><li>
+                            <p><span class="bold"><strong>Formatting List Entries</strong></span></p>
+                            <p>Users can format the text in list elements as they like. The same options as with normal text are available, such as font type, font size, bold, italics, etc. The formatting can be applied before typing or by selecting existing text.</p>
+                        </li></ul></div>
+                </div>
+                <div class="section" lang="en"><div class="titlepage"><div><div><h6 class="title"><a name="zdk.list.bullets"></a>7.11.1.7.4.&nbsp;Working with Different Bullets in a List</h6></div></div></div>
+                    
+                    <p>There are seven different bullets available in ODIS Creator For displaying lists. The default &#8220;dot&#8221; is always used in new lists. You can change that if desired using the context menu.</p>
+                    <div class="figure"><a name="figure.zdk.list.bulletcontext"></a><div class="figure-contents">
+                        
+                        <div class="mediaobject"><img src="images/change_list_symbol.png" alt="Image: changing bullets"></div>
+                    </div><p class="title"><b>Figure&nbsp;316.&nbsp;Context Menu: Changing Bullets</b></p></div><br class="figure-break">
+
+                    <p>The possible bullets are:</p>
+                    <div class="itemizedlist"><ul type="disc"><li>
+                            <p>Dot (default)</p>
+                        </li><li>
+                            <p>Circle</p>
+                        </li><li>
+                            <p>Square</p>
+                        </li><li>
+                            <p>Arabic numerals</p>
+                        </li><li>
+                            <p>Roman numerals</p>
+                        </li><li>
+                            <p>Lower case letters</p>
+                        </li><li>
+                            <p>Upper case letters</p>
+                        </li></ul></div>
+                    <div class="figure"><a name="figure.zdk.list.bulletdialog"></a><div class="figure-contents">
+                        
+                        <div class="mediaobject"><img src="images/change_list_symbol_dialog.png" alt="Image: changing bullets"></div>
+                    </div><p class="title"><b>Figure&nbsp;317.&nbsp;Dialog: Changing Bullets</b></p></div><br class="figure-break">
+                </div>
+            </div>
+            <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="zdk.textlib"></a>7.11.1.8.&nbsp;Using the Text Library</h5></div></div></div>
+                
+                <p>The text library is available in the internal auxiliary document editor. They can be used to add TextIDs into the auxiliary document using a selection dialog.</p>
+                <p>The following restrictions apply:</p><div class="itemizedlist"><ul type="disc"><li>
+                            <p>Placeholders cannot be used.</p>
+                        </li><li>
+                            <p>TextIDs cannot be added within lists.</p>
+                        </li></ul></div><p>Otherwise, all text library functions, such as those available in the function test editor, are available. Adding new text or changing text is possible.</p>
+            </div>
+            <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="zdk.variables"></a>7.11.1.9.&nbsp;Using Variables in the Supplementary Document Editor</h5></div></div></div>
+                
+                <p>Variables (placeholders) for parameters (values from function codes) can be added in the internal auxiliary document editor (manually or using a dialog. Refer to <a class="xref" href="ar01s07s11s01.html#figure.zdk.AssistentVar" title="Figure&nbsp;319.&nbsp;Adding Placeholders with a Dialog">Figure&nbsp;319, &#8220;Adding Placeholders with a Dialog&#8221;</a>). The placeholders must be specified as follows: "%Placeholder" (for specifying leading zeros or also "%0.2Placeholder&#8221; for digits after the decimal point). Placeholders must begin with a letter. The rest may contain alphanumeric characters and &#8220;_&#8221; (umlauts are not permitted).</p>
+                <p>If a percentage sign is placed in front of a &#8220;\&#8221;, it does not function as a placeholder.</p>
+                <p>Placeholder names can be ended with the following characters:</p><div class="itemizedlist"><ul type="disc"><li>
+                            <p>Spaces</p>
+                        </li><li>
+                            <p>Line break</p>
+                        </li><li>
+                            <p>Tables</p>
+                        </li><li>
+                            <p>Icons</p>
+                        </li><li>
+                            <p>Symbols (alpha, beta, etc.)</p>
+                        </li><li>
+                            <p>End of the document</p>
+                        </li></ul></div><p>Placeholders can be used in any location except within an AnchorRef and DocRef.</p>
+                <div class="figure"><a name="figure.zdk.variables"></a><div class="figure-contents">
+                    
+                    <div class="mediaobject"><img src="images/add_variables_zdk.png" alt="Illustration: adding placeholders"></div>
+                </div><p class="title"><b>Figure&nbsp;318.&nbsp;Adding Placeholders</b></p></div><br class="figure-break">
+                <div class="figure"><a name="figure.zdk.AssistentVar"></a><div class="figure-contents">
+                    
+                    <div class="mediaobject"><img src="images/add_variables_dialog_zdk.png" alt="Image: adding placeholders with a dialog"></div>
+                </div><p class="title"><b>Figure&nbsp;319.&nbsp;Adding Placeholders with a Dialog</b></p></div><br class="figure-break">
+                <p>When saving, placeholders with the same name are checked for the same formatting. Placeholders that have the same name but differing formatting are not permitted.</p>
+                <p>
+                    </p><div class="figure"><a name="figure.zdk.validateFormat"></a><div class="figure-contents">
+                        
+                        <div class="mediaobject"><img src="images/zdk_var_validate_format.png" alt="Image: validating placeholder formatting in the auxiliary document editor"></div>
+                    </div><p class="title"><b>Figure&nbsp;320.&nbsp;Validating Placeholder Formatting in the Auxiliary Document Editor</b></p></div><p><br class="figure-break">
+                </p>
+
+                <p>Variables and default text links are checked for the correct formatting when saving. Only fully-formatted or unformatted variables and text links are permitted. For example, if a variable is formatted partially as "red&#8221; and partially as &#8220;blue", you will receive an error message and changes will not be saved.</p>
+                <p>
+                    </p><div class="figure"><a name="figure.zdk.validate"></a><div class="figure-contents">
+                        
+                        <div class="mediaobject"><img src="images/zdk_var_validate.png" alt="Illustration: validating variables in the supplementary document editor"></div>
+                    </div><p class="title"><b>Figure&nbsp;321.&nbsp;Validating Variables in the Supplementary Document Editor</b></p></div><p><br class="figure-break">
+                </p>
+            </div>
+        </div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ar01s07s11.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="ar01s07s11.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="ar01s07s11s02.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">7.11.&nbsp;Editors for Supplemental Documents&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;7.11.2.&nbsp;Hotspot Editor</td></tr></table></div></body></html>

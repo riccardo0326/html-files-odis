@@ -1,0 +1,66 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>6.4.&nbsp;Translation</title><link rel="stylesheet" href="mystyle.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.73.1"><link rel="start" href="index.html" title="ODIS Creator Help"><link rel="up" href="ar01s06.html" title="6.&nbsp;ODIS Creator Order Management Process"><link rel="prev" href="ar01s06s03s03.html" title="6.3.3.&nbsp;Text request status"><link rel="next" href="ar01s06s04s01.html" title="6.4.1.&nbsp;Define Translation Parameters">
+<script type="text/javascript" src="../../../advanced/synchWithToc.js"></script>
+
+<link rel="stylesheet" href="../../../content/org.eclipse.help.webapp/advanced/breadcrumbs.css" charset="ISO-8859-1" type="text/css"></link>
+<script type="text/javascript" src="../../../content/org.eclipse.help/livehelp.js"> </script>
+<script type="text/javascript">
+if( self == top ){
+  var  anchorParam = location.hash.length > 0 ? '\u0026anchor=' + location.hash.substr(1) : '';
+  window.location.replace( "../../../index.jsp?topic=%2FMasterData_Client_Control%2Fhtml%2Far01s06s04.html" + anchorParam);
+}
+</script>
+</head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="help_breadcrumbs"><a href="index.html">ODIS Creator Help</a> > <a href="ar01s06.html">6&#46; ODIS Creator Order Management Process</a></div>
+<div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">6.4.&nbsp;Translation</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ar01s06s03s03.html">Prev</a>&nbsp;</td><th width="60%" align="center">6.&nbsp;ODIS Creator Order Management Process</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ar01s06s04s01.html">Next</a></td></tr></table><hr></div><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a name="auftragsverwaltung.uebersetzung"></a>6.4.&nbsp;Translation</h3></div></div></div>
+        
+        <p>In translation management through ODIS Creator, brand and language-specific translations can be commissioned to a translation portal outside of ODIS Creator. A translation order can be created automatically by ODIS Creator or manually by a translation coordinator.</p>
+        <p>A translation is necessary, if an editorial object is released and newer texts or text files are kept the same as their previous version, if new target markets with additional languages are set or if a new language is added to a target market.</p>
+        <p>The allocation of an editorial object in the equipment network determines which target languages are relevant for it. A knowledge base contains its target languages from the linked vehicle model. A diagnostic object and all linked primary and secondary objects receive the target languages as follows:</p>
+        <p>
+            </p><div class="itemizedlist"><ul type="disc"><li>
+                    <p>If an engine is not given as a child object of the diagnostic object to be considered, then the calculation of target languages is done through the vehicle model of the knowledge base.</p>
+                </li><li>
+                    <p>If there are one or more engine nodes as child nodes, the union of the languages of the engine object is considered for the calculation of the target languages of the diagnostic object.</p>
+                </li></ul></div><p>
+        </p>
+        <p>As a general rule, a translation is performed for each released version of an editorial object. For specific brands, the translation process may already be performed for objects in the &#8220;Confirmed completed&#8221; status. This brand-specific modification does not change the actual course of the translation process. Excluded from this in both cases are versions in which the translation-relevant contents were not changed.</p>
+        <p>
+            </p><div class="itemizedlist"><ul type="disc"><li>
+                    <p>Translation packages are automatically created based on a specific retention time or when exceeding a certain volume.</p>
+                </li><li>
+                    <p>Translation coordinators can also manually order translation packages in order to make translations available quickly in a market.</p>
+                </li></ul></div><p>
+        </p>
+        <p>
+            </p><div class="figure"><a name="figure.auftragsverwaltung.uebersetzung"></a><div class="figure-contents">
+                
+                <div class="mediaobject"><img src="images/AuftragsverwaltungUebersetzung.png" alt="Image: translation overview"></div>
+            </div><p class="title"><b>Figure&nbsp;147.&nbsp;Translation Overview</b></p></div><p><br class="figure-break">
+        </p>
+        <p>
+            </p><div class="table"><a name="table.hinweis.uebersetzung"></a><div class="table-contents">
+                <table summary="Note for Translation" border="1"><colgroup><col align="center"><col align="left"></colgroup><tbody valign="top"><tr><td align="center" valign="top"><span class="inlinemediaobject"><img src="images/info.png" alt="Note symbol"></span></td><td align="left" valign="top"><span class="bold"><strong>Note:</strong></span> Adding new dependencies (for example, through new markets) to editing locations other than the original authoring location may result in a new translation requirement for a document that has already existed for a long time. This will then be added to the involved editing location and also specified there in the navigator.</td></tr></tbody></table>
+            </div><p class="title"><b>Table&nbsp;33.&nbsp;Note for Translation</b></p></div><p><br class="table-break">
+        </p>
+        <p>For the clone language to be taken into consideration, it must be selected for the location in the Administration area under &#8220;Master data -&gt; Location data -&gt; Clone languages&#8221;. After that, manual packages that include the clone languages can be compiled.</p>
+        <p>
+            </p><div class="figure"><a name="figure.auftragsverwaltung.uebersetzung.clone.admin"></a><div class="figure-contents">
+                
+                <div class="mediaobject"><img src="images/clonesprache_konfiguration.png" alt="Image: clone language translation note"></div>
+            </div><p class="title"><b>Figure&nbsp;148.&nbsp;Clone Language Translation Note</b></p></div><p><br class="figure-break">
+        </p>
+        <p>If the target language is set as a cloned language in the clone language settings for the affected location, the translation status of the associated clone language will be adopted.</p>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ar01s06s03s03.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="ar01s06.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="ar01s06s04s01.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">6.3.3.&nbsp;Text request status&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;6.4.1.&nbsp;Define Translation Parameters</td></tr></table></div></body></html>

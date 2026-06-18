@@ -1,0 +1,460 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>7.15.5.&nbsp;Running the Debugger</title><link rel="stylesheet" href="mystyle.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.73.1"><link rel="start" href="index.html" title="ODIS Creator Help"><link rel="up" href="ar01s07s15.html" title="7.15.&nbsp;Debugger (Integrated Operating System)"><link rel="prev" href="ar01s07s15s04.html" title="7.15.4.&nbsp;Actions in Debug Mode"><link rel="next" href="ar01s07s15s06.html" title="7.15.6.&nbsp;Break Points View">
+<script type="text/javascript" src="../../../advanced/synchWithToc.js"></script>
+
+<link rel="stylesheet" href="../../../content/org.eclipse.help.webapp/advanced/breadcrumbs.css" charset="ISO-8859-1" type="text/css"></link>
+<script type="text/javascript" src="../../../content/org.eclipse.help/livehelp.js"> </script>
+<script type="text/javascript">
+if( self == top ){
+  var  anchorParam = location.hash.length > 0 ? '\u0026anchor=' + location.hash.substr(1) : '';
+  window.location.replace( "../../../index.jsp?topic=%2FMasterData_Client_Control%2Fhtml%2Far01s07s15s05.html" + anchorParam);
+}
+</script>
+</head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="help_breadcrumbs"><a href="index.html">ODIS Creator Help</a> > <a href="ar01s07.html">7&#46; ODIS Creator Editing Process</a> > <a href="ar01s07s15.html">7&#46;15&#46; Debugger &#40;Integrated Operating System&#41;</a></div>
+<div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">7.15.5.&nbsp;Running the Debugger</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ar01s07s15s04.html">Prev</a>&nbsp;</td><th width="60%" align="center">7.15.&nbsp;Debugger (Integrated Operating System)</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ar01s07s15s06.html">Next</a></td></tr></table><hr></div><div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="Funktionstesteditor.Debugger.Ausfuehren"></a>7.15.5.&nbsp;Running the Debugger</h4></div></div></div>
+      
+      <p>There are two ways of starting the integrated operating system.</p><div class="itemizedlist"><ul type="disc"><li>
+            <p>Start test module (or start test module in single step mode): starts an individual function test in the operating system.</p>
+          </li><li>
+            <p>Start GFF: starts diagnostic entry. Vehicle identification takes place first in this case, as in the dedicated operating system. The operating system can start function tests during diagnostic entry. Starting diagnostic entry initiates a debug session (see <a class="xref" href="ar01s07s15s11.html#Funktionstesteditor.Debugger.DebugSitzung.Hintergrund" title="7.15.11.1.&nbsp;Background: Debug Session">Section&nbsp;7.15.11.1, &#8220;Background: Debug Session&#8221;</a>) that is valid until diagnostic exit. After successful diagnostic entry, individual function tests can be started using "Start test module".</p>
+          </li></ul></div>
+      <p>Both options assume there is an open function test as base data. The base data, which can also contain local modifications, can be used as the information supplier for a debug session and made available to the operating system, regardless of the content of the ODIS Creator database. All additional information that the operating system requires during a debug session is retrieved from the ODIS creator database. The actual status of all objects at the time the debug session started is used. The result is that changes, for example to a measured value table, that were made after "Start test module" or "Start GFF" was activated, are not visible in the debug session.</p>
+      <p>Note: retrieving information during a debug session is significantly more complex in detail. Information is retrieved from various sources and is overlaid or overwritten depending on the priority of the source. The following information sources exist:</p><div class="itemizedlist"><ul type="disc"><li>
+            <p>Operating system database: DI databases and test baselines, if necessary, are used as information sources in the operating system (priority 3).</p>
+          </li><li>
+            <p>ODIS Creator database: if there is newer information in the ODIS Creator database compared to the data in the operating system, it will be retrieved from this source (priority 2).</p>
+          </li><li>
+            <p>Base data: with priority 1, the base data will overlay all other sources.</p>
+          </li></ul></div><p>You cannot see which data is retrieved from which source.</p>
+      <p>Parameters can be set for the frequency of interface updates before and during the debug session. See <a class="xref" href="ar01s07s15s05.html#Funktionstesteditor.Debugger.Obergflaechenaktualisierung" title="7.15.5.3.&nbsp;Interface Updates Configuration">Section&nbsp;7.15.5.3, &#8220;Interface Updates Configuration&#8221;</a>.</p>
+      <p>After starting the debugger using either "Start test module" or "Start test module in single step mode", a window appears where you can configure the default value input (see <a class="xref" href="ar01s07s15s05.html#figure.Funktionstesteditor.Debugger.Ausfuehren" title="Figure&nbsp;554.&nbsp;Default value input">Figure&nbsp;554, &#8220;Default value input&#8221;</a>). You can either fill the data with values recorded previously from a file, or you can use the runtime values that were read.</p>
+      <p>
+        </p><div class="figure"><a name="figure.Funktionstesteditor.Debugger.Ausfuehren"></a><div class="figure-contents">
+          
+          <div class="mediaobject"><img src="images/fte_Debug_Konf.png" alt="Image: default value input"></div>
+        </div><p class="title"><b>Figure&nbsp;554.&nbsp;Default value input</b></p></div><p><br class="figure-break">
+      </p>
+      <p>If diagnostic entry is started with the "Start GFF" function, the following configuration dialog appears.</p>
+      <p>
+        </p><div class="figure"><a name="figure.Funktionstesteditor.Debugger.Ausfuehren.DiagEntr"></a><div class="figure-contents">
+          
+          <div class="mediaobject"><img src="images/fte_Debug_DiagEntr_Konf.png" alt="Image: simulation"></div>
+        </div><p class="title"><b>Figure&nbsp;555.&nbsp;Simulation</b></p></div><p><br class="figure-break">
+      </p>
+      <p>While a function test runs in the debug session, a yellow counter indicates the current location of the process. This occurs with both the test steps and the commands.</p>
+      <div class="figure"><a name="figure.Funktionstesteditor.Debugger.Zeiger"></a><div class="figure-contents">
+        
+        <div class="mediaobject"><img src="images/fte_Debug_Zeiger.png" alt="Image: yellow counter marks the current running position"></div>
+      </div><p class="title"><b>Figure&nbsp;556.&nbsp;Yellow Counter Marks the Current Running Position</b></p></div><br class="figure-break">
+      <p>Function tests from the ODIS Creator source may be present in the ODIS Creator database in a processing status that cannot be run. If such a function test is used, for example as a sub-program, ODIS Creator will inform you about any compilation errors that occur.</p>
+      <p>
+        </p><div class="figure"><a name="figure.Funktionstesteditor.Debugger.Kompilierfehler"></a><div class="figure-contents">
+          
+          <div class="mediaobject"><img src="images/fte_Debug_Kompilierfehler.png" alt="Image: compilation error"></div>
+        </div><p class="title"><b>Figure&nbsp;557.&nbsp;Compilation Error</b></p></div><p><br class="figure-break">
+      </p>
+      <p>Function tests that cannot be compiled are not available in the debug session, because they cannot be run.</p>
+      <p>The affected function test can be opened in read-only mode in ODIS Creator using the compilation error dialog. Compilation is initiated directly after opening and the results are entered in the Problems view. A function test is compiled exactly once within a debug session. The compilation error dialog appears only once in each debug session and function test.</p>
+      <p>The debug session continues immediately after closing the dialog or after opening the affected function test. In some cases, the integrated operating system may end the debug session if a function test is not available due to compilation errors.</p>
+      <p>A compilation is performed at various points within a debug session.</p>
+      <div class="itemizedlist"><ul type="disc"><li>
+          <p>During the "Determine special functions" phase in diagnostic entry</p>
+        </li><li>
+          <p>Activating an entry in the test plan view</p>
+        </li><li>
+          <p>Encountering a sub-program request in the course of a function test</p>
+        </li></ul></div>
+      <p>For other situations where function tests may be accessed, refer to the ODIS Service user handbook.</p>
+      <p>Depending on the selected debug start, the system either runs to its first interaction 9such as a function selection - see <a class="xref" href="ar01s07s15s05.html#figure.Funktionstesteditor.Debugger.View" title="Figure&nbsp;558.&nbsp;Process View">Figure&nbsp;558, &#8220;Process View&#8221;</a>) or until the break point. If the debugger was started with "Start test module in single step mode", you can go through the process step-by-step using the Debugger button. See <a class="xref" href="ar01s07s15s04.html#figure.Funktionstesteditor.Debugger.Breakpoint_Ablauf" title="Figure&nbsp;553.&nbsp;Debugger Button">Figure&nbsp;553, &#8220;Debugger Button&#8221;</a>.</p>
+      <p>
+        </p><div class="figure"><a name="figure.Funktionstesteditor.Debugger.View"></a><div class="figure-contents">
+          
+          <div class="mediaobject"><img src="images/fte_Debug_View.png" alt="Image: process view"></div>
+        </div><p class="title"><b>Figure&nbsp;558.&nbsp;Process View</b></p></div><p><br class="figure-break">
+      </p>
+      <p>After the debugger reaches the end or it is ended, the process that ran up to that point can be saved (see <a class="xref" href="ar01s07s15s05.html#figure.Funktionstesteditor.Debugger.Speichern" title="Figure&nbsp;559.&nbsp;Saving a Simulation">Figure&nbsp;559, &#8220;Saving a Simulation&#8221;</a>). The result is an XML file with default values. This file can be used as a default values file the next time the debugger is started.</p>
+      <p>
+        </p><div class="figure"><a name="figure.Funktionstesteditor.Debugger.Speichern"></a><div class="figure-contents">
+          
+          <div class="mediaobject"><img src="images/fte_Debug_Speichern.png" alt="Image: saving a simulation"></div>
+        </div><p class="title"><b>Figure&nbsp;559.&nbsp;Saving a Simulation</b></p></div><p><br class="figure-break">
+      </p>
+      <p></p>
+      <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="Funktionstesteditor.Debugger.Testprocedure"></a>7.15.5.1.&nbsp;Direct Debugging of Test Procedures</h5></div></div></div>
+        
+        <p>Direct debugging of test procedures is not possible with the integrated ODIS Debug. However, ODIS Creator has a workaround for this shortcoming. A main program that executes the test procedure bu that is hidden from the user has been created. This makes it possible to start and perform a test procedure directly in ODIS Debug.</p>
+        <p>Because a test procedure that is started directly using this method is always treated like a sub-program, it must always be reloaded from the ODIS Creator database for the debug session. As a result, saving changes to the test procedure locally in the function test editor is not sufficient. A check-in must be performed, for example using the "Save and check in&#8221; function. Only then will any changes made during the session be visible in the debug session. The dialog (<a class="xref" href="ar01s07s15s05.html#figure.Funktionstesteditor.Debugger.Testprocedure.Savedialog" title="Figure&nbsp;560.&nbsp;Test procedure not checked in">Figure&nbsp;560, &#8220;Test procedure not checked in&#8221;</a>) appears when starting the debugger only if the test procedure is opened in write mode. &#8220;Save and check in&#8221; occurs automatically if this dialog was confirmed with &#8220;Yes&#8221;. Otherwise, the changes will not be saved and the debug procedure will be canceled.</p>
+
+        <p>
+          </p><div class="figure"><a name="figure.Funktionstesteditor.Debugger.Testprocedure.Savedialog"></a><div class="figure-contents">
+            
+            <div class="mediaobject"><img src="images/fte_Debug_Save_Prozedur_Dialog.png" alt="Image: dialog for checking in test procedures"></div>
+          </div><p class="title"><b>Figure&nbsp;560.&nbsp;Test procedure not checked in</b></p></div><p><br class="figure-break">
+        </p>
+
+        <p>There is a configuration dialog for preselecting parameters in a test procedure. It will be displayed directly after directly starting a debug session for a test procedure. The dialog can also be deactivated under settings.</p>
+        <p>
+          </p><div class="figure"><a name="figure.Funktionstesteditor.Debugger.Testprocedure.Vorbelegungsdialog"></a><div class="figure-contents">
+            
+            <div class="mediaobject"><img src="images/fte_Debug_Vorbelegungsdialog.png" alt="Image: preselection dialog for test procedures"></div>
+          </div><p class="title"><b>Figure&nbsp;561.&nbsp;Preselection Dialog</b></p></div><p><br class="figure-break">
+        </p>
+        <p>Variables/keywords (no array variables) can be preselected using the preselection dialog.</p>
+        <p>Note: only the parameters for the test procedure are listed for preselection (variables and keywords with at least the &#8216;Accept&#8217; visibility). Variables/keywords that are internal to test procedures are not considered.</p>
+        <p>The procedure for debugging test procedures is the same as the procedure for debugging function tests.</p>
+      </div>
+
+      <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="Funktionstesteditor.Debugger.Generaltest"></a>7.15.5.2.&nbsp;Direct Debugging of "General Tests&#8221;</h5></div></div></div>
+        
+        <p>The procedure for debugging general tests is the same as the procedure for debugging function tests. However, it is possible to activate a preselection dialog for &#8220;General tests&#8221; in order to preselect the corresponding values.</p>
+        <p>
+          </p><div class="figure"><a name="figure.Funktionstesteditor.Debugger.Generaltest.Vorbelegungsdialog"></a><div class="figure-contents">
+            
+            <div class="mediaobject"><img src="images/fte_Debug_Generaltest_Vorbelegungsdialog.png" alt="Image: preselection dialog for &#34;General tests&#8221;"></div>
+          </div><p class="title"><b>Figure&nbsp;562.&nbsp;Preselection Dialog</b></p></div><p><br class="figure-break">
+        </p>
+
+        <p>There is a preselection dialog for preselecting parameters of a general test. It will be displayed directly after directly starting a debug session for a &#8220;General test&#8221;. The dialog can also be deactivated under settings.</p>
+        
+        <p>Variables/keywords (no array variables) can be preselected using the preselection dialog.</p>
+        <p>Note: only the parameters for the "General test&#8221; are listed for preselection (variables and keywords with at least the &#8216;Accept&#8217; visibility). Variables/keywords that are internal to a "General test&#8221; are not considered.</p>
+      </div>
+
+      <div class="section" lang="en"><div class="titlepage"><div><div><h5 class="title"><a name="Funktionstesteditor.Debugger.Obergflaechenaktualisierung"></a>7.15.5.3.&nbsp;Interface Updates Configuration</h5></div></div></div>
+        
+        <p>During a debug session, the Java code generated for the function test runs in the operating ystem and the ODIS Creator interface is continually updated. The user can control the frequency of interface updates. The performance of the debug session can be significantly improved by reducing the updates.</p>
+        <p>Note: an update consists of setting the yellow position indicators and refreshing the &#8220;Variables&#8221; and &#8220;Call stack&#8221; views.</p>
+        <p>Two different modes can be set:</p><div class="orderedlist"><ol type="1"><li>
+              <p>Detailed debug process: there is one interface update for each command in the function test editor. This is the default setting.</p>
+            </li><li>
+              <p>Quick debug process: during the procedure, ODIS Creator calculates if a command requires user interaction. If user interaction is expected, then an interface update will take place. If interaction is not expected, the update will not take place. In this way, the interface will be up-to-date when the user must interact. A user interaction is either entering a placeholder value or entering necessary data in the Process view. A list of commands that requires a user interaction can be found in <a class="xref" href="ar01s07s15s05.html#Funktionstesteditor.Debugger.AnweisungenMitInteraktion">Section&nbsp;7.15.5.3, &#8220;Interface Updates Configuration&#8221;</a>.</p>
+              <p>There is no differentiation between debugging with real values and with placeholder values, meaning when debugging with real values, no default values appear but the interface is updated anyway.</p>
+            </li></ol></div><p>
+        </p>
+        <p>The setting for the frequency can be changed in two ways:</p><div class="itemizedlist"><ul type="disc"><li>
+              <p>Using a button in the ODIS Creator toolbar</p>
+            </li><li>
+              <p>&#8220;ODIS debug&#8221; settings</p>
+            </li></ul></div><p>
+        </p>
+        <p>The setting in the toolbar is adjusted with the &#8220;Quick debug process&#8221; button. See <a class="xref" href="ar01s07s15s05.html#figure.Funktionstesteditor.Debugger.AblaufsteuerungToolbar" title="Figure&nbsp;563.&nbsp;Debug Display Mode in the Toolbar">Figure&nbsp;563, &#8220;Debug Display Mode in the Toolbar&#8221;</a>.</p>
+        <p>
+          </p><div class="figure"><a name="figure.Funktionstesteditor.Debugger.AblaufsteuerungToolbar"></a><div class="figure-contents">
+            
+            <div class="mediaobject"><img src="images/fte_Debug_Ablaufsteuerung.png" alt="Image: debug display mode in the toolbar"></div>
+          </div><p class="title"><b>Figure&nbsp;563.&nbsp;Debug Display Mode in the Toolbar</b></p></div><p><br class="figure-break">
+        </p>
+        <p>You can switch between the detailed and the quick display modes in the settings under the item &#8220;ODIS debug&#8221;. See <a class="xref" href="ar01s07s15s05.html#figure.Funktionstesteditor.Debugger.AblaufsteuerungBenutzervorgaben" title="Figure&nbsp;564.&nbsp;ODIS Debug Settings">Figure&nbsp;564, &#8220;ODIS Debug Settings&#8221;</a>.</p>
+        <p>
+          </p><div class="figure"><a name="figure.Funktionstesteditor.Debugger.AblaufsteuerungBenutzervorgaben"></a><div class="figure-contents">
+            
+            <div class="mediaobject"><img src="images/fte_Debug_Benutzervorgaben.png" alt="Image: ODIS debug settings"></div>
+          </div><p class="title"><b>Figure&nbsp;564.&nbsp;ODIS Debug Settings</b></p></div><p><br class="figure-break">
+        </p>
+        <p>You can also make other adjustments under settings beyond the detailed mode.</p>
+        <p>If the preselection dialog is activated, it will be displayed when a test procedure is started in debug mode.</p>
+        <p>If one or both options</p><div class="itemizedlist"><ul type="disc"><li>
+              <p>From first Break Point</p>
+            </li><li>
+              <p>From first Dialog</p>
+            </li></ul></div><p>are set, the detailed process is only activated after reaching the first break point or the first user interaction (substitute value input or input in the Process view). The quick process is performed first</p>
+        <p>The setting can be changed during a debug session as long as no modal dialog is blocking the interface.</p>
+        <p>The interface update setting is stored on the user&#8217;s PC and applies to all sessions.</p>
+        <p>To reduce the flickering of the interface due to continuous updates, ODIS Debug waits a few milliseconds before each update. The waiting period can be set in the settings. See <a class="xref" href="ar01s07s15s05.html#figure.Funktionstesteditor.Debugger.AblaufsteuerungBenutzervorgaben" title="Figure&nbsp;564.&nbsp;ODIS Debug Settings">Figure&nbsp;564, &#8220;ODIS Debug Settings&#8221;</a>. The waiting period is stored on the user&#8217;s PC and applies to all sessions. The default value is 30 ms.</p>
+        <p><a name="Funktionstesteditor.Debugger.AnweisungenMitInteraktion"></a><span class="bold"><strong>List of commands with user interaction</strong></span></p><div class="itemizedlist"><ul type="disc"><li>
+              <p>Question</p>
+            </li><li>
+              <p>Input</p>
+            </li><li>
+              <p>Message</p>
+            </li><li>
+              <p>Keyboard input</p>
+            </li><li>
+              <p>Vehicle Status</p>
+            </li><li>
+              <p>Measuring channel</p>
+            </li><li>
+              <p>Lock Button</p>
+            </li><li>
+              <p>Voltage measurement</p>
+            </li><li>
+              <p>Electrical current measurement</p>
+            </li><li>
+              <p>Resistance measurement</p>
+            </li><li>
+              <p>Diode measurement</p>
+            </li><li>
+              <p>Measure pressure</p>
+            </li><li>
+              <p>Measure temperature</p>
+            </li><li>
+              <p>Oscilloscope</p>
+            </li><li>
+              <p>High-voltage block</p>
+            </li><li>
+              <p>High-voltage measurement data</p>
+            </li><li>
+              <p>Sub-Program</p>
+            </li><li>
+              <p>Loop Quit / Loop Timeout</p>
+            </li><li>
+              <p>Read measured values</p>
+            </li><li>
+              <p>Read ASAM measured values</p>
+            </li><li>
+              <p>ASAM identification</p>
+            </li><li>
+              <p>ASAM variant identification</p>
+            </li><li>
+              <p>ASAM hex service</p>
+            </li><li>
+              <p>Login</p>
+            </li><li>
+              <p>Log out</p>
+            </li><li>
+              <p>Write XML/XML IA</p>
+            </li><li>
+              <p>Expand XML</p>
+            </li><li>
+              <p>Expand XML IA</p>
+            </li><li>
+              <p>XML set number</p>
+            </li><li>
+              <p>Read XML sentence</p>
+            </li><li>
+              <p>Read XML</p>
+            </li><li>
+              <p>Read XML IA</p>
+            </li><li>
+              <p>Expand XML IA</p>
+            </li><li>
+              <p>Read XML IA</p>
+            </li><li>
+              <p>Check SecurityKey (VFA)</p>
+            </li><li>
+              <p>Send online</p>
+            </li><li>
+              <p>Receive online</p>
+            </li><li>
+              <p>Send log</p>
+            </li><li>
+              <p>Determining the MBs</p>
+            </li><li>
+              <p>MB connection</p>
+            </li><li>
+              <p>Module data request</p>
+            </li><li>
+              <p>Start balancing procedure</p>
+            </li><li>
+              <p>Request (dis)charging parameters</p>
+            </li><li>
+              <p>MB qualification report</p>
+            </li><li>
+              <p>MB process status request</p>
+            </li><li>
+              <p>Request module hardware info</p>
+            </li><li>
+              <p>MB error message</p>
+            </li><li>
+              <p>MB info request</p>
+            </li><li>
+              <p>MB status request</p>
+            </li><li>
+              <p>MB classification report</p>
+            </li><li>
+              <p>Flash path</p>
+            </li><li>
+              <p>Flash container</p>
+            </li><li>
+              <p>Parallel Flashing</p>
+            </li><li>
+              <p>Create flash control file</p>
+            </li><li>
+              <p>Ecukom</p>
+            </li><li>
+              <p>ASAM Ecukom</p>
+            </li><li>
+              <p>ASAM result</p>
+            </li><li>
+              <p>If equipment / If VCI comparison / If symptoms / If vehicle status</p>
+            </li><li>
+              <p>While (not) equipment / While (not) VCI comparison / While (not) symptoms / While (not) vehicle status</p>
+            </li><li>
+              <p>Case equipment / Case VCI comparison / Case symptoms / Case vehicle status</p>
+            </li><li>
+              <p>Following system functions in declare/define keyword/expression/If condition/While (not) condition/case comparison</p>
+              <div class="itemizedlist"><ul type="circle"><li>
+                  <p>ACTIONCODE</p>
+                </li><li>
+                  <p>APPLICATIONTYPE</p>
+                </li><li>
+                  <p>COMMUNICATIONTYPE</p>
+                </li><li>
+                  <p>DATE</p>
+                </li><li>
+                  <p>DATETIME</p>
+                </li><li>
+                  <p>DV_VW_PART</p>
+                </li><li>
+                  <p>DEALERCODE</p>
+                </li><li>
+                  <p>DEALERJOB</p>
+                </li><li>
+                  <p>DEALERSHIPID</p>
+                </li><li>
+                  <p>DEVICE</p>
+                </li><li>
+                  <p>DEVICETYPE</p>
+                </li><li>
+                  <p>ERROR_TYPE</p>
+                </li><li>
+                  <p>FINGERPRINT</p>
+                </li><li>
+                  <p>FINGERPRINTDEALER</p>
+                </li><li>
+                  <p>FINGERPRINTDEVICE</p>
+                </li><li>
+                  <p>FINGERPRINTIMPORTER</p>
+                </li><li>
+                  <p>IMPORTEUR</p>
+                </li><li>
+                  <p>LICENCEPLATENUMBER</p>
+                </li><li>
+                  <p>PIN15_STATE</p>
+                </li><li>
+                  <p>PIN30_STATE</p>
+                </li><li>
+                  <p>PROGRAMMINGVOLTAGE</p>
+                </li><li>
+                  <p>REPAIRSTATE</p>
+                </li><li>
+                  <p>TIME</p>
+                </li><li>
+                  <p>VCI_CONNECTION_TYPE</p>
+                </li><li>
+                  <p>VCI_CONNECTION_TYPE</p>
+                </li><li>
+                  <p>VIN</p>
+                </li><li>
+                  <p>UUID_D3_EDGEBOX</p>
+                </li><li>
+                  <p>CP_HAS_PR_NUMBER</p>
+                </li><li>
+                  <p>CU_5BAUDARD_ARD</p>
+                </li><li>
+                  <p>CU_5BAUDARD_INDEX</p>
+                </li><li>
+                  <p>CU_ADR_ADR</p>
+                </li><li>
+                  <p>CU_ADR_INDEX</p>
+                </li><li>
+                  <p>CU_BUSTYP_ADR</p>
+                </li><li>
+                  <p>CU_BUSTYP_INDEX</p>
+                </li><li>
+                  <p>CU_CODED_ADR</p>
+                </li><li>
+                  <p>CU_CODED_INDEX</p>
+                </li><li>
+                  <p>CU_CODINGTABLE_ADR</p>
+                </li><li>
+                  <p>CU_CODINGTABLE_INDEX</p>
+                </li><li>
+                  <p>CU_CODING_STATE</p>
+                </li><li>
+                  <p>CU_FLASHABLE</p>
+                </li><li>
+                  <p>CU_HARDWARE_NUMBER</p>
+                </li><li>
+                  <p>CU_INSTALLED_ADR</p>
+                </li><li>
+                  <p>CU_INSTALLED_INDEX</p>
+                </li><li>
+                  <p>CU_SERIAL_NUMBER</p>
+                </li><li>
+                  <p>CU_SOFTWARE_NUMBER</p>
+                </li><li>
+                  <p>CU_SOFTWARE_VERSION</p>
+                </li><li>
+                  <p>CU_STATUSINFO_ADR</p>
+                </li><li>
+                  <p>CU_STATUSINFO_INDEX</p>
+                </li><li>
+                  <p>CU_STATUSTEXT_ADR</p>
+                </li><li>
+                  <p>CU_STATUSTEXT_INDEX</p>
+                </li><li>
+                  <p>CU_TIME_STAMP</p>
+                </li><li>
+                  <p>MAX_SPECLIST</p>
+                </li><li>
+                  <p>HVMT_DEVICE_IDENTIFICATION</p>
+                </li><li>
+                  <p>HVMT_FMVERSION_AVAILABLE</p>
+                </li><li>
+                  <p>HVMT_GDIDDVERSION_EXPECTED</p>
+                </li><li>
+                  <p>HVMT_GDIDDVERSION_AVAILABLE</p>
+                </li><li>
+                  <p>HVMT_FMVERSION_EXPECTED</p>
+                </li><li>
+                  <p>STDMT_DEVICE_IDENTIFICATION</p>
+                </li><li>
+                  <p>CU_ASAM_ODX_File_Identifier</p>
+                </li><li>
+                  <p>CU_ASAM_ODX_File_Version</p>
+                </li><li>
+                  <p>CU_ASAM_ODX_Variante</p>
+                </li><li>
+                  <p>CU_Anzahl_Slave</p>
+                </li><li>
+                  <p>CU_Gatewayverbauliste (gateway components list)</p>
+                </li><li>
+                  <p>CU_Ident_Master</p>
+                </li><li>
+                  <p>CU_Ident_Slave</p>
+                </li><li>
+                  <p>CU_SlaveIDs</p>
+                </li><li>
+                  <p>CU_ISO_13400_on_IEEE_802_3</p>
+                </li><li>
+                  <p>CU_ISO_14230_3_on_ISO_15765_2</p>
+                </li><li>
+                  <p>CU_ISO_15765_3_on_ISO_15765_2</p>
+                </li><li>
+                  <p>CU_MCD_VEHICLE_INFO</p>
+                </li><li>
+                  <p>CU_MSP_KW1281_on_ISO_9141_2</p>
+                </li><li>
+                  <p>CU_MSP_KW1281_on_TP16</p>
+                </li><li>
+                  <p>CU_MSP_VW2000LP_on_ISO_14230_2</p>
+                </li><li>
+                  <p>CU_MSP_VW2000LP_on_TP16</p>
+                </li><li>
+                  <p>CU_MSP_VW2000LP_on_TP20</p>
+                </li><li>
+                  <p>CU_PROTOCOL</p>
+                </li><li>
+                  <p>CU_SystemNameOrEngineType</p>
+                </li><li>
+                  <p>CU_UDS_ID_KWP_Dienst_22</p>
+                </li><li>
+                  <p>CU_VW_Coding_Value</p>
+                </li><li>
+                  <p>CU_VW_DataSetNumberOrECUDataContainerNumber</p>
+                </li><li>
+                  <p>CU_VW_DataSetVersionNumber</p>
+                </li><li>
+                  <p>CU_VW_ECU_HardwareVersionNumber</p>
+                </li><li>
+                  <p>CU_VW_FAZITIdentification</p>
+                </li><li>
+                  <p>CU_VehicleEquipmentCodeAndPRNumberCombination</p>
+                </li></ul></div>
+            </li></ul></div><p>
+        </p>
+      </div>
+    </div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ar01s07s15s04.html">Prev</a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="ar01s07s15.html">Up</a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="ar01s07s15s06.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">7.15.4.&nbsp;Actions in Debug Mode&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;7.15.6.&nbsp;Break Points View</td></tr></table></div></body></html>
